@@ -1,0 +1,79 @@
+@use 'sass:math';
+
+$size: 15px;
+$time: 1;
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+.dank-loader-wrapper {
+  width: 100vw;
+  height: calc(100vh - env(safe-area-inset-bottom));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1050;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.dank-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .loader-row {
+    display: flex;
+  }
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  margin: 0 math.div(-$size, 2);
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-bottom: ($size * 1.8) solid var(--main-bg-color);
+  animation: blink $time + s infinite;
+  filter: drop-shadow(0 0 ($size * 1.5) var(--main-bg-color));
+
+  &.down {
+    transform: rotate(180deg);
+  }
+
+  @for $i from 1 through 18 {
+    &.outer-#{$i} {
+      animation-delay: -1 * ( math.div($time, 18) * $i) + s;
+    }
+  }
+
+  @for $i from 1 through 6 {
+    &.inner-#{$i} {
+      animation-delay: -1* (math.div($time, 6) * $i) + s;
+    }
+  }
+}
+
+@keyframes blink {
+  0% { opacity: 0.1; }
+  30% { opacity: 1; }
+  100% { opacity: 0.1; }
+}
