@@ -1,0 +1,3 @@
+[submodule "captain-of-data"]
+	path = captain-of-data
+	url = git@github.com:David-Melo/captain-of-data.git
