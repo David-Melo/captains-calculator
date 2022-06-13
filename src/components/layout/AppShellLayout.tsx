@@ -127,81 +127,88 @@ const AppShellLayout: React.FC = () => {
                 }
             }}
         >
-            <Container
+            <Box
                 sx={(theme) => ({
-                    height: "100%",
-                    [theme.fn.smallerThan('md')]: {
-                        padding: 0,
-                    }
+                    height: "100%"
                 })}
             >
 
-                <Header
-                    height={70}
-                    px="md"
-                    sx={theme => ({
-                        borderImageSlice: 2,
-                        borderBottomWidth: 5,
-                        borderImageSource: 'linear-gradient(45deg, #FCA23A, #FCA23A)',
-                        display: "flex",
-                        flexDirection: 'column',
-                        backgroundColor: theme.colorScheme === 'light' ? theme.colors.dark[8] : theme.white,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        [theme.fn.smallerThan('md')]: {
-                            alignItems: 'flex-start',
-                        },
-                    })}
-                >
+                <Box>
 
-                    <Box
-                        sx={(theme) => ({
-                            display: 'grid',
-                            gridTemplateColumns: '1fr auto',
-                            [theme.fn.smallerThan('md')]: {
-                                gridTemplateColumns: '1fr auto',
-                                width: '100%'
-                            },
-                            [theme.fn.largerThan('md')]: {
-                                width: 896
-                            }
+                    <Header
+                        height={70}
+                        px="md"
+                        sx={theme => ({
+                            borderImageSlice: 2,
+                            borderBottomWidth: 5,
+                            borderImageSource: 'linear-gradient(45deg, #FCA23A, #FCA23A)',
+                            backgroundColor: theme.colorScheme === 'light' ? theme.colors.dark[8] : theme.white,
+
                         })}
                     >
 
-                        <Group>
+                        <Container
+                            size="lg"
+                            sx={(theme) => ({
+                                height: "100%",
+                                width: "100%",
+                                display: "flex",
+                                flexDirection: 'column',
+                                justifyContent: 'center',
+                                [theme.fn.smallerThan('md')]: {
+                                    alignItems: 'flex-start',
+                                },
+                                [theme.fn.smallerThan('md')]: {
+                                    padding: 0,
+                                }
+                            })}
+                        >
+                            <Box
+                                sx={(theme) => ({
+                                    display: 'grid',
+                                    gridTemplateColumns: '1fr auto',
+                                })}
+                            >
 
-                            <MediaQuery largerThan="md" styles={{ display: 'none' }}>
-                                <Burger
-                                    opened={opened}
-                                    onClick={() => setOpened((o) => !o)}
-                                    size="sm"
-                                    color={theme.colors.gray[6]}
-                                />
-                            </MediaQuery>
-                            <Box>
-                                <img src="/img/logo.png" alt="Captain's Calculator" title="Captain's Calculator" />
+                                <Group>
+
+                                    <MediaQuery largerThan="md" styles={{ display: 'none' }}>
+                                        <Burger
+                                            opened={opened}
+                                            onClick={() => setOpened((o) => !o)}
+                                            size="sm"
+                                            color={theme.colors.gray[6]}
+                                        />
+                                    </MediaQuery>
+                                    <Box>
+                                        <img src="/img/logo.png" alt="Captain's Calculator" title="Captain's Calculator" />
+                                    </Box>
+
+                                </Group>
+
+                                <Box>
+
+                                    <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
+                                        <Group
+                                            spacing="xs"
+                                            grow
+                                        >
+                                            {menu.map((i, k) => {
+                                                return <TopBarNavButton key={`nav-item-${k}`} to={i.to} label={i.label} icon={i.icon} onClick={() => setOpened((o) => !o)} />
+                                            })}
+                                        </Group>
+                                    </MediaQuery>
+
+                                </Box>
+
                             </Box>
 
-                        </Group>
+                        </Container>
 
-                        <Box>
 
-                            <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
-                                <Group
-                                    spacing="xs"
-                                    grow
-                                >
-                                    {menu.map((i, k) => {
-                                        return <TopBarNavButton key={`nav-item-${k}`} to={i.to} label={i.label} icon={i.icon} onClick={() => setOpened((o) => !o)} />
-                                    })}
-                                </Group>
-                            </MediaQuery>
 
-                        </Box>
-
-                    </Box>
-
-                </Header>
+                    </Header>
+                </Box>
 
                 <Box
                     className="page-shell-wrapper"
@@ -210,7 +217,7 @@ const AppShellLayout: React.FC = () => {
                     <RenderNavigator navigator={navigator} />
                 </Box>
 
-            </Container>
+            </Box>
 
         </AppShell >
     )

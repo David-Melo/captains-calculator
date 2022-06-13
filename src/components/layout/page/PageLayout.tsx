@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text, MediaQuery, ScrollArea } from '@mantine/core';
+import { Box, Text, MediaQuery, ScrollArea, Container } from '@mantine/core';
 import NavContext from 'components/navigation/NavContext';
 import { NavLink } from 'react-router-dom';
 import { MobileNavIcon } from 'components/ui/Misc';
@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 
 type PageLayoutProps = {
     header?: React.ReactElement;
-    showFooterNav?: boolean; 
+    showFooterNav?: boolean;
 }
 
 const PageLayout: React.FC<PageLayoutProps> = ({ header = null, children, showFooterNav = true }) => {
@@ -29,7 +29,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ header = null, children, showFo
 
     return (
         <Box
-            sx={theme=>({
+            sx={theme => ({
                 height: '100%',
                 display: 'grid',
                 [theme.fn.smallerThan('md')]: {
@@ -57,7 +57,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ header = null, children, showFo
 
             <Box sx={{ position: 'relative', height: '100%', overflow: 'hidden' }}>
 
-            <motion.div
+                <motion.div
                     variants={{
                         enter: { y: -100, opacity: 0, transition: { duration: 0.25 } },
                         target: { y: 0, opacity: 1, transition: { duration: 0.25 } },
@@ -79,12 +79,18 @@ const PageLayout: React.FC<PageLayoutProps> = ({ header = null, children, showFo
                         }}
                     >
 
-                        <Box sx={(theme) => ({
-                            padding: theme.spacing.md,
-                            paddingTop: 0
-                        })}>
+                        <Container
+                            size="lg"
+                            sx={(theme) => ({
+                                height: "100%",
+                                [theme.fn.smallerThan('md')]: {
+                                    padding: 0,
+                                }
+                            })}
+                        >
+
                             {children}
-                        </Box>
+                        </Container>
 
                     </ScrollArea>) : <Loader />}
 
@@ -99,7 +105,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ header = null, children, showFo
                             backgroundColor: theme.colors.dark[9]
                         })}
                     >
-                        <Box sx={theme=>({
+                        <Box sx={theme => ({
                             height: 70,
                             display: "grid",
                             gridTemplateColumns: `repeat(${mobile.length}, 1fr)`,

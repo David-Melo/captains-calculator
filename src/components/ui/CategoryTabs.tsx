@@ -1,16 +1,19 @@
 import React from "react";
-import { createStyles, Divider, Tabs } from "@mantine/core";
+import { createStyles, Box, Tabs, Card, Grid, Group, Image } from '@mantine/core';
 import { matchPath, useLocation, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react"
 
 import Icons, { IconNames } from "components/ui/Icons"
-import { useAppState } from "state";
+import { useAppState, useActions } from 'state';
 import { CategoryId } from "state/app/effects";
 import { GenericDictionary } from "state/_types";
+import * as categories from 'state/categories';
+import { selectCategory } from '../../state/categories/actions/selectCategory';
+import AnimatedList, { AnimateListItem } from "./AnimatedList";
 
 
 type CategoryTabsProps = {
-    onTabChange(id: CategoryId): void
+
 }
 
 let catOrderArray = [
@@ -28,20 +31,21 @@ let catOrderArray = [
     'cargo_docks'
 ]
 
-export const CategoryTabs: React.FC<CategoryTabsProps> = ({onTabChange}) => {
+export const CategoryTabs: React.FC<CategoryTabsProps> = ({ }) => {
 
-    const { items } = useAppState(state => state.categories)
+    const { items: categories, currentItemId: currentCategoryId } = useAppState(state => state.categories)
+    const { selectCategory } = useActions().categories
     const { classes } = useTabStyles();
-    const [activeTab, setActiveTab] = React.useState(0);
+    const [activeTab, setActiveTab] = React.useState(currentCategoryId === null ? 0 : Object.keys(categories).indexOf(currentCategoryId) + 1)
 
     let categoryTabs: GenericDictionary[] = [
         {
             id: 'all',
-            label: 'All',
+            label: 'Categories',
             icon: `all.png`,
         },
-        ...catOrderArray.map(catId=>{
-            let cat = items[catId];
+        ...catOrderArray.map(catId => {
+            let cat = categories[catId];
             return {
                 id: cat.id,
                 label: cat.name,
@@ -50,10 +54,54 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({onTabChange}) => {
         })
     ]
 
-    const onChange = (active: number, tabKey: CategoryId) => {
+    console.log(activeTab)
+
+    const onChange = (active: number, tabKey: CategoryId | 'all') => {
         setActiveTab(active);
-        onTabChange(tabKey);
+        selectCategory(tabKey === 'all' ? null : tabKey);
     };
+
+    if (currentCategoryId === null) {
+        return (
+            <Box>
+                <AnimatedList>
+                    <Grid>
+                        {categoryTabs.filter(c => c.id !== 'all').map((cat, key) => {
+                            return (
+                                <Grid.Col md={6} key={cat.id}>
+                                    <AnimateListItem itemKey={cat.id} >
+                                        <Card
+                                            onClick={() => onChange(key, cat.id)}
+                                            shadow="xs"
+                                            sx={(theme) => ({
+                                                cursor: 'pointer',
+                                                '&:hover': {
+                                                    backgroundColor: theme.colorScheme === 'light' ? theme.colors.gray[2] : theme.colors.dark[9],
+                                                },
+                                            })}
+                                        >
+                                            <Group position="apart">
+                                                {cat.label}
+                                                <Box
+                                                    p={3}
+                                                    sx={theme => ({
+                                                        borderRadius: theme.radius.sm,
+                                                        background: theme.colors.dark[5]
+                                                    })}
+                                                >
+                                                    <Image src={`/assets/categories/${cat.icon}`} />
+                                                </Box>
+                                            </Group>
+                                        </Card>
+                                    </AnimateListItem>
+                                </Grid.Col>
+                            )
+                        })}
+                    </Grid>
+                </AnimatedList>
+            </Box>
+        )
+    }
 
     return (
         <Tabs
