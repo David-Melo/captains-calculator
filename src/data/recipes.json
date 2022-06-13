@@ -1,0 +1,7410 @@
+{
+    "acid_dumping": {
+        "id": "acid_dumping",
+        "name": "Acid Dumping",
+        "machine": "liquid_dump",
+        "duration": 2,
+        "inputs": [
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water_pollution",
+                "name": "Water Pollution",
+                "quantity": 4
+            }
+        ]
+    },
+    "acid_mixing": {
+        "id": "acid_mixing",
+        "name": "Acid Mixing",
+        "machine": "mixer",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "sulfur",
+                "name": "Sulfur",
+                "quantity": 2
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 8
+            }
+        ]
+    },
+    "air_separation": {
+        "id": "air_separation",
+        "name": "Air Separation",
+        "machine": "air_separator",
+        "duration": 20,
+        "inputs": [],
+        "outputs": [
+            {
+                "id": "oxygen",
+                "name": "Oxygen",
+                "quantity": 12
+            },
+            {
+                "id": "nitrogen",
+                "name": "Nitrogen",
+                "quantity": 12
+            }
+        ]
+    },
+    "ammonia_disposal": {
+        "id": "ammonia_disposal",
+        "name": "Ammonia Disposal",
+        "machine": "flare",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "ammonia",
+                "name": "Ammonia",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "air_pollution",
+                "name": "Air Pollution",
+                "quantity": 8
+            }
+        ]
+    },
+    "ammonia_electrolysis": {
+        "id": "ammonia_electrolysis",
+        "name": "Ammonia Electrolysis",
+        "machine": "electrolyzer",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "ammonia",
+                "name": "Ammonia",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "nitrogen",
+                "name": "Nitrogen",
+                "quantity": 8
+            },
+            {
+                "id": "hydrogen",
+                "name": "Hydrogen",
+                "quantity": 4
+            }
+        ]
+    },
+    "ammonia_synthesis": {
+        "id": "ammonia_synthesis",
+        "name": "Ammonia Synthesis",
+        "machine": "chemical_plant",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "hydrogen",
+                "name": "Hydrogen",
+                "quantity": 4
+            },
+            {
+                "id": "nitrogen",
+                "name": "Nitrogen",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "ammonia",
+                "name": "Ammonia",
+                "quantity": 4
+            }
+        ]
+    },
+    "ammonia_synthesis_2": {
+        "id": "ammonia_synthesis_2",
+        "name": "Ammonia Synthesis",
+        "machine": "chemical_plant_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "hydrogen",
+                "name": "Hydrogen",
+                "quantity": 4
+            },
+            {
+                "id": "nitrogen",
+                "name": "Nitrogen",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "ammonia",
+                "name": "Ammonia",
+                "quantity": 4
+            }
+        ]
+    },
+    "anesthetics_production": {
+        "id": "anesthetics_production",
+        "name": "Anesthetics Production",
+        "machine": "chemical_plant_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "ammonia",
+                "name": "Ammonia",
+                "quantity": 2
+            },
+            {
+                "id": "hydrogen_fluoride",
+                "name": "Hydrogen Fluoride",
+                "quantity": 4
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "anesthetics",
+                "name": "Anesthetics",
+                "quantity": 8
+            }
+        ]
+    },
+    "animal_feed_production": {
+        "id": "animal_feed_production",
+        "name": "Animal Feed Production",
+        "machine": "mixer",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "potato",
+                "name": "Potato",
+                "quantity": 10
+            }
+        ],
+        "outputs": [
+            {
+                "id": "animal_feed",
+                "name": "Animal Feed",
+                "quantity": 8
+            }
+        ]
+    },
+    "animal_feed_production_2": {
+        "id": "animal_feed_production_2",
+        "name": "Animal Feed Production",
+        "machine": "mixer",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "wheat",
+                "name": "Wheat",
+                "quantity": 10
+            }
+        ],
+        "outputs": [
+            {
+                "id": "animal_feed",
+                "name": "Animal Feed",
+                "quantity": 6
+            }
+        ]
+    },
+    "antibiotics": {
+        "id": "antibiotics",
+        "name": "Antibiotics",
+        "machine": "fermentation_tank",
+        "duration": 80,
+        "inputs": [
+            {
+                "id": "sugar",
+                "name": "Sugar",
+                "quantity": 4
+            },
+            {
+                "id": "ammonia",
+                "name": "Ammonia",
+                "quantity": 1
+            },
+            {
+                "id": "oxygen",
+                "name": "Oxygen",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "antibiotics",
+                "name": "Antibiotics",
+                "quantity": 8
+            },
+            {
+                "id": "carbon_dioxide",
+                "name": "Carbon Dioxide",
+                "quantity": 4
+            }
+        ]
+    },
+    "bread_making": {
+        "id": "bread_making",
+        "name": "Bread Making",
+        "machine": "baking_unit",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "flour",
+                "name": "Flour",
+                "quantity": 8
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "bread",
+                "name": "Bread",
+                "quantity": 12
+            }
+        ]
+    },
+    "brine_dumping": {
+        "id": "brine_dumping",
+        "name": "Brine Dumping",
+        "machine": "liquid_dump",
+        "duration": 2,
+        "inputs": [
+            {
+                "id": "brine",
+                "name": "Brine",
+                "quantity": 2
+            }
+        ],
+        "outputs": []
+    },
+    "brine_electrolysis": {
+        "id": "brine_electrolysis",
+        "name": "Brine Electrolysis",
+        "machine": "electrolyzer",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "brine",
+                "name": "Brine",
+                "quantity": 6
+            }
+        ],
+        "outputs": [
+            {
+                "id": "chlorine",
+                "name": "Chlorine",
+                "quantity": 4
+            }
+        ]
+    },
+    "brine_making": {
+        "id": "brine_making",
+        "name": "Brine Making",
+        "machine": "evaporation_pond",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "seawater",
+                "name": "Seawater",
+                "quantity": 30
+            }
+        ],
+        "outputs": [
+            {
+                "id": "brine",
+                "name": "Brine",
+                "quantity": 16
+            }
+        ]
+    },
+    "brine_making_2": {
+        "id": "brine_making_2",
+        "name": "Brine Making",
+        "machine": "evaporation_pond_heated",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "seawater",
+                "name": "Seawater",
+                "quantity": 30
+            }
+        ],
+        "outputs": [
+            {
+                "id": "brine",
+                "name": "Brine",
+                "quantity": 16
+            }
+        ]
+    },
+    "brine_production": {
+        "id": "brine_production",
+        "name": "Brine Production",
+        "machine": "mixer",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "salt",
+                "name": "Salt",
+                "quantity": 8
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "brine",
+                "name": "Brine",
+                "quantity": 16
+            }
+        ]
+    },
+    "burning": {
+        "id": "burning",
+        "name": "Burning",
+        "machine": "burner_solid",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "waste",
+                "name": "Waste",
+                "quantity": 6
+            }
+        ],
+        "outputs": [
+            {
+                "id": "air_pollution",
+                "name": "Air Pollution",
+                "quantity": 3
+            }
+        ]
+    },
+    "burning_2": {
+        "id": "burning_2",
+        "name": "Burning",
+        "machine": "burner_solid",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "biomass",
+                "name": "Biomass",
+                "quantity": 6
+            }
+        ],
+        "outputs": [
+            {
+                "id": "air_pollution",
+                "name": "Air Pollution",
+                "quantity": 2
+            }
+        ]
+    },
+    "cake_production": {
+        "id": "cake_production",
+        "name": "Cake Production",
+        "machine": "baking_unit",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "flour",
+                "name": "Flour",
+                "quantity": 5
+            },
+            {
+                "id": "sugar",
+                "name": "Sugar",
+                "quantity": 2
+            },
+            {
+                "id": "cooking_oil",
+                "name": "Cooking Oil",
+                "quantity": 1
+            },
+            {
+                "id": "eggs",
+                "name": "Eggs",
+                "quantity": 1
+            },
+            {
+                "id": "fruit",
+                "name": "Fruit",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "cake",
+                "name": "Cake",
+                "quantity": 7
+            }
+        ]
+    },
+    "canola_milling": {
+        "id": "canola_milling",
+        "name": "Canola Milling",
+        "machine": "mill",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "canola",
+                "name": "Canola",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "cooking_oil",
+                "name": "Cooking Oil",
+                "quantity": 6
+            },
+            {
+                "id": "animal_feed",
+                "name": "Animal Feed",
+                "quantity": 2
+            }
+        ]
+    },
+    "cement_production": {
+        "id": "cement_production",
+        "name": "Cement Production",
+        "machine": "rotary_kiln",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "limestone",
+                "name": "Limestone",
+                "quantity": 6
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "cement",
+                "name": "Cement",
+                "quantity": 2
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 6
+            }
+        ]
+    },
+    "cement_production_2": {
+        "id": "cement_production_2",
+        "name": "Cement Production",
+        "machine": "rotary_kiln_gas",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "limestone",
+                "name": "Limestone",
+                "quantity": 12
+            },
+            {
+                "id": "fuel_gas",
+                "name": "Fuel Gas",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "cement",
+                "name": "Cement",
+                "quantity": 4
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 12
+            }
+        ]
+    },
+    "charcoal_making": {
+        "id": "charcoal_making",
+        "name": "Charcoal Making",
+        "machine": "coal_maker",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "wood",
+                "name": "Wood",
+                "quantity": 20
+            }
+        ],
+        "outputs": [
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 4
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 16
+            }
+        ]
+    },
+    "co2_injection": {
+        "id": "co2_injection",
+        "name": "Co2 Injection",
+        "machine": "gas_injection_pump",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "carbon_dioxide",
+                "name": "Carbon Dioxide",
+                "quantity": 12
+            },
+            {
+                "id": "seawater",
+                "name": "Seawater",
+                "quantity": 4
+            }
+        ],
+        "outputs": []
+    },
+    "composing": {
+        "id": "composing",
+        "name": "Composing",
+        "machine": "mixer",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "animal_feed",
+                "name": "Animal Feed",
+                "quantity": 6
+            }
+        ],
+        "outputs": [
+            {
+                "id": "compost",
+                "name": "Compost",
+                "quantity": 3
+            }
+        ]
+    },
+    "composing_2": {
+        "id": "composing_2",
+        "name": "Composing",
+        "machine": "mixer",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "biomass",
+                "name": "Biomass",
+                "quantity": 6
+            }
+        ],
+        "outputs": [
+            {
+                "id": "compost",
+                "name": "Compost",
+                "quantity": 4
+            }
+        ]
+    },
+    "concrete_mixing": {
+        "id": "concrete_mixing",
+        "name": "Concrete Mixing",
+        "machine": "concrete_mixer",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "cement",
+                "name": "Cement",
+                "quantity": 1
+            },
+            {
+                "id": "sand",
+                "name": "Sand",
+                "quantity": 2
+            },
+            {
+                "id": "slag_crushed",
+                "name": "Slag Crushed",
+                "quantity": 6
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "concrete_slab",
+                "name": "Concrete Slab",
+                "quantity": 8
+            }
+        ]
+    },
+    "concrete_mixing_2": {
+        "id": "concrete_mixing_2",
+        "name": "Concrete Mixing",
+        "machine": "concrete_mixer",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "cement",
+                "name": "Cement",
+                "quantity": 1
+            },
+            {
+                "id": "sand",
+                "name": "Sand",
+                "quantity": 2
+            },
+            {
+                "id": "gravel",
+                "name": "Gravel",
+                "quantity": 6
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "concrete_slab",
+                "name": "Concrete Slab",
+                "quantity": 8
+            }
+        ]
+    },
+    "consumer_electronics_assembly_t1": {
+        "id": "consumer_electronics_assembly_t1",
+        "name": "Consumer Electronics Assembly (T1)",
+        "machine": "assembly_robotic_ii",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "electronics_iii",
+                "name": "Electronics III",
+                "quantity": 2
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 2
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "consumer_electronics",
+                "name": "Consumer Electronics",
+                "quantity": 4
+            }
+        ]
+    },
+    "copper_casting": {
+        "id": "copper_casting",
+        "name": "Copper Casting",
+        "machine": "metal_caster",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "molten_copper",
+                "name": "Molten Copper",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "impure_copper",
+                "name": "Impure Copper",
+                "quantity": 8
+            }
+        ]
+    },
+    "copper_casting_2": {
+        "id": "copper_casting_2",
+        "name": "Copper Casting",
+        "machine": "metal_caster_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "molten_copper",
+                "name": "Molten Copper",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "impure_copper",
+                "name": "Impure Copper",
+                "quantity": 8
+            }
+        ]
+    },
+    "copper_ore_crushing": {
+        "id": "copper_ore_crushing",
+        "name": "Copper Ore Crushing",
+        "machine": "crusher",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "copper_ore",
+                "name": "Copper Ore",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "copper_ore_crushed",
+                "name": "Copper Ore Crushed",
+                "quantity": 12
+            }
+        ]
+    },
+    "copper_purification_acid": {
+        "id": "copper_purification_acid",
+        "name": "Copper Purification (Acid)",
+        "machine": "copper_electrolysis",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "impure_copper",
+                "name": "Impure Copper",
+                "quantity": 16
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 16
+            }
+        ]
+    },
+    "copper_purification_water": {
+        "id": "copper_purification_water",
+        "name": "Copper Purification (Water)",
+        "machine": "copper_electrolysis",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "impure_copper",
+                "name": "Impure Copper",
+                "quantity": 16
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 13
+            }
+        ]
+    },
+    "copper_scrap_smelting": {
+        "id": "copper_scrap_smelting",
+        "name": "Copper Scrap Smelting",
+        "machine": "blast_furnace_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "copper_scrap",
+                "name": "Copper Scrap",
+                "quantity": 16
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 5
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_copper",
+                "name": "Molten Copper",
+                "quantity": 16
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 10
+            }
+        ]
+    },
+    "copper_scrap_smelting_2": {
+        "id": "copper_scrap_smelting_2",
+        "name": "Copper Scrap Smelting",
+        "machine": "blast_furnace",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "copper_scrap",
+                "name": "Copper Scrap",
+                "quantity": 8
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 3
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_copper",
+                "name": "Molten Copper",
+                "quantity": 8
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 6
+            }
+        ]
+    },
+    "copper_scrap_smelting_arc": {
+        "id": "copper_scrap_smelting_arc",
+        "name": "Copper Scrap Smelting (Arc)",
+        "machine": "arc_furnace_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "copper_scrap",
+                "name": "Copper Scrap",
+                "quantity": 16
+            },
+            {
+                "id": "graphite",
+                "name": "Graphite",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_copper",
+                "name": "Molten Copper",
+                "quantity": 16
+            },
+            {
+                "id": "steam_lo",
+                "name": "Steam Lo",
+                "quantity": 4
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 2
+            }
+        ]
+    },
+    "copper_smelting": {
+        "id": "copper_smelting",
+        "name": "Copper Smelting",
+        "machine": "blast_furnace",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "copper_ore",
+                "name": "Copper Ore",
+                "quantity": 8
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 3
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_copper",
+                "name": "Molten Copper",
+                "quantity": 8
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 4
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 8
+            }
+        ]
+    },
+    "copper_smelting_arc": {
+        "id": "copper_smelting_arc",
+        "name": "Copper Smelting (Arc)",
+        "machine": "arc_furnace_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "copper_ore_crushed",
+                "name": "Copper Ore Crushed",
+                "quantity": 12
+            },
+            {
+                "id": "sand",
+                "name": "Sand",
+                "quantity": 2
+            },
+            {
+                "id": "graphite",
+                "name": "Graphite",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_copper",
+                "name": "Molten Copper",
+                "quantity": 16
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 6
+            },
+            {
+                "id": "steam_lo",
+                "name": "Steam Lo",
+                "quantity": 4
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 4
+            }
+        ]
+    },
+    "copper_smelting_sand": {
+        "id": "copper_smelting_sand",
+        "name": "Copper Smelting (Sand)",
+        "machine": "blast_furnace_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "copper_ore_crushed",
+                "name": "Copper Ore Crushed",
+                "quantity": 12
+            },
+            {
+                "id": "sand",
+                "name": "Sand",
+                "quantity": 2
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 5
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_copper",
+                "name": "Molten Copper",
+                "quantity": 16
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 6
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 12
+            }
+        ]
+    },
+    "corn_milling_wet": {
+        "id": "corn_milling_wet",
+        "name": "Corn Milling (Wet)",
+        "machine": "mill",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "corn",
+                "name": "Corn",
+                "quantity": 8
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "corn_mash",
+                "name": "Corn Mash",
+                "quantity": 6
+            },
+            {
+                "id": "animal_feed",
+                "name": "Animal Feed",
+                "quantity": 2
+            }
+        ]
+    },
+    "cp2_assembly_t1": {
+        "id": "cp2_assembly_t1",
+        "name": "CP2 Assembly (T1)",
+        "machine": "assembly_manual",
+        "duration": 80,
+        "inputs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 8
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts_ii",
+                "name": "Construction Parts II",
+                "quantity": 4
+            }
+        ]
+    },
+    "cp2_assembly_t1_2": {
+        "id": "cp2_assembly_t1_2",
+        "name": "CP2 Assembly (T1)",
+        "machine": "assembly_electric",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 8
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts_ii",
+                "name": "Construction Parts II",
+                "quantity": 4
+            }
+        ]
+    },
+    "cp2_assembly_t2": {
+        "id": "cp2_assembly_t2",
+        "name": "CP2 Assembly (T2)",
+        "machine": "assembly_electric_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 8
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts_ii",
+                "name": "Construction Parts II",
+                "quantity": 4
+            }
+        ]
+    },
+    "cp2_assembly_t3": {
+        "id": "cp2_assembly_t3",
+        "name": "CP2 Assembly (T3)",
+        "machine": "assembly_robotic",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 8
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts_ii",
+                "name": "Construction Parts II",
+                "quantity": 4
+            }
+        ]
+    },
+    "cp3_assembly_t1": {
+        "id": "cp3_assembly_t1",
+        "name": "CP3 Assembly (T1)",
+        "machine": "assembly_electric",
+        "duration": 80,
+        "inputs": [
+            {
+                "id": "construction_parts_ii",
+                "name": "Construction Parts II",
+                "quantity": 8
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts_iii",
+                "name": "Construction Parts III",
+                "quantity": 4
+            }
+        ]
+    },
+    "cp3_assembly_t2": {
+        "id": "cp3_assembly_t2",
+        "name": "CP3 Assembly (T2)",
+        "machine": "assembly_electric_ii",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "construction_parts_ii",
+                "name": "Construction Parts II",
+                "quantity": 8
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts_iii",
+                "name": "Construction Parts III",
+                "quantity": 4
+            }
+        ]
+    },
+    "cp3_assembly_t3": {
+        "id": "cp3_assembly_t3",
+        "name": "CP3 Assembly (T3)",
+        "machine": "assembly_robotic",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "construction_parts_ii",
+                "name": "Construction Parts II",
+                "quantity": 8
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts_iii",
+                "name": "Construction Parts III",
+                "quantity": 4
+            }
+        ]
+    },
+    "cp4_assembly_t1": {
+        "id": "cp4_assembly_t1",
+        "name": "CP4 Assembly (T1)",
+        "machine": "assembly_robotic",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "construction_parts_iii",
+                "name": "Construction Parts III",
+                "quantity": 4
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 2
+            }
+        ]
+    },
+    "cp4_assembly_t2": {
+        "id": "cp4_assembly_t2",
+        "name": "CP4 Assembly (T2)",
+        "machine": "assembly_robotic_ii",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "construction_parts_iii",
+                "name": "Construction Parts III",
+                "quantity": 4
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts_iv",
+                "name": "Construction Parts IV",
+                "quantity": 2
+            }
+        ]
+    },
+    "cp_assembly_t1": {
+        "id": "cp_assembly_t1",
+        "name": "CP Assembly (T1)",
+        "machine": "assembly_manual",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 3
+            },
+            {
+                "id": "wood",
+                "name": "Wood",
+                "quantity": 4
+            },
+            {
+                "id": "concrete_slab",
+                "name": "Concrete Slab",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 4
+            }
+        ]
+    },
+    "cp_assembly_t2": {
+        "id": "cp_assembly_t2",
+        "name": "CP Assembly (T2)",
+        "machine": "assembly_electric",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 3
+            },
+            {
+                "id": "wood",
+                "name": "Wood",
+                "quantity": 4
+            },
+            {
+                "id": "concrete_slab",
+                "name": "Concrete Slab",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 4
+            }
+        ]
+    },
+    "cp_assembly_t3": {
+        "id": "cp_assembly_t3",
+        "name": "CP Assembly (T3)",
+        "machine": "assembly_electric_ii",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 3
+            },
+            {
+                "id": "wood",
+                "name": "Wood",
+                "quantity": 4
+            },
+            {
+                "id": "concrete_slab",
+                "name": "Concrete Slab",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 4
+            }
+        ]
+    },
+    "cp_assembly_t3_2": {
+        "id": "cp_assembly_t3_2",
+        "name": "CP Assembly (T3)",
+        "machine": "assembly_robotic",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 6
+            },
+            {
+                "id": "wood",
+                "name": "Wood",
+                "quantity": 8
+            },
+            {
+                "id": "concrete_slab",
+                "name": "Concrete Slab",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 8
+            }
+        ]
+    },
+    "create_computing_power": {
+        "id": "create_computing_power",
+        "name": "Create Computing Power",
+        "machine": "basic_rack",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "chilled_water",
+                "name": "Chilled Water",
+                "quantity": 0.5
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 0.5
+            }
+        ]
+    },
+    "crude_oil_refining": {
+        "id": "crude_oil_refining",
+        "name": "Crude Oil Refining",
+        "machine": "distillation_stage_i",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "crude_oil",
+                "name": "Crude Oil",
+                "quantity": 18
+            },
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 3
+            }
+        ],
+        "outputs": [
+            {
+                "id": "medium_oil",
+                "name": "Medium Oil",
+                "quantity": 16
+            },
+            {
+                "id": "heavy_oil",
+                "name": "Heavy Oil",
+                "quantity": 2
+            },
+            {
+                "id": "sour_water",
+                "name": "Sour Water",
+                "quantity": 6
+            }
+        ]
+    },
+    "crude_oil_refining_2": {
+        "id": "crude_oil_refining_2",
+        "name": "Crude Oil Refining",
+        "machine": "distillation_stage_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "medium_oil",
+                "name": "Medium Oil",
+                "quantity": 16
+            },
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "diesel",
+                "name": "Diesel",
+                "quantity": 12
+            },
+            {
+                "id": "light_oil",
+                "name": "Light Oil",
+                "quantity": 4
+            }
+        ]
+    },
+    "depleted_steam_condensation": {
+        "id": "depleted_steam_condensation",
+        "name": "Depleted Steam Condensation",
+        "machine": "cooling_tower",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "steam_depleted",
+                "name": "Steam Depleted",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 2
+            }
+        ]
+    },
+    "depleted_steam_condensation_2": {
+        "id": "depleted_steam_condensation_2",
+        "name": "Depleted Steam Condensation",
+        "machine": "cooling_tower_large",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "steam_depleted",
+                "name": "Steam Depleted",
+                "quantity": 16
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 12
+            }
+        ]
+    },
+    "diesel_disposal": {
+        "id": "diesel_disposal",
+        "name": "Diesel Disposal",
+        "machine": "flare",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "diesel",
+                "name": "Diesel",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "air_pollution",
+                "name": "Air Pollution",
+                "quantity": 10
+            }
+        ]
+    },
+    "diesel_distillation_basic": {
+        "id": "diesel_distillation_basic",
+        "name": "Diesel Distillation (Basic)",
+        "machine": "basic_distiller",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "crude_oil",
+                "name": "Crude Oil",
+                "quantity": 18
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "diesel",
+                "name": "Diesel",
+                "quantity": 8
+            },
+            {
+                "id": "waste_water",
+                "name": "Waste Water",
+                "quantity": 4
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 12
+            }
+        ]
+    },
+    "diesel_reforming": {
+        "id": "diesel_reforming",
+        "name": "Diesel Reforming",
+        "machine": "cracking_unit",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "diesel",
+                "name": "Diesel",
+                "quantity": 8
+            },
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "naphtha",
+                "name": "Naphtha",
+                "quantity": 6
+            },
+            {
+                "id": "sour_water",
+                "name": "Sour Water",
+                "quantity": 1
+            }
+        ]
+    },
+    "dieselgenerator": {
+        "id": "dieselgenerator",
+        "name": "DieselGenerator",
+        "machine": "diesel_generator",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "diesel",
+                "name": "Diesel",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electricity",
+                "name": "Electricity",
+                "quantity": 216
+            },
+            {
+                "id": "air_pollution",
+                "name": "Air Pollution",
+                "quantity": 1
+            }
+        ]
+    },
+    "digestion": {
+        "id": "digestion",
+        "name": "Digestion",
+        "machine": "anaerobic_digester",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "sludge",
+                "name": "Sludge",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "fuel_gas",
+                "name": "Fuel Gas",
+                "quantity": 5
+            },
+            {
+                "id": "compost",
+                "name": "Compost",
+                "quantity": 1
+            }
+        ]
+    },
+    "digestion_2": {
+        "id": "digestion_2",
+        "name": "Digestion",
+        "machine": "anaerobic_digester",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "potato",
+                "name": "Potato",
+                "quantity": 14
+            }
+        ],
+        "outputs": [
+            {
+                "id": "fuel_gas",
+                "name": "Fuel Gas",
+                "quantity": 5
+            },
+            {
+                "id": "compost",
+                "name": "Compost",
+                "quantity": 1
+            }
+        ]
+    },
+    "disinfectant_production": {
+        "id": "disinfectant_production",
+        "name": "Disinfectant Production",
+        "machine": "chemical_plant",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "ethanol",
+                "name": "Ethanol",
+                "quantity": 3
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "disinfectant",
+                "name": "Disinfectant",
+                "quantity": 8
+            }
+        ]
+    },
+    "disinfectant_production_2": {
+        "id": "disinfectant_production_2",
+        "name": "Disinfectant Production",
+        "machine": "chemical_plant_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "ethanol",
+                "name": "Ethanol",
+                "quantity": 3
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "disinfectant",
+                "name": "Disinfectant",
+                "quantity": 8
+            }
+        ]
+    },
+    "electronics_2_assembly_t1": {
+        "id": "electronics_2_assembly_t1",
+        "name": "Electronics 2 Assembly (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "pcb",
+                "name": "PCB",
+                "quantity": 2
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            },
+            {
+                "id": "silicon_poly",
+                "name": "Silicon (Poly)",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            }
+        ]
+    },
+    "electronics_2_assembly_t2": {
+        "id": "electronics_2_assembly_t2",
+        "name": "Electronics 2 Assembly (T2)",
+        "machine": "assembly_robotic",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "pcb",
+                "name": "PCB",
+                "quantity": 2
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            },
+            {
+                "id": "silicon_poly",
+                "name": "Silicon (Poly)",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            }
+        ]
+    },
+    "electronics_2_assembly_t3": {
+        "id": "electronics_2_assembly_t3",
+        "name": "Electronics 2 Assembly (T3)",
+        "machine": "assembly_robotic_ii",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "pcb",
+                "name": "PCB",
+                "quantity": 2
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            },
+            {
+                "id": "silicon_poly",
+                "name": "Silicon (Poly)",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            }
+        ]
+    },
+    "electronics_3_assembly_t1": {
+        "id": "electronics_3_assembly_t1",
+        "name": "Electronics 3 Assembly (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 80,
+        "inputs": [
+            {
+                "id": "microchips",
+                "name": "Microchips",
+                "quantity": 2
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electronics_iii",
+                "name": "Electronics III",
+                "quantity": 2
+            }
+        ]
+    },
+    "electronics_3_assembly_t2": {
+        "id": "electronics_3_assembly_t2",
+        "name": "Electronics 3 Assembly (T2)",
+        "machine": "assembly_robotic",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "microchips",
+                "name": "Microchips",
+                "quantity": 2
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electronics_iii",
+                "name": "Electronics III",
+                "quantity": 2
+            }
+        ]
+    },
+    "electronics_3_assembly_t3": {
+        "id": "electronics_3_assembly_t3",
+        "name": "Electronics 3 Assembly (T3)",
+        "machine": "assembly_robotic_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "microchips",
+                "name": "Microchips",
+                "quantity": 2
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electronics_iii",
+                "name": "Electronics III",
+                "quantity": 2
+            }
+        ]
+    },
+    "electronics_assembly_t1": {
+        "id": "electronics_assembly_t1",
+        "name": "Electronics Assembly (T1)",
+        "machine": "assembly_manual",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "rubber",
+                "name": "Rubber",
+                "quantity": 1
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            }
+        ]
+    },
+    "electronics_assembly_t2": {
+        "id": "electronics_assembly_t2",
+        "name": "Electronics Assembly (T2)",
+        "machine": "assembly_electric",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "rubber",
+                "name": "Rubber",
+                "quantity": 1
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            }
+        ]
+    },
+    "electronics_assembly_t3": {
+        "id": "electronics_assembly_t3",
+        "name": "Electronics Assembly (T3)",
+        "machine": "assembly_electric_ii",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "rubber",
+                "name": "Rubber",
+                "quantity": 1
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            }
+        ]
+    },
+    "electronics_assembly_t4": {
+        "id": "electronics_assembly_t4",
+        "name": "Electronics Assembly (T4)",
+        "machine": "assembly_robotic",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "rubber",
+                "name": "Rubber",
+                "quantity": 2
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 8
+            }
+        ]
+    },
+    "electronics_assembly_t5": {
+        "id": "electronics_assembly_t5",
+        "name": "Electronics Assembly (T5)",
+        "machine": "assembly_robotic_ii",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "rubber",
+                "name": "Rubber",
+                "quantity": 4
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 16
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 16
+            }
+        ]
+    },
+    "ethanol_disposal": {
+        "id": "ethanol_disposal",
+        "name": "Ethanol Disposal",
+        "machine": "flare",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "ethanol",
+                "name": "Ethanol",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "air_pollution",
+                "name": "Air Pollution",
+                "quantity": 4
+            }
+        ]
+    },
+    "ethanol_making_corn": {
+        "id": "ethanol_making_corn",
+        "name": "Ethanol Making (Corn)",
+        "machine": "fermentation_tank",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "corn_mash",
+                "name": "Corn Mash",
+                "quantity": 6
+            },
+            {
+                "id": "oxygen",
+                "name": "Oxygen",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "ethanol",
+                "name": "Ethanol",
+                "quantity": 3
+            },
+            {
+                "id": "carbon_dioxide",
+                "name": "Carbon Dioxide",
+                "quantity": 6
+            }
+        ]
+    },
+    "ethanol_making_sugar": {
+        "id": "ethanol_making_sugar",
+        "name": "Ethanol Making (Sugar)",
+        "machine": "fermentation_tank",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "sugar",
+                "name": "Sugar",
+                "quantity": 8
+            },
+            {
+                "id": "oxygen",
+                "name": "Oxygen",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "ethanol",
+                "name": "Ethanol",
+                "quantity": 4
+            },
+            {
+                "id": "carbon_dioxide",
+                "name": "Carbon Dioxide",
+                "quantity": 8
+            }
+        ]
+    },
+    "exhaust_filtering": {
+        "id": "exhaust_filtering",
+        "name": "Exhaust Filtering",
+        "machine": "exhaust_scrubber",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 30
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "sulfur",
+                "name": "Sulfur",
+                "quantity": 1
+            },
+            {
+                "id": "carbon_dioxide",
+                "name": "Carbon Dioxide",
+                "quantity": 12
+            },
+            {
+                "id": "steam_lo",
+                "name": "Steam Lo",
+                "quantity": 4
+            },
+            {
+                "id": "air_pollution",
+                "name": "Air Pollution",
+                "quantity": 4
+            }
+        ]
+    },
+    "fertilizer_ii_synthesis": {
+        "id": "fertilizer_ii_synthesis",
+        "name": "Fertilizer II Synthesis",
+        "machine": "mixer",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "fertilizer_i",
+                "name": "Fertilizer I",
+                "quantity": 8
+            },
+            {
+                "id": "limestone",
+                "name": "Limestone",
+                "quantity": 1
+            },
+            {
+                "id": "sulfur",
+                "name": "Sulfur",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "fertilizer_ii",
+                "name": "Fertilizer II",
+                "quantity": 10
+            }
+        ]
+    },
+    "fertilizer_mixing": {
+        "id": "fertilizer_mixing",
+        "name": "Fertilizer Mixing",
+        "machine": "mixer",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "compost",
+                "name": "Compost",
+                "quantity": 12
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "fertilizer_organic",
+                "name": "Fertilizer (Organic)",
+                "quantity": 16
+            }
+        ]
+    },
+    "fertilizer_synthesis": {
+        "id": "fertilizer_synthesis",
+        "name": "Fertilizer Synthesis",
+        "machine": "chemical_plant",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "ammonia",
+                "name": "Ammonia",
+                "quantity": 4
+            },
+            {
+                "id": "nitrogen",
+                "name": "Nitrogen",
+                "quantity": 12
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "fertilizer_i",
+                "name": "Fertilizer I",
+                "quantity": 8
+            }
+        ]
+    },
+    "fertilizer_synthesis_2": {
+        "id": "fertilizer_synthesis_2",
+        "name": "Fertilizer Synthesis",
+        "machine": "chemical_plant_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "ammonia",
+                "name": "Ammonia",
+                "quantity": 4
+            },
+            {
+                "id": "nitrogen",
+                "name": "Nitrogen",
+                "quantity": 12
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "fertilizer_i",
+                "name": "Fertilizer I",
+                "quantity": 8
+            }
+        ]
+    },
+    "filter_media_mixing": {
+        "id": "filter_media_mixing",
+        "name": "Filter Media Mixing",
+        "machine": "mixer",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "gravel",
+                "name": "Gravel",
+                "quantity": 8
+            },
+            {
+                "id": "sand",
+                "name": "Sand",
+                "quantity": 4
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "filter_media",
+                "name": "Filter Media",
+                "quantity": 12
+            }
+        ]
+    },
+    "fluoride_leaching": {
+        "id": "fluoride_leaching",
+        "name": "Fluoride Leaching",
+        "machine": "settling_tank",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "rock",
+                "name": "Rock",
+                "quantity": 8
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 6
+            }
+        ],
+        "outputs": [
+            {
+                "id": "hydrogen_fluoride",
+                "name": "Hydrogen Fluoride",
+                "quantity": 8
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 2
+            }
+        ]
+    },
+    "food_pack_assembly_eggs": {
+        "id": "food_pack_assembly_eggs",
+        "name": "Food Pack Assembly (Eggs)",
+        "machine": "assembly_electric_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "eggs",
+                "name": "Eggs",
+                "quantity": 2
+            },
+            {
+                "id": "bread",
+                "name": "Bread",
+                "quantity": 4
+            },
+            {
+                "id": "snack",
+                "name": "Snack",
+                "quantity": 6
+            }
+        ],
+        "outputs": [
+            {
+                "id": "food_pack",
+                "name": "Food Pack",
+                "quantity": 4
+            }
+        ]
+    },
+    "food_pack_assembly_meat": {
+        "id": "food_pack_assembly_meat",
+        "name": "Food Pack Assembly (Meat)",
+        "machine": "assembly_electric_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "meat",
+                "name": "Meat",
+                "quantity": 2
+            },
+            {
+                "id": "bread",
+                "name": "Bread",
+                "quantity": 4
+            },
+            {
+                "id": "snack",
+                "name": "Snack",
+                "quantity": 6
+            }
+        ],
+        "outputs": [
+            {
+                "id": "food_pack",
+                "name": "Food Pack",
+                "quantity": 4
+            }
+        ]
+    },
+    "fuel_gas_disposal": {
+        "id": "fuel_gas_disposal",
+        "name": "Fuel Gas Disposal",
+        "machine": "flare",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "fuel_gas",
+                "name": "Fuel Gas",
+                "quantity": 16
+            }
+        ],
+        "outputs": [
+            {
+                "id": "air_pollution",
+                "name": "Air Pollution",
+                "quantity": 4
+            }
+        ]
+    },
+    "fuel_transesterification": {
+        "id": "fuel_transesterification",
+        "name": "Fuel Transesterification",
+        "machine": "chemical_plant",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "ethanol",
+                "name": "Ethanol",
+                "quantity": 5
+            },
+            {
+                "id": "cooking_oil",
+                "name": "Cooking Oil",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "diesel",
+                "name": "Diesel",
+                "quantity": 18
+            }
+        ]
+    },
+    "fuel_transesterification_2": {
+        "id": "fuel_transesterification_2",
+        "name": "Fuel Transesterification",
+        "machine": "chemical_plant_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "ethanol",
+                "name": "Ethanol",
+                "quantity": 5
+            },
+            {
+                "id": "cooking_oil",
+                "name": "Cooking Oil",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "diesel",
+                "name": "Diesel",
+                "quantity": 18
+            }
+        ]
+    },
+    "fuelgas_reforming": {
+        "id": "fuelgas_reforming",
+        "name": "FuelGas Reforming",
+        "machine": "cracking_unit",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "fuel_gas",
+                "name": "Fuel Gas",
+                "quantity": 12
+            },
+            {
+                "id": "oxygen",
+                "name": "Oxygen",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "diesel",
+                "name": "Diesel",
+                "quantity": 6
+            },
+            {
+                "id": "carbon_dioxide",
+                "name": "Carbon Dioxide",
+                "quantity": 12
+            }
+        ]
+    },
+    "fuelgas_synthesis": {
+        "id": "fuelgas_synthesis",
+        "name": "FuelGas Synthesis",
+        "machine": "chemical_plant_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "hydrogen",
+                "name": "Hydrogen",
+                "quantity": 8
+            },
+            {
+                "id": "carbon_dioxide",
+                "name": "Carbon Dioxide",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "fuel_gas",
+                "name": "Fuel Gas",
+                "quantity": 8
+            }
+        ]
+    },
+    "glass_broken_smelting": {
+        "id": "glass_broken_smelting",
+        "name": "Glass Broken Smelting",
+        "machine": "blast_furnace_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "broken_glass",
+                "name": "Broken Glass",
+                "quantity": 24
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 5
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_glass",
+                "name": "Molten Glass",
+                "quantity": 16
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 10
+            }
+        ]
+    },
+    "glass_broken_smelting_2": {
+        "id": "glass_broken_smelting_2",
+        "name": "Glass Broken Smelting",
+        "machine": "blast_furnace",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "broken_glass",
+                "name": "Broken Glass",
+                "quantity": 12
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 3
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_glass",
+                "name": "Molten Glass",
+                "quantity": 8
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 6
+            }
+        ]
+    },
+    "glass_casting": {
+        "id": "glass_casting",
+        "name": "Glass Casting",
+        "machine": "glass_maker",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "molten_glass",
+                "name": "Molten Glass",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 8
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 2
+            }
+        ]
+    },
+    "glass_casting_2": {
+        "id": "glass_casting_2",
+        "name": "Glass Casting",
+        "machine": "glass_maker_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "molten_glass",
+                "name": "Molten Glass",
+                "quantity": 16
+            }
+        ],
+        "outputs": [
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 24
+            }
+        ]
+    },
+    "glass_mix_mixing": {
+        "id": "glass_mix_mixing",
+        "name": "Glass Mix Mixing",
+        "machine": "mixer",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "sand",
+                "name": "Sand",
+                "quantity": 16
+            },
+            {
+                "id": "limestone",
+                "name": "Limestone",
+                "quantity": 4
+            },
+            {
+                "id": "salt",
+                "name": "Salt",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "glass_mix",
+                "name": "Glass Mix",
+                "quantity": 12
+            }
+        ]
+    },
+    "glass_mix_mixing_2": {
+        "id": "glass_mix_mixing_2",
+        "name": "Glass Mix Mixing",
+        "machine": "mixer",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "sand",
+                "name": "Sand",
+                "quantity": 16
+            },
+            {
+                "id": "limestone",
+                "name": "Limestone",
+                "quantity": 4
+            },
+            {
+                "id": "salt",
+                "name": "Salt",
+                "quantity": 4
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "glass_mix",
+                "name": "Glass Mix",
+                "quantity": 16
+            }
+        ]
+    },
+    "glass_smelting": {
+        "id": "glass_smelting",
+        "name": "Glass Smelting",
+        "machine": "blast_furnace_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "glass_mix",
+                "name": "Glass Mix",
+                "quantity": 16
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 5
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_glass",
+                "name": "Molten Glass",
+                "quantity": 16
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 4
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 12
+            }
+        ]
+    },
+    "glass_smelting_2": {
+        "id": "glass_smelting_2",
+        "name": "Glass Smelting",
+        "machine": "blast_furnace",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "glass_mix",
+                "name": "Glass Mix",
+                "quantity": 8
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 3
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_glass",
+                "name": "Molten Glass",
+                "quantity": 8
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 3
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 8
+            }
+        ]
+    },
+    "gold_ore_crushing": {
+        "id": "gold_ore_crushing",
+        "name": "Gold Ore Crushing",
+        "machine": "crusher",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "gold_ore",
+                "name": "Gold Ore",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "gold_ore_crushed",
+                "name": "Gold Ore Crushed",
+                "quantity": 12
+            }
+        ]
+    },
+    "gold_ore_milling": {
+        "id": "gold_ore_milling",
+        "name": "Gold Ore Milling",
+        "machine": "crusher",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "gold_ore_crushed",
+                "name": "Gold Ore Crushed",
+                "quantity": 24
+            }
+        ],
+        "outputs": [
+            {
+                "id": "gold_ore_powder",
+                "name": "Gold Ore Powder",
+                "quantity": 24
+            }
+        ]
+    },
+    "gold_settling": {
+        "id": "gold_settling",
+        "name": "Gold Settling",
+        "machine": "settling_tank",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "gold_ore_powder",
+                "name": "Gold Ore Powder",
+                "quantity": 24
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "gold_ore_concentrate",
+                "name": "Gold Ore Concentrate",
+                "quantity": 12
+            },
+            {
+                "id": "toxic_slurry",
+                "name": "Toxic Slurry",
+                "quantity": 12
+            }
+        ]
+    },
+    "gold_smelting": {
+        "id": "gold_smelting",
+        "name": "Gold Smelting",
+        "machine": "gold_furnace",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "gold_ore_concentrate",
+                "name": "Gold Ore Concentrate",
+                "quantity": 6
+            },
+            {
+                "id": "sand",
+                "name": "Sand",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "gold",
+                "name": "Gold",
+                "quantity": 3
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 6
+            }
+        ]
+    },
+    "gold_smelting_2": {
+        "id": "gold_smelting_2",
+        "name": "Gold Smelting",
+        "machine": "gold_furnace",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "gold_scrap",
+                "name": "Gold Scrap",
+                "quantity": 3
+            }
+        ],
+        "outputs": [
+            {
+                "id": "gold",
+                "name": "Gold",
+                "quantity": 3
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 3
+            }
+        ]
+    },
+    "graphite_production": {
+        "id": "graphite_production",
+        "name": "Graphite Production",
+        "machine": "chemical_plant_ii",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 4
+            },
+            {
+                "id": "chlorine",
+                "name": "Chlorine",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "graphite",
+                "name": "Graphite",
+                "quantity": 8
+            },
+            {
+                "id": "sour_water",
+                "name": "Sour Water",
+                "quantity": 4
+            }
+        ]
+    },
+    "graphite_production_2": {
+        "id": "graphite_production_2",
+        "name": "Graphite Production",
+        "machine": "chemical_plant_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "carbon_dioxide",
+                "name": "Carbon Dioxide",
+                "quantity": 24
+            }
+        ],
+        "outputs": [
+            {
+                "id": "graphite",
+                "name": "Graphite",
+                "quantity": 1
+            }
+        ]
+    },
+    "gravel_crushing": {
+        "id": "gravel_crushing",
+        "name": "Gravel Crushing",
+        "machine": "crusher",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "gravel",
+                "name": "Gravel",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "sand",
+                "name": "Sand",
+                "quantity": 8
+            }
+        ]
+    },
+    "heavy_distillate_refining": {
+        "id": "heavy_distillate_refining",
+        "name": "Heavy Distillate Refining",
+        "machine": "distillation_stage_iii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "light_oil",
+                "name": "Light Oil",
+                "quantity": 4
+            },
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "naphtha",
+                "name": "Naphtha",
+                "quantity": 4
+            },
+            {
+                "id": "fuel_gas",
+                "name": "Fuel Gas",
+                "quantity": 6
+            }
+        ]
+    },
+    "heavy_oil_disposal": {
+        "id": "heavy_oil_disposal",
+        "name": "Heavy Oil Disposal",
+        "machine": "flare",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "heavy_oil",
+                "name": "Heavy Oil",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "air_pollution",
+                "name": "Air Pollution",
+                "quantity": 10
+            }
+        ]
+    },
+    "heavyoil_cracking": {
+        "id": "heavyoil_cracking",
+        "name": "HeavyOil Cracking",
+        "machine": "cracking_unit",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "heavy_oil",
+                "name": "Heavy Oil",
+                "quantity": 4
+            },
+            {
+                "id": "hydrogen",
+                "name": "Hydrogen",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "diesel",
+                "name": "Diesel",
+                "quantity": 8
+            },
+            {
+                "id": "fuel_gas",
+                "name": "Fuel Gas",
+                "quantity": 2
+            }
+        ]
+    },
+    "heavyoil_cracking_2": {
+        "id": "heavyoil_cracking_2",
+        "name": "HeavyOil Cracking",
+        "machine": "cracking_unit",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "heavy_oil",
+                "name": "Heavy Oil",
+                "quantity": 4
+            },
+            {
+                "id": "hydrogen",
+                "name": "Hydrogen",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "naphtha",
+                "name": "Naphtha",
+                "quantity": 6
+            },
+            {
+                "id": "fuel_gas",
+                "name": "Fuel Gas",
+                "quantity": 4
+            }
+        ]
+    },
+    "hi-press_steam_condensation": {
+        "id": "hi-press_steam_condensation",
+        "name": "Hi-press Steam Condensation",
+        "machine": "cooling_tower",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 2
+            }
+        ]
+    },
+    "hi-press_steam_condensation_2": {
+        "id": "hi-press_steam_condensation_2",
+        "name": "Hi-press Steam Condensation",
+        "machine": "cooling_tower_large",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 16
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 12
+            }
+        ]
+    },
+    "household_appliances_assembly_t1": {
+        "id": "household_appliances_assembly_t1",
+        "name": "Household Appliances Assembly (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 8
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "household_appliances",
+                "name": "Household Appliances",
+                "quantity": 8
+            }
+        ]
+    },
+    "household_appliances_assembly_t2": {
+        "id": "household_appliances_assembly_t2",
+        "name": "Household Appliances Assembly (T2)",
+        "machine": "assembly_robotic",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 8
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "household_appliances",
+                "name": "Household Appliances",
+                "quantity": 8
+            }
+        ]
+    },
+    "household_appliances_assembly_t3": {
+        "id": "household_appliances_assembly_t3",
+        "name": "Household Appliances Assembly (T3)",
+        "machine": "assembly_robotic_ii",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 8
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "household_appliances",
+                "name": "Household Appliances",
+                "quantity": 8
+            }
+        ]
+    },
+    "household_goods_assembly_t1": {
+        "id": "household_goods_assembly_t1",
+        "name": "Household Goods Assembly (T1)",
+        "machine": "assembly_electric",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 10
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 2
+            },
+            {
+                "id": "wood",
+                "name": "Wood",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "household_goods",
+                "name": "Household Goods",
+                "quantity": 8
+            }
+        ]
+    },
+    "household_goods_assembly_t2": {
+        "id": "household_goods_assembly_t2",
+        "name": "Household Goods Assembly (T2)",
+        "machine": "assembly_electric_ii",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 10
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 2
+            },
+            {
+                "id": "wood",
+                "name": "Wood",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "household_goods",
+                "name": "Household Goods",
+                "quantity": 8
+            }
+        ]
+    },
+    "household_goods_assembly_t3": {
+        "id": "household_goods_assembly_t3",
+        "name": "Household Goods Assembly (T3)",
+        "machine": "assembly_robotic",
+        "duration": 15,
+        "inputs": [
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 10
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 2
+            },
+            {
+                "id": "wood",
+                "name": "Wood",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "household_goods",
+                "name": "Household Goods",
+                "quantity": 8
+            }
+        ]
+    },
+    "hydrogen_disposal": {
+        "id": "hydrogen_disposal",
+        "name": "Hydrogen Disposal",
+        "machine": "flare",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "hydrogen",
+                "name": "Hydrogen",
+                "quantity": 16
+            }
+        ],
+        "outputs": []
+    },
+    "hydrogen_reforming": {
+        "id": "hydrogen_reforming",
+        "name": "Hydrogen Reforming",
+        "machine": "hydrogen_reformer",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "fuel_gas",
+                "name": "Fuel Gas",
+                "quantity": 12
+            },
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "hydrogen",
+                "name": "Hydrogen",
+                "quantity": 12
+            },
+            {
+                "id": "carbon_dioxide",
+                "name": "Carbon Dioxide",
+                "quantity": 12
+            }
+        ]
+    },
+    "iron_casting": {
+        "id": "iron_casting",
+        "name": "Iron Casting",
+        "machine": "metal_caster",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "molten_iron",
+                "name": "Molten Iron",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 8
+            }
+        ]
+    },
+    "iron_casting_2": {
+        "id": "iron_casting_2",
+        "name": "Iron Casting",
+        "machine": "metal_caster_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "molten_iron",
+                "name": "Molten Iron",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 8
+            }
+        ]
+    },
+    "iron_ore_crushing": {
+        "id": "iron_ore_crushing",
+        "name": "Iron Ore Crushing",
+        "machine": "crusher",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "iron_ore",
+                "name": "Iron Ore",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "iron_ore_crushed",
+                "name": "Iron Ore Crushed",
+                "quantity": 12
+            }
+        ]
+    },
+    "iron_scrap_smelting": {
+        "id": "iron_scrap_smelting",
+        "name": "Iron Scrap Smelting",
+        "machine": "blast_furnace_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "iron_scrap",
+                "name": "Iron Scrap",
+                "quantity": 16
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 5
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_iron",
+                "name": "Molten Iron",
+                "quantity": 16
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 10
+            }
+        ]
+    },
+    "iron_scrap_smelting_2": {
+        "id": "iron_scrap_smelting_2",
+        "name": "Iron Scrap Smelting",
+        "machine": "blast_furnace",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "iron_scrap",
+                "name": "Iron Scrap",
+                "quantity": 8
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 3
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_iron",
+                "name": "Molten Iron",
+                "quantity": 8
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 6
+            }
+        ]
+    },
+    "iron_scrap_smelting_arc": {
+        "id": "iron_scrap_smelting_arc",
+        "name": "Iron Scrap Smelting (Arc)",
+        "machine": "arc_furnace_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "iron_scrap",
+                "name": "Iron Scrap",
+                "quantity": 16
+            },
+            {
+                "id": "graphite",
+                "name": "Graphite",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_iron",
+                "name": "Molten Iron",
+                "quantity": 16
+            },
+            {
+                "id": "steam_lo",
+                "name": "Steam Lo",
+                "quantity": 4
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 2
+            }
+        ]
+    },
+    "iron_smelting": {
+        "id": "iron_smelting",
+        "name": "Iron Smelting",
+        "machine": "blast_furnace",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "iron_ore",
+                "name": "Iron Ore",
+                "quantity": 8
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 3
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_iron",
+                "name": "Molten Iron",
+                "quantity": 8
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 4
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 8
+            }
+        ]
+    },
+    "iron_smelting_arc": {
+        "id": "iron_smelting_arc",
+        "name": "Iron Smelting (Arc)",
+        "machine": "arc_furnace_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "iron_ore_crushed",
+                "name": "Iron Ore Crushed",
+                "quantity": 12
+            },
+            {
+                "id": "limestone",
+                "name": "Limestone",
+                "quantity": 1
+            },
+            {
+                "id": "graphite",
+                "name": "Graphite",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_iron",
+                "name": "Molten Iron",
+                "quantity": 16
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 6
+            },
+            {
+                "id": "steam_lo",
+                "name": "Steam Lo",
+                "quantity": 4
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 4
+            }
+        ]
+    },
+    "iron_smelting_lime": {
+        "id": "iron_smelting_lime",
+        "name": "Iron Smelting (Lime)",
+        "machine": "blast_furnace_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "iron_ore_crushed",
+                "name": "Iron Ore Crushed",
+                "quantity": 12
+            },
+            {
+                "id": "limestone",
+                "name": "Limestone",
+                "quantity": 1
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 5
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_iron",
+                "name": "Molten Iron",
+                "quantity": 16
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 6
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 12
+            }
+        ]
+    },
+    "lab_equipment_2_assembly_t2": {
+        "id": "lab_equipment_2_assembly_t2",
+        "name": "Lab Equipment 2 Assembly (T2)",
+        "machine": "assembly_electric_ii",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "lab_equipment_ii",
+                "name": "Lab Equipment II",
+                "quantity": 8
+            },
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "lab_equipment_iii",
+                "name": "Lab Equipment III",
+                "quantity": 4
+            }
+        ]
+    },
+    "lab_equipment_2_assembly_t3": {
+        "id": "lab_equipment_2_assembly_t3",
+        "name": "Lab Equipment 2 Assembly (T3)",
+        "machine": "assembly_robotic",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "lab_equipment_ii",
+                "name": "Lab Equipment II",
+                "quantity": 8
+            },
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "lab_equipment_iii",
+                "name": "Lab Equipment III",
+                "quantity": 4
+            }
+        ]
+    },
+    "lab_equipment_4_assembly_t2": {
+        "id": "lab_equipment_4_assembly_t2",
+        "name": "Lab Equipment 4 Assembly (T2)",
+        "machine": "assembly_electric_ii",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "lab_equipment_iii",
+                "name": "Lab Equipment III",
+                "quantity": 8
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "lab_equipment_iv",
+                "name": "Lab Equipment IV",
+                "quantity": 4
+            }
+        ]
+    },
+    "lab_equipment_4_assembly_t3": {
+        "id": "lab_equipment_4_assembly_t3",
+        "name": "Lab Equipment 4 Assembly (T3)",
+        "machine": "assembly_robotic",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "lab_equipment_iii",
+                "name": "Lab Equipment III",
+                "quantity": 8
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "lab_equipment_iv",
+                "name": "Lab Equipment IV",
+                "quantity": 4
+            }
+        ]
+    },
+    "lab_equipment_assembly_t1": {
+        "id": "lab_equipment_assembly_t1",
+        "name": "Lab Equipment Assembly (T1)",
+        "machine": "assembly_electric",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 4
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "lab_equipment",
+                "name": "Lab Equipment",
+                "quantity": 8
+            }
+        ]
+    },
+    "lab_equipment_assembly_t1_2": {
+        "id": "lab_equipment_assembly_t1_2",
+        "name": "Lab Equipment Assembly (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "lab_equipment",
+                "name": "Lab Equipment",
+                "quantity": 8
+            },
+            {
+                "id": "liquid_nitrogen",
+                "name": "Liquid Nitrogen",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "lab_equipment_ii",
+                "name": "Lab Equipment II",
+                "quantity": 4
+            }
+        ]
+    },
+    "lab_equipment_assembly_t2": {
+        "id": "lab_equipment_assembly_t2",
+        "name": "Lab Equipment Assembly (T2)",
+        "machine": "assembly_electric_ii",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 4
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "lab_equipment",
+                "name": "Lab Equipment",
+                "quantity": 8
+            }
+        ]
+    },
+    "lab_equipment_assembly_t2_2": {
+        "id": "lab_equipment_assembly_t2_2",
+        "name": "Lab Equipment Assembly (T2)",
+        "machine": "assembly_robotic",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "lab_equipment",
+                "name": "Lab Equipment",
+                "quantity": 8
+            },
+            {
+                "id": "liquid_nitrogen",
+                "name": "Liquid Nitrogen",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "lab_equipment_ii",
+                "name": "Lab Equipment II",
+                "quantity": 4
+            }
+        ]
+    },
+    "lab_equipment_assembly_t3": {
+        "id": "lab_equipment_assembly_t3",
+        "name": "Lab Equipment Assembly (T3)",
+        "machine": "assembly_robotic",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 8
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "lab_equipment",
+                "name": "Lab Equipment",
+                "quantity": 16
+            }
+        ]
+    },
+    "light_oil_disposal": {
+        "id": "light_oil_disposal",
+        "name": "Light Oil Disposal",
+        "machine": "flare",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "light_oil",
+                "name": "Light Oil",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "air_pollution",
+                "name": "Air Pollution",
+                "quantity": 8
+            }
+        ]
+    },
+    "liquid_nitrogen_production": {
+        "id": "liquid_nitrogen_production",
+        "name": "Liquid Nitrogen Production",
+        "machine": "chemical_plant",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "nitrogen",
+                "name": "Nitrogen",
+                "quantity": 6
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "liquid_nitrogen",
+                "name": "Liquid Nitrogen",
+                "quantity": 4
+            }
+        ]
+    },
+    "liquid_nitrogen_production_2": {
+        "id": "liquid_nitrogen_production_2",
+        "name": "Liquid Nitrogen Production",
+        "machine": "chemical_plant_ii",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "nitrogen",
+                "name": "Nitrogen",
+                "quantity": 6
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "liquid_nitrogen",
+                "name": "Liquid Nitrogen",
+                "quantity": 4
+            }
+        ]
+    },
+    "lo-press_steam_condensation": {
+        "id": "lo-press_steam_condensation",
+        "name": "Lo-press Steam Condensation",
+        "machine": "cooling_tower",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "steam_lo",
+                "name": "Steam Lo",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 2
+            }
+        ]
+    },
+    "lo-press_steam_condensation_2": {
+        "id": "lo-press_steam_condensation_2",
+        "name": "Lo-press Steam Condensation",
+        "machine": "cooling_tower_large",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "steam_lo",
+                "name": "Steam Lo",
+                "quantity": 16
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 12
+            }
+        ]
+    },
+    "maintenance_i": {
+        "id": "maintenance_i",
+        "name": "Maintenance I",
+        "machine": "maintenance_depot_basic",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 2
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "maintenance_i",
+                "name": "Maintenance I",
+                "quantity": 35
+            }
+        ]
+    },
+    "maintenance_i_2": {
+        "id": "maintenance_i_2",
+        "name": "Maintenance I",
+        "machine": "maintenance_depot",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 8
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "maintenance_i",
+                "name": "Maintenance I",
+                "quantity": 160
+            }
+        ]
+    },
+    "maintenance_ii": {
+        "id": "maintenance_ii",
+        "name": "Maintenance II",
+        "machine": "maintenance_ii_depot",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 4
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "maintenance_ii",
+                "name": "Maintenance II",
+                "quantity": 80
+            }
+        ]
+    },
+    "maintenance_ii_2": {
+        "id": "maintenance_ii_2",
+        "name": "Maintenance II",
+        "machine": "maintenance_ii_depot",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 4
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "maintenance_ii",
+                "name": "Maintenance II",
+                "quantity": 80
+            },
+            {
+                "id": "recyclables",
+                "name": "Recyclables",
+                "quantity": 4
+            }
+        ]
+    },
+    "maintenance_iii": {
+        "id": "maintenance_iii",
+        "name": "Maintenance III",
+        "machine": "maintenance_iii_depot",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 2
+            },
+            {
+                "id": "electronics_iii",
+                "name": "Electronics III",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "maintenance_iii",
+                "name": "Maintenance III",
+                "quantity": 60
+            }
+        ]
+    },
+    "maintenance_iii_2": {
+        "id": "maintenance_iii_2",
+        "name": "Maintenance III",
+        "machine": "maintenance_iii_depot",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 2
+            },
+            {
+                "id": "electronics_iii",
+                "name": "Electronics III",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "maintenance_iii",
+                "name": "Maintenance III",
+                "quantity": 60
+            },
+            {
+                "id": "recyclables",
+                "name": "Recyclables",
+                "quantity": 4
+            }
+        ]
+    },
+    "meat_processing": {
+        "id": "meat_processing",
+        "name": "Meat Processing",
+        "machine": "food_processor",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "chicken_carcass",
+                "name": "Chicken Carcass",
+                "quantity": 10
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 3
+            },
+            {
+                "id": "salt",
+                "name": "Salt",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "meat",
+                "name": "Meat",
+                "quantity": 5
+            },
+            {
+                "id": "meat_trimmings",
+                "name": "Meat Trimmings",
+                "quantity": 2
+            }
+        ]
+    },
+    "mech._parts_assembly_t1": {
+        "id": "mech._parts_assembly_t1",
+        "name": "Mech. Parts Assembly (T1)",
+        "machine": "assembly_manual",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 5
+            }
+        ],
+        "outputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 4
+            }
+        ]
+    },
+    "mech._parts_assembly_t2": {
+        "id": "mech._parts_assembly_t2",
+        "name": "Mech. Parts Assembly (T2)",
+        "machine": "assembly_electric",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 5
+            }
+        ],
+        "outputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 4
+            }
+        ]
+    },
+    "mech._parts_assembly_t3-1": {
+        "id": "mech._parts_assembly_t3-1",
+        "name": "Mech. Parts Assembly (T3-1)",
+        "machine": "assembly_electric_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 5
+            }
+        ],
+        "outputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 4
+            }
+        ]
+    },
+    "mech._parts_assembly_t3-2": {
+        "id": "mech._parts_assembly_t3-2",
+        "name": "Mech. Parts Assembly (T3-2)",
+        "machine": "assembly_electric_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 8
+            }
+        ]
+    },
+    "mech._parts_assembly_t4": {
+        "id": "mech._parts_assembly_t4",
+        "name": "Mech. Parts Assembly (T4)",
+        "machine": "assembly_robotic",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 8
+            }
+        ]
+    },
+    "medical_equipment_assembly_t1": {
+        "id": "medical_equipment_assembly_t1",
+        "name": "Medical Equipment Assembly (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 4
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "medical_equipment",
+                "name": "Medical Equipment",
+                "quantity": 4
+            }
+        ]
+    },
+    "medical_equipment_assembly_t2": {
+        "id": "medical_equipment_assembly_t2",
+        "name": "Medical Equipment Assembly (T2)",
+        "machine": "assembly_robotic",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 4
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "medical_equipment",
+                "name": "Medical Equipment",
+                "quantity": 4
+            }
+        ]
+    },
+    "medical_supplies_assembly_t1": {
+        "id": "medical_supplies_assembly_t1",
+        "name": "Medical Supplies Assembly (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "medical_equipment",
+                "name": "Medical Equipment",
+                "quantity": 4
+            },
+            {
+                "id": "disinfectant",
+                "name": "Disinfectant",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "medical_supplies",
+                "name": "Medical Supplies",
+                "quantity": 8
+            }
+        ]
+    },
+    "medical_supplies_assembly_t1_2": {
+        "id": "medical_supplies_assembly_t1_2",
+        "name": "Medical Supplies Assembly (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "medical_supplies",
+                "name": "Medical Supplies",
+                "quantity": 8
+            },
+            {
+                "id": "antibiotics",
+                "name": "Antibiotics",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "medical_supplies_ii",
+                "name": "Medical Supplies II",
+                "quantity": 8
+            }
+        ]
+    },
+    "medical_supplies_assembly_t2": {
+        "id": "medical_supplies_assembly_t2",
+        "name": "Medical Supplies Assembly (T2)",
+        "machine": "assembly_robotic",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "medical_equipment",
+                "name": "Medical Equipment",
+                "quantity": 4
+            },
+            {
+                "id": "disinfectant",
+                "name": "Disinfectant",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "medical_supplies",
+                "name": "Medical Supplies",
+                "quantity": 8
+            }
+        ]
+    },
+    "medical_supplies_assembly_t2_2": {
+        "id": "medical_supplies_assembly_t2_2",
+        "name": "Medical Supplies Assembly (T2)",
+        "machine": "assembly_robotic",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "medical_supplies",
+                "name": "Medical Supplies",
+                "quantity": 8
+            },
+            {
+                "id": "antibiotics",
+                "name": "Antibiotics",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "medical_supplies_ii",
+                "name": "Medical Supplies II",
+                "quantity": 8
+            }
+        ]
+    },
+    "medical_supplies_iii_assembly_t1": {
+        "id": "medical_supplies_iii_assembly_t1",
+        "name": "Medical Supplies III Assembly (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "medical_supplies_ii",
+                "name": "Medical Supplies II",
+                "quantity": 8
+            },
+            {
+                "id": "anesthetics",
+                "name": "Anesthetics",
+                "quantity": 4
+            },
+            {
+                "id": "morphine",
+                "name": "Morphine",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "medical_supplies_iii",
+                "name": "Medical Supplies III",
+                "quantity": 8
+            }
+        ]
+    },
+    "medical_supplies_iii_assembly_t2": {
+        "id": "medical_supplies_iii_assembly_t2",
+        "name": "Medical Supplies III Assembly (T2)",
+        "machine": "assembly_robotic",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "medical_supplies_ii",
+                "name": "Medical Supplies II",
+                "quantity": 8
+            },
+            {
+                "id": "anesthetics",
+                "name": "Anesthetics",
+                "quantity": 4
+            },
+            {
+                "id": "morphine",
+                "name": "Morphine",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "medical_supplies_iii",
+                "name": "Medical Supplies III",
+                "quantity": 8
+            }
+        ]
+    },
+    "microchip_manufacturing_final_stage": {
+        "id": "microchip_manufacturing_final_stage",
+        "name": "Microchip Manufacturing Final Stage",
+        "machine": "microchip_machine",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "microchips_stage_4_b",
+                "name": "Microchips Stage 4 B",
+                "quantity": 1
+            },
+            {
+                "id": "gold",
+                "name": "Gold",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips",
+                "name": "Microchips",
+                "quantity": 4
+            }
+        ]
+    },
+    "microchip_manufacturing_final_stage_2": {
+        "id": "microchip_manufacturing_final_stage_2",
+        "name": "Microchip Manufacturing Final Stage",
+        "machine": "microchip_machine_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "microchips_stage_4_b",
+                "name": "Microchips Stage 4 B",
+                "quantity": 1
+            },
+            {
+                "id": "gold",
+                "name": "Gold",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips",
+                "name": "Microchips",
+                "quantity": 4
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_1a": {
+        "id": "microchip_manufacturing_stage_1a",
+        "name": "Microchip Manufacturing Stage 1A",
+        "machine": "microchip_machine",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "silicon_wafer",
+                "name": "Silicon Wafer",
+                "quantity": 2
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_1_a",
+                "name": "Microchips Stage 1 A",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_1a_2": {
+        "id": "microchip_manufacturing_stage_1a_2",
+        "name": "Microchip Manufacturing Stage 1A",
+        "machine": "microchip_machine_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "silicon_wafer",
+                "name": "Silicon Wafer",
+                "quantity": 2
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_1_a",
+                "name": "Microchips Stage 1 A",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_1b": {
+        "id": "microchip_manufacturing_stage_1b",
+        "name": "Microchip Manufacturing Stage 1B",
+        "machine": "microchip_machine",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "microchips_stage_1_c",
+                "name": "Microchips Stage 1 C",
+                "quantity": 1
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_2_a",
+                "name": "Microchips Stage 2 A",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_1b_2": {
+        "id": "microchip_manufacturing_stage_1b_2",
+        "name": "Microchip Manufacturing Stage 1B",
+        "machine": "microchip_machine_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "microchips_stage_1_c",
+                "name": "Microchips Stage 1 C",
+                "quantity": 1
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_2_a",
+                "name": "Microchips Stage 2 A",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_1c": {
+        "id": "microchip_manufacturing_stage_1c",
+        "name": "Microchip Manufacturing Stage 1C",
+        "machine": "microchip_machine",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "microchips_stage_2_c",
+                "name": "Microchips Stage 2 C",
+                "quantity": 1
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_3_a",
+                "name": "Microchips Stage 3 A",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_1c_2": {
+        "id": "microchip_manufacturing_stage_1c_2",
+        "name": "Microchip Manufacturing Stage 1C",
+        "machine": "microchip_machine_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "microchips_stage_2_c",
+                "name": "Microchips Stage 2 C",
+                "quantity": 1
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_3_a",
+                "name": "Microchips Stage 3 A",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_1d": {
+        "id": "microchip_manufacturing_stage_1d",
+        "name": "Microchip Manufacturing Stage 1D",
+        "machine": "microchip_machine",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "microchips_stage_3_c",
+                "name": "Microchips Stage 3 C",
+                "quantity": 1
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_4_a",
+                "name": "Microchips Stage 4 A",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_1d_2": {
+        "id": "microchip_manufacturing_stage_1d_2",
+        "name": "Microchip Manufacturing Stage 1D",
+        "machine": "microchip_machine_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "microchips_stage_3_c",
+                "name": "Microchips Stage 3 C",
+                "quantity": 1
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_4_a",
+                "name": "Microchips Stage 4 A",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_2a": {
+        "id": "microchip_manufacturing_stage_2a",
+        "name": "Microchip Manufacturing Stage 2A",
+        "machine": "microchip_machine",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "microchips_stage_1_a",
+                "name": "Microchips Stage 1 A",
+                "quantity": 1
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 1
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_1_b",
+                "name": "Microchips Stage 1 B",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_2a_2": {
+        "id": "microchip_manufacturing_stage_2a_2",
+        "name": "Microchip Manufacturing Stage 2A",
+        "machine": "microchip_machine_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "microchips_stage_1_a",
+                "name": "Microchips Stage 1 A",
+                "quantity": 1
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 1
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_1_b",
+                "name": "Microchips Stage 1 B",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_2b": {
+        "id": "microchip_manufacturing_stage_2b",
+        "name": "Microchip Manufacturing Stage 2B",
+        "machine": "microchip_machine",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "microchips_stage_2_a",
+                "name": "Microchips Stage 2 A",
+                "quantity": 1
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 1
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_2_b",
+                "name": "Microchips Stage 2 B",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_2b_2": {
+        "id": "microchip_manufacturing_stage_2b_2",
+        "name": "Microchip Manufacturing Stage 2B",
+        "machine": "microchip_machine_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "microchips_stage_2_a",
+                "name": "Microchips Stage 2 A",
+                "quantity": 1
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 1
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_2_b",
+                "name": "Microchips Stage 2 B",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_2c": {
+        "id": "microchip_manufacturing_stage_2c",
+        "name": "Microchip Manufacturing Stage 2C",
+        "machine": "microchip_machine",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "microchips_stage_3_a",
+                "name": "Microchips Stage 3 A",
+                "quantity": 1
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 1
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_3_b",
+                "name": "Microchips Stage 3 B",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_2c_2": {
+        "id": "microchip_manufacturing_stage_2c_2",
+        "name": "Microchip Manufacturing Stage 2C",
+        "machine": "microchip_machine_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "microchips_stage_3_a",
+                "name": "Microchips Stage 3 A",
+                "quantity": 1
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 1
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_3_b",
+                "name": "Microchips Stage 3 B",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_2d": {
+        "id": "microchip_manufacturing_stage_2d",
+        "name": "Microchip Manufacturing Stage 2D",
+        "machine": "microchip_machine",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "microchips_stage_4_a",
+                "name": "Microchips Stage 4 A",
+                "quantity": 1
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 1
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_4_b",
+                "name": "Microchips Stage 4 B",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_2d_2": {
+        "id": "microchip_manufacturing_stage_2d_2",
+        "name": "Microchip Manufacturing Stage 2D",
+        "machine": "microchip_machine_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "microchips_stage_4_a",
+                "name": "Microchips Stage 4 A",
+                "quantity": 1
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 1
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_4_b",
+                "name": "Microchips Stage 4 B",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_3a": {
+        "id": "microchip_manufacturing_stage_3a",
+        "name": "Microchip Manufacturing Stage 3A",
+        "machine": "microchip_machine",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "microchips_stage_1_b",
+                "name": "Microchips Stage 1 B",
+                "quantity": 1
+            },
+            {
+                "id": "gold",
+                "name": "Gold",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_1_c",
+                "name": "Microchips Stage 1 C",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_3a_2": {
+        "id": "microchip_manufacturing_stage_3a_2",
+        "name": "Microchip Manufacturing Stage 3A",
+        "machine": "microchip_machine_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "microchips_stage_1_b",
+                "name": "Microchips Stage 1 B",
+                "quantity": 1
+            },
+            {
+                "id": "gold",
+                "name": "Gold",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_1_c",
+                "name": "Microchips Stage 1 C",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_3b": {
+        "id": "microchip_manufacturing_stage_3b",
+        "name": "Microchip Manufacturing Stage 3B",
+        "machine": "microchip_machine",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "microchips_stage_2_b",
+                "name": "Microchips Stage 2 B",
+                "quantity": 1
+            },
+            {
+                "id": "gold",
+                "name": "Gold",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_2_c",
+                "name": "Microchips Stage 2 C",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_3b_2": {
+        "id": "microchip_manufacturing_stage_3b_2",
+        "name": "Microchip Manufacturing Stage 3B",
+        "machine": "microchip_machine_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "microchips_stage_2_b",
+                "name": "Microchips Stage 2 B",
+                "quantity": 1
+            },
+            {
+                "id": "gold",
+                "name": "Gold",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_2_c",
+                "name": "Microchips Stage 2 C",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_3c": {
+        "id": "microchip_manufacturing_stage_3c",
+        "name": "Microchip Manufacturing Stage 3C",
+        "machine": "microchip_machine",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "microchips_stage_3_b",
+                "name": "Microchips Stage 3 B",
+                "quantity": 1
+            },
+            {
+                "id": "gold",
+                "name": "Gold",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_3_c",
+                "name": "Microchips Stage 3 C",
+                "quantity": 1
+            }
+        ]
+    },
+    "microchip_manufacturing_stage_3c_2": {
+        "id": "microchip_manufacturing_stage_3c_2",
+        "name": "Microchip Manufacturing Stage 3C",
+        "machine": "microchip_machine_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "microchips_stage_3_b",
+                "name": "Microchips Stage 3 B",
+                "quantity": 1
+            },
+            {
+                "id": "gold",
+                "name": "Gold",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "microchips_stage_3_c",
+                "name": "Microchips Stage 3 C",
+                "quantity": 1
+            }
+        ]
+    },
+    "morphine_production": {
+        "id": "morphine_production",
+        "name": "Morphine Production",
+        "machine": "chemical_plant_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "poppy",
+                "name": "Poppy",
+                "quantity": 4
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 2
+            },
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "morphine",
+                "name": "Morphine",
+                "quantity": 8
+            }
+        ]
+    },
+    "naphtha_disposal": {
+        "id": "naphtha_disposal",
+        "name": "Naphtha Disposal",
+        "machine": "flare",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "naphtha",
+                "name": "Naphtha",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "air_pollution",
+                "name": "Air Pollution",
+                "quantity": 8
+            }
+        ]
+    },
+    "naphtha_reforming": {
+        "id": "naphtha_reforming",
+        "name": "Naphtha Reforming",
+        "machine": "cracking_unit",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "naphtha",
+                "name": "Naphtha",
+                "quantity": 6
+            },
+            {
+                "id": "hydrogen",
+                "name": "Hydrogen",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "diesel",
+                "name": "Diesel",
+                "quantity": 8
+            },
+            {
+                "id": "fuel_gas",
+                "name": "Fuel Gas",
+                "quantity": 2
+            }
+        ]
+    },
+    "naphtha_reforming_2": {
+        "id": "naphtha_reforming_2",
+        "name": "Naphtha Reforming",
+        "machine": "cracking_unit",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "naphtha",
+                "name": "Naphtha",
+                "quantity": 8
+            },
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "fuel_gas",
+                "name": "Fuel Gas",
+                "quantity": 10
+            },
+            {
+                "id": "sour_water",
+                "name": "Sour Water",
+                "quantity": 2
+            }
+        ]
+    },
+    "nuclearreactor": {
+        "id": "nuclearreactor",
+        "name": "NuclearReactor",
+        "machine": "nuclear_reactor",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 288
+            },
+            {
+                "id": "uranium_rod",
+                "name": "Uranium Rod",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 288
+            },
+            {
+                "id": "spent_fuel",
+                "name": "Spent Fuel",
+                "quantity": 1
+            }
+        ]
+    },
+    "ocean_water_pumping": {
+        "id": "ocean_water_pumping",
+        "name": "Ocean Water Pumping",
+        "machine": "seawater_pump",
+        "duration": 10,
+        "inputs": [],
+        "outputs": [
+            {
+                "id": "seawater",
+                "name": "Seawater",
+                "quantity": 20
+            }
+        ]
+    },
+    "ocean_water_pumping_ii": {
+        "id": "ocean_water_pumping_ii",
+        "name": "Ocean Water Pumping II",
+        "machine": "seawater_pump_tall",
+        "duration": 10,
+        "inputs": [],
+        "outputs": [
+            {
+                "id": "seawater",
+                "name": "Seawater",
+                "quantity": 20
+            }
+        ]
+    },
+    "oil_pumping": {
+        "id": "oil_pumping",
+        "name": "Oil Pumping",
+        "machine": "oil_pump",
+        "duration": 20,
+        "inputs": [],
+        "outputs": [
+            {
+                "id": "crude_oil",
+                "name": "Crude Oil",
+                "quantity": 6
+            }
+        ]
+    },
+    "pcb_assembly_t1": {
+        "id": "pcb_assembly_t1",
+        "name": "PCB Assembly (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 2
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 2
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "pcb",
+                "name": "PCB",
+                "quantity": 4
+            }
+        ]
+    },
+    "pcb_assembly_t2": {
+        "id": "pcb_assembly_t2",
+        "name": "PCB Assembly (T2)",
+        "machine": "assembly_robotic",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 2
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 2
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "pcb",
+                "name": "PCB",
+                "quantity": 4
+            }
+        ]
+    },
+    "pcb_assembly_t3": {
+        "id": "pcb_assembly_t3",
+        "name": "PCB Assembly (T3)",
+        "machine": "assembly_robotic_ii",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 2
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 2
+            },
+            {
+                "id": "copper",
+                "name": "Copper",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "pcb",
+                "name": "PCB",
+                "quantity": 4
+            }
+        ]
+    },
+    "plastic_making": {
+        "id": "plastic_making",
+        "name": "Plastic Making",
+        "machine": "polymerization_plant",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "naphtha",
+                "name": "Naphtha",
+                "quantity": 4
+            },
+            {
+                "id": "chlorine",
+                "name": "Chlorine",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 16
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 8
+            }
+        ]
+    },
+    "plastic_making_2": {
+        "id": "plastic_making_2",
+        "name": "Plastic Making",
+        "machine": "polymerization_plant",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "ethanol",
+                "name": "Ethanol",
+                "quantity": 4
+            },
+            {
+                "id": "chlorine",
+                "name": "Chlorine",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 16
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 8
+            }
+        ]
+    },
+    "powergeneratort1": {
+        "id": "powergeneratort1",
+        "name": "PowerGeneratorT1",
+        "machine": "power_generator",
+        "duration": 0,
+        "inputs": [
+            {
+                "id": "mechanical_power",
+                "name": "Mechanical Power",
+                "quantity": 500
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electricity",
+                "name": "Electricity",
+                "quantity": 360
+            }
+        ]
+    },
+    "powergeneratort2": {
+        "id": "powergeneratort2",
+        "name": "PowerGeneratorT2",
+        "machine": "power_generator_ii",
+        "duration": 0,
+        "inputs": [
+            {
+                "id": "mechanical_power",
+                "name": "Mechanical Power",
+                "quantity": 3000
+            }
+        ],
+        "outputs": [
+            {
+                "id": "electricity",
+                "name": "Electricity",
+                "quantity": 3000
+            }
+        ]
+    },
+    "product_disposal": {
+        "id": "product_disposal",
+        "name": "Product Disposal",
+        "machine": "smoke_stack",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "steam_depleted",
+                "name": "Steam Depleted",
+                "quantity": 20
+            }
+        ],
+        "outputs": []
+    },
+    "product_disposal_2": {
+        "id": "product_disposal_2",
+        "name": "Product Disposal",
+        "machine": "smoke_stack",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 20
+            }
+        ],
+        "outputs": []
+    },
+    "research_lab_ii": {
+        "id": "research_lab_ii",
+        "name": "Research Lab II",
+        "machine": "research_lab_ii",
+        "duration": 15,
+        "inputs": [
+            {
+                "id": "lab_equipment",
+                "name": "Lab Equipment",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "recyclables",
+                "name": "Recyclables",
+                "quantity": 1
+            }
+        ]
+    },
+    "research_lab_iii": {
+        "id": "research_lab_iii",
+        "name": "Research Lab III",
+        "machine": "research_lab_iii",
+        "duration": 15,
+        "inputs": [
+            {
+                "id": "lab_equipment_ii",
+                "name": "Lab Equipment II",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "recyclables",
+                "name": "Recyclables",
+                "quantity": 2
+            }
+        ]
+    },
+    "research_lab_iv": {
+        "id": "research_lab_iv",
+        "name": "Research Lab IV",
+        "machine": "research_lab_iv",
+        "duration": 15,
+        "inputs": [
+            {
+                "id": "lab_equipment_iii",
+                "name": "Lab Equipment III",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "recyclables",
+                "name": "Recyclables",
+                "quantity": 3
+            }
+        ]
+    },
+    "research_lab_v": {
+        "id": "research_lab_v",
+        "name": "Research Lab V",
+        "machine": "research_lab_v",
+        "duration": 15,
+        "inputs": [
+            {
+                "id": "lab_equipment_iv",
+                "name": "Lab Equipment IV",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "recyclables",
+                "name": "Recyclables",
+                "quantity": 4
+            }
+        ]
+    },
+    "rock_crushing": {
+        "id": "rock_crushing",
+        "name": "Rock Crushing",
+        "machine": "crusher",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "rock",
+                "name": "Rock",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "gravel",
+                "name": "Gravel",
+                "quantity": 8
+            }
+        ]
+    },
+    "rubber_production": {
+        "id": "rubber_production",
+        "name": "Rubber Production",
+        "machine": "rubber_maker",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "naphtha",
+                "name": "Naphtha",
+                "quantity": 4
+            },
+            {
+                "id": "sulfur",
+                "name": "Sulfur",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "rubber",
+                "name": "Rubber",
+                "quantity": 6
+            }
+        ]
+    },
+    "rubber_production_alt": {
+        "id": "rubber_production_alt",
+        "name": "Rubber Production (Alt)",
+        "machine": "rubber_maker",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "diesel",
+                "name": "Diesel",
+                "quantity": 4
+            },
+            {
+                "id": "sulfur",
+                "name": "Sulfur",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "rubber",
+                "name": "Rubber",
+                "quantity": 6
+            }
+        ]
+    },
+    "rubber_production_coal": {
+        "id": "rubber_production_coal",
+        "name": "Rubber Production (Coal)",
+        "machine": "rubber_maker",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "naphtha",
+                "name": "Naphtha",
+                "quantity": 4
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "rubber",
+                "name": "Rubber",
+                "quantity": 6
+            },
+            {
+                "id": "waste_water",
+                "name": "Waste Water",
+                "quantity": 1
+            }
+        ]
+    },
+    "rubber_production_coal_alt": {
+        "id": "rubber_production_coal_alt",
+        "name": "Rubber Production (Coal) (Alt)",
+        "machine": "rubber_maker",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "diesel",
+                "name": "Diesel",
+                "quantity": 4
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "rubber",
+                "name": "Rubber",
+                "quantity": 6
+            },
+            {
+                "id": "waste_water",
+                "name": "Waste Water",
+                "quantity": 2
+            }
+        ]
+    },
+    "rubber_production_ethanol": {
+        "id": "rubber_production_ethanol",
+        "name": "Rubber Production (Ethanol)",
+        "machine": "rubber_maker",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "ethanol",
+                "name": "Ethanol",
+                "quantity": 4
+            },
+            {
+                "id": "sulfur",
+                "name": "Sulfur",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "rubber",
+                "name": "Rubber",
+                "quantity": 6
+            }
+        ]
+    },
+    "salt_making": {
+        "id": "salt_making",
+        "name": "Salt Making",
+        "machine": "evaporation_pond",
+        "duration": 80,
+        "inputs": [
+            {
+                "id": "seawater",
+                "name": "Seawater",
+                "quantity": 30
+            }
+        ],
+        "outputs": [
+            {
+                "id": "salt",
+                "name": "Salt",
+                "quantity": 8
+            }
+        ]
+    },
+    "salt_making_2": {
+        "id": "salt_making_2",
+        "name": "Salt Making",
+        "machine": "evaporation_pond",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "brine",
+                "name": "Brine",
+                "quantity": 16
+            }
+        ],
+        "outputs": [
+            {
+                "id": "salt",
+                "name": "Salt",
+                "quantity": 8
+            }
+        ]
+    },
+    "sausage_processing": {
+        "id": "sausage_processing",
+        "name": "Sausage Processing",
+        "machine": "food_processor",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "meat_trimmings",
+                "name": "Meat Trimmings",
+                "quantity": 8
+            },
+            {
+                "id": "flour",
+                "name": "Flour",
+                "quantity": 2
+            },
+            {
+                "id": "salt",
+                "name": "Salt",
+                "quantity": 3
+            }
+        ],
+        "outputs": [
+            {
+                "id": "sausage",
+                "name": "Sausage",
+                "quantity": 8
+            }
+        ]
+    },
+    "seawater_dumping": {
+        "id": "seawater_dumping",
+        "name": "Seawater Dumping",
+        "machine": "liquid_dump",
+        "duration": 2,
+        "inputs": [
+            {
+                "id": "seawater",
+                "name": "Seawater",
+                "quantity": 2
+            }
+        ],
+        "outputs": []
+    },
+    "server_assembly_t1": {
+        "id": "server_assembly_t1",
+        "name": "Server Assembly (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 160,
+        "inputs": [
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 1
+            },
+            {
+                "id": "electronics_iii",
+                "name": "Electronics III",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "server",
+                "name": "Server",
+                "quantity": 4
+            }
+        ]
+    },
+    "server_assembly_t2": {
+        "id": "server_assembly_t2",
+        "name": "Server Assembly (T2)",
+        "machine": "assembly_robotic",
+        "duration": 80,
+        "inputs": [
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 1
+            },
+            {
+                "id": "electronics_iii",
+                "name": "Electronics III",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "server",
+                "name": "Server",
+                "quantity": 4
+            }
+        ]
+    },
+    "server_assembly_t3": {
+        "id": "server_assembly_t3",
+        "name": "Server Assembly (T3)",
+        "machine": "assembly_robotic_ii",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 1
+            },
+            {
+                "id": "electronics_iii",
+                "name": "Electronics III",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "server",
+                "name": "Server",
+                "quantity": 4
+            }
+        ]
+    },
+    "silicon_crystallization": {
+        "id": "silicon_crystallization",
+        "name": "Silicon Crystallization",
+        "machine": "silicon_crystallizer",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "silicon_poly",
+                "name": "Silicon (Poly)",
+                "quantity": 18
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "silicon_wafer",
+                "name": "Silicon Wafer",
+                "quantity": 6
+            }
+        ]
+    },
+    "silicon_smelting_arc": {
+        "id": "silicon_smelting_arc",
+        "name": "Silicon Smelting (Arc)",
+        "machine": "arc_furnace",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "quartz",
+                "name": "Quartz",
+                "quantity": 8
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 2
+            },
+            {
+                "id": "graphite",
+                "name": "Graphite",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_silicon",
+                "name": "Molten Silicon",
+                "quantity": 8
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 3
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 6
+            }
+        ]
+    },
+    "silicon_smelting_arc_ii": {
+        "id": "silicon_smelting_arc_ii",
+        "name": "Silicon Smelting (Arc II)",
+        "machine": "arc_furnace_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "quartz",
+                "name": "Quartz",
+                "quantity": 16
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 4
+            },
+            {
+                "id": "graphite",
+                "name": "Graphite",
+                "quantity": 1
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_silicon",
+                "name": "Molten Silicon",
+                "quantity": 16
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 6
+            },
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 4
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 12
+            }
+        ]
+    },
+    "silicon_treatment": {
+        "id": "silicon_treatment",
+        "name": "Silicon Treatment",
+        "machine": "silicon_reactor",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "molten_silicon",
+                "name": "Molten Silicon",
+                "quantity": 4
+            },
+            {
+                "id": "hydrogen",
+                "name": "Hydrogen",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "silicon_poly",
+                "name": "Silicon (Poly)",
+                "quantity": 4
+            }
+        ]
+    },
+    "slag_crushing": {
+        "id": "slag_crushing",
+        "name": "Slag Crushing",
+        "machine": "crusher",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "slag_crushed",
+                "name": "Slag Crushed",
+                "quantity": 8
+            }
+        ]
+    },
+    "snack_production": {
+        "id": "snack_production",
+        "name": "Snack Production",
+        "machine": "food_processor",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "potato",
+                "name": "Potato",
+                "quantity": 8
+            },
+            {
+                "id": "salt",
+                "name": "Salt",
+                "quantity": 2
+            },
+            {
+                "id": "cooking_oil",
+                "name": "Cooking Oil",
+                "quantity": 1
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "snack",
+                "name": "Snack",
+                "quantity": 12
+            },
+            {
+                "id": "biomass",
+                "name": "Biomass",
+                "quantity": 1
+            }
+        ]
+    },
+    "snack_production_2": {
+        "id": "snack_production_2",
+        "name": "Snack Production",
+        "machine": "food_processor",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "corn",
+                "name": "Corn",
+                "quantity": 8
+            },
+            {
+                "id": "salt",
+                "name": "Salt",
+                "quantity": 2
+            },
+            {
+                "id": "cooking_oil",
+                "name": "Cooking Oil",
+                "quantity": 1
+            },
+            {
+                "id": "plastic",
+                "name": "Plastic",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "snack",
+                "name": "Snack",
+                "quantity": 16
+            },
+            {
+                "id": "biomass",
+                "name": "Biomass",
+                "quantity": 1
+            }
+        ]
+    },
+    "solar_cell_assembly": {
+        "id": "solar_cell_assembly",
+        "name": "Solar Cell Assembly",
+        "machine": "assembly_electric_ii",
+        "duration": 120,
+        "inputs": [
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 1
+            },
+            {
+                "id": "silicon_poly",
+                "name": "Silicon (Poly)",
+                "quantity": 12
+            },
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "solar_cell",
+                "name": "Solar Cell",
+                "quantity": 8
+            }
+        ]
+    },
+    "solar_cell_assembly_2": {
+        "id": "solar_cell_assembly_2",
+        "name": "Solar Cell Assembly",
+        "machine": "assembly_robotic",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 1
+            },
+            {
+                "id": "silicon_poly",
+                "name": "Silicon (Poly)",
+                "quantity": 12
+            },
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "solar_cell",
+                "name": "Solar Cell",
+                "quantity": 8
+            }
+        ]
+    },
+    "sour_water_dumping": {
+        "id": "sour_water_dumping",
+        "name": "Sour Water Dumping",
+        "machine": "liquid_dump",
+        "duration": 2,
+        "inputs": [
+            {
+                "id": "sour_water",
+                "name": "Sour Water",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water_pollution",
+                "name": "Water Pollution",
+                "quantity": 4
+            }
+        ]
+    },
+    "sour_water_stripping_recovery": {
+        "id": "sour_water_stripping_recovery",
+        "name": "Sour Water Stripping (Recovery)",
+        "machine": "sour_water_stripper",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "sour_water",
+                "name": "Sour Water",
+                "quantity": 12
+            },
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "sulfur",
+                "name": "Sulfur",
+                "quantity": 4
+            },
+            {
+                "id": "ammonia",
+                "name": "Ammonia",
+                "quantity": 4
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 8
+            }
+        ]
+    },
+    "soybean_milling": {
+        "id": "soybean_milling",
+        "name": "Soybean Milling",
+        "machine": "mill",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "soybean",
+                "name": "Soybean",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "cooking_oil",
+                "name": "Cooking Oil",
+                "quantity": 3
+            },
+            {
+                "id": "animal_feed",
+                "name": "Animal Feed",
+                "quantity": 4
+            }
+        ]
+    },
+    "steam_generation": {
+        "id": "steam_generation",
+        "name": "Steam Generation",
+        "machine": "boiler_coal",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 8
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 3
+            }
+        ],
+        "outputs": [
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 8
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 6
+            }
+        ]
+    },
+    "steam_generation_2": {
+        "id": "steam_generation_2",
+        "name": "Steam Generation",
+        "machine": "boiler_coal",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 8
+            },
+            {
+                "id": "biomass",
+                "name": "Biomass",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 8
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 4
+            }
+        ]
+    },
+    "steel_casting_cooled": {
+        "id": "steel_casting_cooled",
+        "name": "Steel Casting (Cooled)",
+        "machine": "cooled_caster",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "molten_steel",
+                "name": "Molten Steel",
+                "quantity": 8
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 8
+            }
+        ]
+    },
+    "steel_casting_cooled_2": {
+        "id": "steel_casting_cooled_2",
+        "name": "Steel Casting (Cooled)",
+        "machine": "cooled_caster_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "molten_steel",
+                "name": "Molten Steel",
+                "quantity": 8
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 8
+            }
+        ]
+    },
+    "steel_smelting": {
+        "id": "steel_smelting",
+        "name": "Steel Smelting",
+        "machine": "oxygen_furnace",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "molten_iron",
+                "name": "Molten Iron",
+                "quantity": 16
+            },
+            {
+                "id": "oxygen",
+                "name": "Oxygen",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_steel",
+                "name": "Molten Steel",
+                "quantity": 8
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 16
+            }
+        ]
+    },
+    "steel_smelting_2": {
+        "id": "steel_smelting_2",
+        "name": "Steel Smelting",
+        "machine": "oxygen_furnace_ii",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "molten_iron",
+                "name": "Molten Iron",
+                "quantity": 32
+            },
+            {
+                "id": "oxygen",
+                "name": "Oxygen",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "molten_steel",
+                "name": "Molten Steel",
+                "quantity": 16
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 24
+            }
+        ]
+    },
+    "sugar_refining_cane": {
+        "id": "sugar_refining_cane",
+        "name": "Sugar Refining (Cane)",
+        "machine": "food_processor",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "sugar_cane",
+                "name": "Sugar Cane",
+                "quantity": 10
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "sugar",
+                "name": "Sugar",
+                "quantity": 8
+            },
+            {
+                "id": "biomass",
+                "name": "Biomass",
+                "quantity": 2
+            }
+        ]
+    },
+    "sulfur_neutralization": {
+        "id": "sulfur_neutralization",
+        "name": "Sulfur Neutralization",
+        "machine": "mixer",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "sulfur",
+                "name": "Sulfur",
+                "quantity": 8
+            },
+            {
+                "id": "limestone",
+                "name": "Limestone",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 4
+            }
+        ]
+    },
+    "thermal_desalination": {
+        "id": "thermal_desalination",
+        "name": "Thermal Desalination",
+        "machine": "thermal_desalinator",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "seawater",
+                "name": "Seawater",
+                "quantity": 10
+            },
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 8
+            },
+            {
+                "id": "brine",
+                "name": "Brine",
+                "quantity": 4
+            }
+        ]
+    },
+    "thermal_desalination_2": {
+        "id": "thermal_desalination_2",
+        "name": "Thermal Desalination",
+        "machine": "thermal_desalinator",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "seawater",
+                "name": "Seawater",
+                "quantity": 7
+            },
+            {
+                "id": "steam_lo",
+                "name": "Steam Lo",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 8
+            },
+            {
+                "id": "brine",
+                "name": "Brine",
+                "quantity": 3
+            }
+        ]
+    },
+    "tofu_making": {
+        "id": "tofu_making",
+        "name": "Tofu Making",
+        "machine": "food_processor",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "soybean",
+                "name": "Soybean",
+                "quantity": 6
+            },
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 4
+            },
+            {
+                "id": "sulfur",
+                "name": "Sulfur",
+                "quantity": 1
+            },
+            {
+                "id": "limestone",
+                "name": "Limestone",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "tofu",
+                "name": "Tofu",
+                "quantity": 8
+            },
+            {
+                "id": "animal_feed",
+                "name": "Animal Feed",
+                "quantity": 3
+            }
+        ]
+    },
+    "toxic_slurry_dumping": {
+        "id": "toxic_slurry_dumping",
+        "name": "Toxic Slurry Dumping",
+        "machine": "liquid_dump",
+        "duration": 2,
+        "inputs": [
+            {
+                "id": "toxic_slurry",
+                "name": "Toxic Slurry",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water_pollution",
+                "name": "Water Pollution",
+                "quantity": 5
+            }
+        ]
+    },
+    "toxic_slurry_treatment": {
+        "id": "toxic_slurry_treatment",
+        "name": "Toxic Slurry Treatment",
+        "machine": "wastewater_treatment",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "toxic_slurry",
+                "name": "Toxic Slurry",
+                "quantity": 24
+            },
+            {
+                "id": "filter_media",
+                "name": "Filter Media",
+                "quantity": 2
+            },
+            {
+                "id": "brine",
+                "name": "Brine",
+                "quantity": 6
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 20
+            },
+            {
+                "id": "slag",
+                "name": "Slag",
+                "quantity": 6
+            }
+        ]
+    },
+    "turbinehighpress": {
+        "id": "turbinehighpress",
+        "name": "TurbineHighPress",
+        "machine": "high-pressure_turbine",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "mechanical_power",
+                "name": "Mechanical Power",
+                "quantity": 1000
+            },
+            {
+                "id": "steam_lo",
+                "name": "Steam Lo",
+                "quantity": 4
+            }
+        ]
+    },
+    "turbinehighpresst2": {
+        "id": "turbinehighpresst2",
+        "name": "TurbineHighPressT2",
+        "machine": "high-pressure_turbine_ii",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "steam_hi",
+                "name": "Steam Hi",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "mechanical_power",
+                "name": "Mechanical Power",
+                "quantity": 2000
+            },
+            {
+                "id": "steam_lo",
+                "name": "Steam Lo",
+                "quantity": 8
+            }
+        ]
+    },
+    "turbinelowpress": {
+        "id": "turbinelowpress",
+        "name": "TurbineLowPress",
+        "machine": "low-pressure_turbine",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "steam_lo",
+                "name": "Steam Lo",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "mechanical_power",
+                "name": "Mechanical Power",
+                "quantity": 1000
+            },
+            {
+                "id": "steam_depleted",
+                "name": "Steam Depleted",
+                "quantity": 8
+            }
+        ]
+    },
+    "turbinelowpresst2": {
+        "id": "turbinelowpresst2",
+        "name": "TurbineLowPressT2",
+        "machine": "low-pressure_turbine_ii",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "steam_lo",
+                "name": "Steam Lo",
+                "quantity": 16
+            }
+        ],
+        "outputs": [
+            {
+                "id": "mechanical_power",
+                "name": "Mechanical Power",
+                "quantity": 2000
+            },
+            {
+                "id": "steam_depleted",
+                "name": "Steam Depleted",
+                "quantity": 16
+            }
+        ]
+    },
+    "uranium_crushing": {
+        "id": "uranium_crushing",
+        "name": "Uranium Crushing",
+        "machine": "crusher",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "uranium_ore",
+                "name": "Uranium Ore",
+                "quantity": 12
+            }
+        ],
+        "outputs": [
+            {
+                "id": "uranium_ore_crushed",
+                "name": "Uranium Ore Crushed",
+                "quantity": 12
+            }
+        ]
+    },
+    "uranium_enrichment": {
+        "id": "uranium_enrichment",
+        "name": "Uranium Enrichment",
+        "machine": "enrichment_plant",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "yellow_cake",
+                "name": "Yellow Cake",
+                "quantity": 3
+            },
+            {
+                "id": "hydrogen_fluoride",
+                "name": "Hydrogen Fluoride",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "uranium_pellets",
+                "name": "Uranium Pellets",
+                "quantity": 3
+            }
+        ]
+    },
+    "uranium_leaching": {
+        "id": "uranium_leaching",
+        "name": "Uranium Leaching",
+        "machine": "settling_tank",
+        "duration": 60,
+        "inputs": [
+            {
+                "id": "uranium_ore_crushed",
+                "name": "Uranium Ore Crushed",
+                "quantity": 12
+            },
+            {
+                "id": "acid",
+                "name": "Acid",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "yellow_cake",
+                "name": "Yellow Cake",
+                "quantity": 6
+            },
+            {
+                "id": "toxic_slurry",
+                "name": "Toxic Slurry",
+                "quantity": 6
+            }
+        ]
+    },
+    "uranium_rods_t1": {
+        "id": "uranium_rods_t1",
+        "name": "Uranium Rods (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 180,
+        "inputs": [
+            {
+                "id": "uranium_pellets",
+                "name": "Uranium Pellets",
+                "quantity": 36
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "uranium_rod",
+                "name": "Uranium Rod",
+                "quantity": 6
+            }
+        ]
+    },
+    "vehicle_parts_2_assembly_t1": {
+        "id": "vehicle_parts_2_assembly_t1",
+        "name": "Vehicle Parts 2 Assembly (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "vehicle_parts",
+                "name": "Vehicle Parts",
+                "quantity": 4
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 2
+            },
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "vehicle_parts_ii",
+                "name": "Vehicle Parts II",
+                "quantity": 4
+            }
+        ]
+    },
+    "vehicle_parts_2_assembly_t2": {
+        "id": "vehicle_parts_2_assembly_t2",
+        "name": "Vehicle Parts 2 Assembly (T2)",
+        "machine": "assembly_robotic",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "vehicle_parts",
+                "name": "Vehicle Parts",
+                "quantity": 4
+            },
+            {
+                "id": "steel",
+                "name": "Steel",
+                "quantity": 2
+            },
+            {
+                "id": "glass",
+                "name": "Glass",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "vehicle_parts_ii",
+                "name": "Vehicle Parts II",
+                "quantity": 4
+            }
+        ]
+    },
+    "vehicle_parts_3_assembly_t1": {
+        "id": "vehicle_parts_3_assembly_t1",
+        "name": "Vehicle Parts 3 Assembly (T1)",
+        "machine": "assembly_electric_ii",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "vehicle_parts_ii",
+                "name": "Vehicle Parts II",
+                "quantity": 4
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "vehicle_parts_iii",
+                "name": "Vehicle Parts III",
+                "quantity": 4
+            }
+        ]
+    },
+    "vehicle_parts_3_assembly_t2": {
+        "id": "vehicle_parts_3_assembly_t2",
+        "name": "Vehicle Parts 3 Assembly (T2)",
+        "machine": "assembly_robotic",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "vehicle_parts_ii",
+                "name": "Vehicle Parts II",
+                "quantity": 4
+            },
+            {
+                "id": "electronics_ii",
+                "name": "Electronics II",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "vehicle_parts_iii",
+                "name": "Vehicle Parts III",
+                "quantity": 4
+            }
+        ]
+    },
+    "vehicle_parts_assembly_t1": {
+        "id": "vehicle_parts_assembly_t1",
+        "name": "Vehicle Parts Assembly (T1)",
+        "machine": "assembly_manual",
+        "duration": 80,
+        "inputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 4
+            },
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 2
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "vehicle_parts",
+                "name": "Vehicle Parts",
+                "quantity": 4
+            }
+        ]
+    },
+    "vehicle_parts_assembly_t2": {
+        "id": "vehicle_parts_assembly_t2",
+        "name": "Vehicle Parts Assembly (T2)",
+        "machine": "assembly_electric",
+        "duration": 40,
+        "inputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 4
+            },
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 2
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "vehicle_parts",
+                "name": "Vehicle Parts",
+                "quantity": 4
+            }
+        ]
+    },
+    "vehicle_parts_assembly_t3": {
+        "id": "vehicle_parts_assembly_t3",
+        "name": "Vehicle Parts Assembly (T3)",
+        "machine": "assembly_electric_ii",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 4
+            },
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 2
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "vehicle_parts",
+                "name": "Vehicle Parts",
+                "quantity": 4
+            }
+        ]
+    },
+    "vehicle_parts_assembly_t4": {
+        "id": "vehicle_parts_assembly_t4",
+        "name": "Vehicle Parts Assembly (T4)",
+        "machine": "assembly_robotic",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "iron",
+                "name": "Iron",
+                "quantity": 4
+            },
+            {
+                "id": "mechanical_parts",
+                "name": "Mechanical Parts",
+                "quantity": 2
+            },
+            {
+                "id": "electronics",
+                "name": "Electronics",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "vehicle_parts",
+                "name": "Vehicle Parts",
+                "quantity": 4
+            }
+        ]
+    },
+    "waste_water_dumping": {
+        "id": "waste_water_dumping",
+        "name": "Waste Water Dumping",
+        "machine": "liquid_dump",
+        "duration": 2,
+        "inputs": [
+            {
+                "id": "waste_water",
+                "name": "Waste Water",
+                "quantity": 2
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water_pollution",
+                "name": "Water Pollution",
+                "quantity": 2
+            }
+        ]
+    },
+    "wastesortingplant": {
+        "id": "wastesortingplant",
+        "name": "WasteSortingPlant",
+        "machine": "waste_sorting_plant",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "recyclables",
+                "name": "Recyclables",
+                "quantity": 48
+            }
+        ],
+        "outputs": [
+            {
+                "id": "iron_scrap",
+                "name": "Iron Scrap",
+                "quantity": 1
+            },
+            {
+                "id": "copper_scrap",
+                "name": "Copper Scrap",
+                "quantity": 1
+            },
+            {
+                "id": "gold_scrap",
+                "name": "Gold Scrap",
+                "quantity": 1
+            },
+            {
+                "id": "broken_glass",
+                "name": "Broken Glass",
+                "quantity": 1
+            }
+        ]
+    },
+    "water_cooling": {
+        "id": "water_cooling",
+        "name": "Water Cooling",
+        "machine": "water_chiller",
+        "duration": 20,
+        "inputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 10
+            }
+        ],
+        "outputs": [
+            {
+                "id": "chilled_water",
+                "name": "Chilled Water",
+                "quantity": 8
+            }
+        ]
+    },
+    "water_desalination_basic": {
+        "id": "water_desalination_basic",
+        "name": "Water Desalination (Basic)",
+        "machine": "basic_distiller",
+        "duration": 10,
+        "inputs": [
+            {
+                "id": "seawater",
+                "name": "Seawater",
+                "quantity": 10
+            },
+            {
+                "id": "coal",
+                "name": "Coal",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 6
+            },
+            {
+                "id": "brine",
+                "name": "Brine",
+                "quantity": 4
+            },
+            {
+                "id": "exhaust",
+                "name": "Exhaust",
+                "quantity": 2
+            }
+        ]
+    },
+    "water_dumping": {
+        "id": "water_dumping",
+        "name": "Water Dumping",
+        "machine": "liquid_dump",
+        "duration": 2,
+        "inputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 2
+            }
+        ],
+        "outputs": []
+    },
+    "water_electrolysis": {
+        "id": "water_electrolysis",
+        "name": "Water Electrolysis",
+        "machine": "electrolyzer",
+        "duration": 80,
+        "inputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 1
+            }
+        ],
+        "outputs": [
+            {
+                "id": "oxygen",
+                "name": "Oxygen",
+                "quantity": 8
+            },
+            {
+                "id": "hydrogen",
+                "name": "Hydrogen",
+                "quantity": 2
+            }
+        ]
+    },
+    "water_pumping": {
+        "id": "water_pumping",
+        "name": "Water Pumping",
+        "machine": "groundwater_pump",
+        "duration": 10,
+        "inputs": [],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 8
+            }
+        ]
+    },
+    "water_treatment": {
+        "id": "water_treatment",
+        "name": "Water Treatment",
+        "machine": "wastewater_treatment",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "waste_water",
+                "name": "Waste Water",
+                "quantity": 80
+            },
+            {
+                "id": "sand",
+                "name": "Sand",
+                "quantity": 4
+            },
+            {
+                "id": "chlorine",
+                "name": "Chlorine",
+                "quantity": 4
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 40
+            },
+            {
+                "id": "sludge",
+                "name": "Sludge",
+                "quantity": 12
+            }
+        ]
+    },
+    "water_treatment_advanced": {
+        "id": "water_treatment_advanced",
+        "name": "Water Treatment (Advanced)",
+        "machine": "wastewater_treatment",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "waste_water",
+                "name": "Waste Water",
+                "quantity": 80
+            },
+            {
+                "id": "filter_media",
+                "name": "Filter Media",
+                "quantity": 4
+            },
+            {
+                "id": "chlorine",
+                "name": "Chlorine",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "water",
+                "name": "Water",
+                "quantity": 60
+            },
+            {
+                "id": "sludge",
+                "name": "Sludge",
+                "quantity": 18
+            }
+        ]
+    },
+    "wheat_milling": {
+        "id": "wheat_milling",
+        "name": "Wheat Milling",
+        "machine": "mill",
+        "duration": 30,
+        "inputs": [
+            {
+                "id": "wheat",
+                "name": "Wheat",
+                "quantity": 8
+            }
+        ],
+        "outputs": [
+            {
+                "id": "flour",
+                "name": "Flour",
+                "quantity": 8
+            },
+            {
+                "id": "animal_feed",
+                "name": "Animal Feed",
+                "quantity": 1
+            }
+        ]
+    }
+}

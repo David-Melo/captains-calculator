@@ -14,7 +14,7 @@ let guestRoutes = {
             element: <Layout />,
             breadcrumb: 'Layout',
             children: [
-                { index: true, element: <Home />, breadcrumb: 'Home' },
+                { index: true, element: <Home />, breadcrumb: 'Calculator' },
                 { path: "buildings", element: <Buildings />, breadcrumb: 'Buildings' },
                 { path: "products", element: <Products />, breadcrumb: 'Products' },
                 { path: "recipes", element: <Recipes />, breadcrumb: 'Recipes' },
@@ -25,12 +25,12 @@ let guestRoutes = {
     menu: [
         {
             to: '/',
-            label: "Home",
+            label: "Calculator",
             icon: Icons.home
         },
         {
             to: '/buildings',
-            label: "Home",
+            label: "Buildings",
             icon: Icons.home
         },
         {
@@ -47,7 +47,7 @@ let guestRoutes = {
     mobile: [
         {
             to: '/',
-            label: "Home",
+            label: "Calculator",
             icon: Icons.home
         },
         {

@@ -33,10 +33,10 @@ export const BackButton = () => {
             onClick={handleBack}
             color={colorScheme==='light'?'dark':'gray'}
             variant="light"
-            size="xs"
-            px={5}
+            size="sm"
+            px={8}
         >
-            <Icon icon={Icons.back} width={18} />
+            <Icon icon={Icons.back} width={19} />
         </Button>
     )
 

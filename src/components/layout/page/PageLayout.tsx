@@ -3,14 +3,30 @@ import { Box, Text, MediaQuery, ScrollArea } from '@mantine/core';
 import NavContext from 'components/navigation/NavContext';
 import { NavLink } from 'react-router-dom';
 import { MobileNavIcon } from 'components/ui/Misc';
+import { useReaction } from 'state';
+import Loader from 'components/app/Loader';
+import { motion } from 'framer-motion'
 
 type PageLayoutProps = {
     header?: React.ReactElement;
-    showFooterNav?: boolean;
+    showFooterNav?: boolean; 
 }
 
 const PageLayout: React.FC<PageLayoutProps> = ({ header = null, children, showFooterNav = true }) => {
     const { mobile } = React.useContext(NavContext);
+    const [navigating, setNavigating] = React.useState<boolean>(false)
+    const reaction = useReaction()
+
+    React.useEffect(() => reaction(
+        (state) => state.navigating,
+        (navigating) => {
+            setNavigating(navigating)
+        },
+        {
+            immediate: true
+        }
+    ))
+
     return (
         <Box
             sx={theme=>({
@@ -25,28 +41,54 @@ const PageLayout: React.FC<PageLayoutProps> = ({ header = null, children, showFo
             })}
         >
 
-            {header}
+            <motion.div
+                variants={{
+                    enter: { y: 0, opacity: 0, transition: { duration: 0.25 } },
+                    target: { y: 0, opacity: 1, transition: { duration: 0.25 } },
+                    exit: { y: 0, opacity: 0, transition: { duration: 0.25 } }
+                }}
+                initial="enter"
+                animate="target"
+                exit="exit"
+                style={{ height: '100%', position: 'relative' }}
+            >
+                {header}
+            </motion.div>
 
-            <Box sx={{ position: 'relative', height: '100%' }}>
+            <Box sx={{ position: 'relative', height: '100%', overflow: 'hidden' }}>
 
-                <ScrollArea
-                    style={{
-                        position: "absolute",
-                        top: 0,
-                        bottom: 0,
-                        left: 0,
-                        right: 0
+            <motion.div
+                    variants={{
+                        enter: { y: -100, opacity: 0, transition: { duration: 0.25 } },
+                        target: { y: 0, opacity: 1, transition: { duration: 0.25 } },
+                        exit: { y: 0, opacity: 0, transition: { duration: 0.25 } }
                     }}
+                    initial="enter"
+                    animate="target"
+                    exit="exit"
+                    style={{ height: '100%', position: 'relative' }}
                 >
 
-                    <Box sx={(theme) => ({
-                        padding: theme.spacing.md,
-                        paddingTop: 0
-                    })}>
-                        {children}
-                    </Box>
+                    {!navigating ? (<ScrollArea
+                        style={{
+                            position: "absolute",
+                            top: 0,
+                            bottom: 0,
+                            left: 0,
+                            right: 0
+                        }}
+                    >
 
-                </ScrollArea>
+                        <Box sx={(theme) => ({
+                            padding: theme.spacing.md,
+                            paddingTop: 0
+                        })}>
+                            {children}
+                        </Box>
+
+                    </ScrollArea>) : <Loader />}
+
+                </motion.div>
 
             </Box>
 

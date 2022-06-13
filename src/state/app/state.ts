@@ -4,5 +4,6 @@ export const state: AppState = {
     settings: {
         theme: 'light',
     },
-    loading: true
+    loading: true,
+    navigating: false
 }

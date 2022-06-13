@@ -10,6 +10,9 @@ export const onInitializeOvermind: AsyncAction = pipe(
         logger(`Initializing App`)
         actions.loadSettings()
     },
+    async ({actions}: Context) => {
+        actions.loadJsonData()
+    },
     async ({state,actions}: Context) => {
         state.loading = false;
     }

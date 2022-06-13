@@ -52,6 +52,19 @@ function productParseName(name) {
     return words.join(' ').replaceAll('( ', '(').replaceAll(' )', ')')
 }
 
+function productNameToIcon(n) {
+    let name = n
+    name = name.replaceAll('(', '')
+    name = name.replaceAll(')', '')
+    name = name.endsWith(' IV') ? name.replaceAll(' IV', '4') : name
+    name = name.endsWith(' V') ? name.replaceAll(' V', '5') : name
+    name = name.endsWith(' III') ? name.replaceAll(' III', '3') : name
+    name = name.endsWith(' II') ? name.replaceAll(' II', '2') : name
+    name = name.endsWith(' I') ? name.replaceAll(' I', '1') : name
+    name = name.replaceAll(' ', '')
+    return name
+}
+
 function sortObject(unordered) {
     return Object.keys(unordered).sort().reduce(
         (obj, key) => {
@@ -85,22 +98,37 @@ rawData.machines_and_buildings.forEach(m=>{
     let machine = {
         id: machineNameToId(m.name),
         game_id: m.id,
+        icon: `${m.id}.png`,
         name: machineParseName(m.name),
         category_id: categoryNameToId(m.category),
         category_name: categoryParseName(m.category),
-        build_cost_units: productNameToId(m.build_cost_units),
-        build_cost_quantity: m.build_cost_quantity,
         workers: m.workers,
         maintenance_cost_units: productNameToId(m.maintenance_cost_units),
         maintenance_cost_quantity: m.maintenance_cost_quantity,
         electricity_consumed: m.electricity_consumed,
         electricity_generated: m.electricity_generated,
+        computing_consumed: m.computing_consumed,
+        computing_generated: m.computing_generated,
+        storage_capacity: m.storage_capacity,
+        unity_cost: m.unity_cost,
+        research_speed: m.research_speed,
+        build_costs: [],
         recipes: [],
         products: {
             input: [],
             output: []
         }
     }
+
+    m.build_costs.forEach(c=>{
+        let { product, quantity } = c
+        let cost = {
+            id: productNameToId(product),
+            name: product,
+            quantity
+        }
+        machine.build_costs.push(cost)
+    })
 
     // Prep Recipes
 
@@ -135,9 +163,14 @@ rawData.machines_and_buildings.forEach(m=>{
 
                 // Add New Product
                 if (!PRODUCTS_DATA.hasOwnProperty(product.id)) {
+                    console.log(product.name,productNameToIcon(product.name))
+                    if(!product.name) {
+                        console.log(product,recipeId)
+                    }
                     PRODUCTS_DATA[product.id] = {
                         id: product.id,
                         name: product.name,
+                        icon: `${productNameToIcon(product.name)}.png`,
                         recipes: {
                             input: [],
                             output: [],
@@ -178,9 +211,15 @@ rawData.machines_and_buildings.forEach(m=>{
 
                 // Add New Product
                 if (!PRODUCTS_DATA.hasOwnProperty(product.id)) {
+                    console.log(product.name,productNameToIcon(product.name))
+                    if(!product.name) {
+                        console.log(product,recipeId)
+                    }
+
                     PRODUCTS_DATA[product.id] = {
                         id: product.id,
                         name: product.name,
+                        icon: `${productNameToIcon(product.name)}.png`,
                         recipes: {
                             input: [],
                             output: [],

@@ -4,6 +4,8 @@ import { AppState } from 'state/app/_types';
 
 export * from "state/app/_types";
 export * from "state/machines/_types";
+export * from "state/products/_types";
+export * from "state/categories/_types";
 
 export type Context = IContext<typeof AppStateConfig>
 
@@ -41,3 +43,4 @@ export type GenericError = {
     code: string;
     text: string;
 }
+

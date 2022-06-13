@@ -6,9 +6,13 @@ import { namespaced, merge } from 'overmind/config';
 import { state, actions, effects } from 'state/app';
 
 import * as machines from 'state/machines'
+import * as products from 'state/products'
+import * as categories from 'state/categories'
 
 export const AppModules = {
-    machines
+    machines,
+    products,
+    categories
 }
 
 export const AppStateConfig = merge(

@@ -13,13 +13,13 @@ type PageTab = {
 
 type PageTabsProps = {
     parentId: string;
-    tabs: Record<string,PageTab>;
+    tabs: Record<string, PageTab>;
     urlRoot: string;
 }
 
-export const PageTabs: React.FC<PageTabsProps> = ({tabs, urlRoot, parentId}) => {
+export const PageTabs: React.FC<PageTabsProps> = ({ tabs, urlRoot, parentId }) => {
 
-    const {classes} = useTabStyles();
+    const { classes } = useTabStyles();
     const navigate = useNavigate();
     const location = useLocation()
     const match = matchPath({ path: `${urlRoot}/:id/:page`, end: true }, location.pathname)
@@ -28,7 +28,7 @@ export const PageTabs: React.FC<PageTabsProps> = ({tabs, urlRoot, parentId}) => 
 
     if (match?.params.page) {
         let currentTabIndex = Object.keys(tabs).indexOf(match?.params.page)
-        if (currentTabIndex>=0) {
+        if (currentTabIndex >= 0) {
             activeTab = currentTabIndex
         }
     }
@@ -43,7 +43,7 @@ export const PageTabs: React.FC<PageTabsProps> = ({tabs, urlRoot, parentId}) => 
 
     if (!parentId) return null;
 
-    return ( 
+    return (
         <Tabs
             active={activeTab}
             onTabChange={onChange}
@@ -56,11 +56,11 @@ export const PageTabs: React.FC<PageTabsProps> = ({tabs, urlRoot, parentId}) => 
                 tabActive: classes.tabActive,
             }}
         >
-            {Object.keys(tabs).map(tabKey=>{
+            {Object.keys(tabs).map(tabKey => {
                 let tab = tabs[tabKey];
-                return <Tabs.Tab key={tabKey} label={tab.label} icon={ tab.icon ? <Icon icon={Icons[tab.icon]} width={17}/> : null } />
+                return <Tabs.Tab key={tabKey} label={tab.label} icon={tab.icon ? <Icon icon={Icons[tab.icon]} width={17} /> : null} />
             })}
-            
+
         </Tabs>
     )
 
@@ -86,5 +86,22 @@ export const useTabStyles = createStyles((theme) => ({
     }
 }))
 
-export const TabDivider: React.FC<{label: string}> = ({label}) => <Divider my="xs" mt={0} mb="md" label={label} variant="dashed" labelPosition="center" />
-export const TabDividerSpacing: React.FC<{label: string}> = ({label}) => <Divider my="md" label={label} variant="dashed" labelPosition="center" />
+export const TabDivider: React.FC<{ label: string }> = ({ label }) => <Divider my="xs" mt={0} mb="md" label={label} variant="dashed" labelPosition="center" />
+export const TabDividerStatus: React.FC<{ label: string, valid: boolean }> = ({ label, valid }) => (
+    <Divider
+        my="xs"
+        mt={0}
+        mb="md"
+        label={label}
+        variant="dashed"
+        labelPosition="center"
+        styles={theme => ({
+            label: {
+                color: !valid ? theme.colors.red[9] : theme.colorScheme === 'light' ? theme.colors.gray[2] : theme.colors.dark[5],
+                '&:before,&:after': {
+                    borderTopColor: !valid ? theme.colors.red[9] : theme.colorScheme === 'light' ? theme.colors.gray[2] : theme.colors.dark[5]
+                }
+            }
+        })} />
+)
+export const TabDividerSpacing: React.FC<{ label: string }> = ({ label }) => <Divider my="md" label={label} variant="dashed" labelPosition="center" />

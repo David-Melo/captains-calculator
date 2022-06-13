@@ -46,3 +46,21 @@ export const changeNullPropsDeep = (source: GenericDictionary, target: GenericDi
 
     return target;
 }
+
+export const changeEmptyPropsDeep = (source: GenericDictionary, target: GenericDictionary = {}) => {
+    if (isObject(source)) {
+        for (const key in source) {
+            if (isObject(source[key])) {
+                if (!target[key]) Object.assign(target, {
+                    [key]: {}
+                });
+                target[key] = changeEmptyPropsDeep(target[key], source[key]);
+            } else {
+                Object.assign(target, {
+                    [key]: typeof source[key] === 'number' ? source[key] : source[key].length ? source[key] : null
+                });
+            }
+        }
+    }
+    return target;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-type NavContextType = {
+export type NavContextType = {
     routes: any[];
     menu: any[];
     mobile: any[];

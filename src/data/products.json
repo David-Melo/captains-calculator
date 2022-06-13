@@ -1,0 +1,4272 @@
+{
+    "acid": {
+        "id": "acid",
+        "name": "Acid",
+        "icon": "Acid.png",
+        "recipes": {
+            "input": [
+                "acid_dumping",
+                "copper_purification_acid",
+                "fluoride_leaching",
+                "glass_mix_mixing_2",
+                "gold_settling",
+                "microchip_manufacturing_stage_1a",
+                "microchip_manufacturing_stage_1a_2",
+                "microchip_manufacturing_stage_1b",
+                "microchip_manufacturing_stage_1b_2",
+                "microchip_manufacturing_stage_1c",
+                "microchip_manufacturing_stage_1c_2",
+                "microchip_manufacturing_stage_1d",
+                "microchip_manufacturing_stage_1d_2",
+                "morphine_production",
+                "uranium_leaching"
+            ],
+            "output": [
+                "acid_mixing"
+            ]
+        },
+        "machines": {
+            "input": [
+                "chemical_plant_ii",
+                "copper_electrolysis",
+                "liquid_dump",
+                "microchip_machine",
+                "microchip_machine_ii",
+                "mixer",
+                "settling_tank"
+            ],
+            "output": [
+                "mixer"
+            ]
+        }
+    },
+    "air_pollution": {
+        "id": "air_pollution",
+        "name": "Air Pollution",
+        "icon": "AirPollution.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "ammonia_disposal",
+                "burning",
+                "burning_2",
+                "diesel_disposal",
+                "dieselgenerator",
+                "ethanol_disposal",
+                "exhaust_filtering",
+                "fuel_gas_disposal",
+                "heavy_oil_disposal",
+                "light_oil_disposal",
+                "naphtha_disposal",
+                "product_disposal_2"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "burner_solid",
+                "diesel_generator",
+                "exhaust_scrubber",
+                "flare",
+                "smoke_stack",
+                "smoke_stack_large"
+            ]
+        }
+    },
+    "ammonia": {
+        "id": "ammonia",
+        "name": "Ammonia",
+        "icon": "Ammonia.png",
+        "recipes": {
+            "input": [
+                "ammonia_disposal",
+                "ammonia_electrolysis",
+                "anesthetics_production",
+                "antibiotics",
+                "fertilizer_synthesis",
+                "fertilizer_synthesis_2"
+            ],
+            "output": [
+                "ammonia_synthesis",
+                "ammonia_synthesis_2",
+                "sour_water_stripping_recovery"
+            ]
+        },
+        "machines": {
+            "input": [
+                "chemical_plant",
+                "chemical_plant_ii",
+                "electrolyzer",
+                "fermentation_tank",
+                "flare"
+            ],
+            "output": [
+                "chemical_plant",
+                "chemical_plant_ii",
+                "sour_water_stripper"
+            ]
+        }
+    },
+    "anesthetics": {
+        "id": "anesthetics",
+        "name": "Anesthetics",
+        "icon": "Anesthetics.png",
+        "recipes": {
+            "input": [
+                "medical_supplies_iii_assembly_t1",
+                "medical_supplies_iii_assembly_t2"
+            ],
+            "output": [
+                "anesthetics_production"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ],
+            "output": [
+                "chemical_plant_ii"
+            ]
+        }
+    },
+    "animal_feed": {
+        "id": "animal_feed",
+        "name": "Animal Feed",
+        "icon": "AnimalFeed.png",
+        "recipes": {
+            "input": [
+                "burning_2",
+                "composing",
+                "steam_generation_2"
+            ],
+            "output": [
+                "animal_feed_production",
+                "animal_feed_production_2",
+                "canola_milling",
+                "corn_milling_wet",
+                "soybean_milling",
+                "tofu_making",
+                "wheat_milling"
+            ]
+        },
+        "machines": {
+            "input": [
+                "boiler_coal",
+                "burner_solid",
+                "mixer"
+            ],
+            "output": [
+                "food_processor",
+                "mill",
+                "mixer"
+            ]
+        }
+    },
+    "antibiotics": {
+        "id": "antibiotics",
+        "name": "Antibiotics",
+        "icon": "Antibiotics.png",
+        "recipes": {
+            "input": [
+                "medical_supplies_assembly_t1_2",
+                "medical_supplies_assembly_t2_2"
+            ],
+            "output": [
+                "antibiotics"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ],
+            "output": [
+                "fermentation_tank"
+            ]
+        }
+    },
+    "biomass": {
+        "id": "biomass",
+        "name": "Biomass",
+        "icon": "Biomass.png",
+        "recipes": {
+            "input": [
+                "burning_2",
+                "composing_2",
+                "steam_generation_2"
+            ],
+            "output": [
+                "snack_production",
+                "snack_production_2",
+                "sugar_refining_cane"
+            ]
+        },
+        "machines": {
+            "input": [
+                "boiler_coal",
+                "burner_solid",
+                "mixer"
+            ],
+            "output": [
+                "food_processor"
+            ]
+        }
+    },
+    "bread": {
+        "id": "bread",
+        "name": "Bread",
+        "icon": "Bread.png",
+        "recipes": {
+            "input": [
+                "food_pack_assembly_eggs",
+                "food_pack_assembly_meat"
+            ],
+            "output": [
+                "bread_making"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii"
+            ],
+            "output": [
+                "baking_unit"
+            ]
+        }
+    },
+    "brine": {
+        "id": "brine",
+        "name": "Brine",
+        "icon": "Brine.png",
+        "recipes": {
+            "input": [
+                "brine_dumping",
+                "brine_electrolysis",
+                "salt_making_2",
+                "toxic_slurry_treatment"
+            ],
+            "output": [
+                "brine_making",
+                "brine_making_2",
+                "brine_production",
+                "thermal_desalination",
+                "thermal_desalination_2",
+                "water_desalination_basic"
+            ]
+        },
+        "machines": {
+            "input": [
+                "electrolyzer",
+                "evaporation_pond",
+                "evaporation_pond_heated",
+                "liquid_dump",
+                "wastewater_treatment"
+            ],
+            "output": [
+                "basic_distiller",
+                "evaporation_pond",
+                "evaporation_pond_heated",
+                "mixer",
+                "thermal_desalinator"
+            ]
+        }
+    },
+    "broken_glass": {
+        "id": "broken_glass",
+        "name": "Broken Glass",
+        "icon": "BrokenGlass.png",
+        "recipes": {
+            "input": [
+                "glass_broken_smelting",
+                "glass_broken_smelting_2",
+                "glass_smelting_2"
+            ],
+            "output": [
+                "wastesortingplant"
+            ]
+        },
+        "machines": {
+            "input": [
+                "arc_furnace_ii",
+                "blast_furnace",
+                "blast_furnace_ii"
+            ],
+            "output": [
+                "waste_sorting_plant"
+            ]
+        }
+    },
+    "cake": {
+        "id": "cake",
+        "name": "Cake",
+        "icon": "Cake.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "cake_production"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "baking_unit"
+            ]
+        }
+    },
+    "canola": {
+        "id": "canola",
+        "name": "Canola",
+        "icon": "Canola.png",
+        "recipes": {
+            "input": [
+                "canola_milling"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "mill"
+            ],
+            "output": []
+        }
+    },
+    "carbon_dioxide": {
+        "id": "carbon_dioxide",
+        "name": "Carbon Dioxide",
+        "icon": "CarbonDioxide.png",
+        "recipes": {
+            "input": [
+                "co2_injection",
+                "fuelgas_synthesis",
+                "graphite_production_2",
+                "product_disposal_2"
+            ],
+            "output": [
+                "antibiotics",
+                "ethanol_making_corn",
+                "ethanol_making_sugar",
+                "exhaust_filtering",
+                "fuelgas_reforming",
+                "hydrogen_reforming",
+                "steam_generation_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "chemical_plant_ii",
+                "gas_injection_pump",
+                "smoke_stack",
+                "smoke_stack_large"
+            ],
+            "output": [
+                "boiler_gas",
+                "cracking_unit",
+                "exhaust_scrubber",
+                "fermentation_tank",
+                "hydrogen_reformer"
+            ]
+        }
+    },
+    "cement": {
+        "id": "cement",
+        "name": "Cement",
+        "icon": "Cement.png",
+        "recipes": {
+            "input": [
+                "concrete_mixing",
+                "concrete_mixing_2"
+            ],
+            "output": [
+                "cement_production",
+                "cement_production_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "concrete_mixer",
+                "concrete_mixer_ii",
+                "concrete_mixer_iii"
+            ],
+            "output": [
+                "rotary_kiln",
+                "rotary_kiln_gas"
+            ]
+        }
+    },
+    "chicken_carcass": {
+        "id": "chicken_carcass",
+        "name": "Chicken Carcass",
+        "icon": "ChickenCarcass.png",
+        "recipes": {
+            "input": [
+                "burning_2",
+                "meat_processing"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "burner_solid",
+                "food_processor"
+            ],
+            "output": []
+        }
+    },
+    "chilled_water": {
+        "id": "chilled_water",
+        "name": "Chilled Water",
+        "icon": "ChilledWater.png",
+        "recipes": {
+            "input": [
+                "create_computing_power"
+            ],
+            "output": [
+                "water_cooling"
+            ]
+        },
+        "machines": {
+            "input": [
+                "basic_rack"
+            ],
+            "output": [
+                "water_chiller"
+            ]
+        }
+    },
+    "chlorine": {
+        "id": "chlorine",
+        "name": "Chlorine",
+        "icon": "Chlorine.png",
+        "recipes": {
+            "input": [
+                "graphite_production",
+                "plastic_making",
+                "plastic_making_2",
+                "water_treatment",
+                "water_treatment_advanced"
+            ],
+            "output": [
+                "brine_electrolysis"
+            ]
+        },
+        "machines": {
+            "input": [
+                "chemical_plant_ii",
+                "polymerization_plant",
+                "wastewater_treatment"
+            ],
+            "output": [
+                "electrolyzer"
+            ]
+        }
+    },
+    "coal": {
+        "id": "coal",
+        "name": "Coal",
+        "icon": "Coal.png",
+        "recipes": {
+            "input": [
+                "cement_production",
+                "copper_scrap_smelting",
+                "copper_scrap_smelting_2",
+                "copper_smelting",
+                "copper_smelting_sand",
+                "diesel_distillation_basic",
+                "filter_media_mixing",
+                "glass_broken_smelting",
+                "glass_broken_smelting_2",
+                "glass_smelting",
+                "glass_smelting_2",
+                "graphite_production",
+                "iron_scrap_smelting",
+                "iron_scrap_smelting_2",
+                "iron_smelting",
+                "iron_smelting_lime",
+                "rubber_production_coal",
+                "rubber_production_coal_alt",
+                "silicon_smelting_arc",
+                "silicon_smelting_arc_ii",
+                "steam_generation",
+                "water_desalination_basic"
+            ],
+            "output": [
+                "charcoal_making"
+            ]
+        },
+        "machines": {
+            "input": [
+                "arc_furnace",
+                "arc_furnace_ii",
+                "basic_distiller",
+                "blast_furnace",
+                "blast_furnace_ii",
+                "boiler_coal",
+                "chemical_plant_ii",
+                "mixer",
+                "rotary_kiln",
+                "rubber_maker"
+            ],
+            "output": [
+                "coal_maker"
+            ]
+        }
+    },
+    "compost": {
+        "id": "compost",
+        "name": "Compost",
+        "icon": "Compost.png",
+        "recipes": {
+            "input": [
+                "fertilizer_mixing"
+            ],
+            "output": [
+                "composing",
+                "composing_2",
+                "digestion",
+                "digestion_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "mixer"
+            ],
+            "output": [
+                "anaerobic_digester",
+                "mixer"
+            ]
+        }
+    },
+    "concrete_slab": {
+        "id": "concrete_slab",
+        "name": "Concrete Slab",
+        "icon": "ConcreteSlab.png",
+        "recipes": {
+            "input": [
+                "cp_assembly_t1",
+                "cp_assembly_t2",
+                "cp_assembly_t3",
+                "cp_assembly_t3_2"
+            ],
+            "output": [
+                "concrete_mixing",
+                "concrete_mixing_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic"
+            ],
+            "output": [
+                "concrete_mixer",
+                "concrete_mixer_ii",
+                "concrete_mixer_iii"
+            ]
+        }
+    },
+    "construction_parts": {
+        "id": "construction_parts",
+        "name": "Construction Parts",
+        "icon": "ConstructionParts.png",
+        "recipes": {
+            "input": [
+                "cp2_assembly_t1",
+                "cp2_assembly_t1_2",
+                "cp2_assembly_t2",
+                "cp2_assembly_t3"
+            ],
+            "output": [
+                "cp_assembly_t1",
+                "cp_assembly_t2",
+                "cp_assembly_t3",
+                "cp_assembly_t3_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic"
+            ],
+            "output": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "construction_parts_ii": {
+        "id": "construction_parts_ii",
+        "name": "Construction Parts II",
+        "icon": "ConstructionParts2.png",
+        "recipes": {
+            "input": [
+                "cp3_assembly_t1",
+                "cp3_assembly_t2",
+                "cp3_assembly_t3"
+            ],
+            "output": [
+                "cp2_assembly_t1",
+                "cp2_assembly_t1_2",
+                "cp2_assembly_t2",
+                "cp2_assembly_t3"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ],
+            "output": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "construction_parts_iii": {
+        "id": "construction_parts_iii",
+        "name": "Construction Parts III",
+        "icon": "ConstructionParts3.png",
+        "recipes": {
+            "input": [
+                "cp4_assembly_t1",
+                "cp4_assembly_t2"
+            ],
+            "output": [
+                "cp3_assembly_t1",
+                "cp3_assembly_t2",
+                "cp3_assembly_t3"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_robotic",
+                "assembly_robotic_ii"
+            ],
+            "output": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "construction_parts_iv": {
+        "id": "construction_parts_iv",
+        "name": "Construction Parts IV",
+        "icon": "ConstructionParts4.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "cp4_assembly_t1",
+                "cp4_assembly_t2"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "assembly_robotic",
+                "assembly_robotic_ii"
+            ]
+        }
+    },
+    "consumer_electronics": {
+        "id": "consumer_electronics",
+        "name": "Consumer Electronics",
+        "icon": "ConsumerElectronics.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "consumer_electronics_assembly_t1"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "assembly_robotic_ii"
+            ]
+        }
+    },
+    "cooking_oil": {
+        "id": "cooking_oil",
+        "name": "Cooking Oil",
+        "icon": "CookingOil.png",
+        "recipes": {
+            "input": [
+                "cake_production",
+                "fuel_transesterification",
+                "fuel_transesterification_2",
+                "snack_production",
+                "snack_production_2"
+            ],
+            "output": [
+                "canola_milling",
+                "soybean_milling"
+            ]
+        },
+        "machines": {
+            "input": [
+                "baking_unit",
+                "chemical_plant",
+                "chemical_plant_ii",
+                "food_processor"
+            ],
+            "output": [
+                "mill"
+            ]
+        }
+    },
+    "copper": {
+        "id": "copper",
+        "name": "Copper",
+        "icon": "Copper.png",
+        "recipes": {
+            "input": [
+                "electronics_assembly_t1",
+                "electronics_assembly_t2",
+                "electronics_assembly_t3",
+                "electronics_assembly_t4",
+                "electronics_assembly_t5",
+                "microchip_manufacturing_stage_2a",
+                "microchip_manufacturing_stage_2a_2",
+                "microchip_manufacturing_stage_2b",
+                "microchip_manufacturing_stage_2b_2",
+                "microchip_manufacturing_stage_2c",
+                "microchip_manufacturing_stage_2c_2",
+                "microchip_manufacturing_stage_2d",
+                "microchip_manufacturing_stage_2d_2",
+                "pcb_assembly_t1",
+                "pcb_assembly_t2",
+                "pcb_assembly_t3"
+            ],
+            "output": [
+                "copper_purification_acid",
+                "copper_purification_water"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic",
+                "assembly_robotic_ii",
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "copper_electrolysis"
+            ]
+        }
+    },
+    "copper_ore": {
+        "id": "copper_ore",
+        "name": "Copper Ore",
+        "icon": "CopperOre.png",
+        "recipes": {
+            "input": [
+                "copper_ore_crushing",
+                "copper_smelting"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "blast_furnace",
+                "crusher"
+            ],
+            "output": []
+        }
+    },
+    "copper_ore_crushed": {
+        "id": "copper_ore_crushed",
+        "name": "Copper Ore Crushed",
+        "icon": "CopperOreCrushed.png",
+        "recipes": {
+            "input": [
+                "copper_smelting_arc",
+                "copper_smelting_sand"
+            ],
+            "output": [
+                "copper_ore_crushing"
+            ]
+        },
+        "machines": {
+            "input": [
+                "arc_furnace_ii",
+                "blast_furnace_ii"
+            ],
+            "output": [
+                "crusher"
+            ]
+        }
+    },
+    "copper_scrap": {
+        "id": "copper_scrap",
+        "name": "Copper Scrap",
+        "icon": "CopperScrap.png",
+        "recipes": {
+            "input": [
+                "copper_scrap_smelting",
+                "copper_scrap_smelting_2",
+                "copper_scrap_smelting_arc"
+            ],
+            "output": [
+                "wastesortingplant"
+            ]
+        },
+        "machines": {
+            "input": [
+                "arc_furnace_ii",
+                "blast_furnace",
+                "blast_furnace_ii"
+            ],
+            "output": [
+                "waste_sorting_plant"
+            ]
+        }
+    },
+    "corn": {
+        "id": "corn",
+        "name": "Corn",
+        "icon": "Corn.png",
+        "recipes": {
+            "input": [
+                "animal_feed_production_2",
+                "corn_milling_wet",
+                "snack_production_2"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "food_processor",
+                "mill",
+                "mixer"
+            ],
+            "output": []
+        }
+    },
+    "corn_mash": {
+        "id": "corn_mash",
+        "name": "Corn Mash",
+        "icon": "CornMash.png",
+        "recipes": {
+            "input": [
+                "ethanol_making_corn"
+            ],
+            "output": [
+                "corn_milling_wet"
+            ]
+        },
+        "machines": {
+            "input": [
+                "fermentation_tank"
+            ],
+            "output": [
+                "mill"
+            ]
+        }
+    },
+    "crude_oil": {
+        "id": "crude_oil",
+        "name": "Crude Oil",
+        "icon": "CrudeOil.png",
+        "recipes": {
+            "input": [
+                "crude_oil_refining",
+                "diesel_distillation_basic"
+            ],
+            "output": [
+                "oil_pumping"
+            ]
+        },
+        "machines": {
+            "input": [
+                "basic_distiller",
+                "distillation_stage_i"
+            ],
+            "output": [
+                "oil_pump"
+            ]
+        }
+    },
+    "diesel": {
+        "id": "diesel",
+        "name": "Diesel",
+        "icon": "Diesel.png",
+        "recipes": {
+            "input": [
+                "diesel_disposal",
+                "diesel_reforming",
+                "dieselgenerator",
+                "rubber_production_alt",
+                "rubber_production_coal_alt"
+            ],
+            "output": [
+                "crude_oil_refining_2",
+                "diesel_distillation_basic",
+                "fuel_transesterification",
+                "fuel_transesterification_2",
+                "fuelgas_reforming",
+                "heavyoil_cracking",
+                "naphtha_reforming"
+            ]
+        },
+        "machines": {
+            "input": [
+                "cracking_unit",
+                "diesel_generator",
+                "flare",
+                "rubber_maker"
+            ],
+            "output": [
+                "basic_distiller",
+                "chemical_plant",
+                "chemical_plant_ii",
+                "cracking_unit",
+                "distillation_stage_ii"
+            ]
+        }
+    },
+    "disinfectant": {
+        "id": "disinfectant",
+        "name": "Disinfectant",
+        "icon": "Disinfectant.png",
+        "recipes": {
+            "input": [
+                "medical_supplies_assembly_t1",
+                "medical_supplies_assembly_t2"
+            ],
+            "output": [
+                "disinfectant_production",
+                "disinfectant_production_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ],
+            "output": [
+                "chemical_plant",
+                "chemical_plant_ii"
+            ]
+        }
+    },
+    "eggs": {
+        "id": "eggs",
+        "name": "Eggs",
+        "icon": "Eggs.png",
+        "recipes": {
+            "input": [
+                "cake_production",
+                "food_pack_assembly_eggs"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "baking_unit"
+            ],
+            "output": []
+        }
+    },
+    "electricity": {
+        "id": "electricity",
+        "name": "Electricity",
+        "icon": "Electricity.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "dieselgenerator",
+                "powergeneratort1",
+                "powergeneratort2"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "diesel_generator",
+                "power_generator",
+                "power_generator_ii"
+            ]
+        }
+    },
+    "electronics": {
+        "id": "electronics",
+        "name": "Electronics",
+        "icon": "Electronics.png",
+        "recipes": {
+            "input": [
+                "cp2_assembly_t1",
+                "cp2_assembly_t1_2",
+                "cp2_assembly_t2",
+                "cp2_assembly_t3",
+                "electronics_2_assembly_t1",
+                "electronics_2_assembly_t2",
+                "electronics_2_assembly_t3",
+                "household_appliances_assembly_t1",
+                "household_appliances_assembly_t2",
+                "household_appliances_assembly_t3",
+                "lab_equipment_assembly_t1",
+                "lab_equipment_assembly_t2",
+                "lab_equipment_assembly_t3",
+                "maintenance_i",
+                "maintenance_i_2",
+                "vehicle_parts_assembly_t1",
+                "vehicle_parts_assembly_t2",
+                "vehicle_parts_assembly_t3",
+                "vehicle_parts_assembly_t4"
+            ],
+            "output": [
+                "electronics_assembly_t1",
+                "electronics_assembly_t2",
+                "electronics_assembly_t3",
+                "electronics_assembly_t4",
+                "electronics_assembly_t5"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic",
+                "assembly_robotic_ii",
+                "maintenance_depot",
+                "maintenance_depot_basic"
+            ],
+            "output": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic",
+                "assembly_robotic_ii"
+            ]
+        }
+    },
+    "electronics_ii": {
+        "id": "electronics_ii",
+        "name": "Electronics II",
+        "icon": "Electronics2.png",
+        "recipes": {
+            "input": [
+                "cp4_assembly_t1",
+                "cp4_assembly_t2",
+                "electronics_3_assembly_t1",
+                "electronics_3_assembly_t2",
+                "electronics_3_assembly_t3",
+                "household_appliances_assembly_t1",
+                "household_appliances_assembly_t2",
+                "household_appliances_assembly_t3",
+                "lab_equipment_4_assembly_t2",
+                "lab_equipment_4_assembly_t3",
+                "maintenance_ii",
+                "maintenance_ii_2",
+                "vehicle_parts_3_assembly_t1",
+                "vehicle_parts_3_assembly_t2"
+            ],
+            "output": [
+                "electronics_2_assembly_t1",
+                "electronics_2_assembly_t2",
+                "electronics_2_assembly_t3"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii",
+                "maintenance_ii_depot"
+            ],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii"
+            ]
+        }
+    },
+    "electronics_iii": {
+        "id": "electronics_iii",
+        "name": "Electronics III",
+        "icon": "Electronics3.png",
+        "recipes": {
+            "input": [
+                "consumer_electronics_assembly_t1",
+                "maintenance_iii",
+                "maintenance_iii_2",
+                "server_assembly_t1",
+                "server_assembly_t2",
+                "server_assembly_t3"
+            ],
+            "output": [
+                "electronics_3_assembly_t1",
+                "electronics_3_assembly_t2",
+                "electronics_3_assembly_t3"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii",
+                "maintenance_iii_depot"
+            ],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii"
+            ]
+        }
+    },
+    "ethanol": {
+        "id": "ethanol",
+        "name": "Ethanol",
+        "icon": "Ethanol.png",
+        "recipes": {
+            "input": [
+                "disinfectant_production",
+                "disinfectant_production_2",
+                "ethanol_disposal",
+                "fuel_transesterification",
+                "fuel_transesterification_2",
+                "plastic_making_2",
+                "rubber_production_ethanol",
+                "steam_generation_2"
+            ],
+            "output": [
+                "ethanol_making_corn",
+                "ethanol_making_sugar"
+            ]
+        },
+        "machines": {
+            "input": [
+                "boiler_gas",
+                "chemical_plant",
+                "chemical_plant_ii",
+                "flare",
+                "polymerization_plant",
+                "rubber_maker"
+            ],
+            "output": [
+                "fermentation_tank"
+            ]
+        }
+    },
+    "exhaust": {
+        "id": "exhaust",
+        "name": "Exhaust",
+        "icon": "Exhaust.png",
+        "recipes": {
+            "input": [
+                "exhaust_filtering",
+                "product_disposal_2"
+            ],
+            "output": [
+                "cement_production",
+                "cement_production_2",
+                "charcoal_making",
+                "copper_scrap_smelting",
+                "copper_scrap_smelting_2",
+                "copper_scrap_smelting_arc",
+                "copper_smelting",
+                "copper_smelting_arc",
+                "copper_smelting_sand",
+                "diesel_distillation_basic",
+                "glass_broken_smelting",
+                "glass_broken_smelting_2",
+                "glass_smelting",
+                "glass_smelting_2",
+                "gold_smelting",
+                "gold_smelting_2",
+                "iron_scrap_smelting",
+                "iron_scrap_smelting_2",
+                "iron_scrap_smelting_arc",
+                "iron_smelting",
+                "iron_smelting_arc",
+                "iron_smelting_lime",
+                "plastic_making",
+                "plastic_making_2",
+                "silicon_smelting_arc",
+                "silicon_smelting_arc_ii",
+                "steam_generation",
+                "steam_generation_2",
+                "steel_smelting",
+                "steel_smelting_2",
+                "water_desalination_basic"
+            ]
+        },
+        "machines": {
+            "input": [
+                "exhaust_scrubber",
+                "smoke_stack",
+                "smoke_stack_large"
+            ],
+            "output": [
+                "arc_furnace",
+                "arc_furnace_ii",
+                "basic_distiller",
+                "blast_furnace",
+                "blast_furnace_ii",
+                "boiler_coal",
+                "boiler_gas",
+                "coal_maker",
+                "gold_furnace",
+                "oxygen_furnace",
+                "oxygen_furnace_ii",
+                "polymerization_plant",
+                "rotary_kiln",
+                "rotary_kiln_gas"
+            ]
+        }
+    },
+    "fertilizer_i": {
+        "id": "fertilizer_i",
+        "name": "Fertilizer I",
+        "icon": "Fertilizer1.png",
+        "recipes": {
+            "input": [
+                "fertilizer_ii_synthesis"
+            ],
+            "output": [
+                "fertilizer_synthesis",
+                "fertilizer_synthesis_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "mixer"
+            ],
+            "output": [
+                "chemical_plant",
+                "chemical_plant_ii"
+            ]
+        }
+    },
+    "fertilizer_ii": {
+        "id": "fertilizer_ii",
+        "name": "Fertilizer II",
+        "icon": "Fertilizer2.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "fertilizer_ii_synthesis"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "mixer"
+            ]
+        }
+    },
+    "fertilizer_organic": {
+        "id": "fertilizer_organic",
+        "name": "Fertilizer (Organic)",
+        "icon": "FertilizerOrganic.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "fertilizer_mixing"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "mixer"
+            ]
+        }
+    },
+    "filter_media": {
+        "id": "filter_media",
+        "name": "Filter Media",
+        "icon": "FilterMedia.png",
+        "recipes": {
+            "input": [
+                "toxic_slurry_treatment",
+                "water_treatment_advanced"
+            ],
+            "output": [
+                "filter_media_mixing"
+            ]
+        },
+        "machines": {
+            "input": [
+                "wastewater_treatment"
+            ],
+            "output": [
+                "mixer"
+            ]
+        }
+    },
+    "flour": {
+        "id": "flour",
+        "name": "Flour",
+        "icon": "Flour.png",
+        "recipes": {
+            "input": [
+                "bread_making",
+                "cake_production",
+                "sausage_processing"
+            ],
+            "output": [
+                "wheat_milling"
+            ]
+        },
+        "machines": {
+            "input": [
+                "baking_unit",
+                "food_processor"
+            ],
+            "output": [
+                "mill"
+            ]
+        }
+    },
+    "food_pack": {
+        "id": "food_pack",
+        "name": "Food Pack",
+        "icon": "FoodPack.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "food_pack_assembly_eggs",
+                "food_pack_assembly_meat"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "assembly_electric_ii"
+            ]
+        }
+    },
+    "fruit": {
+        "id": "fruit",
+        "name": "Fruit",
+        "icon": "Fruit.png",
+        "recipes": {
+            "input": [
+                "cake_production"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "baking_unit"
+            ],
+            "output": []
+        }
+    },
+    "fuel_gas": {
+        "id": "fuel_gas",
+        "name": "Fuel Gas",
+        "icon": "FuelGas.png",
+        "recipes": {
+            "input": [
+                "cement_production_2",
+                "fuel_gas_disposal",
+                "fuelgas_reforming",
+                "hydrogen_reforming",
+                "steam_generation_2"
+            ],
+            "output": [
+                "digestion",
+                "digestion_2",
+                "fuelgas_synthesis",
+                "heavy_distillate_refining",
+                "heavyoil_cracking",
+                "heavyoil_cracking_2",
+                "naphtha_reforming",
+                "naphtha_reforming_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "boiler_gas",
+                "cracking_unit",
+                "flare",
+                "hydrogen_reformer",
+                "rotary_kiln_gas"
+            ],
+            "output": [
+                "anaerobic_digester",
+                "chemical_plant_ii",
+                "cracking_unit",
+                "distillation_stage_iii"
+            ]
+        }
+    },
+    "glass": {
+        "id": "glass",
+        "name": "Glass",
+        "icon": "Glass.png",
+        "recipes": {
+            "input": [
+                "household_goods_assembly_t1",
+                "household_goods_assembly_t2",
+                "household_goods_assembly_t3",
+                "lab_equipment_2_assembly_t2",
+                "lab_equipment_2_assembly_t3",
+                "morphine_production",
+                "pcb_assembly_t1",
+                "pcb_assembly_t2",
+                "pcb_assembly_t3",
+                "solar_cell_assembly",
+                "solar_cell_assembly_2",
+                "vehicle_parts_2_assembly_t1",
+                "vehicle_parts_2_assembly_t2"
+            ],
+            "output": [
+                "glass_casting",
+                "glass_casting_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii",
+                "chemical_plant_ii"
+            ],
+            "output": [
+                "glass_maker",
+                "glass_maker_ii"
+            ]
+        }
+    },
+    "glass_mix": {
+        "id": "glass_mix",
+        "name": "Glass Mix",
+        "icon": "GlassMix.png",
+        "recipes": {
+            "input": [
+                "glass_smelting",
+                "glass_smelting_2"
+            ],
+            "output": [
+                "glass_mix_mixing",
+                "glass_mix_mixing_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "arc_furnace_ii",
+                "blast_furnace",
+                "blast_furnace_ii"
+            ],
+            "output": [
+                "mixer"
+            ]
+        }
+    },
+    "gold": {
+        "id": "gold",
+        "name": "Gold",
+        "icon": "Gold.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_final_stage",
+                "microchip_manufacturing_final_stage_2",
+                "microchip_manufacturing_stage_3a",
+                "microchip_manufacturing_stage_3a_2",
+                "microchip_manufacturing_stage_3b",
+                "microchip_manufacturing_stage_3b_2",
+                "microchip_manufacturing_stage_3c",
+                "microchip_manufacturing_stage_3c_2"
+            ],
+            "output": [
+                "gold_smelting",
+                "gold_smelting_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "gold_furnace"
+            ]
+        }
+    },
+    "gold_ore": {
+        "id": "gold_ore",
+        "name": "Gold Ore",
+        "icon": "GoldOre.png",
+        "recipes": {
+            "input": [
+                "gold_ore_crushing"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "crusher"
+            ],
+            "output": []
+        }
+    },
+    "gold_ore_concentrate": {
+        "id": "gold_ore_concentrate",
+        "name": "Gold Ore Concentrate",
+        "icon": "GoldOreConcentrate.png",
+        "recipes": {
+            "input": [
+                "gold_smelting"
+            ],
+            "output": [
+                "gold_settling"
+            ]
+        },
+        "machines": {
+            "input": [
+                "gold_furnace"
+            ],
+            "output": [
+                "settling_tank"
+            ]
+        }
+    },
+    "gold_ore_crushed": {
+        "id": "gold_ore_crushed",
+        "name": "Gold Ore Crushed",
+        "icon": "GoldOreCrushed.png",
+        "recipes": {
+            "input": [
+                "gold_ore_milling"
+            ],
+            "output": [
+                "gold_ore_crushing"
+            ]
+        },
+        "machines": {
+            "input": [
+                "crusher"
+            ],
+            "output": [
+                "crusher"
+            ]
+        }
+    },
+    "gold_ore_powder": {
+        "id": "gold_ore_powder",
+        "name": "Gold Ore Powder",
+        "icon": "GoldOrePowder.png",
+        "recipes": {
+            "input": [
+                "gold_settling"
+            ],
+            "output": [
+                "gold_ore_milling"
+            ]
+        },
+        "machines": {
+            "input": [
+                "settling_tank"
+            ],
+            "output": [
+                "crusher"
+            ]
+        }
+    },
+    "gold_scrap": {
+        "id": "gold_scrap",
+        "name": "Gold Scrap",
+        "icon": "GoldScrap.png",
+        "recipes": {
+            "input": [
+                "gold_smelting_2"
+            ],
+            "output": [
+                "wastesortingplant"
+            ]
+        },
+        "machines": {
+            "input": [
+                "gold_furnace"
+            ],
+            "output": [
+                "waste_sorting_plant"
+            ]
+        }
+    },
+    "graphite": {
+        "id": "graphite",
+        "name": "Graphite",
+        "icon": "Graphite.png",
+        "recipes": {
+            "input": [
+                "copper_scrap_smelting_arc",
+                "copper_smelting_arc",
+                "glass_smelting_2",
+                "iron_scrap_smelting_arc",
+                "iron_smelting_arc",
+                "silicon_smelting_arc",
+                "silicon_smelting_arc_ii"
+            ],
+            "output": [
+                "graphite_production",
+                "graphite_production_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "arc_furnace",
+                "arc_furnace_ii"
+            ],
+            "output": [
+                "chemical_plant_ii"
+            ]
+        }
+    },
+    "gravel": {
+        "id": "gravel",
+        "name": "Gravel",
+        "icon": "Gravel.png",
+        "recipes": {
+            "input": [
+                "concrete_mixing_2",
+                "filter_media_mixing",
+                "gravel_crushing"
+            ],
+            "output": [
+                "rock_crushing"
+            ]
+        },
+        "machines": {
+            "input": [
+                "concrete_mixer",
+                "concrete_mixer_ii",
+                "concrete_mixer_iii",
+                "crusher",
+                "mixer"
+            ],
+            "output": [
+                "crusher"
+            ]
+        }
+    },
+    "heavy_oil": {
+        "id": "heavy_oil",
+        "name": "Heavy Oil",
+        "icon": "HeavyOil.png",
+        "recipes": {
+            "input": [
+                "heavy_oil_disposal",
+                "heavyoil_cracking",
+                "heavyoil_cracking_2",
+                "steam_generation_2"
+            ],
+            "output": [
+                "crude_oil_refining"
+            ]
+        },
+        "machines": {
+            "input": [
+                "boiler_gas",
+                "cracking_unit",
+                "flare"
+            ],
+            "output": [
+                "distillation_stage_i"
+            ]
+        }
+    },
+    "household_appliances": {
+        "id": "household_appliances",
+        "name": "Household Appliances",
+        "icon": "HouseholdAppliances.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "household_appliances_assembly_t1",
+                "household_appliances_assembly_t2",
+                "household_appliances_assembly_t3"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii"
+            ]
+        }
+    },
+    "household_goods": {
+        "id": "household_goods",
+        "name": "Household Goods",
+        "icon": "HouseholdGoods.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "household_goods_assembly_t1",
+                "household_goods_assembly_t2",
+                "household_goods_assembly_t3"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "hydrogen": {
+        "id": "hydrogen",
+        "name": "Hydrogen",
+        "icon": "Hydrogen.png",
+        "recipes": {
+            "input": [
+                "ammonia_synthesis",
+                "ammonia_synthesis_2",
+                "cement_production_2",
+                "fuelgas_synthesis",
+                "heavyoil_cracking",
+                "heavyoil_cracking_2",
+                "hydrogen_disposal",
+                "naphtha_reforming",
+                "silicon_treatment",
+                "steam_generation_2"
+            ],
+            "output": [
+                "ammonia_electrolysis",
+                "hydrogen_reforming",
+                "water_electrolysis"
+            ]
+        },
+        "machines": {
+            "input": [
+                "boiler_gas",
+                "chemical_plant",
+                "chemical_plant_ii",
+                "cracking_unit",
+                "flare",
+                "rotary_kiln_gas",
+                "silicon_reactor"
+            ],
+            "output": [
+                "electrolyzer",
+                "hydrogen_reformer"
+            ]
+        }
+    },
+    "hydrogen_fluoride": {
+        "id": "hydrogen_fluoride",
+        "name": "Hydrogen Fluoride",
+        "icon": "HydrogenFluoride.png",
+        "recipes": {
+            "input": [
+                "anesthetics_production",
+                "uranium_enrichment"
+            ],
+            "output": [
+                "fluoride_leaching"
+            ]
+        },
+        "machines": {
+            "input": [
+                "chemical_plant_ii",
+                "enrichment_plant"
+            ],
+            "output": [
+                "settling_tank"
+            ]
+        }
+    },
+    "impure_copper": {
+        "id": "impure_copper",
+        "name": "Impure Copper",
+        "icon": "ImpureCopper.png",
+        "recipes": {
+            "input": [
+                "copper_purification_acid",
+                "copper_purification_water"
+            ],
+            "output": [
+                "copper_casting",
+                "copper_casting_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "copper_electrolysis"
+            ],
+            "output": [
+                "metal_caster",
+                "metal_caster_ii"
+            ]
+        }
+    },
+    "iron": {
+        "id": "iron",
+        "name": "Iron",
+        "icon": "Iron.png",
+        "recipes": {
+            "input": [
+                "cp_assembly_t1",
+                "cp_assembly_t2",
+                "cp_assembly_t3",
+                "cp_assembly_t3_2",
+                "mech._parts_assembly_t1",
+                "mech._parts_assembly_t2",
+                "mech._parts_assembly_t3-1",
+                "vehicle_parts_assembly_t1",
+                "vehicle_parts_assembly_t2",
+                "vehicle_parts_assembly_t3",
+                "vehicle_parts_assembly_t4"
+            ],
+            "output": [
+                "iron_casting",
+                "iron_casting_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic"
+            ],
+            "output": [
+                "metal_caster",
+                "metal_caster_ii"
+            ]
+        }
+    },
+    "iron_ore": {
+        "id": "iron_ore",
+        "name": "Iron Ore",
+        "icon": "IronOre.png",
+        "recipes": {
+            "input": [
+                "iron_ore_crushing",
+                "iron_smelting"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "blast_furnace",
+                "crusher"
+            ],
+            "output": []
+        }
+    },
+    "iron_ore_crushed": {
+        "id": "iron_ore_crushed",
+        "name": "Iron Ore Crushed",
+        "icon": "IronOreCrushed.png",
+        "recipes": {
+            "input": [
+                "iron_smelting_arc",
+                "iron_smelting_lime"
+            ],
+            "output": [
+                "iron_ore_crushing"
+            ]
+        },
+        "machines": {
+            "input": [
+                "arc_furnace_ii",
+                "blast_furnace_ii"
+            ],
+            "output": [
+                "crusher"
+            ]
+        }
+    },
+    "iron_scrap": {
+        "id": "iron_scrap",
+        "name": "Iron Scrap",
+        "icon": "IronScrap.png",
+        "recipes": {
+            "input": [
+                "iron_scrap_smelting",
+                "iron_scrap_smelting_2",
+                "iron_scrap_smelting_arc"
+            ],
+            "output": [
+                "wastesortingplant"
+            ]
+        },
+        "machines": {
+            "input": [
+                "arc_furnace_ii",
+                "blast_furnace",
+                "blast_furnace_ii"
+            ],
+            "output": [
+                "waste_sorting_plant"
+            ]
+        }
+    },
+    "lab_equipment": {
+        "id": "lab_equipment",
+        "name": "Lab Equipment",
+        "icon": "LabEquipment.png",
+        "recipes": {
+            "input": [
+                "lab_equipment_assembly_t1_2",
+                "lab_equipment_assembly_t2_2",
+                "research_lab_ii"
+            ],
+            "output": [
+                "lab_equipment_assembly_t1",
+                "lab_equipment_assembly_t2",
+                "lab_equipment_assembly_t3"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "research_lab_ii"
+            ],
+            "output": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "lab_equipment_ii": {
+        "id": "lab_equipment_ii",
+        "name": "Lab Equipment II",
+        "icon": "LabEquipment2.png",
+        "recipes": {
+            "input": [
+                "lab_equipment_2_assembly_t2",
+                "lab_equipment_2_assembly_t3",
+                "research_lab_iii"
+            ],
+            "output": [
+                "lab_equipment_assembly_t1_2",
+                "lab_equipment_assembly_t2_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "research_lab_iii"
+            ],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "lab_equipment_iii": {
+        "id": "lab_equipment_iii",
+        "name": "Lab Equipment III",
+        "icon": "LabEquipment3.png",
+        "recipes": {
+            "input": [
+                "lab_equipment_4_assembly_t2",
+                "lab_equipment_4_assembly_t3",
+                "research_lab_iv"
+            ],
+            "output": [
+                "lab_equipment_2_assembly_t2",
+                "lab_equipment_2_assembly_t3"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "research_lab_iv"
+            ],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "lab_equipment_iv": {
+        "id": "lab_equipment_iv",
+        "name": "Lab Equipment IV",
+        "icon": "LabEquipment4.png",
+        "recipes": {
+            "input": [
+                "research_lab_v"
+            ],
+            "output": [
+                "lab_equipment_4_assembly_t2",
+                "lab_equipment_4_assembly_t3"
+            ]
+        },
+        "machines": {
+            "input": [
+                "research_lab_v"
+            ],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "light_oil": {
+        "id": "light_oil",
+        "name": "Light Oil",
+        "icon": "LightOil.png",
+        "recipes": {
+            "input": [
+                "heavy_distillate_refining",
+                "light_oil_disposal",
+                "steam_generation_2"
+            ],
+            "output": [
+                "crude_oil_refining_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "boiler_gas",
+                "distillation_stage_iii",
+                "flare"
+            ],
+            "output": [
+                "distillation_stage_ii"
+            ]
+        }
+    },
+    "limestone": {
+        "id": "limestone",
+        "name": "Limestone",
+        "icon": "Limestone.png",
+        "recipes": {
+            "input": [
+                "cement_production",
+                "cement_production_2",
+                "fertilizer_ii_synthesis",
+                "glass_mix_mixing",
+                "glass_mix_mixing_2",
+                "iron_smelting_arc",
+                "iron_smelting_lime",
+                "sulfur_neutralization",
+                "tofu_making"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "arc_furnace_ii",
+                "blast_furnace_ii",
+                "food_processor",
+                "mixer",
+                "rotary_kiln",
+                "rotary_kiln_gas"
+            ],
+            "output": []
+        }
+    },
+    "liquid_nitrogen": {
+        "id": "liquid_nitrogen",
+        "name": "Liquid Nitrogen",
+        "icon": "LiquidNitrogen.png",
+        "recipes": {
+            "input": [
+                "lab_equipment_assembly_t1_2",
+                "lab_equipment_assembly_t2_2"
+            ],
+            "output": [
+                "liquid_nitrogen_production",
+                "liquid_nitrogen_production_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ],
+            "output": [
+                "chemical_plant",
+                "chemical_plant_ii"
+            ]
+        }
+    },
+    "maintenance_i": {
+        "id": "maintenance_i",
+        "name": "Maintenance I",
+        "icon": "Maintenance1.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "maintenance_i",
+                "maintenance_i_2"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "maintenance_depot",
+                "maintenance_depot_basic"
+            ]
+        }
+    },
+    "maintenance_ii": {
+        "id": "maintenance_ii",
+        "name": "Maintenance II",
+        "icon": "Maintenance2.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "maintenance_ii",
+                "maintenance_ii_2"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "maintenance_ii_depot"
+            ]
+        }
+    },
+    "maintenance_iii": {
+        "id": "maintenance_iii",
+        "name": "Maintenance III",
+        "icon": "Maintenance3.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "maintenance_iii",
+                "maintenance_iii_2"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "maintenance_iii_depot"
+            ]
+        }
+    },
+    "meat": {
+        "id": "meat",
+        "name": "Meat",
+        "icon": "Meat.png",
+        "recipes": {
+            "input": [
+                "food_pack_assembly_meat"
+            ],
+            "output": [
+                "meat_processing"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii"
+            ],
+            "output": [
+                "food_processor"
+            ]
+        }
+    },
+    "meat_trimmings": {
+        "id": "meat_trimmings",
+        "name": "Meat Trimmings",
+        "icon": "MeatTrimmings.png",
+        "recipes": {
+            "input": [
+                "burning_2",
+                "composing_2",
+                "digestion_2",
+                "sausage_processing"
+            ],
+            "output": [
+                "meat_processing"
+            ]
+        },
+        "machines": {
+            "input": [
+                "anaerobic_digester",
+                "burner_solid",
+                "food_processor",
+                "mixer"
+            ],
+            "output": [
+                "food_processor"
+            ]
+        }
+    },
+    "mechanical_parts": {
+        "id": "mechanical_parts",
+        "name": "Mechanical Parts",
+        "icon": "MechanicalParts.png",
+        "recipes": {
+            "input": [
+                "lab_equipment_assembly_t1",
+                "lab_equipment_assembly_t2",
+                "lab_equipment_assembly_t3",
+                "maintenance_i",
+                "maintenance_i_2",
+                "maintenance_ii",
+                "maintenance_ii_2",
+                "maintenance_iii",
+                "maintenance_iii_2",
+                "vehicle_parts_assembly_t1",
+                "vehicle_parts_assembly_t2",
+                "vehicle_parts_assembly_t3",
+                "vehicle_parts_assembly_t4"
+            ],
+            "output": [
+                "mech._parts_assembly_t1",
+                "mech._parts_assembly_t2",
+                "mech._parts_assembly_t3-1",
+                "mech._parts_assembly_t3-2",
+                "mech._parts_assembly_t4"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic",
+                "maintenance_depot",
+                "maintenance_depot_basic",
+                "maintenance_ii_depot",
+                "maintenance_iii_depot"
+            ],
+            "output": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "mechanical_power": {
+        "id": "mechanical_power",
+        "name": "Mechanical Power",
+        "icon": "MechanicalPower.png",
+        "recipes": {
+            "input": [
+                "powergeneratort1",
+                "powergeneratort2"
+            ],
+            "output": [
+                "turbinehighpress",
+                "turbinehighpresst2",
+                "turbinelowpress",
+                "turbinelowpresst2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "power_generator",
+                "power_generator_ii"
+            ],
+            "output": [
+                "high-pressure_turbine",
+                "high-pressure_turbine_ii",
+                "low-pressure_turbine",
+                "low-pressure_turbine_ii"
+            ]
+        }
+    },
+    "medical_equipment": {
+        "id": "medical_equipment",
+        "name": "Medical Equipment",
+        "icon": "MedicalEquipment.png",
+        "recipes": {
+            "input": [
+                "medical_supplies_assembly_t1",
+                "medical_supplies_assembly_t2"
+            ],
+            "output": [
+                "medical_equipment_assembly_t1",
+                "medical_equipment_assembly_t2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "medical_supplies": {
+        "id": "medical_supplies",
+        "name": "Medical Supplies",
+        "icon": "MedicalSupplies.png",
+        "recipes": {
+            "input": [
+                "medical_supplies_assembly_t1_2",
+                "medical_supplies_assembly_t2_2"
+            ],
+            "output": [
+                "medical_supplies_assembly_t1",
+                "medical_supplies_assembly_t2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "medical_supplies_ii": {
+        "id": "medical_supplies_ii",
+        "name": "Medical Supplies II",
+        "icon": "MedicalSupplies2.png",
+        "recipes": {
+            "input": [
+                "medical_supplies_iii_assembly_t1",
+                "medical_supplies_iii_assembly_t2"
+            ],
+            "output": [
+                "medical_supplies_assembly_t1_2",
+                "medical_supplies_assembly_t2_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "medical_supplies_iii": {
+        "id": "medical_supplies_iii",
+        "name": "Medical Supplies III",
+        "icon": "MedicalSupplies3.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "medical_supplies_iii_assembly_t1",
+                "medical_supplies_iii_assembly_t2"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "medium_oil": {
+        "id": "medium_oil",
+        "name": "Medium Oil",
+        "icon": "MediumOil.png",
+        "recipes": {
+            "input": [
+                "crude_oil_refining_2",
+                "steam_generation_2"
+            ],
+            "output": [
+                "crude_oil_refining"
+            ]
+        },
+        "machines": {
+            "input": [
+                "boiler_gas",
+                "distillation_stage_ii"
+            ],
+            "output": [
+                "distillation_stage_i"
+            ]
+        }
+    },
+    "microchips": {
+        "id": "microchips",
+        "name": "Microchips",
+        "icon": "Microchips.png",
+        "recipes": {
+            "input": [
+                "electronics_3_assembly_t1",
+                "electronics_3_assembly_t2",
+                "electronics_3_assembly_t3"
+            ],
+            "output": [
+                "microchip_manufacturing_final_stage",
+                "microchip_manufacturing_final_stage_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii"
+            ],
+            "output": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ]
+        }
+    },
+    "microchips_stage_1_a": {
+        "id": "microchips_stage_1_a",
+        "name": "Microchips Stage 1 A",
+        "icon": "MicrochipsStage1A.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_stage_2a",
+                "microchip_manufacturing_stage_2a_2"
+            ],
+            "output": [
+                "microchip_manufacturing_stage_1a",
+                "microchip_manufacturing_stage_1a_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ]
+        }
+    },
+    "microchips_stage_1_b": {
+        "id": "microchips_stage_1_b",
+        "name": "Microchips Stage 1 B",
+        "icon": "MicrochipsStage1B.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_stage_3a",
+                "microchip_manufacturing_stage_3a_2"
+            ],
+            "output": [
+                "microchip_manufacturing_stage_2a",
+                "microchip_manufacturing_stage_2a_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ]
+        }
+    },
+    "microchips_stage_1_c": {
+        "id": "microchips_stage_1_c",
+        "name": "Microchips Stage 1 C",
+        "icon": "MicrochipsStage1C.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_stage_1b",
+                "microchip_manufacturing_stage_1b_2"
+            ],
+            "output": [
+                "microchip_manufacturing_stage_3a",
+                "microchip_manufacturing_stage_3a_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ]
+        }
+    },
+    "microchips_stage_2_a": {
+        "id": "microchips_stage_2_a",
+        "name": "Microchips Stage 2 A",
+        "icon": "MicrochipsStage2A.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_stage_2b",
+                "microchip_manufacturing_stage_2b_2"
+            ],
+            "output": [
+                "microchip_manufacturing_stage_1b",
+                "microchip_manufacturing_stage_1b_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ]
+        }
+    },
+    "microchips_stage_2_b": {
+        "id": "microchips_stage_2_b",
+        "name": "Microchips Stage 2 B",
+        "icon": "MicrochipsStage2B.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_stage_3b",
+                "microchip_manufacturing_stage_3b_2"
+            ],
+            "output": [
+                "microchip_manufacturing_stage_2b",
+                "microchip_manufacturing_stage_2b_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ]
+        }
+    },
+    "microchips_stage_2_c": {
+        "id": "microchips_stage_2_c",
+        "name": "Microchips Stage 2 C",
+        "icon": "MicrochipsStage2C.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_stage_1c",
+                "microchip_manufacturing_stage_1c_2"
+            ],
+            "output": [
+                "microchip_manufacturing_stage_3b",
+                "microchip_manufacturing_stage_3b_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ]
+        }
+    },
+    "microchips_stage_3_a": {
+        "id": "microchips_stage_3_a",
+        "name": "Microchips Stage 3 A",
+        "icon": "MicrochipsStage3A.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_stage_2c",
+                "microchip_manufacturing_stage_2c_2"
+            ],
+            "output": [
+                "microchip_manufacturing_stage_1c",
+                "microchip_manufacturing_stage_1c_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ]
+        }
+    },
+    "microchips_stage_3_b": {
+        "id": "microchips_stage_3_b",
+        "name": "Microchips Stage 3 B",
+        "icon": "MicrochipsStage3B.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_stage_3c",
+                "microchip_manufacturing_stage_3c_2"
+            ],
+            "output": [
+                "microchip_manufacturing_stage_2c",
+                "microchip_manufacturing_stage_2c_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ]
+        }
+    },
+    "microchips_stage_3_c": {
+        "id": "microchips_stage_3_c",
+        "name": "Microchips Stage 3 C",
+        "icon": "MicrochipsStage3C.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_stage_1d",
+                "microchip_manufacturing_stage_1d_2"
+            ],
+            "output": [
+                "microchip_manufacturing_stage_3c",
+                "microchip_manufacturing_stage_3c_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ]
+        }
+    },
+    "microchips_stage_4_a": {
+        "id": "microchips_stage_4_a",
+        "name": "Microchips Stage 4 A",
+        "icon": "MicrochipsStage4A.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_stage_2d",
+                "microchip_manufacturing_stage_2d_2"
+            ],
+            "output": [
+                "microchip_manufacturing_stage_1d",
+                "microchip_manufacturing_stage_1d_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ]
+        }
+    },
+    "microchips_stage_4_b": {
+        "id": "microchips_stage_4_b",
+        "name": "Microchips Stage 4 B",
+        "icon": "MicrochipsStage4B.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_final_stage",
+                "microchip_manufacturing_final_stage_2"
+            ],
+            "output": [
+                "microchip_manufacturing_stage_2d",
+                "microchip_manufacturing_stage_2d_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "microchip_machine",
+                "microchip_machine_ii"
+            ]
+        }
+    },
+    "molten_copper": {
+        "id": "molten_copper",
+        "name": "Molten Copper",
+        "icon": "MoltenCopper.png",
+        "recipes": {
+            "input": [
+                "copper_casting",
+                "copper_casting_2"
+            ],
+            "output": [
+                "copper_scrap_smelting",
+                "copper_scrap_smelting_2",
+                "copper_scrap_smelting_arc",
+                "copper_smelting",
+                "copper_smelting_arc",
+                "copper_smelting_sand"
+            ]
+        },
+        "machines": {
+            "input": [
+                "metal_caster",
+                "metal_caster_ii"
+            ],
+            "output": [
+                "arc_furnace_ii",
+                "blast_furnace",
+                "blast_furnace_ii"
+            ]
+        }
+    },
+    "molten_glass": {
+        "id": "molten_glass",
+        "name": "Molten Glass",
+        "icon": "MoltenGlass.png",
+        "recipes": {
+            "input": [
+                "glass_casting",
+                "glass_casting_2"
+            ],
+            "output": [
+                "glass_broken_smelting",
+                "glass_broken_smelting_2",
+                "glass_smelting",
+                "glass_smelting_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "glass_maker",
+                "glass_maker_ii"
+            ],
+            "output": [
+                "arc_furnace_ii",
+                "blast_furnace",
+                "blast_furnace_ii"
+            ]
+        }
+    },
+    "molten_iron": {
+        "id": "molten_iron",
+        "name": "Molten Iron",
+        "icon": "MoltenIron.png",
+        "recipes": {
+            "input": [
+                "iron_casting",
+                "iron_casting_2",
+                "steel_smelting",
+                "steel_smelting_2"
+            ],
+            "output": [
+                "iron_scrap_smelting",
+                "iron_scrap_smelting_2",
+                "iron_scrap_smelting_arc",
+                "iron_smelting",
+                "iron_smelting_arc",
+                "iron_smelting_lime"
+            ]
+        },
+        "machines": {
+            "input": [
+                "metal_caster",
+                "metal_caster_ii",
+                "oxygen_furnace",
+                "oxygen_furnace_ii"
+            ],
+            "output": [
+                "arc_furnace_ii",
+                "blast_furnace",
+                "blast_furnace_ii"
+            ]
+        }
+    },
+    "molten_silicon": {
+        "id": "molten_silicon",
+        "name": "Molten Silicon",
+        "icon": "MoltenSilicon.png",
+        "recipes": {
+            "input": [
+                "silicon_treatment"
+            ],
+            "output": [
+                "silicon_smelting_arc",
+                "silicon_smelting_arc_ii"
+            ]
+        },
+        "machines": {
+            "input": [
+                "silicon_reactor"
+            ],
+            "output": [
+                "arc_furnace",
+                "arc_furnace_ii"
+            ]
+        }
+    },
+    "molten_steel": {
+        "id": "molten_steel",
+        "name": "Molten Steel",
+        "icon": "MoltenSteel.png",
+        "recipes": {
+            "input": [
+                "steel_casting_cooled",
+                "steel_casting_cooled_2"
+            ],
+            "output": [
+                "steel_smelting",
+                "steel_smelting_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "cooled_caster",
+                "cooled_caster_ii"
+            ],
+            "output": [
+                "oxygen_furnace",
+                "oxygen_furnace_ii"
+            ]
+        }
+    },
+    "morphine": {
+        "id": "morphine",
+        "name": "Morphine",
+        "icon": "Morphine.png",
+        "recipes": {
+            "input": [
+                "medical_supplies_iii_assembly_t1",
+                "medical_supplies_iii_assembly_t2"
+            ],
+            "output": [
+                "morphine_production"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ],
+            "output": [
+                "chemical_plant_ii"
+            ]
+        }
+    },
+    "naphtha": {
+        "id": "naphtha",
+        "name": "Naphtha",
+        "icon": "Naphtha.png",
+        "recipes": {
+            "input": [
+                "naphtha_disposal",
+                "naphtha_reforming",
+                "naphtha_reforming_2",
+                "plastic_making",
+                "rubber_production",
+                "rubber_production_coal",
+                "steam_generation_2"
+            ],
+            "output": [
+                "diesel_reforming",
+                "heavy_distillate_refining",
+                "heavyoil_cracking_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "boiler_gas",
+                "cracking_unit",
+                "flare",
+                "polymerization_plant",
+                "rubber_maker"
+            ],
+            "output": [
+                "cracking_unit",
+                "distillation_stage_iii"
+            ]
+        }
+    },
+    "nitrogen": {
+        "id": "nitrogen",
+        "name": "Nitrogen",
+        "icon": "Nitrogen.png",
+        "recipes": {
+            "input": [
+                "ammonia_synthesis",
+                "ammonia_synthesis_2",
+                "fertilizer_synthesis",
+                "fertilizer_synthesis_2",
+                "liquid_nitrogen_production",
+                "liquid_nitrogen_production_2",
+                "product_disposal_2"
+            ],
+            "output": [
+                "air_separation",
+                "ammonia_electrolysis"
+            ]
+        },
+        "machines": {
+            "input": [
+                "chemical_plant",
+                "chemical_plant_ii",
+                "smoke_stack",
+                "smoke_stack_large"
+            ],
+            "output": [
+                "air_separator",
+                "electrolyzer"
+            ]
+        }
+    },
+    "oxygen": {
+        "id": "oxygen",
+        "name": "Oxygen",
+        "icon": "Oxygen.png",
+        "recipes": {
+            "input": [
+                "antibiotics",
+                "ethanol_making_corn",
+                "ethanol_making_sugar",
+                "fuelgas_reforming",
+                "product_disposal_2",
+                "steel_smelting",
+                "steel_smelting_2"
+            ],
+            "output": [
+                "air_separation",
+                "water_electrolysis"
+            ]
+        },
+        "machines": {
+            "input": [
+                "cracking_unit",
+                "fermentation_tank",
+                "oxygen_furnace",
+                "oxygen_furnace_ii",
+                "smoke_stack",
+                "smoke_stack_large"
+            ],
+            "output": [
+                "air_separator",
+                "electrolyzer"
+            ]
+        }
+    },
+    "pcb": {
+        "id": "pcb",
+        "name": "PCB",
+        "icon": "PCB.png",
+        "recipes": {
+            "input": [
+                "electronics_2_assembly_t1",
+                "electronics_2_assembly_t2",
+                "electronics_2_assembly_t3"
+            ],
+            "output": [
+                "pcb_assembly_t1",
+                "pcb_assembly_t2",
+                "pcb_assembly_t3"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii"
+            ],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii"
+            ]
+        }
+    },
+    "plastic": {
+        "id": "plastic",
+        "name": "Plastic",
+        "icon": "Plastic.png",
+        "recipes": {
+            "input": [
+                "consumer_electronics_assembly_t1",
+                "disinfectant_production",
+                "disinfectant_production_2",
+                "medical_equipment_assembly_t1",
+                "medical_equipment_assembly_t2",
+                "microchip_manufacturing_stage_2a",
+                "microchip_manufacturing_stage_2a_2",
+                "microchip_manufacturing_stage_2b",
+                "microchip_manufacturing_stage_2b_2",
+                "microchip_manufacturing_stage_2c",
+                "microchip_manufacturing_stage_2c_2",
+                "microchip_manufacturing_stage_2d",
+                "microchip_manufacturing_stage_2d_2",
+                "pcb_assembly_t1",
+                "pcb_assembly_t2",
+                "pcb_assembly_t3",
+                "snack_production",
+                "snack_production_2"
+            ],
+            "output": [
+                "plastic_making",
+                "plastic_making_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii",
+                "chemical_plant",
+                "chemical_plant_ii",
+                "food_processor",
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "polymerization_plant"
+            ]
+        }
+    },
+    "poppy": {
+        "id": "poppy",
+        "name": "Poppy",
+        "icon": "Poppy.png",
+        "recipes": {
+            "input": [
+                "morphine_production"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "chemical_plant_ii"
+            ],
+            "output": []
+        }
+    },
+    "potato": {
+        "id": "potato",
+        "name": "Potato",
+        "icon": "Potato.png",
+        "recipes": {
+            "input": [
+                "animal_feed_production",
+                "digestion_2",
+                "snack_production"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "anaerobic_digester",
+                "food_processor",
+                "mixer"
+            ],
+            "output": []
+        }
+    },
+    "quartz": {
+        "id": "quartz",
+        "name": "Quartz",
+        "icon": "Quartz.png",
+        "recipes": {
+            "input": [
+                "silicon_smelting_arc",
+                "silicon_smelting_arc_ii"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "arc_furnace",
+                "arc_furnace_ii"
+            ],
+            "output": []
+        }
+    },
+    "recyclables": {
+        "id": "recyclables",
+        "name": "Recyclables",
+        "icon": "Recyclables.png",
+        "recipes": {
+            "input": [
+                "wastesortingplant"
+            ],
+            "output": [
+                "maintenance_i_2",
+                "maintenance_ii_2",
+                "maintenance_iii_2",
+                "research_lab_ii",
+                "research_lab_iii",
+                "research_lab_iv",
+                "research_lab_v"
+            ]
+        },
+        "machines": {
+            "input": [
+                "waste_sorting_plant"
+            ],
+            "output": [
+                "maintenance_depot",
+                "maintenance_ii_depot",
+                "maintenance_iii_depot",
+                "research_lab_ii",
+                "research_lab_iii",
+                "research_lab_iv",
+                "research_lab_v"
+            ]
+        }
+    },
+    "rock": {
+        "id": "rock",
+        "name": "Rock",
+        "icon": "Rock.png",
+        "recipes": {
+            "input": [
+                "fluoride_leaching",
+                "rock_crushing"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "crusher",
+                "settling_tank"
+            ],
+            "output": []
+        }
+    },
+    "rubber": {
+        "id": "rubber",
+        "name": "Rubber",
+        "icon": "Rubber.png",
+        "recipes": {
+            "input": [
+                "electronics_assembly_t1",
+                "electronics_assembly_t2",
+                "electronics_assembly_t3",
+                "electronics_assembly_t4",
+                "electronics_assembly_t5"
+            ],
+            "output": [
+                "rubber_production",
+                "rubber_production_alt",
+                "rubber_production_coal",
+                "rubber_production_coal_alt",
+                "rubber_production_ethanol"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic",
+                "assembly_robotic_ii"
+            ],
+            "output": [
+                "rubber_maker"
+            ]
+        }
+    },
+    "salt": {
+        "id": "salt",
+        "name": "Salt",
+        "icon": "Salt.png",
+        "recipes": {
+            "input": [
+                "brine_production",
+                "glass_mix_mixing",
+                "glass_mix_mixing_2",
+                "meat_processing",
+                "sausage_processing",
+                "snack_production",
+                "snack_production_2"
+            ],
+            "output": [
+                "salt_making",
+                "salt_making_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "food_processor",
+                "mixer"
+            ],
+            "output": [
+                "evaporation_pond",
+                "evaporation_pond_heated"
+            ]
+        }
+    },
+    "sand": {
+        "id": "sand",
+        "name": "Sand",
+        "icon": "Sand.png",
+        "recipes": {
+            "input": [
+                "concrete_mixing",
+                "concrete_mixing_2",
+                "copper_smelting_arc",
+                "copper_smelting_sand",
+                "filter_media_mixing",
+                "glass_mix_mixing",
+                "glass_mix_mixing_2",
+                "gold_smelting",
+                "water_treatment"
+            ],
+            "output": [
+                "gravel_crushing"
+            ]
+        },
+        "machines": {
+            "input": [
+                "arc_furnace_ii",
+                "blast_furnace_ii",
+                "concrete_mixer",
+                "concrete_mixer_ii",
+                "concrete_mixer_iii",
+                "gold_furnace",
+                "mixer",
+                "wastewater_treatment"
+            ],
+            "output": [
+                "crusher"
+            ]
+        }
+    },
+    "sausage": {
+        "id": "sausage",
+        "name": "Sausage",
+        "icon": "Sausage.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "sausage_processing"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "food_processor"
+            ]
+        }
+    },
+    "seawater": {
+        "id": "seawater",
+        "name": "Seawater",
+        "icon": "Seawater.png",
+        "recipes": {
+            "input": [
+                "brine_making",
+                "brine_making_2",
+                "co2_injection",
+                "salt_making",
+                "salt_making_2",
+                "seawater_dumping",
+                "thermal_desalination",
+                "thermal_desalination_2",
+                "water_desalination_basic"
+            ],
+            "output": [
+                "ocean_water_pumping",
+                "ocean_water_pumping_ii"
+            ]
+        },
+        "machines": {
+            "input": [
+                "basic_distiller",
+                "evaporation_pond",
+                "evaporation_pond_heated",
+                "gas_injection_pump",
+                "liquid_dump",
+                "thermal_desalinator"
+            ],
+            "output": [
+                "seawater_pump",
+                "seawater_pump_tall"
+            ]
+        }
+    },
+    "server": {
+        "id": "server",
+        "name": "Server",
+        "icon": "Server.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "server_assembly_t1",
+                "server_assembly_t2",
+                "server_assembly_t3"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii"
+            ]
+        }
+    },
+    "silicon_poly": {
+        "id": "silicon_poly",
+        "name": "Silicon (Poly)",
+        "icon": "SiliconPoly.png",
+        "recipes": {
+            "input": [
+                "electronics_2_assembly_t1",
+                "electronics_2_assembly_t2",
+                "electronics_2_assembly_t3",
+                "silicon_crystallization",
+                "solar_cell_assembly",
+                "solar_cell_assembly_2"
+            ],
+            "output": [
+                "silicon_treatment"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii",
+                "silicon_crystallizer"
+            ],
+            "output": [
+                "silicon_reactor"
+            ]
+        }
+    },
+    "silicon_wafer": {
+        "id": "silicon_wafer",
+        "name": "Silicon Wafer",
+        "icon": "SiliconWafer.png",
+        "recipes": {
+            "input": [
+                "microchip_manufacturing_stage_1a",
+                "microchip_manufacturing_stage_1a_2",
+                "solar_cell_assembly_2"
+            ],
+            "output": [
+                "silicon_crystallization"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_robotic_ii",
+                "microchip_machine",
+                "microchip_machine_ii"
+            ],
+            "output": [
+                "silicon_crystallizer"
+            ]
+        }
+    },
+    "slag": {
+        "id": "slag",
+        "name": "Slag",
+        "icon": "Slag.png",
+        "recipes": {
+            "input": [
+                "slag_crushing"
+            ],
+            "output": [
+                "copper_smelting",
+                "copper_smelting_arc",
+                "copper_smelting_sand",
+                "fluoride_leaching",
+                "glass_casting",
+                "glass_smelting",
+                "glass_smelting_2",
+                "iron_smelting",
+                "iron_smelting_arc",
+                "iron_smelting_lime",
+                "silicon_smelting_arc",
+                "silicon_smelting_arc_ii",
+                "sulfur_neutralization",
+                "toxic_slurry_treatment"
+            ]
+        },
+        "machines": {
+            "input": [
+                "crusher"
+            ],
+            "output": [
+                "arc_furnace",
+                "arc_furnace_ii",
+                "blast_furnace",
+                "blast_furnace_ii",
+                "glass_maker",
+                "mixer",
+                "settling_tank",
+                "wastewater_treatment"
+            ]
+        }
+    },
+    "slag_crushed": {
+        "id": "slag_crushed",
+        "name": "Slag Crushed",
+        "icon": "SlagCrushed.png",
+        "recipes": {
+            "input": [
+                "concrete_mixing",
+                "concrete_mixing_2"
+            ],
+            "output": [
+                "slag_crushing"
+            ]
+        },
+        "machines": {
+            "input": [
+                "concrete_mixer",
+                "concrete_mixer_ii",
+                "concrete_mixer_iii"
+            ],
+            "output": [
+                "crusher"
+            ]
+        }
+    },
+    "sludge": {
+        "id": "sludge",
+        "name": "Sludge",
+        "icon": "Sludge.png",
+        "recipes": {
+            "input": [
+                "burning_2",
+                "digestion"
+            ],
+            "output": [
+                "water_treatment",
+                "water_treatment_advanced"
+            ]
+        },
+        "machines": {
+            "input": [
+                "anaerobic_digester",
+                "burner_solid"
+            ],
+            "output": [
+                "wastewater_treatment"
+            ]
+        }
+    },
+    "snack": {
+        "id": "snack",
+        "name": "Snack",
+        "icon": "Snack.png",
+        "recipes": {
+            "input": [
+                "food_pack_assembly_eggs",
+                "food_pack_assembly_meat"
+            ],
+            "output": [
+                "snack_production",
+                "snack_production_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii"
+            ],
+            "output": [
+                "food_processor"
+            ]
+        }
+    },
+    "solar_cell": {
+        "id": "solar_cell",
+        "name": "Solar Cell",
+        "icon": "SolarCell.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "solar_cell_assembly",
+                "solar_cell_assembly_2"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii"
+            ]
+        }
+    },
+    "solar_cell_mono": {
+        "id": "solar_cell_mono",
+        "name": "Solar Cell Mono",
+        "icon": "SolarCellMono.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "solar_cell_assembly_2"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "assembly_robotic_ii"
+            ]
+        }
+    },
+    "sour_water": {
+        "id": "sour_water",
+        "name": "Sour Water",
+        "icon": "SourWater.png",
+        "recipes": {
+            "input": [
+                "sour_water_dumping",
+                "sour_water_stripping_recovery"
+            ],
+            "output": [
+                "crude_oil_refining",
+                "diesel_reforming",
+                "graphite_production",
+                "naphtha_reforming_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "liquid_dump",
+                "sour_water_stripper"
+            ],
+            "output": [
+                "chemical_plant_ii",
+                "cracking_unit",
+                "distillation_stage_i"
+            ]
+        }
+    },
+    "soybean": {
+        "id": "soybean",
+        "name": "Soybean",
+        "icon": "Soybean.png",
+        "recipes": {
+            "input": [
+                "animal_feed_production_2",
+                "soybean_milling",
+                "tofu_making"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "food_processor",
+                "mill",
+                "mixer"
+            ],
+            "output": []
+        }
+    },
+    "spent_fuel": {
+        "id": "spent_fuel",
+        "name": "Spent Fuel",
+        "icon": "SpentFuel.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "nuclearreactor"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "nuclear_reactor"
+            ]
+        }
+    },
+    "steam_depleted": {
+        "id": "steam_depleted",
+        "name": "Steam Depleted",
+        "icon": "SteamDepleted.png",
+        "recipes": {
+            "input": [
+                "depleted_steam_condensation",
+                "depleted_steam_condensation_2",
+                "product_disposal",
+                "product_disposal_2",
+                "thermal_desalination_2"
+            ],
+            "output": [
+                "steam_generation_2",
+                "turbinelowpress",
+                "turbinelowpresst2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "cooling_tower",
+                "cooling_tower_large",
+                "smoke_stack",
+                "smoke_stack_large",
+                "thermal_desalinator"
+            ],
+            "output": [
+                "boiler_gas",
+                "low-pressure_turbine",
+                "low-pressure_turbine_ii"
+            ]
+        }
+    },
+    "steam_hi": {
+        "id": "steam_hi",
+        "name": "Steam Hi",
+        "icon": "SteamHi.png",
+        "recipes": {
+            "input": [
+                "crude_oil_refining",
+                "crude_oil_refining_2",
+                "diesel_reforming",
+                "heavy_distillate_refining",
+                "hi-press_steam_condensation",
+                "hi-press_steam_condensation_2",
+                "hydrogen_reforming",
+                "naphtha_reforming_2",
+                "product_disposal_2",
+                "sour_water_stripping_recovery",
+                "thermal_desalination",
+                "turbinehighpress",
+                "turbinehighpresst2"
+            ],
+            "output": [
+                "nuclearreactor",
+                "silicon_smelting_arc_ii",
+                "steam_generation",
+                "steam_generation_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "cooling_tower",
+                "cooling_tower_large",
+                "cracking_unit",
+                "distillation_stage_i",
+                "distillation_stage_ii",
+                "distillation_stage_iii",
+                "high-pressure_turbine",
+                "high-pressure_turbine_ii",
+                "hydrogen_reformer",
+                "smoke_stack",
+                "smoke_stack_large",
+                "sour_water_stripper",
+                "thermal_desalinator"
+            ],
+            "output": [
+                "arc_furnace_ii",
+                "boiler_coal",
+                "boiler_electric",
+                "boiler_gas",
+                "nuclear_reactor"
+            ]
+        }
+    },
+    "steam_lo": {
+        "id": "steam_lo",
+        "name": "Steam Lo",
+        "icon": "SteamLo.png",
+        "recipes": {
+            "input": [
+                "lo-press_steam_condensation",
+                "lo-press_steam_condensation_2",
+                "product_disposal_2",
+                "thermal_desalination_2",
+                "turbinelowpress",
+                "turbinelowpresst2"
+            ],
+            "output": [
+                "copper_scrap_smelting_arc",
+                "copper_smelting_arc",
+                "exhaust_filtering",
+                "glass_smelting_2",
+                "iron_scrap_smelting_arc",
+                "iron_smelting_arc",
+                "turbinehighpress",
+                "turbinehighpresst2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "cooling_tower",
+                "cooling_tower_large",
+                "low-pressure_turbine",
+                "low-pressure_turbine_ii",
+                "smoke_stack",
+                "smoke_stack_large",
+                "thermal_desalinator"
+            ],
+            "output": [
+                "arc_furnace_ii",
+                "exhaust_scrubber",
+                "high-pressure_turbine",
+                "high-pressure_turbine_ii"
+            ]
+        }
+    },
+    "steel": {
+        "id": "steel",
+        "name": "Steel",
+        "icon": "Steel.png",
+        "recipes": {
+            "input": [
+                "anesthetics_production",
+                "consumer_electronics_assembly_t1",
+                "cp3_assembly_t1",
+                "cp3_assembly_t2",
+                "cp3_assembly_t3",
+                "household_appliances_assembly_t1",
+                "household_appliances_assembly_t2",
+                "household_appliances_assembly_t3",
+                "household_goods_assembly_t1",
+                "household_goods_assembly_t2",
+                "household_goods_assembly_t3",
+                "liquid_nitrogen_production",
+                "liquid_nitrogen_production_2",
+                "mech._parts_assembly_t3-2",
+                "mech._parts_assembly_t4",
+                "medical_equipment_assembly_t1",
+                "medical_equipment_assembly_t2",
+                "server_assembly_t1",
+                "server_assembly_t2",
+                "server_assembly_t3",
+                "solar_cell_assembly",
+                "solar_cell_assembly_2",
+                "uranium_rods_t1",
+                "vehicle_parts_2_assembly_t1",
+                "vehicle_parts_2_assembly_t2"
+            ],
+            "output": [
+                "steel_casting_cooled",
+                "steel_casting_cooled_2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_robotic",
+                "assembly_robotic_ii",
+                "chemical_plant",
+                "chemical_plant_ii"
+            ],
+            "output": [
+                "cooled_caster",
+                "cooled_caster_ii"
+            ]
+        }
+    },
+    "sugar": {
+        "id": "sugar",
+        "name": "Sugar",
+        "icon": "Sugar.png",
+        "recipes": {
+            "input": [
+                "antibiotics",
+                "cake_production",
+                "ethanol_making_sugar"
+            ],
+            "output": [
+                "sugar_refining_cane"
+            ]
+        },
+        "machines": {
+            "input": [
+                "baking_unit",
+                "fermentation_tank"
+            ],
+            "output": [
+                "food_processor"
+            ]
+        }
+    },
+    "sugar_cane": {
+        "id": "sugar_cane",
+        "name": "Sugar Cane",
+        "icon": "SugarCane.png",
+        "recipes": {
+            "input": [
+                "sugar_refining_cane"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "food_processor"
+            ],
+            "output": []
+        }
+    },
+    "sulfur": {
+        "id": "sulfur",
+        "name": "Sulfur",
+        "icon": "Sulfur.png",
+        "recipes": {
+            "input": [
+                "acid_mixing",
+                "burning_2",
+                "fertilizer_ii_synthesis",
+                "rubber_production",
+                "rubber_production_alt",
+                "rubber_production_ethanol",
+                "sulfur_neutralization",
+                "tofu_making"
+            ],
+            "output": [
+                "exhaust_filtering",
+                "sour_water_stripping_recovery"
+            ]
+        },
+        "machines": {
+            "input": [
+                "burner_solid",
+                "food_processor",
+                "mixer",
+                "rubber_maker"
+            ],
+            "output": [
+                "exhaust_scrubber",
+                "sour_water_stripper"
+            ]
+        }
+    },
+    "tofu": {
+        "id": "tofu",
+        "name": "Tofu",
+        "icon": "Tofu.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "tofu_making"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "food_processor"
+            ]
+        }
+    },
+    "toxic_slurry": {
+        "id": "toxic_slurry",
+        "name": "Toxic Slurry",
+        "icon": "ToxicSlurry.png",
+        "recipes": {
+            "input": [
+                "toxic_slurry_dumping",
+                "toxic_slurry_treatment"
+            ],
+            "output": [
+                "gold_settling",
+                "uranium_leaching"
+            ]
+        },
+        "machines": {
+            "input": [
+                "liquid_dump",
+                "wastewater_treatment"
+            ],
+            "output": [
+                "settling_tank"
+            ]
+        }
+    },
+    "uranium_ore": {
+        "id": "uranium_ore",
+        "name": "Uranium Ore",
+        "icon": "UraniumOre.png",
+        "recipes": {
+            "input": [
+                "uranium_crushing"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "crusher"
+            ],
+            "output": []
+        }
+    },
+    "uranium_ore_crushed": {
+        "id": "uranium_ore_crushed",
+        "name": "Uranium Ore Crushed",
+        "icon": "UraniumOreCrushed.png",
+        "recipes": {
+            "input": [
+                "uranium_leaching"
+            ],
+            "output": [
+                "uranium_crushing"
+            ]
+        },
+        "machines": {
+            "input": [
+                "settling_tank"
+            ],
+            "output": [
+                "crusher"
+            ]
+        }
+    },
+    "uranium_pellets": {
+        "id": "uranium_pellets",
+        "name": "Uranium Pellets",
+        "icon": "UraniumPellets.png",
+        "recipes": {
+            "input": [
+                "uranium_rods_t1"
+            ],
+            "output": [
+                "uranium_enrichment"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii"
+            ],
+            "output": [
+                "enrichment_plant"
+            ]
+        }
+    },
+    "uranium_rod": {
+        "id": "uranium_rod",
+        "name": "Uranium Rod",
+        "icon": "UraniumRod.png",
+        "recipes": {
+            "input": [
+                "nuclearreactor"
+            ],
+            "output": [
+                "uranium_rods_t1"
+            ]
+        },
+        "machines": {
+            "input": [
+                "nuclear_reactor"
+            ],
+            "output": [
+                "assembly_electric_ii"
+            ]
+        }
+    },
+    "vehicle_parts": {
+        "id": "vehicle_parts",
+        "name": "Vehicle Parts",
+        "icon": "VehicleParts.png",
+        "recipes": {
+            "input": [
+                "vehicle_parts_2_assembly_t1",
+                "vehicle_parts_2_assembly_t2"
+            ],
+            "output": [
+                "vehicle_parts_assembly_t1",
+                "vehicle_parts_assembly_t2",
+                "vehicle_parts_assembly_t3",
+                "vehicle_parts_assembly_t4"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ],
+            "output": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "vehicle_parts_ii": {
+        "id": "vehicle_parts_ii",
+        "name": "Vehicle Parts II",
+        "icon": "VehicleParts2.png",
+        "recipes": {
+            "input": [
+                "vehicle_parts_3_assembly_t1",
+                "vehicle_parts_3_assembly_t2"
+            ],
+            "output": [
+                "vehicle_parts_2_assembly_t1",
+                "vehicle_parts_2_assembly_t2"
+            ]
+        },
+        "machines": {
+            "input": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "vehicle_parts_iii": {
+        "id": "vehicle_parts_iii",
+        "name": "Vehicle Parts III",
+        "icon": "VehicleParts3.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "vehicle_parts_3_assembly_t1",
+                "vehicle_parts_3_assembly_t2"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "assembly_electric_ii",
+                "assembly_robotic"
+            ]
+        }
+    },
+    "waste": {
+        "id": "waste",
+        "name": "Waste",
+        "icon": "Waste.png",
+        "recipes": {
+            "input": [
+                "burning"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "burner_solid"
+            ],
+            "output": []
+        }
+    },
+    "waste_water": {
+        "id": "waste_water",
+        "name": "Waste Water",
+        "icon": "WasteWater.png",
+        "recipes": {
+            "input": [
+                "waste_water_dumping",
+                "water_treatment",
+                "water_treatment_advanced"
+            ],
+            "output": [
+                "diesel_distillation_basic",
+                "rubber_production_coal",
+                "rubber_production_coal_alt"
+            ]
+        },
+        "machines": {
+            "input": [
+                "liquid_dump",
+                "wastewater_treatment"
+            ],
+            "output": [
+                "basic_distiller",
+                "rubber_maker"
+            ]
+        }
+    },
+    "water": {
+        "id": "water",
+        "name": "Water",
+        "icon": "Water.png",
+        "recipes": {
+            "input": [
+                "acid_mixing",
+                "bread_making",
+                "brine_production",
+                "concrete_mixing",
+                "concrete_mixing_2",
+                "copper_purification_water",
+                "copper_scrap_smelting_arc",
+                "copper_smelting_arc",
+                "corn_milling_wet",
+                "exhaust_filtering",
+                "fertilizer_mixing",
+                "fertilizer_synthesis",
+                "fertilizer_synthesis_2",
+                "glass_smelting_2",
+                "iron_scrap_smelting_arc",
+                "iron_smelting_arc",
+                "meat_processing",
+                "microchip_manufacturing_stage_1a",
+                "microchip_manufacturing_stage_1a_2",
+                "microchip_manufacturing_stage_1b",
+                "microchip_manufacturing_stage_1b_2",
+                "microchip_manufacturing_stage_1c",
+                "microchip_manufacturing_stage_1c_2",
+                "microchip_manufacturing_stage_1d",
+                "microchip_manufacturing_stage_1d_2",
+                "nuclearreactor",
+                "silicon_crystallization",
+                "silicon_smelting_arc_ii",
+                "steam_generation",
+                "steam_generation_2",
+                "steel_casting_cooled",
+                "steel_casting_cooled_2",
+                "sugar_refining_cane",
+                "tofu_making",
+                "water_cooling",
+                "water_dumping",
+                "water_electrolysis"
+            ],
+            "output": [
+                "create_computing_power",
+                "depleted_steam_condensation",
+                "depleted_steam_condensation_2",
+                "hi-press_steam_condensation",
+                "hi-press_steam_condensation_2",
+                "lo-press_steam_condensation",
+                "lo-press_steam_condensation_2",
+                "sour_water_stripping_recovery",
+                "thermal_desalination",
+                "thermal_desalination_2",
+                "toxic_slurry_treatment",
+                "water_desalination_basic",
+                "water_pumping",
+                "water_treatment",
+                "water_treatment_advanced"
+            ]
+        },
+        "machines": {
+            "input": [
+                "arc_furnace_ii",
+                "baking_unit",
+                "boiler_coal",
+                "boiler_electric",
+                "boiler_gas",
+                "chemical_plant",
+                "chemical_plant_ii",
+                "concrete_mixer",
+                "concrete_mixer_ii",
+                "concrete_mixer_iii",
+                "cooled_caster",
+                "cooled_caster_ii",
+                "copper_electrolysis",
+                "electrolyzer",
+                "exhaust_scrubber",
+                "food_processor",
+                "liquid_dump",
+                "microchip_machine",
+                "microchip_machine_ii",
+                "mill",
+                "mixer",
+                "nuclear_reactor",
+                "silicon_crystallizer",
+                "water_chiller"
+            ],
+            "output": [
+                "basic_distiller",
+                "basic_rack",
+                "cooling_tower",
+                "cooling_tower_large",
+                "groundwater_pump",
+                "sour_water_stripper",
+                "thermal_desalinator",
+                "wastewater_treatment"
+            ]
+        }
+    },
+    "water_pollution": {
+        "id": "water_pollution",
+        "name": "Water Pollution",
+        "icon": "WaterPollution.png",
+        "recipes": {
+            "input": [],
+            "output": [
+                "acid_dumping",
+                "sour_water_dumping",
+                "toxic_slurry_dumping",
+                "waste_water_dumping"
+            ]
+        },
+        "machines": {
+            "input": [],
+            "output": [
+                "liquid_dump"
+            ]
+        }
+    },
+    "wheat": {
+        "id": "wheat",
+        "name": "Wheat",
+        "icon": "Wheat.png",
+        "recipes": {
+            "input": [
+                "animal_feed_production_2",
+                "digestion_2",
+                "wheat_milling"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "anaerobic_digester",
+                "mill",
+                "mixer"
+            ],
+            "output": []
+        }
+    },
+    "wood": {
+        "id": "wood",
+        "name": "Wood",
+        "icon": "Wood.png",
+        "recipes": {
+            "input": [
+                "charcoal_making",
+                "cp_assembly_t1",
+                "cp_assembly_t2",
+                "cp_assembly_t3",
+                "cp_assembly_t3_2",
+                "household_goods_assembly_t1",
+                "household_goods_assembly_t2",
+                "household_goods_assembly_t3"
+            ],
+            "output": []
+        },
+        "machines": {
+            "input": [
+                "assembly_electric",
+                "assembly_electric_ii",
+                "assembly_manual",
+                "assembly_robotic",
+                "coal_maker"
+            ],
+            "output": []
+        }
+    },
+    "yellow_cake": {
+        "id": "yellow_cake",
+        "name": "Yellow Cake",
+        "icon": "YellowCake.png",
+        "recipes": {
+            "input": [
+                "uranium_enrichment"
+            ],
+            "output": [
+                "uranium_leaching"
+            ]
+        },
+        "machines": {
+            "input": [
+                "enrichment_plant"
+            ],
+            "output": [
+                "settling_tank"
+            ]
+        }
+    }
+}

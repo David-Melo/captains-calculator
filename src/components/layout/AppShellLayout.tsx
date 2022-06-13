@@ -1,8 +1,10 @@
 import { AppShell, Box, Burger, Button, Divider, Group, Header, MediaQuery, Navbar, ThemeIcon, useMantineTheme, Container } from "@mantine/core"
 import React from "react"
-import { NavLink, useRoutes } from "react-router-dom"
+import { NavLink, Outlet, useRoutes } from "react-router-dom"
 import { Icon } from '@iconify/react';
 import NavContext from "components/navigation/NavContext";
+import { AnimatePresence } from 'framer-motion'
+import { RenderNavigator } from "components/navigation/Layout";
 
 type SideBarNavButtonProps = {
     to: string;
@@ -177,7 +179,7 @@ const AppShellLayout: React.FC = () => {
                                 />
                             </MediaQuery>
                             <Box>
-                                <img src="/img/logo.png" alt="Captain's Calculator" title="Captain's Calculator"/>
+                                <img src="/img/logo.png" alt="Captain's Calculator" title="Captain's Calculator" />
                             </Box>
 
                         </Group>
@@ -202,11 +204,11 @@ const AppShellLayout: React.FC = () => {
                 </Header>
 
                 <Box
-                        className="page-shell-wrapper"
-                        sx={{height:'100%'}}
-                    >
-                        {navigator}
-                    </Box>
+                    className="page-shell-wrapper"
+                    sx={{ height: '100%', overflow: 'hidden' }}
+                >
+                    <RenderNavigator navigator={navigator} />
+                </Box>
 
             </Container>
 
