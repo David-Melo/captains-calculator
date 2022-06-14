@@ -6,6 +6,7 @@ import Home from "screens/app/Home";
 import Buildings from "screens/app/Buildings";
 import Products from "screens/app/Products";
 import Recipes from '../screens/app/Recipes';
+import Calculator from '../screens/app/Calculator';
 
 let guestRoutes = {
     routes: [
@@ -17,7 +18,7 @@ let guestRoutes = {
                 { index: true, element: <Home />, breadcrumb: 'Calculator' },
                 { path: "buildings", element: <Buildings />, breadcrumb: 'Buildings' },
                 { path: "products", element: <Products />, breadcrumb: 'Products' },
-                { path: "recipes", element: <Recipes />, breadcrumb: 'Recipes' },
+                { path: "recipes", element: <Calculator />, breadcrumb: 'Recipes' },
                 { path: "*", element: <NotFound />, breadcrumb: 'Page Not Found', }
             ]
         }

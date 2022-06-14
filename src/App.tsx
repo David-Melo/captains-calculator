@@ -30,7 +30,7 @@ const App: React.FC = () => {
     return (
         <NavContext.Provider value={routes}>
             <BrowserRouter>
-                <Wrapper />
+                <Wrapper /> 
             </BrowserRouter>
         </NavContext.Provider>
     );  
