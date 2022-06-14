@@ -11,11 +11,11 @@ export type CategoryId = keyof typeof categoryData;
 export type BuildCost = {
     id: ProductId;
     name: string;
-    quatity: number;
+    quantity: number;
 }
 
 export type Machine = {
-    id: MachineId;
+    id: MachineId; 
     game_id: string;
     icon: string;
     name: string;
@@ -61,8 +61,19 @@ export type Product = {
     }
 }
 
+export type RecipeProduct = {
+    id: ProductId;
+    name: string;
+    quantity: number;
+}
+
 export type Recipe = {
-    
+    id: string;
+    name: string;
+    machine: string;
+    duration: number;
+    inputs: RecipeProduct[];
+    outputs: RecipeProduct[];
 }
 
 type MachineData = { [id in MachineId]: Machine }
@@ -78,7 +89,7 @@ export const loadProductData = () => {
     return productData as unknown as ProductData
 }
 
-export const loadRecipetData = () => {
+export const loadRecipeData = () => {
     return recipeData as unknown as RecipeData
 }
 

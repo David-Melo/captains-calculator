@@ -1,9 +1,8 @@
 import { AppShell, Box, Burger, Button, Divider, Group, Header, MediaQuery, Navbar, ThemeIcon, useMantineTheme, Container } from "@mantine/core"
 import React from "react"
-import { NavLink, Outlet, useRoutes } from "react-router-dom"
+import { NavLink, useRoutes } from "react-router-dom"
 import { Icon } from '@iconify/react';
 import NavContext from "components/navigation/NavContext";
-import { AnimatePresence } from 'framer-motion'
 import { RenderNavigator } from "components/navigation/Layout";
 
 type SideBarNavButtonProps = {

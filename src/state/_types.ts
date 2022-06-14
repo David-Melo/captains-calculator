@@ -6,6 +6,7 @@ export * from "state/app/_types";
 export * from "state/machines/_types";
 export * from "state/products/_types";
 export * from "state/categories/_types";
+export * from "state/recipes/_types";
 
 export type Context = IContext<typeof AppStateConfig>
 

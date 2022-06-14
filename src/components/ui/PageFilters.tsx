@@ -232,7 +232,7 @@ export const PageFilters: React.FC<FilterComponentProps> = ({ options }) => {
 
                     tabActive: {
                         backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[3],
-                        fontWeight: '500'
+                        fontWeight: 'bold'
                     },
                 })}
             >

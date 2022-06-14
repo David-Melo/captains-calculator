@@ -26,17 +26,21 @@ export const ProductMachineSelect = () => {
     const currentProduct = useAppState(state=>state.products.currentItem)
     const { itemsList, currentItemId } = useAppState(state=>state.machines)
     const selectMachine = useActions().machines.selectMachine
+    const selectRecipe = useActions().recipes.selectRecipe
+    const delectRecipesItem = useActions().recipes.delectRecipesItem
     const onChange = (machineId: MachineId) => {
+        selectRecipe(null)
+        delectRecipesItem(null)
         selectMachine(machineId)
     }
     if (!currentProduct) return null;
-    let filteredMachines = itemsList.filter(m=>currentProduct.machines.output.indexOf(m.id)>=1)
+    let filteredMachines = itemsList.filter(m=>currentProduct.machines.output.indexOf(m.id)>=0)
     return (
         <Select
             size="md"
             value={currentItemId} 
             onChange={onChange}
-            label="Select Building"
+            label="2. Select Building"
             placeholder="Pick one"
             itemComponent={SelectItem}
             data={filteredMachines.map(p=>({
@@ -46,7 +50,7 @@ export const ProductMachineSelect = () => {
             }))}
             searchable
             maxDropdownHeight={400}
-            nothingFound="Nobody here"
+            nothingFound="No Match Found"
             filter={(value, item) => item.label ? item.label.toLowerCase().includes(value.toLowerCase().trim()) : false}
         />
     )

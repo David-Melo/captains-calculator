@@ -19,7 +19,7 @@ const Wrapper = () => {
     return (
             <Routes>
                 <Route path="*" element={<AppShellLayout />} />
-            </Routes>
+            </Routes> 
     )
 } 
 
@@ -33,7 +33,7 @@ const App: React.FC = () => {
                 <Wrapper />
             </BrowserRouter>
         </NavContext.Provider>
-    ); 
+    );  
 }
 
 export default App; 

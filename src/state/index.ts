@@ -8,11 +8,13 @@ import { state, actions, effects } from 'state/app';
 import * as machines from 'state/machines'
 import * as products from 'state/products'
 import * as categories from 'state/categories'
+import * as recipes from 'state/recipes'
 
 export const AppModules = {
     machines,
     products,
-    categories
+    categories,
+    recipes
 }
 
 export const AppStateConfig = merge(

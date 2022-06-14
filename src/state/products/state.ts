@@ -7,7 +7,6 @@ export const state: ProductsState = {
     items: {},
     currentItemId: null,
     get currentItem() {
-        console.log('huh')
         return this.currentItemId ? this.items[this.currentItemId] : null
     }
 }

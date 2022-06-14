@@ -25,7 +25,13 @@ const SelectItem = React.forwardRef<HTMLDivElement, ItemProps>(
 export const ProductSelect = () => {
     const { itemsList, currentItemId } = useAppState(state=>state.products)
     const selectProduct = useActions().products.selectProduct
+    const selectMachine = useActions().machines.selectMachine
+    const selectRecipe = useActions().recipes.selectRecipe
+    const delectRecipesItem = useActions().recipes.delectRecipesItem
     const onChange = (productId: ProductId) => {
+        selectMachine(null)
+        selectRecipe(null)
+        delectRecipesItem(null)
         selectProduct(productId)
     }
     return (
@@ -33,7 +39,7 @@ export const ProductSelect = () => {
             size="md"
             value={currentItemId} 
             onChange={onChange}
-            label="Select Product"
+            label="1. Select Product"
             placeholder="Pick one"
             itemComponent={SelectItem}
             data={itemsList.map(p=>({
@@ -43,7 +49,7 @@ export const ProductSelect = () => {
             }))}
             searchable
             maxDropdownHeight={400}
-            nothingFound="Nobody here"
+            nothingFound="No Match Found"
             filter={(value, item) => item.label ? item.label.toLowerCase().includes(value.toLowerCase().trim()) : false}
         />
     )

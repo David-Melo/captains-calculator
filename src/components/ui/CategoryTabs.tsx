@@ -1,14 +1,8 @@
 import React from "react";
 import { createStyles, Box, Tabs, Card, Grid, Group, Image } from '@mantine/core';
-import { matchPath, useLocation, useNavigate } from "react-router-dom";
-import { Icon } from "@iconify/react"
-
-import Icons, { IconNames } from "components/ui/Icons"
 import { useAppState, useActions } from 'state';
 import { CategoryId } from "state/app/effects";
 import { GenericDictionary } from "state/_types";
-import * as categories from 'state/categories';
-import { selectCategory } from '../../state/categories/actions/selectCategory';
 import AnimatedList, { AnimateListItem } from "./AnimatedList";
 
 
@@ -22,7 +16,7 @@ let catOrderArray = [
     'food_production',
     'metallurgy_and_smelting',
     'power_production',
-    'crude_oil_refining',
+    'crude_oil_refining', 
     'waste_management',
     'storage',
     'buildings',
@@ -31,7 +25,7 @@ let catOrderArray = [
     'cargo_docks'
 ]
 
-export const CategoryTabs: React.FC<CategoryTabsProps> = ({ }) => {
+export const CategoryTabs: React.FC<CategoryTabsProps> = () => {
 
     const { items: categories, currentItemId: currentCategoryId } = useAppState(state => state.categories)
     const { selectCategory } = useActions().categories
@@ -89,7 +83,7 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({ }) => {
                                                         background: theme.colors.dark[5]
                                                     })}
                                                 >
-                                                    <Image src={`/assets/categories/${cat.icon}`} />
+                                                    <Image src={`/assets/categories/${cat.icon}`} alt={cat.label}/>
                                                 </Box>
                                             </Group>
                                         </Card>
@@ -117,7 +111,7 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({ }) => {
             }}
         >
             {categoryTabs.map(tab => {
-                return <Tabs.Tab key={tab.id} tabKey={tab.id} icon={tab.icon ? <img height={20} src={`/assets/categories/${tab.icon}`} /> : null} />
+                return <Tabs.Tab key={tab.id} tabKey={tab.id} icon={tab.icon ? <img height={20} src={`/assets/categories/${tab.icon}`} alt={tab.label} /> : null} />
             })}
 
         </Tabs>

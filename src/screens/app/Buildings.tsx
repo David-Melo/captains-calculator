@@ -1,9 +1,8 @@
-import { Box, Card, Grid, Group, Text, Image, Stack, Tabs } from '@mantine/core';
+import { Box, Card, Grid, Group, Text, Image, Stack } from '@mantine/core';
 import PageHeader from 'components/layout/page/PageHeader';
 import PageLayout from 'components/layout/page/PageLayout';
 import React from 'react';
 import { useAppState } from 'state';
-import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom';
 import NeedsBage from 'components/ui/NeedsBadge';
 import { CategoryTabs } from 'components/ui/CategoryTabs';
@@ -12,7 +11,7 @@ import AnimatedList, { AnimateListItem } from '../../components/ui/AnimatedList'
 const Buildings: React.FC = () => {
 
     const { itemsList } = useAppState(state => state.machines)
-    const { items: categories, currentItemId: currentCategoryId, currentItem: currentCategory } = useAppState(state => state.categories)
+    const { currentItemId: currentCategoryId, currentItem: currentCategory } = useAppState(state => state.categories)
 
 
     let filteredItems = itemsList.filter(items => {

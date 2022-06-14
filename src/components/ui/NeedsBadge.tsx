@@ -1,4 +1,4 @@
-import { Box, Text, Image, Group } from "@mantine/core";
+import { Box, Text, Image, Group, Tooltip } from "@mantine/core";
 import React from "react";
 
 type NeedsBageProps = {
@@ -36,7 +36,7 @@ const needMap = {
     },
 }
 
-const NeedsBage: React.FC<NeedsBageProps> = ({ need, value, mode = 'long', suffix = null }) => {
+const NeedsBage: React.FC<NeedsBageProps> = ({ need, value, mode = 'short', suffix = null }) => {
 
     if (value === 0) return null;
 
@@ -58,46 +58,52 @@ const NeedsBage: React.FC<NeedsBageProps> = ({ need, value, mode = 'long', suffi
     }
 
     return (
-        <Box
-            p={3}
-            sx={theme => ({
-                borderRadius: theme.radius.sm,
-                background: needMap[need].color,
-                display: 'inline-block'
-            })}
+        <Tooltip
+            label={needMap[need].label}
+            withArrow
+            withinPortal
         >
             <Box
+                p={3}
                 sx={theme => ({
-                    display: 'flex',
-                    alignItems: 'center'
+                    borderRadius: theme.radius.sm,
+                    background: needMap[need].color,
+                    display: 'inline-block'
                 })}
             >
-
-                {mode === 'long' ? (
-                    <Group position="left" spacing={5}>
-                        <Image sx={{ display: 'block' }} height={12} src={`/assets/ui/${needMap[need].icon}`} />
-                        <Text color="white" size="xs">{needMap[need].label}</Text>
-                    </Group>
-                ) : (
-
-                    <Box
-                        px={4}
-                    >
-                        <Image sx={{ display: 'block' }} height={12} src={`/assets/ui/${needMap[need].icon}`} />
-                    </Box>)}
-
                 <Box
-                    px={6}
-                    py={2}
                     sx={theme => ({
-                        borderRadius: theme.radius.sm,
-                        background: '#141517'
+                        display: 'flex',
+                        alignItems: 'center'
                     })}
                 >
-                    <Text color="white" weight="lighter" sx={{ fontSize: 10 }}>{value}{suffix ? ` ${suffix}` : ''}</Text>
+
+                    {mode === 'long' ? (
+                        <Group position="left" spacing={5}>
+                            <Image sx={{ display: 'block' }} height={12} src={`/assets/ui/${needMap[need].icon}`} />
+                            <Text color="white" size="xs">{needMap[need].label}</Text>
+                        </Group>
+                    ) : (
+
+                        <Box
+                            px={4}
+                        >
+                            <Image sx={{ display: 'block' }} height={12} src={`/assets/ui/${needMap[need].icon}`} />
+                        </Box>)}
+
+                    <Box
+                        px={6}
+                        py={2}
+                        sx={theme => ({
+                            borderRadius: theme.radius.sm,
+                            background: '#141517'
+                        })}
+                    >
+                        <Text color="white" weight="lighter" sx={{ fontSize: 10 }}>{value}{suffix ? ` ${suffix}` : ''}</Text>
+                    </Box>
                 </Box>
             </Box>
-        </Box>
+        </Tooltip>
     )
 
 }
