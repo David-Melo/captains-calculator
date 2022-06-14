@@ -15,14 +15,13 @@ const ProductIcon: React.FC<CostsIconProps> = ({ product }) => {
             withinPortal
         >
             <Box
-                p={6}
+                p={5}
                 sx={theme => ({
-                    borderRadius: theme.radius.md,
-                    border: `1px solid ${theme.colors.gray[1]}`,
-                    background: theme.colors.gray[7]
+                    borderRadius: theme.radius.sm,
+                    background: theme.colors.dark[4]
                 })}
             >
-                <Image src={`/assets/products/${product.icon}`} height={28} width={28} />
+                <Image src={`/assets/products/${product.icon}`} height={24} width={24} />
             </Box>
         </Tooltip>
     )

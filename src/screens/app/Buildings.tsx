@@ -57,7 +57,12 @@ const Buildings: React.FC = () => {
                                                             <Text weight={500} size="lg">{i.name}</Text>
                                                             <Group spacing={2}>
                                                                 <NeedsBage need="workers" value={i.workers} />
-                                                                <NeedsBage need="maintenance" value={i.maintenance_cost_quantity} />
+                                                                {i.maintenance_cost_units === 'maintenance_i' && (
+                                                                    <NeedsBage need="maintenance1" value={i.maintenance_cost_quantity} />
+                                                                )}
+                                                                {i.maintenance_cost_units === 'maintenance_iI' && (
+                                                                    <NeedsBage need="maintenance2" value={i.maintenance_cost_quantity} />
+                                                                )}
                                                                 <NeedsBage need="electricity" value={i.electricity_consumed} />
                                                                 <NeedsBage need="unity" value={i.unity_cost} />
                                                                 <NeedsBage need="computing" value={i.computing_consumed} suffix="tf" />

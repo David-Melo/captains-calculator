@@ -139,7 +139,7 @@ const SelectItemWithMachine = React.forwardRef<HTMLDivElement, ItemPropsWithMach
         return (
             <div ref={ref} {...others}>
                 <Group spacing="xs" noWrap>
-                    <Group>
+                    <Group spacing="xs">
                         {machine ? (
                             <React.Fragment>
                                 <Box
@@ -157,7 +157,7 @@ const SelectItemWithMachine = React.forwardRef<HTMLDivElement, ItemPropsWithMach
                                     />
                                 </Box>
                                 <Box>
-                                    <Text weight={500} size="lg" sx={{ lineHeight: '1em' }}>{machine.name}</Text>
+                                    <Text weight={500} size="md" sx={{ lineHeight: '1em' }}>{machine.name}</Text>
                                 </Box>
                             </React.Fragment>
                         ):(
@@ -177,7 +177,7 @@ const SelectItemWithMachine = React.forwardRef<HTMLDivElement, ItemPropsWithMach
                                     />
                                 </Box>
                                 <Box>
-                                    <Text weight={500} size="lg" sx={{ lineHeight: '1em' }}>{recipe.name}</Text>
+                                    <Text weight={500} size="md" sx={{ lineHeight: '1em' }}>{recipe.name}</Text>
                                 </Box>
                             </React.Fragment>
                         )}
@@ -203,7 +203,7 @@ const SelectItemWithMachine = React.forwardRef<HTMLDivElement, ItemPropsWithMach
                                         color="green"
                                         withinPortal
                                     >
-                                        <Indicator label={product.quantity} color="green" radius="xs" styles={{ indicator: { fontSize: 11, height: 'auto', paddingRight: 5, paddingLeft: 5 } }} size={8}>
+                                        <Indicator label={product.quantity} color="green" radius="xs" styles={{ indicator: { fontSize: 11, height: 'auto', paddingRight: 5, paddingLeft: 5 } }} size={5}>
                                             <Box
                                                 p={8}
                                                 sx={theme => ({
@@ -212,7 +212,7 @@ const SelectItemWithMachine = React.forwardRef<HTMLDivElement, ItemPropsWithMach
                                                     background: theme.colors.gray[7]
                                                 })}
                                             >
-                                                <Image src={`/assets/products/${product.icon}`} height={22} width={22} />
+                                                <Image src={`/assets/products/${product.icon}`} height={18} width={18} />
                                             </Box>
                                         </Indicator>
                                     </Tooltip>
@@ -255,7 +255,7 @@ const SelectItemWithMachine = React.forwardRef<HTMLDivElement, ItemPropsWithMach
                                                     background: theme.colors.gray[7]
                                                 })}
                                             >
-                                                <Image src={`/assets/products/${product.icon}`} height={26} width={26} />
+                                                <Image src={`/assets/products/${product.icon}`} height={18} width={18} />
                                             </Box>
                                         </Indicator>
                                     </Tooltip>
@@ -289,8 +289,7 @@ export const MachineRecipeSelect = () => {
             size="md"
             value={currentItemId}
             onChange={onChange}
-            label="3. Select Recipe"
-            placeholder="Pick one"
+            placeholder="3. Select Recipe"
             itemComponent={SelectItem}
             data={filteredRecipes.map(r => ({
                 label: r.name,
@@ -323,13 +322,13 @@ export const RecipeSelectControlled: React.FC<RecipeSelectControlledProps> = ({ 
 
     return (
         <Select
-            size="md"
+            size="sm"
             value={selectedId}
             onChange={onChange}
             placeholder={`Select Source For ${label} Input`}
             itemComponent={SelectItemWithMachine}
             data={recipes.map(r => ({
-                label: `${r.name} (${allMachines[r.machine].name})`,
+                label: `${r.name} [${allMachines[r.machine].name}]`,
                 value: r.id,
                 recipe: r,
                 machine: allMachines[r.machine]

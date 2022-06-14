@@ -39,8 +39,7 @@ export const ProductSelect = () => {
             size="md"
             value={currentItemId} 
             onChange={onChange}
-            label="1. Select Product"
-            placeholder="Pick one"
+            placeholder="1. Select Product"
             itemComponent={SelectItem}
             data={itemsList.map(p=>({
                 label: p.name,

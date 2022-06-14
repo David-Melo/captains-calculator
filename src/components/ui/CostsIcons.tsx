@@ -1,13 +1,14 @@
-import { Box, Image, Tooltip, Indicator } from "@mantine/core";
+import { Box, Image, Tooltip, Text, MantineColor, Stack } from "@mantine/core";
 import React from "react";
 import { useAppState } from "state";
 import { BuildCost } from "state/app/effects";
 
 type CostsIconProps = {
     product: BuildCost;
+    color?: MantineColor;
 }
 
-const CostsIcon: React.FC<CostsIconProps> = ({ product }) => {
+const CostsIcon: React.FC<CostsIconProps> = ({ product, color = "dark" }) => {
 
     const products = useAppState(state => state.products.items)
     const productData = products[product.id]
@@ -19,21 +20,21 @@ const CostsIcon: React.FC<CostsIconProps> = ({ product }) => {
             withArrow
             withinPortal
         >
-            <Indicator label={value} color="red" radius="xs" styles={{ indicator: { fontSize: 11, height: 'auto', paddingRight: 5, paddingLeft: 5 } }} size={8}>
+            <Stack align="center" spacing={5}>
                 <Box
                     p={6}
                     sx={theme => ({
-                        borderRadius: theme.radius.md,
-                        border: `1px solid ${theme.colors.gray[1]}`,
-                        background: theme.colors.gray[7]
+                        borderRadius: theme.radius.sm,
+                        background: theme.colors.dark[4]
                     })}
                 >
-                    <Image src={`/assets/products/${productData.icon}`} height={24} width={24} />
+                    <Image src={`/assets/products/${productData.icon}`} height={28} width={28} />
                 </Box>
-            </Indicator>
+                <Text weight="bold" size="sm" sx={theme=>({lineHeight: `${theme.fontSizes.sm}px`})}>{value}</Text>
+            </Stack>
         </Tooltip>
     )
 
-} 
+}
 
 export default CostsIcon; 
