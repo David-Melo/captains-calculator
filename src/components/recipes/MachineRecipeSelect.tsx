@@ -289,7 +289,8 @@ export const MachineRecipeSelect = () => {
             size="md"
             value={currentItemId}
             onChange={onChange}
-            placeholder="3. Select Recipe"
+            label="3. Select Recipe"
+            placeholder="Make Selection..."
             itemComponent={SelectItem}
             data={filteredRecipes.map(r => ({
                 label: r.name,

@@ -40,7 +40,8 @@ export const ProductMachineSelect = () => {
             size="md"
             value={currentItemId} 
             onChange={onChange}
-            placeholder="2. Select Building"
+            label="2. Select Building"
+            placeholder="Make Selection..."
             itemComponent={SelectItem}
             data={filteredMachines.map(p=>({
                 label: p.name,

@@ -41,7 +41,7 @@ export type Machine = {
 }
 
 export type Category = {
-    id: string;
+    id: CategoryId;
     name: string;
     machines: MachineId[];
     recipes: RecipeId[];
@@ -68,9 +68,9 @@ export type RecipeProduct = {
 }
 
 export type Recipe = {
-    id: string;
+    id: RecipeId;
     name: string;
-    machine: string;
+    machine: MachineId;
     duration: number;
     inputs: RecipeProduct[];
     outputs: RecipeProduct[];

@@ -83,8 +83,7 @@ const Root = () => {
                                 ...theme.fn.fontStyles(),
                                 background: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[1],
                                 color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.black,
-                                lineHeight: theme.lineHeight,
-                                backgroundImage: 'url("https://www.transparenttextures.com/patterns/squared-metal.png")'
+                                lineHeight: theme.lineHeight
                             },
                         })}
                     />

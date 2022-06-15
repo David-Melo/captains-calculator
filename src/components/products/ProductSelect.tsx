@@ -41,7 +41,8 @@ export const ProductSelect = () => {
             withinPortal
             value={currentItemId} 
             onChange={onChange}
-            placeholder="1. Select Product"
+            label="1. Select Product"
+            placeholder="Make Selection..."
             itemComponent={SelectItem}
             data={itemsList.map(p=>({
                 label: p.name,

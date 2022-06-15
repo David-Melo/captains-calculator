@@ -11,36 +11,22 @@ import { Icon } from '@iconify/react';
 import CostsBadge from 'components/ui/CostsBadge';
 import CostsIcon from 'components/ui/CostsIcons';
 import NeedsBage, { needMap } from 'components/ui/NeedsBadge';
+import { ProductSelectDrawer } from 'components/products/ProductSelectDrawer';
+import { MachineSelectDrawer } from 'components/machines/MachineSelectDrawer';
+import { RecipeSelectDrawer } from '../../components/recipes/RecipeSelectDrawer';
 
 const Setup = () => {
 
-    const { items: allProducts, currentItem: currentProduct } = useAppState(state => state.products)
-    const { items: allMachines, currentItem: currentMachine } = useAppState(state => state.machines)
-    const { items: allRecipes, currentItem: currentRecipe } = useAppState(state => state.recipes)
-
-    const renderRecipeSelect = () => {
-        if (!currentMachine) return null
-        return <MachineRecipeSelect />
-    }
-
-    const renderProductSelect = () => {
-        if (!currentProduct) return null
-        return <ProductMachineSelect />
-    }
+    const { currentItem: currentProduct } = useAppState(state => state.products)
+    const { currentItem: currentMachine } = useAppState(state => state.machines)
 
     return (
         <Box>
-            <Grid columns={10} gutter="xs">
-                <Grid.Col md={2}>
-                    <ProductSelect />
-                </Grid.Col>
-                <Grid.Col md={3}>
-                    {renderProductSelect()}
-                </Grid.Col>
-                <Grid.Col md={5}>
-                    {renderRecipeSelect()}
-                </Grid.Col>
-            </Grid>
+            <Stack>
+                <ProductSelectDrawer />
+                {currentProduct&&<MachineSelectDrawer />}
+                {currentMachine&&<RecipeSelectDrawer />}
+            </Stack>
         </Box>
     )
 
@@ -470,12 +456,10 @@ const ResultsSummary = () => {
     })
 
     return (
-        <Card
-            p="xs"
-            sx={theme => ({
-                border: `1px solid ${theme.colors.green[4]}`
-            })}
-        >
+        <Box>
+
+            <Text weight="bold" mb="xs">Production Chain Summary</Text>
+
             <Stack spacing="xs">
 
                 <Table
@@ -631,7 +615,7 @@ const ResultsSummary = () => {
                 </Table>
 
             </Stack>
-        </Card>
+        </Box>
     )
 
 }
@@ -643,31 +627,27 @@ const EditorLayout = () => {
             sx={theme => ({
                 height: '100%',
                 display: 'grid',
-                gridTemplateColumns: '1fr auto',
-                gridTemplateRows: 'auto 1fr',
+                gridTemplateColumns: '300px 1fr 300px',
                 gridColumnGap: 0,
-                gridRowGap: 0,
-                padding: 12
+                gridRowGap: 0
             })}
         >
             <Box
-                sx={theme => ({
-                    gridArea: ' 1 / 1 / 2 / 2'
-                })}
+                p="md"
+                sx={theme=>({backgroundColor: theme.colors.gray[1]})}
             >
                 <Setup />
             </Box>
-            <Box
-                sx={theme => ({
-                    gridArea: '2 / 1 / 3 / 2'
-                })}
-            >
+            <Box sx={theme=>({
+                backgroundImage: 'url("https://www.transparenttextures.com/patterns/squared-metal.png")',
+                borderRight: `1px solid ${theme.colors.gray[4]}`,
+                borderLeft: `1px solid ${theme.colors.gray[4]}`
+            })}>
                 <EditorWrapper />
             </Box>
             <Box
-                sx={theme => ({
-                    gridArea: '1 / 2 / 3 / 3'
-                })}
+                p="md"
+                sx={theme=>({backgroundColor: theme.colors.gray[1]})}
             >
                 <ResultsSummary />
             </Box>
