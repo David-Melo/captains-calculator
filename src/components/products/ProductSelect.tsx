@@ -36,7 +36,9 @@ export const ProductSelect = () => {
     }
     return (
         <Select
+            shadow="sm"
             size="md"
+            withinPortal
             value={currentItemId} 
             onChange={onChange}
             placeholder="1. Select Product"
@@ -47,6 +49,7 @@ export const ProductSelect = () => {
                 value: p.id
             }))}
             searchable
+            clearable
             maxDropdownHeight={400}
             nothingFound="No Match Found"
             filter={(value, item) => item.label ? item.label.toLowerCase().includes(value.toLowerCase().trim()) : false}

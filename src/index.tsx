@@ -17,6 +17,27 @@ const overmind = createOvermind(AppStateConfig, {
     devtools: true
 })
 
+// background-color: #f1f3f5;
+// background-image: url("https://www.transparenttextures.com/patterns/graphy.png");
+// /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+// background-color: #f1f3f5;
+// background-image: url("https://www.transparenttextures.com/patterns/graphy.png");
+// /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+// background-color: #f1f3f5;
+// background-image: url("https://www.transparenttextures.com/patterns/graphy.png");
+// /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+// background-color: #f1f3f5;
+// background-image: url("https://www.transparenttextures.com/patterns/graphy.png");
+// /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+// background-color: #f1f3f5;
+// background-image: url("https://www.transparenttextures.com/patterns/graphy.png");
+// /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+
 const Root = () => {
 
     const { theme: colorScheme } = useAppState().settings
@@ -63,6 +84,7 @@ const Root = () => {
                                 background: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[1],
                                 color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.black,
                                 lineHeight: theme.lineHeight,
+                                backgroundImage: 'url("https://www.transparenttextures.com/patterns/squared-metal.png")'
                             },
                         })}
                     />

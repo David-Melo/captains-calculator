@@ -13,8 +13,6 @@ import ProductIcon from 'components/products/ProductIcon';
 import { Icon } from '@iconify/react';
 import CostsBadge from 'components/ui/CostsBadge';
 
-type RecipeSource = { machines: Machine[], recipes: Recipe[] }
-
 const renderRecipeSource = (recipe: Recipe, machine: Machine, category: Category) => {
 
     return (
@@ -99,7 +97,7 @@ const renderRecipeSource = (recipe: Recipe, machine: Machine, category: Category
                         {recipe.inputs.map((product, key) => {
                             return (
                                 <Group className="product-input" spacing="xs" key={`input_${product.id}`} noWrap>
-                                    <CostsIcon key={key} product={product} color="red" />
+                                    <CostsIcon key={key} recipeId={recipe.id} product={product} color="red" />
                                     <Icon className="product-icon" icon="icomoon-free:plus" width={10} />
                                 </Group>
                             )
@@ -130,7 +128,7 @@ const renderRecipeSource = (recipe: Recipe, machine: Machine, category: Category
                         {recipe.outputs.map((product, key) => {
                             return (
                                 <Group className="product-output" spacing="xs" key={`input_${product.id}`} noWrap>
-                                    <CostsIcon key={key} product={product} color="red" />
+                                    <CostsIcon key={key} recipeId={recipe.id} product={product} color="red" />
                                     <Icon className="product-icon" icon="icomoon-free:plus" width={10} />
                                 </Group>
                             )
@@ -454,6 +452,7 @@ const ResultsSummary = () => {
                                     </tr>
                                 )
                             }
+                            return null
                         })}
                     </tbody>
                 </Table>
@@ -501,6 +500,7 @@ const ResultsSummary = () => {
                                     </tr>
                                 )
                             }
+                            return null
                         })}
                     </tbody>
                 </Table>
@@ -556,6 +556,7 @@ const ResultsSummary = () => {
                                     </tr>
                                 )
                             }
+                            return null
                         })}
                     </tbody>
                 </Table>
