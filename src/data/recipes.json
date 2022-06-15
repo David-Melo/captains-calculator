@@ -1672,7 +1672,7 @@
             {
                 "id": "electricity",
                 "name": "Electricity",
-                "quantity": 216
+                "quantity": 180
             },
             {
                 "id": "air_pollution",
@@ -5513,7 +5513,7 @@
             {
                 "id": "electricity",
                 "name": "Electricity",
-                "quantity": 360
+                "quantity": 300
             }
         ]
     },
@@ -5533,7 +5533,7 @@
             {
                 "id": "electricity",
                 "name": "Electricity",
-                "quantity": 3000
+                "quantity": 2500
             }
         ]
     },

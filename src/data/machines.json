@@ -20,7 +20,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 75
+                "quantity": 100
             }
         ],
         "recipes": [
@@ -55,7 +55,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 38
+                "quantity": 50
             }
         ],
         "recipes": [
@@ -98,7 +98,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 120
+                "quantity": 160
             }
         ],
         "recipes": [
@@ -138,7 +138,7 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 105
+                "quantity": 140
             }
         ],
         "recipes": [
@@ -198,7 +198,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -258,7 +258,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -378,7 +378,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 19
+                "quantity": 25
             }
         ],
         "recipes": [
@@ -429,12 +429,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 45
+                "quantity": 60
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -546,7 +546,7 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -612,7 +612,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -655,7 +655,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -734,7 +734,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [],
@@ -764,7 +764,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -815,7 +815,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 135
+                "quantity": 180
             }
         ],
         "recipes": [
@@ -868,7 +868,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -910,12 +910,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 45
+                "quantity": 60
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -951,7 +951,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 38
+                "quantity": 50
             }
         ],
         "recipes": [
@@ -1003,7 +1003,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 11
+                "quantity": 15
             }
         ],
         "recipes": [
@@ -1051,12 +1051,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 40
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 75
+                "quantity": 100
             }
         ],
         "recipes": [],
@@ -1086,12 +1086,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 90
+                "quantity": 120
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 180
+                "quantity": 240
             }
         ],
         "recipes": [],
@@ -1121,12 +1121,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 150
+                "quantity": 200
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 300
+                "quantity": 400
             }
         ],
         "recipes": [],
@@ -1156,12 +1156,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 225
+                "quantity": 300
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 450
+                "quantity": 600
             }
         ],
         "recipes": [],
@@ -1191,7 +1191,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -1242,7 +1242,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 90
+                "quantity": 120
             }
         ],
         "recipes": [
@@ -1310,7 +1310,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 38
+                "quantity": 50
             }
         ],
         "recipes": [],
@@ -1340,7 +1340,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [
@@ -1377,12 +1377,12 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 30
+                "quantity": 40
             },
             {
                 "id": "electronics",
                 "name": "Electronics",
-                "quantity": 8
+                "quantity": 10
             }
         ],
         "recipes": [
@@ -1425,7 +1425,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -1466,7 +1466,7 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -1507,12 +1507,12 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 75
+                "quantity": 100
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 60
+                "quantity": 80
             }
         ],
         "recipes": [],
@@ -1542,7 +1542,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -1579,7 +1579,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -1616,12 +1616,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 23
+                "quantity": 30
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -1661,12 +1661,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 80
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 150
+                "quantity": 200
             }
         ],
         "recipes": [
@@ -1706,7 +1706,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -1745,7 +1745,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 75
+                "quantity": 100
             }
         ],
         "recipes": [
@@ -1796,7 +1796,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -1853,17 +1853,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 75
+                "quantity": 100
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 90
+                "quantity": 120
             },
             {
                 "id": "electronics_iii",
                 "name": "Electronics III",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [],
@@ -1883,7 +1883,7 @@
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 6,
         "electricity_consumed": 0,
-        "electricity_generated": 216,
+        "electricity_generated": 180,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -1893,12 +1893,12 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 15
+                "quantity": 20
             },
             {
                 "id": "electronics",
                 "name": "Electronics",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [
@@ -1935,7 +1935,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 38
+                "quantity": 50
             }
         ],
         "recipes": [
@@ -1974,7 +1974,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 53
+                "quantity": 70
             }
         ],
         "recipes": [
@@ -2012,7 +2012,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 53
+                "quantity": 70
             }
         ],
         "recipes": [
@@ -2050,7 +2050,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -2093,12 +2093,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 113
+                "quantity": 150
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -2135,7 +2135,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -2175,7 +2175,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 38
+                "quantity": 50
             }
         ],
         "recipes": [
@@ -2215,7 +2215,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 60
+                "quantity": 80
             }
         ],
         "recipes": [
@@ -2255,7 +2255,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -2285,7 +2285,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -2328,7 +2328,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 8
+                "quantity": 10
             }
         ],
         "recipes": [
@@ -2378,7 +2378,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 90
+                "quantity": 120
             }
         ],
         "recipes": [],
@@ -2408,7 +2408,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [],
@@ -2438,7 +2438,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [],
@@ -2468,7 +2468,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -2498,7 +2498,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -2528,7 +2528,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 68
+                "quantity": 90
             }
         ],
         "recipes": [],
@@ -2558,7 +2558,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 135
+                "quantity": 180
             }
         ],
         "recipes": [],
@@ -2588,7 +2588,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 19
+                "quantity": 25
             }
         ],
         "recipes": [],
@@ -2618,7 +2618,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [],
@@ -2648,7 +2648,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -2708,7 +2708,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [],
@@ -2738,7 +2738,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [],
@@ -2768,7 +2768,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 53
+                "quantity": 70
             }
         ],
         "recipes": [],
@@ -2798,7 +2798,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 38
+                "quantity": 50
             }
         ],
         "recipes": [
@@ -2833,7 +2833,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 38
+                "quantity": 50
             }
         ],
         "recipes": [
@@ -2870,7 +2870,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 90
+                "quantity": 120
             }
         ],
         "recipes": [
@@ -2906,7 +2906,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 53
+                "quantity": 70
             }
         ],
         "recipes": [
@@ -2946,12 +2946,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 75
+                "quantity": 100
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 240
+                "quantity": 320
             }
         ],
         "recipes": [],
@@ -2981,12 +2981,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 150
+                "quantity": 200
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 480
+                "quantity": 640
             }
         ],
         "recipes": [],
@@ -3016,7 +3016,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -3050,7 +3050,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 38
+                "quantity": 50
             }
         ],
         "recipes": [
@@ -3087,7 +3087,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 80
             }
         ],
         "recipes": [
@@ -3124,17 +3124,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 80
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 60
+                "quantity": 80
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [],
@@ -3164,12 +3164,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 45
+                "quantity": 60
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [],
@@ -3199,7 +3199,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 60
+                "quantity": 80
             }
         ],
         "recipes": [],
@@ -3229,7 +3229,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 105
+                "quantity": 140
             }
         ],
         "recipes": [],
@@ -3259,12 +3259,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 150
+                "quantity": 200
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 180
+                "quantity": 240
             }
         ],
         "recipes": [],
@@ -3294,7 +3294,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 80
             }
         ],
         "recipes": [
@@ -3332,7 +3332,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [],
@@ -3362,7 +3362,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [
@@ -3410,7 +3410,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 90
+                "quantity": 120
             }
         ],
         "recipes": [],
@@ -3440,7 +3440,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [],
@@ -3470,7 +3470,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [],
@@ -3500,7 +3500,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -3530,7 +3530,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -3560,7 +3560,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 68
+                "quantity": 90
             }
         ],
         "recipes": [],
@@ -3590,7 +3590,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 135
+                "quantity": 180
             }
         ],
         "recipes": [],
@@ -3620,7 +3620,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -3657,7 +3657,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 105
+                "quantity": 140
             }
         ],
         "recipes": [
@@ -3694,7 +3694,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 38
+                "quantity": 50
             }
         ],
         "recipes": [
@@ -3733,7 +3733,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -3770,12 +3770,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 38
+                "quantity": 50
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [
@@ -3814,12 +3814,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 38
+                "quantity": 50
             },
             {
                 "id": "electronics_iii",
                 "name": "Electronics III",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [
@@ -3858,7 +3858,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -3897,12 +3897,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 40
             },
             {
                 "id": "steel",
                 "name": "Steel",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [
@@ -3941,7 +3941,7 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 60
+                "quantity": 80
             }
         ],
         "recipes": [
@@ -4015,7 +4015,7 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 120
+                "quantity": 160
             }
         ],
         "recipes": [
@@ -4089,7 +4089,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -4135,7 +4135,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -4209,12 +4209,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 600
+                "quantity": 800
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 60
+                "quantity": 80
             }
         ],
         "recipes": [
@@ -4252,7 +4252,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -4286,7 +4286,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -4324,7 +4324,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 53
+                "quantity": 70
             }
         ],
         "recipes": [
@@ -4362,7 +4362,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 75
+                "quantity": 100
             }
         ],
         "recipes": [
@@ -4392,7 +4392,7 @@
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 1,
         "electricity_consumed": 0,
-        "electricity_generated": 360,
+        "electricity_generated": 300,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -4402,12 +4402,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 15
+                "quantity": 20
             },
             {
                 "id": "electronics",
                 "name": "Electronics",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [
@@ -4433,7 +4433,7 @@
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 8,
         "electricity_consumed": 0,
-        "electricity_generated": 3000,
+        "electricity_generated": 2500,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -4443,12 +4443,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 80
             },
             {
                 "id": "electronics",
                 "name": "Electronics",
-                "quantity": 135
+                "quantity": 180
             }
         ],
         "recipes": [
@@ -4484,12 +4484,12 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 15
+                "quantity": 20
             },
             {
                 "id": "wood",
                 "name": "Wood",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -4519,7 +4519,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [],
@@ -4549,7 +4549,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -4579,12 +4579,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 45
+                "quantity": 60
             },
             {
                 "id": "lab_equipment",
                 "name": "Lab Equipment",
-                "quantity": 8
+                "quantity": 10
             }
         ],
         "recipes": [
@@ -4620,12 +4620,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 90
+                "quantity": 120
             },
             {
                 "id": "lab_equipment_ii",
                 "name": "Lab Equipment II",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [
@@ -4661,17 +4661,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 165
+                "quantity": 220
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 45
+                "quantity": 60
             },
             {
                 "id": "lab_equipment_iii",
                 "name": "Lab Equipment III",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [
@@ -4707,17 +4707,17 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 150
+                "quantity": 200
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 120
+                "quantity": 160
             },
             {
                 "id": "lab_equipment_iv",
                 "name": "Lab Equipment IV",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [
@@ -4753,12 +4753,12 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 900
+                "quantity": 1200
             },
             {
                 "id": "vehicle_parts_iii",
                 "name": "Vehicle Parts III",
-                "quantity": 120
+                "quantity": 160
             }
         ],
         "recipes": [],
@@ -4788,17 +4788,17 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 225
+                "quantity": 300
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 750
+                "quantity": 1000
             },
             {
                 "id": "steel",
                 "name": "Steel",
-                "quantity": 600
+                "quantity": 800
             }
         ],
         "recipes": [],
@@ -4828,7 +4828,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -4866,7 +4866,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -4906,7 +4906,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -4951,7 +4951,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 38
+                "quantity": 50
             }
         ],
         "recipes": [
@@ -4985,7 +4985,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 38
+                "quantity": 50
             }
         ],
         "recipes": [
@@ -5019,7 +5019,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 80
             }
         ],
         "recipes": [
@@ -5064,7 +5064,7 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -5101,7 +5101,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 15
+                "quantity": 20
             }
         ],
         "recipes": [
@@ -5138,7 +5138,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 8
+                "quantity": 10
             }
         ],
         "recipes": [
@@ -5186,12 +5186,12 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 8
+                "quantity": 10
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -5229,7 +5229,7 @@
         "maintenance_cost_units": "maintenance_ii",
         "maintenance_cost_quantity": 0.5996094,
         "electricity_consumed": 0,
-        "electricity_generated": 38,
+        "electricity_generated": 32,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -5239,17 +5239,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 15
+                "quantity": 20
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 8
+                "quantity": 10
             },
             {
                 "id": "solar_cell",
                 "name": "Solar cell",
-                "quantity": 90
+                "quantity": 120
             }
         ],
         "recipes": [],
@@ -5269,7 +5269,7 @@
         "maintenance_cost_units": "maintenance_ii",
         "maintenance_cost_quantity": 0.5996094,
         "electricity_consumed": 0,
-        "electricity_generated": 48,
+        "electricity_generated": 40,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -5279,17 +5279,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 15
+                "quantity": 20
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 8
+                "quantity": 10
             },
             {
                 "id": "solar_cell_mono",
                 "name": "Solar cell mono",
-                "quantity": 90
+                "quantity": 120
             }
         ],
         "recipes": [],
@@ -5319,7 +5319,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -5358,12 +5358,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 113
+                "quantity": 150
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 375
+                "quantity": 500
             }
         ],
         "recipes": [],
@@ -5393,12 +5393,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 23
+                "quantity": 30
             },
             {
                 "id": "steel",
                 "name": "Steel",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -5440,7 +5440,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 90
+                "quantity": 120
             }
         ],
         "recipes": [],
@@ -5470,7 +5470,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 45
+                "quantity": 60
             }
         ],
         "recipes": [],
@@ -5500,7 +5500,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [],
@@ -5530,7 +5530,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -5560,7 +5560,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 23
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -5590,7 +5590,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 68
+                "quantity": 90
             }
         ],
         "recipes": [],
@@ -5620,7 +5620,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 135
+                "quantity": 180
             }
         ],
         "recipes": [],
@@ -5650,7 +5650,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [],
@@ -5680,7 +5680,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 90
+                "quantity": 120
             }
         ],
         "recipes": [],
@@ -5710,7 +5710,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 210
+                "quantity": 280
             }
         ],
         "recipes": [],
@@ -5740,7 +5740,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 19
+                "quantity": 25
             }
         ],
         "recipes": [],
@@ -5770,7 +5770,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 300
+                "quantity": 400
             }
         ],
         "recipes": [
@@ -5809,7 +5809,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 105
+                "quantity": 140
             }
         ],
         "recipes": [
@@ -5854,7 +5854,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [
@@ -5890,7 +5890,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 40
             }
         ],
         "recipes": [],
