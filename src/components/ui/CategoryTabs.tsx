@@ -48,8 +48,6 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = () => {
         })
     ]
 
-    console.log(activeTab)
-
     const onChange = (active: number, tabKey: CategoryId | 'all') => {
         setActiveTab(active);
         selectCategory(tabKey === 'all' ? null : tabKey);

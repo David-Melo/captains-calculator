@@ -2,8 +2,7 @@ import { Action } from "state/_types";
 import { RecipeId } from '../../app/effects/loadJsonData';
 import ProductionNode from "../ProductionNode";
 
-export const selectRecipe: Action<RecipeId|null> = async ({state,actions}, recipeId) => {
-    state.recipes.currentItemId = recipeId
+export const linkRecipe: Action<RecipeId> = async ({state,actions}, recipeId) => {
     if (recipeId) {
         let recipe = state.recipes.items[recipeId]
         let machine = state.machines.items[recipe.machine]

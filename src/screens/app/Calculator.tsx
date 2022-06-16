@@ -1,11 +1,11 @@
 import React from 'react';
 import { Box, Card, Grid, Image, Group, Divider, Stack, Tooltip, Text, Table } from '@mantine/core';
 import PageLayoutBlank from '../../components/layout/page/PageLayoutBlank';
-import ReactFlow, { MiniMap, Controls, ReactFlowProvider, Handle, Position, NodeTypes, NodeProps, useNodesState, useEdgesState, addEdge, ReactFlowInstance, Connection, MarkerType, EdgeProps, getSmoothStepPath, EdgeTypes, updateEdge, Edge, useReactFlow, useNodes, BezierEdge, Node } from 'react-flow-renderer';
+import ReactFlow, { MiniMap, Controls, ReactFlowProvider, Handle, Position, NodeTypes, NodeProps, useNodesState, useEdgesState, addEdge, ReactFlowInstance, Connection, MarkerType, EdgeProps, getSmoothStepPath, EdgeTypes, updateEdge, Edge, useReactFlow, useNodes, BezierEdge, Node, NodeChange, applyNodeChanges, applyEdgeChanges } from 'react-flow-renderer';
 import { ProductSelect } from 'components/products/ProductSelect';
 import { MachineRecipeSelect } from 'components/recipes/MachineRecipeSelect';
 import { ProductMachineSelect } from 'components/products/ProductMachineSelect';
-import { useActions, useAppState } from 'state';
+import { useActions, useAppState, useReaction } from 'state';
 import { Category, Machine, Recipe } from 'state/app/effects';
 import { Icon } from '@iconify/react';
 import CostsBadge from 'components/ui/CostsBadge';
@@ -28,13 +28,12 @@ type EditorProps = {
     initialEdges: any;
 }
 
-const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, outputs } }: NodeProps<RecipeNodeData>) => {
-
-    const { items: allProducts } = useAppState(state => state.products)
+const RecipeNodeType = ({ id, data: { machine, category, inputs, outputs } }: NodeProps<RecipeNodeData>) => {
 
     return (
 
         <Box
+            key={`recipe-node-${id}`}
             sx={theme => ({
                 backgroundColor: theme.white,
                 borderRadius: theme.radius.sm,
@@ -62,7 +61,7 @@ const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, outputs
                     <Text weight="bolder" size="lg" sx={{ lineHeight: '1em' }}>{machine.name}</Text>
                     <Tooltip
                         label={machine.name}
-                        withArrow 
+                        withArrow
                         withinPortal
                     >
                         <Box
@@ -88,10 +87,10 @@ const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, outputs
             <Grid gutter={40}>
                 <Grid.Col span={6}>
                     <Stack spacing="sm" justify="space-around" sx={{ marginLeft: -14 }} >
-                        {Object.keys(inputs).sort((a,b)=>sortArray(inputs[a].name,inputs[b].name)).map(productId => {
+                        {Object.keys(inputs).sort((a, b) => sortArray(inputs[a].name, inputs[b].name)).map(productId => {
                             let product = inputs[productId]
                             return (
-                                <Box>
+                                <Box key={`recipe-handle-input-${productId}`}>
                                     <Group spacing={5} noWrap>
                                         <Handle
                                             key={`${id}-${product.id}-input`}
@@ -134,10 +133,10 @@ const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, outputs
                 </Grid.Col>
                 <Grid.Col span={6}>
                     <Stack spacing="sm" justify="space-around" sx={{ marginRight: -14 }} align="flex-end">
-                        {Object.keys(outputs).sort((a,b)=>sortArray(outputs[a].name,outputs[b].name)).map(productId => {
+                        {Object.keys(outputs).sort((a, b) => sortArray(outputs[a].name, outputs[b].name)).map(productId => {
                             let product = outputs[productId]
                             return (
-                                <Box>
+                                <Box key={`recipe-handle-output-${productId}`}>
                                     <Group spacing={5} noWrap>
                                         <Group spacing={5} noWrap>
                                             <Text sx={{ whiteSpace: 'nowrap' }}>{product.name}</Text>
@@ -263,13 +262,28 @@ const Setup = () => {
     const { currentItem: currentMachine } = useAppState(state => state.machines)
     const { currentItem: currentRecipe, currentNode } = useAppState(state => state.recipes)
 
-    const { fitView, getEdges, getNodes, setNodes, setCenter } = useReactFlow();
+    const { setNodes, getNodes } = useReactFlow();
 
-    const fit = async () => {
-        let graph = await createGraphLayout(getNodes(), getEdges())
+    const handleSelect = async () => {
+        let prevNodes = getNodes()
+        let graph = await createGraphLayout(prevNodes.concat([{
+            id: Date.now().toString(),
+            type: 'source',
+            data: {},
+            position: { x: 0, y: 0 }
+        }]), [])
         setNodes(graph)
-        fitView({ padding: 0.25 });
+        //linkRecipe(recipeId)
+
     }
+
+    //const { fitView, getEdges, getNodes, setNodes, setCenter } = useReactFlow();
+
+    // const fit = async () => {
+    //     let graph = await createGraphLayout(getNodes(), getEdges())
+    //     setNodes(graph)
+    //     //fitView({ padding: 0.25 });
+    // }
 
     return (
         <Box>
@@ -282,8 +296,9 @@ const Setup = () => {
             {currentRecipe && (
                 <Divider label="Assitional Settings" my="md" mt="xl" />
             )}
-            <button onClick={fit}>fit</button>
-            <NodeDrawer/> 
+            <button onClick={handleSelect}>fit</button>
+            <NodeDrawer />
+            <Text size="xs"><pre>{JSON.stringify(currentNode?.sources, null, 4)}</pre></Text>
         </Box>
     )
 
@@ -291,80 +306,98 @@ const Setup = () => {
 
 const handleStyle: React.CSSProperties = { width: 'auto', height: 'auto', position: 'relative', top: 'initial', left: 'initial', right: 'initial', bottom: 'initial', borderRadius: 0, transform: 'initial', backgroundColor: 'transparent' }
 
-const Editor: React.FC<EditorProps> = ({ initialNodes, initialEdges }) => {
+const EditorWrapper: React.FC = () => {
 
-    const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-    const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-    const { fitView, getEdges, getNodes } = useReactFlow();
+    //const { fitView, getEdges, setNodes } = useReactFlow();
     const selectNode = useActions().recipes.selectNode
+    const reaction = useReaction()
+    // const [graph, setGraph] = React.useState<Array<Node>>()
 
-    const onConnectEnd = async () => {
-        let graph = await createGraphLayout(getNodes(), getEdges())
-        setNodes(graph)
-        await new Promise(resolve => setTimeout(resolve, 250));
-        fitView({padding:0.2})
-    }
+    // const [nodes, setNodes, onNodesChange] = useNodesState([]);
+    // const [edges, setEdges, onEdgesChange] = useEdgesState([]);
 
-    const onConnect = async (params: Connection) => {
-        console.log('onConnect', params)
-        // @ts-ignore
-        params.style.stroke = generateDarkColorHex()
-        setEdges((eds) => addEdge(params, eds))
-    }
+    const [nodes, setNodes] = React.useState<Node<RecipeNodeData>[]>([]);
+    const [edges, setEdges] = React.useState([]);
 
-    const onInit = async (reactFlowInstance: ReactFlowInstance<RecipeNodeData>) => {
-        console.log('flow loaded:', reactFlowInstance);
-        let graph = await createGraphLayout(getNodes(), getEdges())
-        setNodes(graph)
-        await new Promise(resolve => setTimeout(resolve, 250));
-        fitView({ padding: 0.25 });
-    };
+    React.useEffect(() => reaction(
+        (state) => state.recipes.nodesList,
+        (nodesList) => {
+            console.log('ReactionRan')
+            if (nodesList.length) {
+                let nodes = nodesList.map(node => {
+                    return {
+                        id: node.id,
+                        type: 'RecipeNode',
+                        data: node,
+                        position: { x: 0, y: 0 }
+                    }
+                })
+                createGraphLayout(nodes, [])
+                    .then(graph => {
+                        setNodes(graph)
+                    })
+            }
+        },
+        {
+            immediate: false
+        }
+    ))
 
-    const onNodeClick = (e: any, node: Node<RecipeNodeData>) =>{
+    // const handleNodesChange = (nodes: NodeChange[]) => {
+    //     console.log('handleNodesChange', nodes)
+    //     //fitView({ padding: 1 , includeHiddenNodes: true});
+    // }
+
+    // const onNodesChange = React.useCallback(
+    //     (changes) => setNodes(async (nds: SetStateAction<Node<ProductionNode>[]>) => {
+    //         let changed = applyNodeChanges(changes, nds)
+    //         let graph = await createGraphLayout(changed, [])
+    //         return graph
+    //     }),
+    //     [setNodes]
+    // );
+    // const onEdgesChange = React.useCallback(
+    //     (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
+    //     [setEdges]
+    // );
+
+    // const onConnectEnd = async () => {
+    //     console.log('onConnectEnd')
+    // }
+
+    // const onConnect = async (params: Connection) => {
+    //     console.log('onConnect')
+    //     // @ts-ignore
+    //     params.style.stroke = generateDarkColorHex()
+    //     setEdges((eds) => addEdge(params, eds))
+    // }
+
+    // const onInit = async (reactFlowInstance: ReactFlowInstance<RecipeNodeData>) => {
+    //     console.log('onInit');
+    // };
+
+    const onNodeClick = (e: any, node: Node<RecipeNodeData>) => {
         selectNode(node.data.id)
     }
 
     return (
         <ReactFlow
-            defaultZoom={1}
+            //defaultZoom={1}
             nodes={nodes}
             edges={edges}
-            onNodesChange={onNodesChange}
-            onEdgesChange={onEdgesChange}
+            //onNodesChange={handleNodesChange}
+            //onEdgesChange={onEdgesChange}
             onNodeClick={onNodeClick}
-            onConnect={onConnect}
-            onInit={onInit}
+            //onConnect={onConnect}
+            //onInit={onInit}            
+            //onConnectEnd={onConnectEnd}
             nodeTypes={nodeTypes}
             edgeTypes={edgeTypes}
-            onConnectEnd={onConnectEnd}
             defaultEdgeOptions={{ style: { stroke: '#000', strokeWidth: 3 }, animated: true, type: "smart" }}
         >
             <MiniMap />
             <Controls />
         </ReactFlow>
-    )
-
-}
-
-const EditorWrapper = () => {
-
-    const {nodesList} = useAppState(state => state.recipes)
-
-    if (!nodesList.length) return null
-
-    let nodes = nodesList.map(node => {
-        return {
-            id: node.id,
-            type: 'RecipeNode',
-            data: node,
-            position: { x: 0, y: 0 }
-        }
-    })
-
-    console.log(nodes)
-
-    return (
-        <Editor initialNodes={nodes} initialEdges={[]} />
     )
 
 }
@@ -431,7 +464,6 @@ const ResultsSummary = () => {
         }
 
         if (buildings.hasOwnProperty(machine.id)) {
-            console.log(machine.id)
             buildings[machine.id].total += 1
         }
 

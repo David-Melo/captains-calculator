@@ -4,7 +4,9 @@ import { Box, Button, Drawer, Text, Stack, Card, Group, Image, Divider } from "@
 import { useAppState, useActions, useReaction } from 'state';
 import RecipeListCard from "./RecipeListCard";
 import { DrawerBody, DrawerBodyScrollArea } from "components/ui/DrawerBody";
-import { RecipeId } from "state/app/effects";
+import { ProductId, RecipeId } from "state/app/effects";
+import * as recipes from 'state/recipes';
+import { NodeRecipeLink } from "./NodeRecipeSelect";
 
 export const NodeDrawer = () => {
 
@@ -24,12 +26,14 @@ export const NodeDrawer = () => {
         },
         {
             immediate: false
-        }
+        } 
     ))
 
     const handleClose = () => {
         deSelectNode()
     }
+
+    if (!node) return null
 
     const renderBody = () => {
         return (
@@ -38,14 +42,23 @@ export const NodeDrawer = () => {
                     <Box p="xl">
                         <Stack spacing="xs">
                             <Text weight="bold" mb="xs">1. Desired Product</Text>
+                            {Object.keys(node.inputs).map((productId,key)=>{
+                                try {
+                                    let sources = node.sources[productId as ProductId]
+                                    let product = node.inputs[productId]
+                                    return <NodeRecipeLink key={key} recipes={sources} label={product.name}/>
+                                } catch (e: any) {
+                                    console.error(e.message)
+                                    return productId
+                                }
+                            })}
+                            <Text size="xs"><pre>{JSON.stringify(node.sources, null, 4)}</pre></Text>
                         </Stack>
                     </Box>
                 </DrawerBodyScrollArea>
             </DrawerBody>
         )
     }
-
-    if (!node) return null
 
     return (
         <>

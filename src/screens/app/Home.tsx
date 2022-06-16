@@ -187,7 +187,7 @@ const Home: React.FC = () => {
                 {Object.keys(sources).length ? (
                     <React.Fragment>
                         <Divider my={0} variant="solid" labelPosition="center" color="gray" sx={theme => ({ borderTopColor: theme.colors.gray[4] })} />
-                        <Box p='xs'>
+                        <Box p='xs'> 
                             <Stack spacing={5}>
                                 {Object.keys(sources).map((inputId, key) => {
                                     let inputSources = sources[inputId as ProductId]
@@ -365,7 +365,6 @@ const ResultsSummary = () => {
         }
 
         if (buildings.hasOwnProperty(machine.id)) {
-            console.log(machine.id)
             buildings[machine.id].total += 1
         }
 

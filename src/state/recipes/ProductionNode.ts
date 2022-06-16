@@ -1,5 +1,5 @@
 import { Category, Machine, Product, ProductId, Recipe, RecipeId, RecipeProduct } from "state/app/effects"
-import { ProductsState } from "state/_types";
+import { ProductRecipes, ProductsState } from "state/_types";
 
 type ProductionNodeParams = {
     recipe: Recipe;
@@ -7,6 +7,8 @@ type ProductionNodeParams = {
     category: Category;
     inputs: RecipeIOInput[];
     outputs: RecipeIOInput[];
+    sources: ProductRecipes;
+    targets: ProductRecipes;
 }
 
 type RecipeInput = RecipeIOInput & {
@@ -28,17 +30,23 @@ class ProductionNode {
     recipe: Recipe;
     machine: Machine;
     category: Category;
+
     inputs: RecipeIODict;
     outputs: RecipeIODict;
+
+    sources: ProductRecipes;
+    targets: ProductRecipes;
 
     duration: number = 60;
     machinesCount: number = 0;
 
-    constructor( { recipe, machine, category, inputs, outputs }: ProductionNodeParams ) {
+    constructor( { recipe, machine, category, inputs, outputs, sources, targets }: ProductionNodeParams ) {
+        
         this.id = recipe.id
         this.recipe = {...recipe}
         this.machine = {...machine}
         this.category = {...category}
+
         let inputProducts = inputs.reduce((items,item)=>({
             ...items, 
             [item.id]: {
@@ -47,6 +55,7 @@ class ProductionNode {
                 imported: 0
             }
         }),{})
+
         let outputProducts = outputs.reduce((items,item)=>({
             ...items, 
             [item.id]: {
@@ -55,8 +64,12 @@ class ProductionNode {
                 imported: 0
             }
         }),{})
+
         this.inputs = inputProducts
         this.outputs = outputProducts
+
+        this.sources = sources
+        this.targets = targets
     }
 
     calculateProduct60(originalDuration: number, quantity: number) {

@@ -16,7 +16,11 @@ const elk = new Elk({
     'elk.algorithm': 'layered',
     'elk.direction': 'RIGHT',
     'elk.spacing.edgeNode': '130',
-    'elk.layered.spacing.nodeNodeBetweenLayers': '130'
+    'elk.spacing.nodeNode': '75',
+    'elk.layered.spacing.nodeNodeBetweenLayers': '130',
+    'elk.hierarchyHandling': 'INCLUDE_CHILDREN',
+    'elk.layered.crossingMinimization.semiInteractive': 'true',
+    'elk.layered.nodePlacement.bk.fixedAlignment': 'BALANCED'
   }
 })
 

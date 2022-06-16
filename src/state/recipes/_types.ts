@@ -1,4 +1,4 @@
-import { Recipe, RecipeId } from 'state/app/effects/loadJsonData';
+import { ProductId, Recipe, RecipeId } from 'state/app/effects/loadJsonData';
 import ProductionNode from './ProductionNode';
 
 export type RecipesState = {
@@ -16,4 +16,8 @@ export type RecipesState = {
     currentNodeId: RecipeId | null;
     currentNode: ProductionNode | null;
     nodesList: ProductionNode[];
+}
+
+export type ProductRecipes = {
+    [index in ProductId]: Recipe[]
 }
