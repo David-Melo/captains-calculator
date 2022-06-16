@@ -68,7 +68,7 @@ export const ProductSelectDrawer = () => {
             </DrawerBody>
         )
     }
-
+ 
     return (
         <>
             <Drawer
@@ -97,7 +97,7 @@ export const ProductSelectDrawer = () => {
             </Drawer>
 
             <Box>
-                <Text weight="bold" mb="xs">Desired Product</Text>
+                <Text weight="bold" mb="xs">1. Desired Product</Text>
                 {currentItem ? (
                     <ProductListCard item={currentItem} active={false} onSelect={() => setOpened(true)} />
                 ) : (

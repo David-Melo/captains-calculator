@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Drawer, Text, Stack, Card } from "@mantine/core";
+import { Box, Button, Drawer, Text, Stack, Card, Group, Image } from "@mantine/core";
 
 import { useAppState, useActions } from 'state';
 import RecipeListCard from "./RecipeListCard";
@@ -77,6 +77,7 @@ export const RecipeSelectDrawer = () => {
                     <Card
                         onClick={() => setOpened(true)}
                         shadow="xs"
+                        p="xs"
                         sx={(theme) => ({
                             cursor: 'pointer',
                             '&:hover': {
@@ -84,8 +85,24 @@ export const RecipeSelectDrawer = () => {
                             },
                         })}
                     >
-                        <Text weight={500}>{currentItem.name}</Text>
-                        <Text size="sm">{currentMachine.name}</Text>
+                        <Group position='apart'>
+                            <Text weight={500} size="sm">{currentItem.name}</Text>
+                            <Box
+                                p="xs"
+                                sx={theme => ({
+                                    borderRadius: theme.radius.sm,
+                                    background: theme.colors.dark[3]
+                                })}
+                            >
+                                <Image
+                                    height={24}
+                                    radius="md"
+                                    src={`/assets/products/${currentProduct.icon}`} alt={currentProduct.name}
+                                />
+                            </Box>
+                        </Group>
+
+
                     </Card>
                 ) : (
                     <Button onClick={() => setOpened(true)}>Open Drawer</Button>

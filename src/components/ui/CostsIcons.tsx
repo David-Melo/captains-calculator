@@ -28,7 +28,7 @@ const CostsIcon: React.FC<CostsIconProps> = ({ product, recipeId, color = "dark"
                     p={6}
                     sx={theme => ({
                         borderRadius: theme.radius.sm,
-                        background: theme.colors.dark[4]
+                        background: theme.colors.dark[3]
                     })}
                 >
                     <Image src={`/assets/products/${productData.icon}`} height={28} width={28} />

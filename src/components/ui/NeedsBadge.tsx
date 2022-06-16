@@ -76,7 +76,7 @@ const NeedsBage: React.FC<NeedsBageProps> = ({ need, value, mode = 'short', suff
                 sx={theme => ({
                     borderRadius: theme.radius.sm,
                     background: needMap[need].color,
-                    height: 32,
+                    height: 30,
                     display: 'flex',
                     alignItems: 'center'
                 })}

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Box, Card, Grid, Image, Group, Divider, Stack, Tooltip, Text, Table } from '@mantine/core';
 import PageLayoutBlank from '../../components/layout/page/PageLayoutBlank';
-import ReactFlow, { MiniMap, Controls, ReactFlowProvider, Handle, Position, NodeTypes, NodeProps, useNodesState, useEdgesState, addEdge, ReactFlowInstance, Connection, MarkerType, EdgeProps, getSmoothStepPath, EdgeTypes, updateEdge, Edge } from 'react-flow-renderer';
+import ReactFlow, { MiniMap, Controls, ReactFlowProvider, Handle, Position, NodeTypes, NodeProps, useNodesState, useEdgesState, addEdge, ReactFlowInstance, Connection, MarkerType, EdgeProps, getSmoothStepPath, EdgeTypes, updateEdge, Edge, useReactFlow, useNodes, BezierEdge, Node } from 'react-flow-renderer';
 import { ProductSelect } from 'components/products/ProductSelect';
 import { MachineRecipeSelect } from 'components/recipes/MachineRecipeSelect';
 import { ProductMachineSelect } from 'components/products/ProductMachineSelect';
-import { useAppState } from 'state';
+import { useActions, useAppState } from 'state';
 import { Category, Machine, Recipe } from 'state/app/effects';
 import { Icon } from '@iconify/react';
 import CostsBadge from 'components/ui/CostsBadge';
@@ -14,42 +14,201 @@ import NeedsBage, { needMap } from 'components/ui/NeedsBadge';
 import { ProductSelectDrawer } from 'components/products/ProductSelectDrawer';
 import { MachineSelectDrawer } from 'components/machines/MachineSelectDrawer';
 import { RecipeSelectDrawer } from '../../components/recipes/RecipeSelectDrawer';
+import { getSmartEdge, pathfindingAStarNoDiagonal, pathfindingJumpPointNoDiagonal } from '@tisoap/react-flow-smart-edge'
+import { sortArray } from 'utils/objects';
+import { createGraphLayout } from 'utils/graph';
+import { generateDarkColorHex } from 'utils/colors';
+import ProductionNode from 'state/recipes/ProductionNode';
+import { NodeDrawer } from 'components/recipes/NodeDrawer';
 
-const Setup = () => {
+type RecipeNodeData = ProductionNode
 
-    const { currentItem: currentProduct } = useAppState(state => state.products)
-    const { currentItem: currentMachine } = useAppState(state => state.machines)
+type EditorProps = {
+    initialNodes: any;
+    initialEdges: any;
+}
+
+const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, outputs } }: NodeProps<RecipeNodeData>) => {
+
+    const { items: allProducts } = useAppState(state => state.products)
 
     return (
-        <Box>
-            <Stack>
-                <ProductSelectDrawer />
-                {currentProduct&&<MachineSelectDrawer />}
-                {currentMachine&&<RecipeSelectDrawer />}
-            </Stack>
-        </Box>
-    )
 
+        <Box
+            sx={theme => ({
+                backgroundColor: theme.white,
+                borderRadius: theme.radius.sm,
+                boxShadow: theme.shadows.sm
+            })}
+        >
+
+            <Box>
+                <Group position="apart" px="md" pt="md" pb={0}>
+                    <Tooltip
+                        label={category.name}
+                        withArrow
+                        withinPortal
+                    >
+                        <Box
+                            p={4}
+                            sx={theme => ({
+                                borderRadius: theme.radius.sm,
+                                background: theme.colors.dark[3]
+                            })}
+                        >
+                            <Image src={`/assets/categories/${category.id}.png`} alt={category.name} height={22} />
+                        </Box>
+                    </Tooltip>
+                    <Text weight="bolder" size="lg" sx={{ lineHeight: '1em' }}>{machine.name}</Text>
+                    <Tooltip
+                        label={machine.name}
+                        withArrow 
+                        withinPortal
+                    >
+                        <Box
+                            p={4}
+                            sx={theme => ({
+                                borderRadius: theme.radius.sm,
+                                background: theme.colors.dark[3]
+                            })}
+                        >
+                            <Image
+                                height={22}
+                                radius="md"
+                                src={`/assets/buildings/${machine.icon}`} alt={machine.name}
+                            />
+                        </Box>
+                    </Tooltip>
+                </Group>
+
+
+            </Box>
+
+            <Divider py="xs" variant="solid" labelPosition="center" label="Inputs & Outputs" color="gray" sx={theme => ({ borderTopColor: theme.colors.gray[4] })} />
+            <Grid gutter={40}>
+                <Grid.Col span={6}>
+                    <Stack spacing="sm" justify="space-around" sx={{ marginLeft: -14 }} >
+                        {Object.keys(inputs).sort((a,b)=>sortArray(inputs[a].name,inputs[b].name)).map(productId => {
+                            let product = inputs[productId]
+                            return (
+                                <Box>
+                                    <Group spacing={5} noWrap>
+                                        <Handle
+                                            key={`${id}-${product.id}-input`}
+                                            id={`${id}-${product.id}-input`}
+                                            type="target"
+                                            position={Position.Left}
+                                            style={handleStyle}
+                                        >
+                                            <Box sx={theme => ({
+                                                width: 28,
+                                                height: 28,
+                                                display: 'flex',
+                                                justifyContent: 'center',
+                                                alignItems: 'center',
+                                                backgroundColor: theme.colors.red[8],
+                                                borderRadius: theme.radius.sm,
+                                                pointerEvents: 'none'
+                                            })}
+                                            >
+                                                <Text color="white" align="center" size="sm" sx={{ lineHeight: 24 }}>{product.quantity}</Text>
+                                            </Box>
+                                        </Handle>
+                                        <Group spacing={5} noWrap>
+                                            <Box
+                                                sx={theme => ({
+                                                    border: `1px dashed ${theme.colors.gray[4]}`,
+                                                    borderRadius: theme.radius.sm,
+                                                    padding: 3
+                                                })}
+                                            >
+                                                <Image src={`/assets/products/${product.icon}`} alt='test' height={22} width={22} style={{ pointerEvents: 'none' }} />
+                                            </Box>
+                                            <Text sx={{ whiteSpace: 'nowrap' }}>{product.name}</Text>
+                                        </Group>
+                                    </Group>
+                                </Box>
+                            )
+                        })}
+                    </Stack>
+                </Grid.Col>
+                <Grid.Col span={6}>
+                    <Stack spacing="sm" justify="space-around" sx={{ marginRight: -14 }} align="flex-end">
+                        {Object.keys(outputs).sort((a,b)=>sortArray(outputs[a].name,outputs[b].name)).map(productId => {
+                            let product = outputs[productId]
+                            return (
+                                <Box>
+                                    <Group spacing={5} noWrap>
+                                        <Group spacing={5} noWrap>
+                                            <Text sx={{ whiteSpace: 'nowrap' }}>{product.name}</Text>
+                                            <Box
+                                                sx={theme => ({
+                                                    border: `1px dashed ${theme.colors.gray[4]}`,
+                                                    borderRadius: theme.radius.sm,
+                                                    padding: 3
+                                                })}
+                                            >
+                                                <Image src={`/assets/products/${product.icon}`} alt='test' height={22} width={22} style={{ pointerEvents: 'none' }} />
+                                            </Box>
+                                        </Group>
+                                        <Handle
+                                            key={`${id}-${product.id}-output`}
+                                            id={`${id}-${product.id}-output`}
+                                            type="source"
+                                            position={Position.Right}
+                                            style={handleStyle}
+                                        >
+                                            <Box sx={theme => ({
+                                                width: 28,
+                                                height: 28,
+                                                display: 'flex',
+                                                justifyContent: 'center',
+                                                alignItems: 'center',
+                                                backgroundColor: theme.colors.green[8],
+                                                borderRadius: theme.radius.sm,
+                                                pointerEvents: 'none'
+                                            })}
+                                            >
+                                                <Text color="white" align="center" size="sm" sx={{ lineHeight: 24 }}>{product.quantity}</Text>
+                                            </Box>
+                                        </Handle>
+                                    </Group>
+                                </Box>
+                            )
+                        })}
+                    </Stack>
+                </Grid.Col>
+            </Grid>
+
+            <Divider py="xs" variant="solid" labelPosition="center" label="Costs & Needs" color="gray" sx={theme => ({ borderTopColor: theme.colors.gray[4] })} />
+            <Box pb="md" px="md">
+
+                <Group spacing={4} position="center">
+                    {machine.build_costs.map((product, key) => {
+                        return <CostsBadge key={key} product={product} />
+                    })}
+                    <NeedsBage need="workers" value={machine.workers} />
+                    {machine.maintenance_cost_units === 'maintenance_i' && (
+                        <NeedsBage need="maintenance1" value={machine.maintenance_cost_quantity} />
+                    )}
+                    {machine.maintenance_cost_units === 'maintenance_iI' && (
+                        <NeedsBage need="maintenance2" value={machine.maintenance_cost_quantity} />
+                    )}
+                    <NeedsBage need="electricity" value={machine.electricity_consumed} />
+                    <NeedsBage need="unity" value={machine.unity_cost} />
+                    <NeedsBage need="computing" value={machine.computing_consumed} suffix="tf" />
+                </Group>
+
+            </Box>
+
+
+        </Box >
+
+
+    );
 }
-
-type RecipeNodeData = {
-    label: string;
-    recipe: Recipe;
-    machine: Machine;
-    category: Category;
-}
-
-type RecipeEdgeData = {
-    label: string;
-    recipe: Recipe;
-    machine: Machine;
-    category: Category;
-}
-
-const handleStyle: React.CSSProperties = { width: 'auto', height: 'auto', position: 'relative', top: 'initial', left: 'initial', right: 'initial', bottom: 'initial', borderRadius: 4, transform: 'initial' }
 
 const RecipeEdgeType = ({
-    id,
     sourceX,
     sourceY,
     targetX,
@@ -57,248 +216,113 @@ const RecipeEdgeType = ({
     sourcePosition,
     targetPosition,
     style = {},
-    data,
+    markerStart,
     markerEnd,
-}: EdgeProps<RecipeEdgeData>) => {
+}: EdgeProps<any>) => {
 
-    const edgePath = getSmoothStepPath({
-        sourceX,
-        sourceY,
+    const nodes = useNodes()
+
+    const getSmartEdgeResponse = getSmartEdge({
         sourcePosition,
-        targetX,
-        targetY,
         targetPosition,
-    });
-
-    console.log({
-        id,
         sourceX,
         sourceY,
         targetX,
         targetY,
-    },data)
+        nodes,
+        options: {
+            nodePadding: 30,
+            generatePath: pathfindingAStarNoDiagonal
+        }
+    })
+
+    if (!getSmartEdgeResponse) return null
+
+    const { svgPathString } = getSmartEdgeResponse
 
     return (
         <>
             <path
-                id={id}
                 style={style}
-                className="react-flow__edge-path"
-                d={edgePath}
+                className='react-flow__edge-path'
+                d={svgPathString}
                 markerEnd={markerEnd}
+                markerStart={markerStart}
             />
-            <text startOffset="50%" textAnchor="middle">
-                ok
-            </text>
         </>
     );
 
 }
 
-const RecipeNodeType = ({ id, data: { recipe, machine, category } }: NodeProps<RecipeNodeData>) => {
+const nodeTypes: NodeTypes = { RecipeNode: RecipeNodeType }
+const edgeTypes: EdgeTypes = { smart: RecipeEdgeType }
 
-    const { items: allProducts, currentItem: currentProduct } = useAppState(state => state.products)
+const Setup = () => {
+
+    const { currentItem: currentProduct } = useAppState(state => state.products)
+    const { currentItem: currentMachine } = useAppState(state => state.machines)
+    const { currentItem: currentRecipe, currentNode } = useAppState(state => state.recipes)
+
+    const { fitView, getEdges, getNodes, setNodes, setCenter } = useReactFlow();
+
+    const fit = async () => {
+        let graph = await createGraphLayout(getNodes(), getEdges())
+        setNodes(graph)
+        fitView({ padding: 0.25 });
+    }
 
     return (
-
-        <Group spacing={0}>
-
-            <Stack justify="space-around">
-                {recipe.inputs.map(input => {
-                    let product = allProducts[input.id]
-                    return (
-                        <Handle
-                            key={`${id}-${input.id}-input`}
-                            id={`${id}-${input.id}-input`}
-                            type="target"
-                            position={Position.Left}
-                            style={handleStyle}
-                        >
-                            <Image src={`/assets/products/${product.icon}`} alt='test' height={22} style={{ margin: 5, pointerEvents: 'none' }} />
-                        </Handle>
-                    )
-                })}
-            </Stack>
-
-            <Card p={0}>
-
-                <Box>
-
-                    <Group position="center" p="xs">
-                        {/* <Tooltip
-                            label={category.name}
-                            withArrow
-                            withinPortal
-                        >
-                            <Box
-                                p={4}
-                                sx={theme => ({
-                                    borderRadius: theme.radius.sm,
-                                    background: theme.colors.dark[4]
-                                })}
-                            >
-                                <Image src={`/assets/categories/${category.id}.png`} alt={category.name} height={22} />
-                            </Box>
-                        </Tooltip> */}
-                        <Text weight="bolder" size="lg" sx={{ lineHeight: '1em' }}>{machine.name}</Text>
-                        {/* <Tooltip
-                            label={machine.name}
-                            withArrow
-                            withinPortal
-                        >
-                            <Box
-                                p={4}
-                                sx={theme => ({
-                                    borderRadius: theme.radius.sm,
-                                    background: theme.colors.dark[4]
-                                })}
-                            >
-                                <Image
-                                    height={22}
-                                    radius="md"
-                                    src={`/assets/buildings/${machine.icon}`} alt={machine.name}
-                                />
-                            </Box>
-                        </Tooltip> */}
-                    </Group>
-
-                    <Divider my={0} variant="solid" labelPosition="center" color="gray" sx={theme => ({ borderTopColor: theme.colors.gray[4] })} />
-
-                    <Box p="md">
-
-                        <Group noWrap position="center">
-                            <Group
-                                noWrap
-                                spacing="xs"
-                                sx={theme => ({
-                                    '& .product-input .product-icon': {
-                                        color: theme.colors.gray[6],
-                                        marginBottom: 18
-                                    },
-                                    '& .product-input:last-child .product-icon': {
-                                        display: 'none'
-                                    }
-                                })}
-                            >
-
-                                {recipe.inputs.map((product, key) => {
-                                    return (
-                                        <Group className="product-input" spacing="xs" key={`input_${product.id}`} noWrap>
-                                            <CostsIcon key={key} recipeId={recipe.id} product={product} color="red" />
-                                            <Icon className="product-icon" icon="icomoon-free:plus" width={10} />
-                                        </Group>
-                                    )
-                                })}
-                            </Group>
-                            <Group
-                                spacing="xs"
-                            >
-                                <Stack align="center" spacing={5}>
-                                    <Icon className="results-icon" icon="icomoon-free:arrow-right" width={15} />
-                                    <Text weight="bold" size="sm" sx={theme => ({ color: theme.colors.gray[6], lineHeight: `${theme.fontSizes.sm}px` })}>{recipe.duration}<small>/s</small></Text>
-                                </Stack>
-
-                            </Group>
-                            <Group
-                                noWrap
-                                spacing="xs"
-                                sx={theme => ({
-                                    '& .product-output': {
-                                        position: 'relative'
-                                    },
-                                    '& .product-output .product-icon': {
-                                        color: theme.colors.gray[6],
-                                        marginBottom: 18
-                                    },
-                                    '& .product-output:last-child .product-icon': {
-                                        display: 'none'
-                                    }
-                                })}
-                            >
-                                {recipe.outputs.map((product, key) => {
-                                    return (
-                                        <Group className="product-output" spacing="xs" key={`input_${product.id}`} noWrap>
-                                            <CostsIcon key={key} recipeId={recipe.id} product={product} color="red" />
-                                            <Icon className="product-icon" icon="icomoon-free:plus" width={10} />
-                                        </Group>
-                                    )
-                                })}
-                            </Group>
-                        </Group>
-
-                    </Box>
-
-                    <Divider my={0} variant="solid" labelPosition="center" color="gray" sx={theme => ({ borderTopColor: theme.colors.gray[4] })} />
-
-                    <Group spacing={4} position="center" p="xs">
-                        {machine.build_costs.map((product, key) => {
-                            return <CostsBadge key={key} product={product} />
-                        })}
-                        <NeedsBage need="workers" value={machine.workers} />
-                        {machine.maintenance_cost_units === 'maintenance_i' && (
-                            <NeedsBage need="maintenance1" value={machine.maintenance_cost_quantity} />
-                        )}
-                        {machine.maintenance_cost_units === 'maintenance_iI' && (
-                            <NeedsBage need="maintenance2" value={machine.maintenance_cost_quantity} />
-                        )}
-                        <NeedsBage need="electricity" value={machine.electricity_consumed} />
-                        <NeedsBage need="unity" value={machine.unity_cost} />
-                        <NeedsBage need="computing" value={machine.computing_consumed} suffix="tf" />
-                    </Group>
-
-                </Box>
-
-            </Card >
-
+        <Box>
+            <Divider label="Production Chain Setup" mb="sm" />
             <Stack>
-                {recipe.outputs.map(output => {
-                    let product = allProducts[output.id]
-                    return (
-                        <Handle
-                            id={`${id}-${output.id}-output`}
-                            key={`${id}-${output.id}-output`}
-                            type="source"
-                            position={Position.Left}
-                            style={handleStyle}
-                        >
-                            <Image src={`/assets/products/${product.icon}`} alt='test' height={22} style={{ margin: 5, pointerEvents: 'none' }} />
-                        </Handle>
-                    )
-                })}
+                <ProductSelectDrawer />
+                {currentProduct && <MachineSelectDrawer />}
+                {currentMachine && <RecipeSelectDrawer />}
             </Stack>
+            {currentRecipe && (
+                <Divider label="Assitional Settings" my="md" mt="xl" />
+            )}
+            <button onClick={fit}>fit</button>
+            <NodeDrawer/> 
+        </Box>
+    )
 
-        </Group>
-
-
-    );
 }
 
-const nodeTypes: NodeTypes = { RecipeNode: RecipeNodeType }
-const edgeTypes: EdgeTypes = { RecipeEdge: RecipeEdgeType }
-
-type EditorProps = {
-    initialNodes: any;
-    initialEdges: any;
-}
+const handleStyle: React.CSSProperties = { width: 'auto', height: 'auto', position: 'relative', top: 'initial', left: 'initial', right: 'initial', bottom: 'initial', borderRadius: 0, transform: 'initial', backgroundColor: 'transparent' }
 
 const Editor: React.FC<EditorProps> = ({ initialNodes, initialEdges }) => {
 
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+    const { fitView, getEdges, getNodes } = useReactFlow();
+    const selectNode = useActions().recipes.selectNode
 
-    const onConnect = (params: Connection) => {
-        console.log('onConnect',params)
+    const onConnectEnd = async () => {
+        let graph = await createGraphLayout(getNodes(), getEdges())
+        setNodes(graph)
+        await new Promise(resolve => setTimeout(resolve, 250));
+        fitView({padding:0.2})
+    }
+
+    const onConnect = async (params: Connection) => {
+        console.log('onConnect', params)
+        // @ts-ignore
+        params.style.stroke = generateDarkColorHex()
         setEdges((eds) => addEdge(params, eds))
     }
 
-    const onInit = (reactFlowInstance: ReactFlowInstance<RecipeNodeData>) => {
-        reactFlowInstance.setCenter(0, 0, { zoom: 1 })
+    const onInit = async (reactFlowInstance: ReactFlowInstance<RecipeNodeData>) => {
+        console.log('flow loaded:', reactFlowInstance);
+        let graph = await createGraphLayout(getNodes(), getEdges())
+        setNodes(graph)
+        await new Promise(resolve => setTimeout(resolve, 250));
+        fitView({ padding: 0.25 });
     };
 
-    const onEdgeUpdate = (oldEdge: Edge<RecipeEdgeData>, newConnection: Connection) => {
-        console.log('onEdgeUpdate',oldEdge,newConnection)
-        setEdges((els) => updateEdge(oldEdge, newConnection, els))
-    };
+    const onNodeClick = (e: any, node: Node<RecipeNodeData>) =>{
+        selectNode(node.data.id)
+    }
 
     return (
         <ReactFlow
@@ -307,12 +331,13 @@ const Editor: React.FC<EditorProps> = ({ initialNodes, initialEdges }) => {
             edges={edges}
             onNodesChange={onNodesChange}
             onEdgesChange={onEdgesChange}
+            onNodeClick={onNodeClick}
             onConnect={onConnect}
-            onEdgeUpdate={onEdgeUpdate}
             onInit={onInit}
             nodeTypes={nodeTypes}
             edgeTypes={edgeTypes}
-            defaultEdgeOptions={{ style: { stroke: '#000' }, animated: true, type: "RecipeEdge", markerStart: { type: MarkerType.ArrowClosed, color: "red" }, markerEnd: { type: MarkerType.ArrowClosed, color: "green" } }}
+            onConnectEnd={onConnectEnd}
+            defaultEdgeOptions={{ style: { stroke: '#000', strokeWidth: 3 }, animated: true, type: "smart" }}
         >
             <MiniMap />
             <Controls />
@@ -323,34 +348,20 @@ const Editor: React.FC<EditorProps> = ({ initialNodes, initialEdges }) => {
 
 const EditorWrapper = () => {
 
-    const { items: allProducts, currentItem: currentProduct } = useAppState(state => state.products)
-    const { items: allMachines, currentItem: currentMachine } = useAppState(state => state.machines)
-    const { items: allRecipes, currentItem: currentRecipe } = useAppState(state => state.recipes)
-    const { items: allCategories } = useAppState(state => state.categories)
-    const { selectedRecipies } = useAppState(state => state.recipes)
+    const {nodesList} = useAppState(state => state.recipes)
 
-    if (!currentRecipe || !currentMachine) return null
+    if (!nodesList.length) return null
 
-    let nodes = selectedRecipies.map(recipe => {
-        let machine = allMachines[recipe.machine]
-        let category = allCategories[machine.category_id]
-        console.log({
-            recipe,
-            machine,
-            category
-        })
+    let nodes = nodesList.map(node => {
         return {
-            id: recipe.id,
+            id: node.id,
             type: 'RecipeNode',
-            data: {
-                label: 'Node A',
-                recipe,
-                machine,
-                category
-            },
+            data: node,
             position: { x: 0, y: 0 }
         }
     })
+
+    console.log(nodes)
 
     return (
         <Editor initialNodes={nodes} initialEdges={[]} />
@@ -634,11 +645,11 @@ const EditorLayout = () => {
         >
             <Box
                 p="md"
-                sx={theme=>({backgroundColor: theme.colors.gray[1]})}
+                sx={theme => ({ backgroundColor: theme.colors.gray[1] })}
             >
                 <Setup />
             </Box>
-            <Box sx={theme=>({
+            <Box sx={theme => ({
                 backgroundImage: 'url("https://www.transparenttextures.com/patterns/squared-metal.png")',
                 borderRight: `1px solid ${theme.colors.gray[4]}`,
                 borderLeft: `1px solid ${theme.colors.gray[4]}`
@@ -647,7 +658,7 @@ const EditorLayout = () => {
             </Box>
             <Box
                 p="md"
-                sx={theme=>({backgroundColor: theme.colors.gray[1]})}
+                sx={theme => ({ backgroundColor: theme.colors.gray[1] })}
             >
                 <ResultsSummary />
             </Box>
@@ -656,8 +667,6 @@ const EditorLayout = () => {
 }
 
 const Calculator: React.FC = () => {
-
-
 
     return (
         <PageLayoutBlank>

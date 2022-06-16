@@ -11,4 +11,10 @@ export const state: RecipesState = {
     },
     selectedRecipeIds: [],
     selectedRecipies: derived( (state: RecipesState) => state.selectedRecipeIds.map(id=>state.items[id]) ),
+    nodes: {},
+    nodesList: derived( (state: RecipesState) => Object.values(state.nodes) ),
+    currentNodeId: null,
+    get currentNode() {
+        return this.currentNodeId ? this.nodes[this.currentNodeId] : null
+    },
 }

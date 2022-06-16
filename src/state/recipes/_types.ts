@@ -1,4 +1,5 @@
 import { Recipe, RecipeId } from 'state/app/effects/loadJsonData';
+import ProductionNode from './ProductionNode';
 
 export type RecipesState = {
     itemsList: Recipe[];
@@ -8,5 +9,11 @@ export type RecipesState = {
     currentItemId: Recipe['id'] | null;
     currentItem: Recipe | null;
     selectedRecipeIds: RecipeId[];
-    selectedRecipies: Recipe[]
+    selectedRecipies: Recipe[];
+    nodes: {
+        [key: string]: ProductionNode
+    };
+    currentNodeId: RecipeId | null;
+    currentNode: ProductionNode | null;
+    nodesList: ProductionNode[];
 }

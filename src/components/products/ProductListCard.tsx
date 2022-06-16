@@ -30,7 +30,7 @@ export const ProductListCardEmpty: React.FC<{onSelect(): void}> = ({ onSelect })
                     p="xs"
                     sx={theme => ({
                         borderRadius: theme.radius.md,
-                        background: theme.colors.gray[7]
+                        background: theme.colors.dark[3]
                     })}
                 >
                     <Image
@@ -52,6 +52,7 @@ const ProductListCard: React.FC<ProductListCardProps> = ({ item, active, onSelec
         <Card
             onClick={() => onItemClick(item.id)}
             shadow="xs"
+            p="xs"
             sx={(theme) => ({
                 cursor: 'pointer',
                 backgroundColor: active ? theme.colors.gray[4] : '',
@@ -61,16 +62,16 @@ const ProductListCard: React.FC<ProductListCardProps> = ({ item, active, onSelec
             })}
         >
             <Group position='apart'>
-                <Text weight={500}>{item.name}</Text>
+                <Text weight={500} size="sm">{item.name}</Text>
                 <Box
                     p="xs"
                     sx={theme => ({
-                        borderRadius: theme.radius.md,
-                        background: theme.colors.gray[7]
+                        borderRadius: theme.radius.sm,
+                        background: theme.colors.dark[3]
                     })}
                 >
                     <Image
-                        height={30}
+                        height={24}
                         radius="md"
                         src={`/assets/products/${item.icon}`} alt={item.name}
                     />
