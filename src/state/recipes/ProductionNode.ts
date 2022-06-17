@@ -1,5 +1,7 @@
 import { Category, Machine, Product, ProductId, Recipe, RecipeId, RecipeProduct } from "state/app/effects"
 import { ProductRecipes, ProductsState } from "state/_types";
+import { Edge, Node }  from 'react-flow-renderer';
+import { generateDarkColorHex } from "utils/colors";
 
 type ProductionNodeParams = {
     recipe: Recipe;
@@ -11,18 +13,34 @@ type ProductionNodeParams = {
     targets: ProductRecipes;
 }
 
-type RecipeInput = RecipeIOInput & {
-    imported: number;
-}
-
-type RecipeOutput = RecipeIOInput & {
-    exported: number;
+type RecipeIO = RecipeIOInput & {
+    exported?: number;
+    target?: RecipeId | null;
+    imported?: number;
+    source?: RecipeId | null;
 }
 
 type RecipeIOInput = Product & RecipeProduct
 type RecipeIODict = {
-    [index: string]: RecipeInput | RecipeOutput
+    [index: string]: RecipeIO
 }
+
+
+// type RecipeInput = RecipeIOInput & {
+//     imported: number;
+//     source: RecipeId | null;
+// }
+
+// type RecipeOutput = RecipeIOInput & {
+//     exported: number;
+//     target: RecipeId | null;
+// }
+
+
+// type RecipeIOInput = Product & RecipeProduct
+// type RecipeIODict = {
+//     [index: string]: RecipeInput | RecipeOutput
+// }
 
 class ProductionNode {
 
@@ -52,7 +70,8 @@ class ProductionNode {
             [item.id]: {
                 ...item,
                 quantity: this.calculateProduct60(recipe.duration, item.quantity),
-                imported: 0
+                imported: 0,
+                source: null
             }
         }),{})
 
@@ -61,7 +80,8 @@ class ProductionNode {
             [item.id]: {
                 ...item,
                 quantity: this.calculateProduct60(recipe.duration, item.quantity),
-                imported: 0
+                imported: 0,
+                target: null
             }
         }),{})
 
@@ -85,6 +105,33 @@ class ProductionNode {
             outputs: this.outputs,
             duration: this.duration
         })
+    }
+
+    get nodeData(): Node<ProductionNode> {
+        return  {
+            id: this.id,
+            type: 'RecipeNode',
+            data: this,
+            position: { x: 0, y: 0 }
+        }
+    }
+
+    get edgeData(): Edge<any>[] {
+        let edges: Edge<any>[] = []
+        Object.values(this.inputs).forEach(input=>{
+            if (input.source) {
+                edges.push({
+                    id: `${input.source}-${this.id}`,
+                    source: input.source,
+                    sourceHandle: `${input.source}-${input.id}-output`,
+                    target: this.id,
+                    targetHandle: `${this.id}-${input.id}-input`,
+                    style: { stroke: generateDarkColorHex(), strokeWidth: 3 }
+                })
+            }
+            
+        })
+        return edges;
     }
 
 }

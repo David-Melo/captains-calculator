@@ -11,7 +11,7 @@ import { NodeRecipeLink } from "./NodeRecipeSelect";
 export const NodeDrawer = () => {
 
     const reaction = useReaction()
-    const node = useAppState(state=>state.recipes.currentNode)
+    const node = useAppState(state => state.recipes.currentNode)
     const deSelectNode = useActions().recipes.deSelectNode
     const [opened, setOpened] = React.useState(false)
 
@@ -42,17 +42,26 @@ export const NodeDrawer = () => {
                     <Box p="xl">
                         <Stack spacing="xs">
                             <Text weight="bold" mb="xs">1. Desired Product</Text>
-                            {Object.keys(node.inputs).map((productId,key)=>{
+                            {Object.keys(node.inputs).map((productId, key) => {
                                 try {
                                     let sources = node.sources[productId as ProductId]
                                     let product = node.inputs[productId]
-                                    return <NodeRecipeLink key={key} recipes={sources} label={product.name}/>
+                                    return (
+                                        <NodeRecipeLink
+                                            key={key}
+                                            direction="input"
+                                            recipes={sources}
+                                            label={product.name}
+                                            currentNodeId={node.id}
+                                            productId={product.id}
+                                        />
+                                    )
                                 } catch (e: any) {
                                     console.error(e.message)
                                     return productId
                                 }
                             })}
-                            <Text size="xs"><pre>{JSON.stringify(node.sources, null, 4)}</pre></Text>
+                            <Text size="xs">{node.id}</Text>
                         </Stack>
                     </Box>
                 </DrawerBodyScrollArea>
@@ -86,6 +95,25 @@ export const NodeDrawer = () => {
             >
                 {renderBody()}
             </Drawer>
+            {/* {Object.keys(node.inputs).map((productId, key) => {
+                try {
+                    let sources = node.sources[productId as ProductId]
+                    let product = node.inputs[productId]
+                    return (
+                        <NodeRecipeLink
+                            key={key}
+                            direction="input"
+                            recipes={sources}
+                            label={product.name}
+                            currentNodeId={node.id}
+                            productId={product.id}
+                        />
+                    )
+                } catch (e: any) {
+                    console.error(e.message)
+                    return productId
+                }
+            })} */}
         </>
     );
 

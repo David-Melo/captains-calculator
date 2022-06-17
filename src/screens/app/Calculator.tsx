@@ -14,21 +14,18 @@ import NeedsBage, { needMap } from 'components/ui/NeedsBadge';
 import { ProductSelectDrawer } from 'components/products/ProductSelectDrawer';
 import { MachineSelectDrawer } from 'components/machines/MachineSelectDrawer';
 import { RecipeSelectDrawer } from '../../components/recipes/RecipeSelectDrawer';
-import { getSmartEdge, pathfindingAStarNoDiagonal, pathfindingJumpPointNoDiagonal } from '@tisoap/react-flow-smart-edge'
+import { getSmartEdge, pathfindingAStarDiagonal, pathfindingAStarNoDiagonal, pathfindingJumpPointNoDiagonal, svgDrawSmoothLinePath, svgDrawStraightLinePath } from '@tisoap/react-flow-smart-edge'
 import { sortArray } from 'utils/objects';
-import { createGraphLayout } from 'utils/graph';
 import { generateDarkColorHex } from 'utils/colors';
 import ProductionNode from 'state/recipes/ProductionNode';
 import { NodeDrawer } from 'components/recipes/NodeDrawer';
+import logger from 'utils/logger';
+import Elk, { ElkNode, ElkPrimitiveEdge } from "elkjs";
+import dagre from 'dagre';
 
 type RecipeNodeData = ProductionNode
 
-type EditorProps = {
-    initialNodes: any;
-    initialEdges: any;
-}
-
-const RecipeNodeType = ({ id, data: { machine, category, inputs, outputs } }: NodeProps<RecipeNodeData>) => {
+const RecipeNodeType = ({ id, xPos, yPos, data: { machine, category, inputs, outputs } }: NodeProps<RecipeNodeData>) => {
 
     return (
 
@@ -37,7 +34,8 @@ const RecipeNodeType = ({ id, data: { machine, category, inputs, outputs } }: No
             sx={theme => ({
                 backgroundColor: theme.white,
                 borderRadius: theme.radius.sm,
-                boxShadow: theme.shadows.sm
+                boxShadow: theme.shadows.sm,
+                width: 400
             })}
         >
 
@@ -230,8 +228,9 @@ const RecipeEdgeType = ({
         targetY,
         nodes,
         options: {
-            nodePadding: 30,
-            generatePath: pathfindingAStarNoDiagonal
+            nodePadding: 40,
+            drawEdge: svgDrawSmoothLinePath,
+            generatePath: pathfindingAStarDiagonal
         }
     })
 
@@ -253,6 +252,114 @@ const RecipeEdgeType = ({
 
 }
 
+/* From https://github.com/wbkd/react-flow/issues/5#issuecomment-954001434 */
+/* 
+Get a sense of the parameters at:
+https://rtsys.informatik.uni-kiel.de/elklive/examples.html?e=general%2Fspacing%2FnodesEdges 
+*/
+
+const elk = new Elk({
+    defaultLayoutOptions: {
+        'elk.algorithm': 'layered',
+        'elk.direction': 'RIGHT',
+        'elk.hierarchyHandling': 'INCLUDE_CHILDREN',
+        'elk.layered.crossingMinimization.strategy': 'LAYER_SWEEP',
+        'elk.layered.nodePlacement.bk.fixedAlignment': 'BALANCED',
+        'elk.layered.nodePlacement.strategy': 'LINEAR_SEGMENTS',
+        'elk.spacing.nodeNode': '50',
+        'elk.layered.spacing.nodeNodeBetweenLayers': '200',
+        'elk.layered.crossingMinimization.semiInteractive': 'true'
+    }
+})
+
+export const createGraphLayout = async (nodes: Array<Node>, edges: Array<Edge>): Promise<Array<Node>> => {
+    console.log('generatingLayout')
+    const elkNodes: ElkNode[] = [];
+    const elkEdges: ElkPrimitiveEdge[] = [];
+
+    nodes.forEach((flowNode) => {
+        elkNodes.push({
+            id: flowNode.id,
+            width: flowNode.width ?? 0,
+            height: flowNode.height ?? 0,
+        });
+    });
+    edges.forEach((flowEdge) => {
+        elkEdges.push({
+            id: flowEdge.id,
+            target: flowEdge.target,
+            source: flowEdge.source,
+        });
+    });
+
+    const newGraph = await elk.layout({
+        id: "root",
+        children: elkNodes,
+        edges: elkEdges,
+    });
+    return nodes.map((flowNode) => {
+        const node = newGraph?.children?.find((n) => n.id === flowNode.id);
+        if (node?.x && node?.y && node?.width && node?.height) {
+            flowNode.position = {
+                x: node.x - node.width / 2 + Math.random() / 1000,
+                y: node.y - node.height / 2,
+            };
+        }
+        return flowNode;
+    });
+};
+
+const nodeWidth = 300;
+const nodeHeight = 200;
+
+const dagreGraph = new dagre.graphlib.Graph();
+dagreGraph.setDefaultEdgeLabel(() => ({}));
+
+const getLayoutedElements = (nodes: Node<any>[], edges: Edge<any>[]) => {
+
+    dagreGraph.setGraph({ 
+        rankdir: 'LR',
+        align: 'UR',
+        nodesep: 50,
+        edgesep: 50,
+        ranksep: 150,
+        ranker: 'network-simplex',
+        acyclicer: 'greedy',
+        orderRestarts: 1
+     });
+
+    nodes.forEach((node) => {
+        dagreGraph.setNode(node.id, { width: node.width, height: node.height });
+    });
+
+    edges.forEach((edge) => {
+        dagreGraph.setEdge(edge.source, edge.target);
+    });
+
+    dagre.layout(dagreGraph);
+
+    nodes.forEach((node) => {
+
+        const nodeWithPosition = dagreGraph.node(node.id);
+
+        node.targetPosition = Position.Right
+        node.sourcePosition = Position.Left
+
+        let w = node.width !== null ? node.width as number : nodeWidth
+        let h = node.height !== null ? node.height as number : nodeHeight
+
+        node.position = {
+            x: nodeWithPosition.x,
+            y: nodeWithPosition.y,
+        };
+
+        return node;
+    });
+
+    return { nodes, edges };
+};
+
+
 const nodeTypes: NodeTypes = { RecipeNode: RecipeNodeType }
 const edgeTypes: EdgeTypes = { smart: RecipeEdgeType }
 
@@ -262,28 +369,17 @@ const Setup = () => {
     const { currentItem: currentMachine } = useAppState(state => state.machines)
     const { currentItem: currentRecipe, currentNode } = useAppState(state => state.recipes)
 
-    const { setNodes, getNodes } = useReactFlow();
+    const { fitView, getEdges, getNodes, setNodes, setCenter, setEdges } = useReactFlow();
 
-    const handleSelect = async () => {
-        let prevNodes = getNodes()
-        let graph = await createGraphLayout(prevNodes.concat([{
-            id: Date.now().toString(),
-            type: 'source',
-            data: {},
-            position: { x: 0, y: 0 }
-        }]), [])
-        setNodes(graph)
-        //linkRecipe(recipeId)
-
+    const fit = async () => {
+        let data = getLayoutedElements(
+            getNodes(),
+            getEdges()            
+        );
+        setNodes(data.nodes)
+        setEdges(data.edges)
+        fitView({ padding: 0.1, includeHiddenNodes: false, duration: 102 });
     }
-
-    //const { fitView, getEdges, getNodes, setNodes, setCenter } = useReactFlow();
-
-    // const fit = async () => {
-    //     let graph = await createGraphLayout(getNodes(), getEdges())
-    //     setNodes(graph)
-    //     //fitView({ padding: 0.25 });
-    // }
 
     return (
         <Box>
@@ -296,9 +392,8 @@ const Setup = () => {
             {currentRecipe && (
                 <Divider label="Assitional Settings" my="md" mt="xl" />
             )}
-            <button onClick={handleSelect}>fit</button>
+            <button onClick={fit}>fit</button>
             <NodeDrawer />
-            <Text size="xs"><pre>{JSON.stringify(currentNode?.sources, null, 4)}</pre></Text>
         </Box>
     )
 
@@ -306,42 +401,49 @@ const Setup = () => {
 
 const handleStyle: React.CSSProperties = { width: 'auto', height: 'auto', position: 'relative', top: 'initial', left: 'initial', right: 'initial', bottom: 'initial', borderRadius: 0, transform: 'initial', backgroundColor: 'transparent' }
 
-const EditorWrapper: React.FC = () => {
+type EditorProps = {
+    nodesData: Node<ProductionNode>[];
+    edgesData: Edge<any>[];
+}
 
-    //const { fitView, getEdges, setNodes } = useReactFlow();
+const Editor: React.FC<EditorProps> = ({ nodesData, edgesData }) => {
+
+    // const { fitView, getEdges, setNodes } = useReactFlow();
     const selectNode = useActions().recipes.selectNode
-    const reaction = useReaction()
+    // const reaction = useReaction()
     // const [graph, setGraph] = React.useState<Array<Node>>()
 
-    // const [nodes, setNodes, onNodesChange] = useNodesState([]);
-    // const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+    const [nodes, setNodes, onNodesChange] = useNodesState(nodesData);
+    const [edges, setEdges, onEdgesChange] = useEdgesState(edgesData);
 
-    const [nodes, setNodes] = React.useState<Node<RecipeNodeData>[]>([]);
-    const [edges, setEdges] = React.useState([]);
 
-    React.useEffect(() => reaction(
-        (state) => state.recipes.nodesList,
-        (nodesList) => {
-            console.log('ReactionRan')
-            if (nodesList.length) {
-                let nodes = nodesList.map(node => {
-                    return {
-                        id: node.id,
-                        type: 'RecipeNode',
-                        data: node,
-                        position: { x: 0, y: 0 }
-                    }
-                })
-                createGraphLayout(nodes, [])
-                    .then(graph => {
-                        setNodes(graph)
-                    })
-            }
-        },
-        {
-            immediate: false
-        }
-    ))
+
+    // const [nodes, setNodes] = React.useState<Node<RecipeNodeData>[]>([]);
+    // const [edges, setEdges] = React.useState([]);
+
+    // React.useEffect(() => reaction(
+    //     (state) => state.recipes.nodesList,
+    //     (nodesList) => {
+    //         console.log('ReactionRan')
+    //         if (nodesList.length) {
+    //             let nodes = nodesList.map(node => {
+    //                 return {
+    //                     id: node.id,
+    //                     type: 'RecipeNode',
+    //                     data: node,
+    //                     position: { x: 0, y: 0 }
+    //                 }
+    //             })
+    //             createGraphLayout(nodes, [])
+    //                 .then(graph => {
+    //                     setNodes(graph)
+    //                 })
+    //         }
+    //     },
+    //     {
+    //         immediate: false
+    //     }
+    // ))
 
     // const handleNodesChange = (nodes: NodeChange[]) => {
     //     console.log('handleNodesChange', nodes)
@@ -349,13 +451,10 @@ const EditorWrapper: React.FC = () => {
     // }
 
     // const onNodesChange = React.useCallback(
-    //     (changes) => setNodes(async (nds: SetStateAction<Node<ProductionNode>[]>) => {
-    //         let changed = applyNodeChanges(changes, nds)
-    //         let graph = await createGraphLayout(changed, [])
-    //         return graph
-    //     }),
+    //     (changes) => console.log(changes),
     //     [setNodes]
     // );
+
     // const onEdgesChange = React.useCallback(
     //     (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
     //     [setEdges]
@@ -365,16 +464,29 @@ const EditorWrapper: React.FC = () => {
     //     console.log('onConnectEnd')
     // }
 
-    // const onConnect = async (params: Connection) => {
-    //     console.log('onConnect')
-    //     // @ts-ignore
-    //     params.style.stroke = generateDarkColorHex()
-    //     setEdges((eds) => addEdge(params, eds))
-    // }
+    const onConnect = async (params: Connection) => {
+        console.log(params)
+        console.log('onConnect')
+        // @ts-ignore
+        params.style.stroke = generateDarkColorHex()
+        setEdges((eds) => addEdge(params, eds))
+    }
 
-    // const onInit = async (reactFlowInstance: ReactFlowInstance<RecipeNodeData>) => {
-    //     console.log('onInit');
-    // };
+    const onInit = async (reactFlowInstance: ReactFlowInstance<RecipeNodeData>) => {
+        reactFlowInstance.setCenter(0, 0)
+        logger('Init')
+        let graph = await createGraphLayout(reactFlowInstance.getNodes(), reactFlowInstance.getEdges())
+        logger('SetNodes')
+        setNodes(graph)
+        logger('Wait1')
+        new Promise(resolve => setTimeout(resolve, 100));
+        logger('FitView1')
+        reactFlowInstance.fitView({ padding: 0.1, includeHiddenNodes: true, duration: 250 });
+        logger('Wait2')
+        await new Promise(resolve => setTimeout(resolve, 100));
+        logger('FitView2')
+        reactFlowInstance.fitView({ padding: 0.1, includeHiddenNodes: true, duration: 250 });
+    };
 
     const onNodeClick = (e: any, node: Node<RecipeNodeData>) => {
         selectNode(node.data.id)
@@ -385,20 +497,33 @@ const EditorWrapper: React.FC = () => {
             //defaultZoom={1}
             nodes={nodes}
             edges={edges}
-            //onNodesChange={handleNodesChange}
-            //onEdgesChange={onEdgesChange}
+            onNodesChange={onNodesChange}
+            onEdgesChange={onEdgesChange}
             onNodeClick={onNodeClick}
-            //onConnect={onConnect}
-            //onInit={onInit}            
-            //onConnectEnd={onConnectEnd}
+            onConnect={onConnect}
+            onInit={onInit}
             nodeTypes={nodeTypes}
             edgeTypes={edgeTypes}
             defaultEdgeOptions={{ style: { stroke: '#000', strokeWidth: 3 }, animated: true, type: "smart" }}
+            snapToGrid
+            maxZoom={1}
+            minZoom={0.1}
+            nodesConnectable={false}
         >
             <MiniMap />
             <Controls />
         </ReactFlow>
     )
+
+}
+
+const EditorWrapper = () => {
+
+    let { nodesData, edgesData } = useAppState(state => state.recipes)
+
+    if (!nodesData.length) return null
+
+    return <Editor key={`editor-${nodesData.length}`} nodesData={nodesData} edgesData={edgesData} />
 
 }
 

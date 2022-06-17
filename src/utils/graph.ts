@@ -6,33 +6,31 @@ import { Node, Edge } from "react-flow-renderer";
 Get a sense of the parameters at:
 https://rtsys.informatik.uni-kiel.de/elklive/examples.html?e=general%2Fspacing%2FnodesEdges 
 */
- 
-const DEFAULT_WIDTH = 330;
-const DEFAULT_HEIGHT = 75;
-const DEFAULT_WIDTH_FOR_ROOT = 170;
 
 const elk = new Elk({
-  defaultLayoutOptions: {
-    'elk.algorithm': 'layered',
-    'elk.direction': 'RIGHT',
-    'elk.spacing.edgeNode': '130',
-    'elk.spacing.nodeNode': '75',
-    'elk.layered.spacing.nodeNodeBetweenLayers': '130',
-    'elk.hierarchyHandling': 'INCLUDE_CHILDREN',
-    'elk.layered.crossingMinimization.semiInteractive': 'true',
-    'elk.layered.nodePlacement.bk.fixedAlignment': 'BALANCED'
-  }
+    defaultLayoutOptions: {
+        'elk.algorithm': 'layered',
+        'elk.direction': 'RIGHT',
+        'elk.hierarchyHandling': 'SEPARATE_CHILDREN',
+        'elk.layered.crossingMinimization.strategy': 'LAYER_SWEEP',
+        'elk.layered.nodePlacement.bk.fixedAlignment': 'BALANCED',
+        'elk.layered.nodePlacement.strategy': 'LINEAR_SEGMENTS',
+        'elk.spacing.nodeNode': '50',
+        'elk.layered.spacing.nodeNodeBetweenLayers': '200',
+        'elk.layered.crossingMinimization.semiInteractive': 'true'
+    }
 })
 
 export const createGraphLayout = async (nodes: Array<Node>, edges: Array<Edge>): Promise<Array<Node>> => {
+    console.log('generatingLayout')
     const elkNodes: ElkNode[] = [];
     const elkEdges: ElkPrimitiveEdge[] = [];
 
     nodes.forEach((flowNode) => {
         elkNodes.push({
             id: flowNode.id,
-            width: flowNode.id === "0" ? DEFAULT_WIDTH_FOR_ROOT : flowNode.width ?? DEFAULT_WIDTH,
-            height: flowNode.height ?? DEFAULT_HEIGHT,
+            width: flowNode.width ?? 0,
+            height: flowNode.height ?? 0,
         });
     });
     edges.forEach((flowEdge) => {
