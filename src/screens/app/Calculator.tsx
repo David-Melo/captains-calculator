@@ -6,7 +6,7 @@ import { ProductSelect } from 'components/products/ProductSelect';
 import { MachineRecipeSelect } from 'components/recipes/MachineRecipeSelect';
 import { ProductMachineSelect } from 'components/products/ProductMachineSelect';
 import { useActions, useAppState, useReaction } from 'state';
-import { Category, Machine, Recipe } from 'state/app/effects';
+import { Category, Machine, ProductId, Recipe } from 'state/app/effects';
 import { Icon } from '@iconify/react';
 import CostsBadge from 'components/ui/CostsBadge';
 import CostsIcon from 'components/ui/CostsIcons';
@@ -17,15 +17,70 @@ import { RecipeSelectDrawer } from '../../components/recipes/RecipeSelectDrawer'
 import { getSmartEdge, pathfindingAStarDiagonal, pathfindingAStarNoDiagonal, pathfindingJumpPointNoDiagonal, svgDrawSmoothLinePath, svgDrawStraightLinePath } from '@tisoap/react-flow-smart-edge'
 import { sortArray } from 'utils/objects';
 import { generateDarkColorHex } from 'utils/colors';
-import ProductionNode from 'state/recipes/ProductionNode';
+import ProductionNode, { RecipeIOProduct } from 'state/recipes/ProductionNode';
 import { NodeDrawer } from 'components/recipes/NodeDrawer';
 import logger from 'utils/logger';
 import Elk, { ElkNode, ElkPrimitiveEdge } from "elkjs";
 import dagre from 'dagre';
+import Icons from 'components/ui/Icons';
+import RecipeLinkModal from 'components/recipes/RecipeLinkModal';
+import { useModals } from '@mantine/modals';
+import { DrawerBody, DrawerBodyScrollArea } from 'components/ui/DrawerBody';
+import { NodeRecipeLink } from 'components/recipes/NodeRecipeSelect';
 
-type RecipeNodeData = ProductionNode
+export type RecipeNodeData = ProductionNode
+export type LinkNodeData = { recipeId: string, product: RecipeIOProduct, type: string }
+export type LinkNode = Node<LinkNodeData>
+export type RecipeNode = Node<RecipeNodeData>
 
-const RecipeNodeType = ({ id, xPos, yPos, data: { machine, category, inputs, outputs } }: NodeProps<RecipeNodeData>) => {
+const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, outputs, sources } }: NodeProps<RecipeNodeData>) => {
+
+    const modals = useModals();
+
+    const openContentModal = (direction: 'input'|'output', product: RecipeIOProduct) => {
+        const id = modals.openModal({
+            title: `Select ${direction==='input'?'Source':'Target'} For ${product.name}`,
+            size: 'xl',
+            children: (
+                <>
+                    <Box sx={{height:400}}>
+                    <DrawerBody>
+                        <DrawerBodyScrollArea>
+                            <Box>
+                                <Stack spacing="xs">
+                                    {Object.keys(inputs).map((productId, key) => {
+                                        try {
+                                            let sourceRecipes = sources[productId as ProductId]
+                                            let product = inputs[productId]
+                                            return (
+                                                <NodeRecipeLink
+                                                    key={key}
+                                                    direction="input"
+                                                    recipes={sourceRecipes}
+                                                    label={product.name}
+                                                    currentNodeId={recipe.id}
+                                                    productId={product.id}
+                                                />
+                                            )
+                                        } catch (e: any) {
+                                            console.error(e.message)
+                                            return productId
+                                        }
+                                    })}
+                                </Stack>
+                            </Box>
+                        </DrawerBodyScrollArea>
+                    </DrawerBody>
+                    </Box>
+                </>
+            ),
+        });
+    };
+
+    const handleLinkCreate = (direction: 'input'|'output',product: RecipeIOProduct) => {
+        console.log('clicked')
+        openContentModal(direction,product)
+    }
 
     return (
 
@@ -84,12 +139,40 @@ const RecipeNodeType = ({ id, xPos, yPos, data: { machine, category, inputs, out
             <Divider py="xs" variant="solid" labelPosition="center" label="Inputs & Outputs" color="gray" sx={theme => ({ borderTopColor: theme.colors.gray[4] })} />
             <Grid gutter={40}>
                 <Grid.Col span={6}>
-                    <Stack spacing="sm" justify="space-around" sx={{ marginLeft: -14 }} >
+                    <Stack spacing="sm" justify="space-around">
                         {Object.keys(inputs).sort((a, b) => sortArray(inputs[a].name, inputs[b].name)).map(productId => {
                             let product = inputs[productId]
                             return (
-                                <Box key={`recipe-handle-input-${productId}`}>
+                                <Box key={`recipe-handle-input-${productId}`} sx={{ marginLeft: !!product.source ? -14 : -47 }} className='nodrag'>
                                     <Group spacing={5} noWrap>
+                                        {!product.source && (
+                                            <Tooltip
+                                                label="Add Input Source"
+                                                withArrow
+                                                withinPortal
+                                                allowPointerEvents
+                                            >
+                                                <Box
+                                                    onClick={()=>handleLinkCreate('input',product)}
+                                                    sx={theme => ({
+                                                        width: 28,
+                                                        height: 28,
+                                                        display: 'flex',
+                                                        justifyContent: 'center',
+                                                        alignItems: 'center',
+                                                        backgroundColor: theme.white,
+                                                        borderRadius: theme.radius.sm,
+                                                        boxShadow: theme.shadows.sm,
+                                                        cursor: "default",
+                                                        '&:hover': {
+                                                            backgroundColor: theme.colors.gray[2],
+                                                        }
+                                                    })}
+                                                >
+                                                    <Icon icon={Icons.add} />
+                                                </Box>
+                                            </Tooltip>
+                                        )}
                                         <Handle
                                             key={`${id}-${product.id}-input`}
                                             id={`${id}-${product.id}-input`}
@@ -130,11 +213,11 @@ const RecipeNodeType = ({ id, xPos, yPos, data: { machine, category, inputs, out
                     </Stack>
                 </Grid.Col>
                 <Grid.Col span={6}>
-                    <Stack spacing="sm" justify="space-around" sx={{ marginRight: -14 }} align="flex-end">
+                    <Stack spacing="sm" justify="space-around" align="flex-end">
                         {Object.keys(outputs).sort((a, b) => sortArray(outputs[a].name, outputs[b].name)).map(productId => {
                             let product = outputs[productId]
                             return (
-                                <Box key={`recipe-handle-output-${productId}`}>
+                                <Box key={`recipe-handle-output-${productId}`} sx={{ marginRight: !!product.target ? -14 : -47 }} className='nodrag'>
                                     <Group spacing={5} noWrap>
                                         <Group spacing={5} noWrap>
                                             <Text sx={{ whiteSpace: 'nowrap' }}>{product.name}</Text>
@@ -169,6 +252,34 @@ const RecipeNodeType = ({ id, xPos, yPos, data: { machine, category, inputs, out
                                                 <Text color="white" align="center" size="sm" sx={{ lineHeight: 24 }}>{product.quantity}</Text>
                                             </Box>
                                         </Handle>
+                                        {!product.target && (
+                                            <Tooltip
+                                                label="Add Output Target"
+                                                withArrow
+                                                withinPortal
+                                                allowPointerEvents
+                                            >
+                                                <Box
+                                                    onClick={()=>handleLinkCreate('output',product)}
+                                                    sx={theme => ({
+                                                        width: 28,
+                                                        height: 28,
+                                                        display: 'flex',
+                                                        justifyContent: 'center',
+                                                        alignItems: 'center',
+                                                        backgroundColor: theme.white,
+                                                        borderRadius: theme.radius.sm,
+                                                        boxShadow: theme.shadows.sm,
+                                                        cursor: "default",
+                                                        '&:hover': {
+                                                            backgroundColor: theme.colors.gray[2],
+                                                        }
+                                                    })}
+                                                >
+                                                    <Icon icon={Icons.add} />
+                                                </Box>
+                                            </Tooltip>
+                                        )}
                                     </Group>
                                 </Box>
                             )
@@ -202,6 +313,45 @@ const RecipeNodeType = ({ id, xPos, yPos, data: { machine, category, inputs, out
         </Box >
 
 
+    );
+}
+
+const LinkNodeType = ({ id, data: { product, recipeId, type } }: NodeProps<LinkNodeData>) => {
+
+    return (
+        <Handle
+            id={`${recipeId}-${product.id}-${type}-add`}
+            type={type === 'input' ? 'source' : 'target'}
+            position={type === 'input' ? Position.Right : Position.Left}
+            style={handleStyle}
+        >
+            <Box>
+                <Tooltip
+                    label="Connect Recipe"
+                    withArrow
+                    withinPortal
+                    sx={{ pointerEvents: 'none' }}
+                >
+                    <Box
+                        key={id}
+                        sx={theme => ({
+                            width: 28,
+                            height: 28,
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            backgroundColor: theme.white,
+                            borderRadius: theme.radius.sm,
+                            boxShadow: theme.shadows.sm,
+                            pointerEvents: 'none',
+                            cursor: "default"
+                        })}
+                    >
+                        <Icon icon={Icons.add} />
+                    </Box>
+                </Tooltip>
+            </Box>
+        </Handle>
     );
 }
 
@@ -317,16 +467,15 @@ dagreGraph.setDefaultEdgeLabel(() => ({}));
 
 const getLayoutedElements = (nodes: Node<any>[], edges: Edge<any>[]) => {
 
-    dagreGraph.setGraph({ 
+    dagreGraph.setGraph({
         rankdir: 'LR',
         align: 'UR',
         nodesep: 50,
         edgesep: 50,
         ranksep: 150,
         ranker: 'network-simplex',
-        acyclicer: 'greedy',
-        orderRestarts: 1
-     });
+        acyclicer: 'greedy'
+    });
 
     nodes.forEach((node) => {
         dagreGraph.setNode(node.id, { width: node.width, height: node.height });
@@ -360,7 +509,7 @@ const getLayoutedElements = (nodes: Node<any>[], edges: Edge<any>[]) => {
 };
 
 
-const nodeTypes: NodeTypes = { RecipeNode: RecipeNodeType }
+const nodeTypes: NodeTypes = { RecipeNode: RecipeNodeType, LinkNode: LinkNodeType }
 const edgeTypes: EdgeTypes = { smart: RecipeEdgeType }
 
 const Setup = () => {
@@ -374,7 +523,7 @@ const Setup = () => {
     const fit = async () => {
         let data = getLayoutedElements(
             getNodes(),
-            getEdges()            
+            getEdges()
         );
         setNodes(data.nodes)
         setEdges(data.edges)
@@ -399,10 +548,10 @@ const Setup = () => {
 
 }
 
-const handleStyle: React.CSSProperties = { width: 'auto', height: 'auto', position: 'relative', top: 'initial', left: 'initial', right: 'initial', bottom: 'initial', borderRadius: 0, transform: 'initial', backgroundColor: 'transparent' }
+const handleStyle: React.CSSProperties = { border: 'none', width: 'auto', height: 'auto', position: 'relative', top: 'initial', left: 'initial', right: 'initial', bottom: 'initial', borderRadius: 0, transform: 'initial', backgroundColor: 'transparent' }
 
 type EditorProps = {
-    nodesData: Node<ProductionNode>[];
+    nodesData: Node<ProductionNode | RecipeIOProduct>[];
     edgesData: Edge<any>[];
 }
 
@@ -474,18 +623,14 @@ const Editor: React.FC<EditorProps> = ({ nodesData, edgesData }) => {
 
     const onInit = async (reactFlowInstance: ReactFlowInstance<RecipeNodeData>) => {
         reactFlowInstance.setCenter(0, 0)
-        logger('Init')
-        let graph = await createGraphLayout(reactFlowInstance.getNodes(), reactFlowInstance.getEdges())
-        logger('SetNodes')
-        setNodes(graph)
-        logger('Wait1')
-        new Promise(resolve => setTimeout(resolve, 100));
-        logger('FitView1')
-        reactFlowInstance.fitView({ padding: 0.1, includeHiddenNodes: true, duration: 250 });
-        logger('Wait2')
-        await new Promise(resolve => setTimeout(resolve, 100));
-        logger('FitView2')
-        reactFlowInstance.fitView({ padding: 0.1, includeHiddenNodes: true, duration: 250 });
+        let data = getLayoutedElements(
+            reactFlowInstance.getNodes(),
+            reactFlowInstance.getEdges()
+        );
+        reactFlowInstance.setNodes(data.nodes)
+        reactFlowInstance.setEdges(data.edges)
+        reactFlowInstance.fitView({ padding: 0.1, includeHiddenNodes: false, duration: 102 });
+
     };
 
     const onNodeClick = (e: any, node: Node<RecipeNodeData>) => {
@@ -499,7 +644,7 @@ const Editor: React.FC<EditorProps> = ({ nodesData, edgesData }) => {
             edges={edges}
             onNodesChange={onNodesChange}
             onEdgesChange={onEdgesChange}
-            onNodeClick={onNodeClick}
+            //onNodeClick={onNodeClick}
             onConnect={onConnect}
             onInit={onInit}
             nodeTypes={nodeTypes}
@@ -508,7 +653,7 @@ const Editor: React.FC<EditorProps> = ({ nodesData, edgesData }) => {
             snapToGrid
             maxZoom={1}
             minZoom={0.1}
-            nodesConnectable={false}
+            nodesConnectable={true}
         >
             <MiniMap />
             <Controls />

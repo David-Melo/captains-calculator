@@ -1,5 +1,5 @@
 import { derived } from 'overmind';
-import { Edge } from 'react-flow-renderer';
+import { Edge, Node } from 'react-flow-renderer';
 
 import { RecipesState } from "state/_types";
 
@@ -18,7 +18,11 @@ export const state: RecipesState = {
     get currentNode() {
         return this.currentNodeId ? this.nodes[this.currentNodeId] : null
     },
-    nodesData: derived( (state: RecipesState) => Object.values(state.nodes).map(node=>node.nodeData) ),
+    nodesData: derived( (state: RecipesState) => {
+        return Object.values(state.nodes).reduce((edges,node)=>{
+            return [ ...edges, ...node.nodeData ]
+        },[] as Node<any>[]) 
+    }),
     edgesData: derived( (state: RecipesState) => {
         return Object.values(state.nodes).reduce((edges,node)=>{
             return [ ...edges, ...node.edgeData ]

@@ -3,6 +3,8 @@ import { useReactFlow } from "react-flow-renderer";
 import { useActions } from "state";
 import { ProductId, Recipe, RecipeId } from "state/app/effects";
 import { RecipeSelectControlled } from "./MachineRecipeSelect";
+import RecipeListCard from "./RecipeListCard";
+import { RecipeListCardControlled } from "./RecipeListCardControlled";
 
 type RecipeSelectProps = {
     direction: 'input' | 'output';
@@ -29,7 +31,9 @@ export const NodeRecipeLink: React.FC<RecipeSelectProps> = ({ direction, current
 
     return (
         <React.Fragment>
-            {recipes.length ? <RecipeSelectControlled recipes={recipes} onSelect={handleSelect} label={label} /> : null}
+            {recipes.map((item,key)=>{
+                return <RecipeListCard key={key} item={item} active={false} onSelect={() => handleSelect(item.id)} />
+            })}
         </React.Fragment>
     )
 
