@@ -82,7 +82,7 @@ class ProductionNode {
             [item.id]: {
                 ...item,
                 quantity: this.calculateProduct60(recipe.duration, item.quantity),
-                imported: 0,
+                exported: 0,
                 target: null
             }
         }),{})

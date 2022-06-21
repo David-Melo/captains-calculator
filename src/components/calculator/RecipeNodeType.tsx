@@ -175,9 +175,23 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                                 pointerEvents: 'none'
                                             })}
                                             >
-                                                <Text color="white" align="center" size="sm" sx={{ lineHeight: 24 }}>{product.quantity}</Text>
+                                                <Text color="white" align="center" size="sm" sx={{ lineHeight: 24 }}>{product.imported}</Text>
                                             </Box>
                                         </Handle>
+                                        <Box sx={theme => ({
+                                            width: 28,
+                                            height: 28,
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            backgroundColor: theme.white,
+                                            borderRadius: theme.radius.sm,
+                                            pointerEvents: 'none',
+                                            border: `1px dashed ${theme.colors.gray[4]}`,
+                                        })}
+                                        >
+                                            <Text align="center" size="sm" sx={{ lineHeight: 24 }}>{product.quantity}</Text>
+                                        </Box>
                                         <Group spacing={5} noWrap>
                                             <Box
                                                 sx={theme => ({
@@ -215,6 +229,20 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                                 <Image src={`/assets/products/${product.icon}`} alt='test' height={22} width={22} style={{ pointerEvents: 'none' }} />
                                             </Box>
                                         </Group>
+                                        <Box sx={theme => ({
+                                            width: 28,
+                                            height: 28,
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            backgroundColor: theme.white,
+                                            borderRadius: theme.radius.sm,
+                                            pointerEvents: 'none',
+                                            border: `1px dashed ${theme.colors.gray[4]}`,
+                                        })}
+                                        >
+                                            <Text align="center" size="sm" sx={{ lineHeight: 24 }}>{product.quantity}</Text>
+                                        </Box>
                                         <Handle
                                             key={`${id}-${product.id}-output`}
                                             id={`${id}-${product.id}-output`}
@@ -233,7 +261,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                                 pointerEvents: 'none'
                                             })}
                                             >
-                                                <Text color="white" align="center" size="sm" sx={{ lineHeight: 24 }}>{product.quantity}</Text>
+                                                <Text color="white" align="center" size="sm" sx={{ lineHeight: 24 }}>{product.exported}</Text>
                                             </Box>
                                         </Handle>
                                         {!product.target && (

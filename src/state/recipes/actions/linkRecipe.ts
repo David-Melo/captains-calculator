@@ -29,29 +29,40 @@ export const linkRecipe: AsyncAction<LinkRecipeParams> = async ({ state, actions
         targets
     }
 
+    // @TODO
+
     // Create New Node
     let newNode = new ProductionNode(nodeParams)
 
     // Link Current Node
     let currentNode = state.recipes.nodes[currentNodeId]
 
+    // New Node Exports
+    let newNodeExportedProduct = newNode.outputs[productId]
+
+    // Current Node Exports
+    let currentNodeExportedProduct = currentNode.outputs[productId]
+
     if (direction==='input') {
         currentNode.inputs[productId].source = newNodeId
+        currentNode.inputs[productId].imported = newNodeExportedProduct.quantity
     }
 
     if (direction==='output') {
         currentNode.outputs[productId].target = newNodeId
+        currentNode.outputs[productId].exported = currentNodeExportedProduct.quantity
     }
 
     // Link New Node
 
     if (direction==='input') {
         newNode.outputs[productId].target = currentNodeId
-        
+        newNode.outputs[productId].exported = currentNodeExportedProduct.quantity
     }
 
     if (direction==='output') {
         newNode.inputs[productId].source = currentNodeId
+        newNode.inputs[productId].imported = newNodeExportedProduct.quantity
     }
 
     state.recipes.nodes[newNode.id] = newNode
