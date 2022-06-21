@@ -630,7 +630,7 @@ const Editor: React.FC<EditorProps> = ({ nodesData, edgesData }) => {
         );
         reactFlowInstance.setNodes(data.nodes)
         reactFlowInstance.setEdges(data.edges)
-        reactFlowInstance.fitView({ padding: 0.2, includeHiddenNodes: false, duration: 102 });
+        reactFlowInstance.fitView({ padding: 0.1, includeHiddenNodes: false, duration: 102 });
 
     };
 
