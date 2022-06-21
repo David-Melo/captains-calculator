@@ -1,10 +1,7 @@
 import React from "react";
-import { useReactFlow } from "react-flow-renderer";
 import { useActions } from "state";
 import { ProductId, Recipe, RecipeId } from "state/app/effects";
-import { RecipeSelectControlled } from "./MachineRecipeSelect";
 import RecipeListCard from "./RecipeListCard";
-import { RecipeListCardControlled } from "./RecipeListCardControlled";
 
 type RecipeSelectProps = {
     direction: 'input' | 'output';

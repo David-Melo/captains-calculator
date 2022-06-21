@@ -12,7 +12,7 @@ type MachineListCardProps = {
 const MachineListCard: React.FC<MachineListCardProps> = ({ item, active, onSelect }) => {
     const onItemClick = React.useCallback((id: MachineId) => {
         onSelect(id)
-    }, [item, onSelect]);
+    }, [onSelect]);
     return (
         <Card
             onClick={() => onItemClick(item.id)}

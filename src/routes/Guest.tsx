@@ -5,7 +5,7 @@ import NotFound from "screens/global/NotFound";
 import Home from "screens/app/Home";
 import Buildings from "screens/app/Buildings";
 import Products from "screens/app/Products";
-import Recipes from '../screens/app/Recipes';
+// import Recipes from '../screens/app/Recipes';
 import Calculator from '../screens/app/Calculator';
 
 let guestRoutes = {

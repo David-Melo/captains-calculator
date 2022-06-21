@@ -18,7 +18,7 @@ const RecipeListCard: React.FC<RecipeListCardProps> = ({ item, active, onSelect 
 
     const onItemClick = React.useCallback((id: RecipeId) => {
         onSelect(id)
-    }, [item, onSelect]);
+    }, [onSelect]);
 
     if (!item||!currentMachine) return null
 

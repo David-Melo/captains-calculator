@@ -1,9 +1,8 @@
-import { Category, Machine, Product, ProductId, Recipe, RecipeId, RecipeProduct } from "state/app/effects"
-import { ProductRecipes, ProductsState } from "state/_types";
-import { Edge, Node }  from 'react-flow-renderer';
+import { Category, Machine, Product, Recipe, RecipeId, RecipeProduct } from "state/app/effects"
+import { ProductRecipes } from "state/_types";
+import { Edge }  from 'react-flow-renderer';
 import { generateDarkColorHex } from "utils/colors";
-import { LinkNode, LinkNodeData, RecipeNode } from "screens/app/Calculator";
-import { sortArray } from "utils/objects";
+import { RecipeNode } from "components/calculator/Editor";
 
 type ProductionNodeParams = {
     recipe: Recipe;
@@ -110,7 +109,7 @@ class ProductionNode {
         })
     }
 
-    get nodeData(): (RecipeNode|LinkNode)[] {
+    get nodeData(): RecipeNode[] {
         let mainNode = {
             id: this.id,
             type: 'RecipeNode',

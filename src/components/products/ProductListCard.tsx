@@ -47,7 +47,7 @@ export const ProductListCardEmpty: React.FC<{onSelect(): void}> = ({ onSelect })
 const ProductListCard: React.FC<ProductListCardProps> = ({ item, active, onSelect }) => {
     const onItemClick = React.useCallback((id: ProductId) => {
         onSelect(id)
-    }, [item, onSelect]);
+    }, [onSelect]);
     return (
         <Card
             onClick={() => onItemClick(item.id)}

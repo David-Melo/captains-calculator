@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from "react";
 import { Icon } from "@iconify/react";
-import { Box, Button, Drawer, Input, Text, ScrollArea, Stack } from "@mantine/core";
+import { Box, Button, Drawer, Input, Text, Stack } from "@mantine/core";
 
 import Icons from "components/ui/Icons";
 

@@ -7,7 +7,7 @@ import { useAppState } from 'state';
 import Loader from 'components/app/Loader';
 import AppShellLayout from 'components/layout/AppShellLayout';
 import NavContext, { NavContextType } from 'components/navigation/NavContext';
-
+ 
 import guestRoutes from 'routes/Guest'
 
 const Wrapper = () => { 
@@ -36,4 +36,4 @@ const App: React.FC = () => {
     );  
 }
 
-export default App; 
+export default App;  

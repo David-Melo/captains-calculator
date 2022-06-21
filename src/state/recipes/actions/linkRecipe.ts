@@ -1,5 +1,4 @@
-import { Action, AsyncAction } from "state/_types";
-import { createGraphLayout } from "utils/graph";
+import { AsyncAction } from "state/_types";
 import { ProductId, RecipeId } from '../../app/effects/loadJsonData';
 import ProductionNode from "../ProductionNode";
 

@@ -1,11 +1,8 @@
 import React from "react";
-import { Box, Button, Drawer, Text, Stack, Card, Group, Image, Divider } from "@mantine/core";
-
+import { Box, Drawer, Text, Stack } from "@mantine/core";
 import { useAppState, useActions, useReaction } from 'state';
-import RecipeListCard from "./RecipeListCard";
 import { DrawerBody, DrawerBodyScrollArea } from "components/ui/DrawerBody";
-import { ProductId, RecipeId } from "state/app/effects";
-import * as recipes from 'state/recipes';
+import { ProductId } from "state/app/effects";
 import { NodeRecipeLink } from "./NodeRecipeSelect";
 
 export const NodeDrawer = () => {
