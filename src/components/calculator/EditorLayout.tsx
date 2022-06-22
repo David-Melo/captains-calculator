@@ -32,12 +32,11 @@ export const EditorLayout = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundImage: 'url("https://www.transparenttextures.com/patterns/squared-metal.png")',
-                    filter: 'filter: invert(1)',
+                    backgroundImage: 'url("https://www.transparenttextures.com/patterns/squared-metal.png")'
                 },
-                '& > div': {
-                    position: 'relative'
-                }
+                // '& > div': {
+                //     position: 'relative'
+                // }
             })}>
                 <EditorWrapper />
             </Box>

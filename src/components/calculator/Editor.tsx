@@ -3,16 +3,16 @@ import ReactFlow, { MiniMap, Controls, Position, NodeTypes, useNodesState, useEd
 import dagre from 'dagre';
 
 import { useAppState } from 'state';
-import ProductionNode, { RecipeIOProduct } from 'state/recipes/ProductionNode';
+import ProductionNode from 'state/recipes/ProductionNode';
 
 import { generateDarkColorHex } from 'utils/colors';
 
 import { RecipeNodeType } from './RecipeNodeType';
 import { RecipeEdgeType } from './RecipeEdgeType';
+import { Box, Loader } from '@mantine/core';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export type RecipeNodeData = ProductionNode
-export type LinkNodeData = { recipeId: string, product: RecipeIOProduct, type: string }
-export type LinkNode = Node<LinkNodeData>
 export type RecipeNode = Node<RecipeNodeData>
 
 const dagreGraph = new dagre.graphlib.Graph();
@@ -48,8 +48,8 @@ const getLayoutedElements = (nodes: Node<any>[], edges: Edge<any>[]) => {
         node.sourcePosition = Position.Left
 
         node.position = {
-            x: nodeWithPosition.x,
-            y: nodeWithPosition.y,
+            x: nodeWithPosition.x - (!!node.width ? node.width / 2 : 0),
+            y: nodeWithPosition.y - (!!node.height ? node.height / 2 : 0)
         };
 
         return node;
@@ -62,7 +62,7 @@ const nodeTypes: NodeTypes = { RecipeNode: RecipeNodeType }
 const edgeTypes: EdgeTypes = { smart: RecipeEdgeType }
 
 type EditorProps = {
-    nodesData: Node<ProductionNode | RecipeIOProduct>[];
+    nodesData: Node<ProductionNode>[];
     edgesData: Edge<any>[];
 }
 
@@ -72,6 +72,8 @@ export const Editor: React.FC<EditorProps> = ({ nodesData, edgesData }) => {
     //const selectNode = useActions().recipes.selectNode
     // const reaction = useReaction()
     // const [graph, setGraph] = React.useState<Array<Node>>()
+
+    const [loading, setLoading] = React.useState(true)
 
     const [nodes, setNodes, onNodesChange] = useNodesState(nodesData);
     const [edges, setEdges, onEdgesChange] = useEdgesState(edgesData);
@@ -138,7 +140,10 @@ export const Editor: React.FC<EditorProps> = ({ nodesData, edgesData }) => {
         );
         reactFlowInstance.setNodes(data.nodes)
         reactFlowInstance.setEdges(data.edges)
-        reactFlowInstance.fitView({ padding: 0.1, includeHiddenNodes: false, duration: 100 });
+        reactFlowInstance.fitView({ padding: 0.2, includeHiddenNodes: false, duration: 100 });
+        console.log(reactFlowInstance.getViewport())
+        //await new Promise(resolve=>setTimeout(resolve,1000))
+        setLoading(false)
 
     };
 
@@ -147,25 +152,67 @@ export const Editor: React.FC<EditorProps> = ({ nodesData, edgesData }) => {
     // }
 
     return (
-        <ReactFlow
-            nodes={nodes}
-            edges={edges}
-            onNodesChange={onNodesChange}
-            onEdgesChange={onEdgesChange}
-            //onNodeClick={onNodeClick}
-            onConnect={onConnect}
-            onInit={onInit}
-            nodeTypes={nodeTypes}
-            edgeTypes={edgeTypes}
-            defaultEdgeOptions={{ style: { stroke: '#000', strokeWidth: 3 }, animated: true, type: "smart" }}
-            snapToGrid
-            maxZoom={1}
-            minZoom={0.1}
-            nodesConnectable={true}
-        >
-            <MiniMap />
-            <Controls />
-        </ReactFlow>
+        <React.Fragment>
+            <AnimatePresence>
+                {loading && (
+                    <motion.div
+                        variants={{
+                            enter: { opacity: 0, transition: { duration: 0 } },
+                            target: { opacity: 1, transition: { duration: 0 } },
+                            exit: { opacity: 0, transition: { duration: .5 } }
+                        }}
+                        initial="enter"
+                        animate="target"
+                        exit="exit"
+                        style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            bottom: 0,
+                            right: 0,
+                            zIndex: 9999,
+                            
+                        }}
+                    >
+
+                        <Box sx={theme => ({
+                            background: theme.colorScheme === 'light' ? theme.white : theme.colors.dark[8],
+                            backgroundImage: 'url("https://www.transparenttextures.com/patterns/squared-metal.png")',
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            bottom: 0,
+                            right: 0,
+                            zIndex: 9999,
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center'
+                        })}>
+                            <Loader size="xl" color="dark" />
+                        </Box>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+            <ReactFlow
+                nodes={nodes}
+                edges={edges}
+                onNodesChange={onNodesChange}
+                onEdgesChange={onEdgesChange}
+                //onNodeClick={onNodeClick}
+                onConnect={onConnect}
+                onInit={onInit}
+                nodeTypes={nodeTypes}
+                edgeTypes={edgeTypes}
+                defaultEdgeOptions={{ style: { stroke: '#000', strokeWidth: 3 }, animated: true, type: "smart" }}
+                snapToGrid
+                maxZoom={1}
+                minZoom={0.1}
+                nodesConnectable={true}
+            >
+                <MiniMap />
+                <Controls />
+            </ReactFlow>
+        </React.Fragment>
     )
 
 }

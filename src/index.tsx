@@ -65,6 +65,26 @@ const Root = () => {
                         },
                     },
                 }}
+                styles={{
+                    Modal: theme=>({
+                        modal: {
+                            backgroundColor: theme.colors.gray[2]
+                        }
+                    }),
+                    Drawer: theme=>({
+                        drawer: {
+                            backgroundColor: theme.colors.gray[2],
+                            height: '100%',
+                            minHeight: '100%',
+                            maxHeight: '100%'
+                        },
+                        header: {
+                            borderBottom: `1px solid ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[5]}`,
+                            marginBottom: 0,
+                            padding: theme.spacing.xl
+                        }
+                    })
+                }}
             >
                 <ModalsProvider>
                     <Global

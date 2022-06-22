@@ -79,19 +79,6 @@ export const ProductSelectDrawer = () => {
                 size="xl"
                 overlayBlur={3}
                 position="left"
-                styles={(theme) => ({
-                    header: {
-                        borderBottom: `1px solid ${theme.colorScheme === 'light' ? theme.colors.gray[2] : theme.colors.dark[5]}`,
-                        marginBottom: 0,
-                        padding: theme.spacing.xl
-                    },
-                    drawer: {
-                        height: '100%',
-                        minHeight: '100%',
-                        maxHeight: '100%',
-                        backgroundColor: theme.colors.gray[1]
-                    },
-                })}
             >
                 {renderBody()}
             </Drawer>

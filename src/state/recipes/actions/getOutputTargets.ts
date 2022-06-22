@@ -5,11 +5,11 @@ export const getOutputTargets: Action<RecipeId,ProductRecipes> = ({state},recipe
     let recipe = state.recipes.items[recipeId]
     return recipe.outputs.reduce((outputRecipes, output) => {
         let product = state.products.items[output.id]
-        let recipeSources = product.recipes.output.length ? product.recipes.output.map(recipeId => state.recipes.items[recipeId]) : []
+        let recipeTargets = product.recipes.input.length ? product.recipes.input.map(recipeId => state.recipes.items[recipeId]) : []
         if (outputRecipes[output.id]) {
-            return recipeSources.length ? { ...outputRecipes, [output.id]: [...outputRecipes[output.id], recipeSources] } : outputRecipes
+            return recipeTargets.length ? { ...outputRecipes, [output.id]: [...outputRecipes[output.id], recipeTargets] } : outputRecipes
         } else {
-            return recipeSources.length ? { ...outputRecipes, [output.id]: recipeSources } : outputRecipes
+            return recipeTargets.length ? { ...outputRecipes, [output.id]: recipeTargets } : outputRecipes
         }
     }, {} as ProductRecipes)
 }

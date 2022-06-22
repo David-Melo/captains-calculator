@@ -1,5 +1,5 @@
 import { ProductId, Recipe, RecipeId } from 'state/app/effects/loadJsonData';
-import ProductionNode, { RecipeIOProduct } from './ProductionNode';
+import ProductionNode from './ProductionNode';
 import { Edge, Node }  from 'react-flow-renderer';
 
 export type RecipesState = {
@@ -16,10 +16,10 @@ export type RecipesState = {
     };
     currentNodeId: RecipeId | null;
     currentNode: ProductionNode | null;
-    nodesList: (ProductionNode|RecipeIOProduct)[];
-    nodesData: Node<ProductionNode|RecipeIOProduct>[]; 
+    nodesList: (ProductionNode)[];
+    nodesData: Node<ProductionNode>[]; 
     edgesData: Edge<any>[];
-    graphData: Node<ProductionNode|RecipeIOProduct>[]; 
+    graphData: Node<ProductionNode>[]; 
 }
 
 export type ProductRecipes = {

@@ -8,41 +8,40 @@ type ProductionNodeParams = {
     recipe: Recipe;
     machine: Machine;
     category: Category;
-    inputs: RecipeIOProduct[];
-    outputs: RecipeIOProduct[];
+    inputs: (Product & RecipeProduct)[];
+    outputs: (Product & RecipeProduct)[];
     sources: ProductRecipes;
     targets: ProductRecipes;
 }
 
-type RecipeIO =  {
-    exported?: number;
-    target?: RecipeId | null;
-    imported?: number;
-    source?: RecipeId | null;
+type RecipeIOImport =  {
+    maxed: boolean;
+    imported: number;
+    imports: {
+        source: RecipeId;
+        quantity: number;
+    }[]
 }
 
-export type RecipeIOProduct = Product & RecipeProduct & RecipeIO
-
-export type RecipeIODict = {
-    [index: string]: RecipeIOProduct
+type RecipeIOExport =  {
+    maxed: boolean;
+    exported: number;
+    exports: {
+        target: RecipeId;
+        quantity: number;
+    }[]
 }
 
+export type RecipeIOImportProduct = Product & RecipeProduct & RecipeIOImport
+export type RecipeIOExportProduct = Product & RecipeProduct & RecipeIOExport
 
-// type RecipeInput = RecipeIOInput & {
-//     imported: number;
-//     source: RecipeId | null;
-// }
+export type RecipeIODictInput = {
+    [index: string]: RecipeIOImportProduct
+}
 
-// type RecipeOutput = RecipeIOInput & {
-//     exported: number;
-//     target: RecipeId | null;
-// }
-
-
-// type RecipeIOInput = Product & RecipeProduct
-// type RecipeIODict = {
-//     [index: string]: RecipeInput | RecipeOutput
-// }
+export type RecipeIODictOutput= {
+    [index: string]: RecipeIOExportProduct
+}
 
 class ProductionNode {
 
@@ -51,8 +50,8 @@ class ProductionNode {
     machine: Machine;
     category: Category;
 
-    inputs: RecipeIODict;
-    outputs: RecipeIODict;
+    inputs: RecipeIODictInput;
+    outputs: RecipeIODictOutput;
 
     sources: ProductRecipes;
     targets: ProductRecipes;
@@ -73,7 +72,8 @@ class ProductionNode {
                 ...item,
                 quantity: this.calculateProduct60(recipe.duration, item.quantity),
                 imported: 0,
-                source: null
+                maxed: false,
+                imports: []
             }
         }),{})
 
@@ -83,7 +83,8 @@ class ProductionNode {
                 ...item,
                 quantity: this.calculateProduct60(recipe.duration, item.quantity),
                 exported: 0,
-                target: null
+                maxed: false,
+                exports: []
             }
         }),{})
 
@@ -96,6 +97,69 @@ class ProductionNode {
 
     calculateProduct60(originalDuration: number, quantity: number) {
         return (this.duration/originalDuration) * quantity
+    }
+
+    canImport(productId: string): boolean {
+        return this.inputs.hasOwnProperty(productId) && !this.inputs[productId].maxed
+    }
+
+    canExport(productId: string): boolean {
+        return this.outputs.hasOwnProperty(productId) && !this.outputs[productId].maxed
+    }
+
+    addImport(productId: string, sourceRecipeId: RecipeId, importedQuantity: number): number | false {
+
+        let amountToImport = 0
+
+        // If Node Can Accept Input
+        if (this.canImport(productId)) {
+
+            let quantityNeeded = this.inputs[productId].quantity - this.inputs[productId].imported
+
+            if (quantityNeeded>0) {
+
+                if (quantityNeeded>=importedQuantity) {
+                    amountToImport = importedQuantity
+                } else {
+                    amountToImport = quantityNeeded
+                }
+                
+                this.inputs[productId].imports.push({
+                    source: sourceRecipeId,
+                    quantity: amountToImport
+                })
+
+                this.inputs[productId].imported += amountToImport
+
+                if (this.inputs[productId].imported===this.inputs[productId].quantity) {
+                    this.inputs[productId].maxed = true
+                }
+
+                // Return How Much We Are Importing
+                return amountToImport
+
+            }
+
+        }
+
+        // Return False, Can't Import
+        return false
+
+    }
+
+    addExport(productId: string, targetRecipeId: RecipeId, exportedQuantity: number) {
+
+        this.outputs[productId].exports.push({
+            target: targetRecipeId,
+            quantity: exportedQuantity
+        })
+
+        this.outputs[productId].exported += exportedQuantity
+
+        if (this.outputs[productId].exported===this.outputs[productId].quantity) {
+            this.outputs[productId].maxed = true
+        }
+
     }
 
     toJson() {
@@ -116,34 +180,6 @@ class ProductionNode {
             data: this,
             position: { x: 0, y: 0 }
         }
-        // let productInputPorts = Object.values(this.inputs).filter(i=>{
-        //     return !i.source
-        // }).map(i=>{
-        //     return {
-        //         id: `${this.id}-${i.id}-input-add`,
-        //         type: 'LinkNode',
-        //         data: {
-        //             recipeId: this.id,
-        //             product: i,
-        //             type: 'input'
-        //         },
-        //         position: { x: 0, y: 0 }
-        //     }
-        // }).sort((a, b) => sortArray(a.data.product.name, b.data.product.name))
-        // let productOutputPorts = Object.values(this.outputs).filter(i=>{
-        //     return !i.target
-        // }).map(i=>{
-        //     return {
-        //         id: `${this.id}-${i.id}-output-add`,
-        //         type: 'LinkNode',
-        //         data: {
-        //             recipeId: this.id,
-        //             product: i,
-        //             type: 'output'
-        //         },
-        //         position: { x: 0, y: 0 }
-        //     }
-        // }).sort((a, b) => sortArray(a.data.product.name, b.data.product.name))
         return [ mainNode ]
     }
 
@@ -151,46 +187,17 @@ class ProductionNode {
         let edges: Edge<any>[] = []
 
         Object.values(this.inputs).forEach(input=>{
-            if (input.source) {
+            input.imports.forEach(item=>{
                 edges.push({
-                    id: `${input.source}-${this.id}`,
-                    source: input.source,
-                    sourceHandle: `${input.source}-${input.id}-output`,
+                    id: `${item.source}-${this.id}`,
+                    source: item.source,
+                    sourceHandle: `${item.source}-${input.id}-output`,
                     target: this.id,
                     targetHandle: `${this.id}-${input.id}-input`,
                     style: { stroke: generateDarkColorHex(), strokeWidth: 3 }
                 })
-            }
-            
+            })
         })
-
-        // this.nodeData.forEach(node=>{
-        //     if (node.type==='LinkNode') {
-        //         let linkNode = node as LinkNode
-        //         if (linkNode.data.type==='input') {
-        //             edges.push({
-        //                 id: `${this.id}-${linkNode.data.product.id}-add-${linkNode.data.type}`,
-        //                 source: linkNode.id,
-        //                 sourceHandle: `${this.id}-${linkNode.data.product.id}-input-add`,
-        //                 target: linkNode.data.recipeId,
-        //                 targetHandle: `${this.id}-${linkNode.data.product.id}-input`,
-        //                 style: { stroke: generateDarkColorHex(), strokeWidth: 3 }
-        //             })
-        //         }
-        //         else
-        //         {
-        //             edges.push({
-        //                 id: `${this.id}-${linkNode.data.product.id}-add-${linkNode.data.type}`,
-        //                 source: linkNode.data.recipeId,
-        //                 sourceHandle: `${this.id}-${linkNode.data.product.id}-output`,
-        //                 target: linkNode.id,
-        //                 targetHandle: `${this.id}-${linkNode.data.product.id}-output-add`,
-        //                 style: { stroke: 'red', strokeWidth: 3 }
-        //             })
-        //         }
-        //     }
-        // })
-
         return edges
     }
 

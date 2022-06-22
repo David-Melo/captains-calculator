@@ -51,6 +51,7 @@ export const NodeDrawer = () => {
                                             label={product.name}
                                             currentNodeId={node.id}
                                             productId={product.id}
+                                            onSelect={()=>null}
                                         />
                                     )
                                 } catch (e: any) {
