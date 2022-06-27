@@ -20,7 +20,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 100
+                "quantity": 75
             }
         ],
         "recipes": [
@@ -55,14 +55,14 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 50
+                "quantity": 38
             }
         ],
         "recipes": [
             "digestion",
             "digestion_2",
-            "digestion_2",
-            "digestion_2"
+            "digestion_3",
+            "digestion_4"
         ],
         "products": {
             "input": [
@@ -98,7 +98,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 160
+                "quantity": 120
             }
         ],
         "recipes": [
@@ -138,14 +138,14 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 140
+                "quantity": 105
             }
         ],
         "recipes": [
             "copper_scrap_smelting_arc",
             "copper_smelting_arc",
-            "glass_smelting_2",
-            "glass_smelting_2",
+            "glass_smelting_3",
+            "glass_smelting_4",
             "iron_scrap_smelting_arc",
             "iron_smelting_arc",
             "silicon_smelting_arc_ii"
@@ -198,7 +198,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [
@@ -258,7 +258,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -378,7 +378,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 25
+                "quantity": 19
             }
         ],
         "recipes": [
@@ -429,12 +429,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 45
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [
@@ -546,7 +546,7 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [
@@ -558,8 +558,8 @@
             "household_appliances_assembly_t3",
             "pcb_assembly_t3",
             "server_assembly_t3",
-            "solar_cell_assembly_2",
-            "solar_cell_assembly_2"
+            "solar_cell_assembly_3",
+            "solar_cell_assembly_4"
         ],
         "products": {
             "input": [
@@ -612,7 +612,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -655,7 +655,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -734,7 +734,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [],
@@ -764,7 +764,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [
@@ -815,7 +815,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 180
+                "quantity": 135
             }
         ],
         "recipes": [
@@ -868,13 +868,13 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
             "steam_generation",
             "steam_generation_2",
-            "steam_generation_2"
+            "steam_generation_3"
         ],
         "products": {
             "input": [
@@ -910,16 +910,16 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 45
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
-            "steam_generation_2"
+            "steam_generation_11"
         ],
         "products": {
             "input": [
@@ -951,17 +951,17 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 50
+                "quantity": 38
             }
         ],
         "recipes": [
-            "steam_generation_2",
-            "steam_generation_2",
-            "steam_generation_2",
-            "steam_generation_2",
-            "steam_generation_2",
-            "steam_generation_2",
-            "steam_generation_2"
+            "steam_generation_10",
+            "steam_generation_4",
+            "steam_generation_5",
+            "steam_generation_6",
+            "steam_generation_7",
+            "steam_generation_8",
+            "steam_generation_9"
         ],
         "products": {
             "input": [
@@ -1003,17 +1003,17 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 15
+                "quantity": 11
             }
         ],
         "recipes": [
             "burning",
             "burning_2",
-            "burning_2",
-            "burning_2",
-            "burning_2",
-            "burning_2",
-            "burning_2"
+            "burning_3",
+            "burning_4",
+            "burning_5",
+            "burning_6",
+            "burning_7"
         ],
         "products": {
             "input": [
@@ -1051,12 +1051,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 40
+                "quantity": 30
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 100
+                "quantity": 75
             }
         ],
         "recipes": [],
@@ -1086,12 +1086,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 120
+                "quantity": 90
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 240
+                "quantity": 180
             }
         ],
         "recipes": [],
@@ -1121,12 +1121,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 200
+                "quantity": 150
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 400
+                "quantity": 300
             }
         ],
         "recipes": [],
@@ -1156,12 +1156,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 300
+                "quantity": 225
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 600
+                "quantity": 450
             }
         ],
         "recipes": [],
@@ -1191,7 +1191,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -1242,7 +1242,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 120
+                "quantity": 90
             }
         ],
         "recipes": [
@@ -1310,7 +1310,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 50
+                "quantity": 38
             }
         ],
         "recipes": [],
@@ -1340,7 +1340,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [
@@ -1353,6 +1353,40 @@
             "output": [
                 "coal",
                 "exhaust"
+            ]
+        }
+    },
+    "coal_mine": {
+        "id": "coal_mine",
+        "game_id": "MineTower",
+        "icon": "MineTower.png",
+        "name": "Coal Mine",
+        "category_id": "mines",
+        "category_name": "Mines",
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 20
+            }
+        ],
+        "recipes": [
+            "coal_mining"
+        ],
+        "products": {
+            "input": [],
+            "output": [
+                "coal"
             ]
         }
     },
@@ -1377,19 +1411,19 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 40
+                "quantity": 30
             },
             {
                 "id": "electronics",
                 "name": "Electronics",
-                "quantity": 10
+                "quantity": 8
             }
         ],
         "recipes": [
             "concrete_mixing",
             "concrete_mixing_2",
-            "concrete_mixing_2",
-            "concrete_mixing_2"
+            "concrete_mixing_3",
+            "concrete_mixing_4"
         ],
         "products": {
             "input": [
@@ -1425,12 +1459,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
-            "concrete_mixing_2",
-            "concrete_mixing_2"
+            "concrete_mixing_5",
+            "concrete_mixing_6"
         ],
         "products": {
             "input": [
@@ -1466,12 +1500,12 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
-            "concrete_mixing_2",
-            "concrete_mixing_2"
+            "concrete_mixing_7",
+            "concrete_mixing_8"
         ],
         "products": {
             "input": [
@@ -1507,12 +1541,12 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 100
+                "quantity": 75
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 80
+                "quantity": 60
             }
         ],
         "recipes": [],
@@ -1542,7 +1576,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [
@@ -1579,7 +1613,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -1616,12 +1650,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 23
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -1661,12 +1695,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 80
+                "quantity": 60
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 200
+                "quantity": 150
             }
         ],
         "recipes": [
@@ -1706,7 +1740,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [
@@ -1721,6 +1755,40 @@
             ],
             "output": [
                 "copper"
+            ]
+        }
+    },
+    "copper_mine": {
+        "id": "copper_mine",
+        "game_id": "MineTower",
+        "icon": "MineTower.png",
+        "name": "Copper Mine",
+        "category_id": "mines",
+        "category_name": "Mines",
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 20
+            }
+        ],
+        "recipes": [
+            "copper_mining"
+        ],
+        "products": {
+            "input": [],
+            "output": [
+                "copper_ore"
             ]
         }
     },
@@ -1745,7 +1813,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 100
+                "quantity": 75
             }
         ],
         "recipes": [
@@ -1796,7 +1864,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [
@@ -1853,17 +1921,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 100
+                "quantity": 75
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 120
+                "quantity": 90
             },
             {
                 "id": "electronics_iii",
                 "name": "Electronics III",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [],
@@ -1883,7 +1951,7 @@
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 6,
         "electricity_consumed": 0,
-        "electricity_generated": 180,
+        "electricity_generated": 216,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -1893,12 +1961,12 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 20
+                "quantity": 15
             },
             {
                 "id": "electronics",
                 "name": "Electronics",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [
@@ -1911,6 +1979,40 @@
             "output": [
                 "air_pollution",
                 "electricity"
+            ]
+        }
+    },
+    "dirt_mine": {
+        "id": "dirt_mine",
+        "game_id": "MineTower",
+        "icon": "MineTower.png",
+        "name": "Dirt Mine",
+        "category_id": "mines",
+        "category_name": "Mines",
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 20
+            }
+        ],
+        "recipes": [
+            "dirt_mining"
+        ],
+        "products": {
+            "input": [],
+            "output": [
+                "dirt"
             ]
         }
     },
@@ -1935,7 +2037,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 50
+                "quantity": 38
             }
         ],
         "recipes": [
@@ -1974,7 +2076,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 70
+                "quantity": 53
             }
         ],
         "recipes": [
@@ -2012,7 +2114,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 70
+                "quantity": 53
             }
         ],
         "recipes": [
@@ -2050,7 +2152,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -2093,12 +2195,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 150
+                "quantity": 113
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -2135,7 +2237,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [
@@ -2175,13 +2277,13 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 50
+                "quantity": 38
             }
         ],
         "recipes": [
             "brine_making_2",
-            "salt_making_2",
-            "salt_making_2"
+            "salt_making_3",
+            "salt_making_4"
         ],
         "products": {
             "input": [
@@ -2215,7 +2317,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 80
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -2255,7 +2357,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [],
@@ -2285,7 +2387,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -2328,7 +2430,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 10
+                "quantity": 8
             }
         ],
         "recipes": [
@@ -2378,7 +2480,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 120
+                "quantity": 90
             }
         ],
         "recipes": [],
@@ -2408,7 +2510,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [],
@@ -2438,7 +2540,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -2471,9 +2573,75 @@
                 "quantity": 30
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "acid_storage_4",
+            "ammonia_storage_4",
+            "brine_storage_4",
+            "carbon_dioxide_storage_4",
+            "chilled_water_storage_4",
+            "chlorine_storage_4",
+            "cooking_oil_storage_4",
+            "corn_mash_storage_4",
+            "crude_oil_storage_4",
+            "diesel_storage_4",
+            "ethanol_storage_4",
+            "exhaust_storage_4",
+            "fertilizer_i_storage_4",
+            "fertilizer_ii_storage_4",
+            "fertilizer_organic_storage_4",
+            "fuel_gas_storage_4",
+            "heavy_oil_storage_4",
+            "hydrogen_fluoride_storage_4",
+            "hydrogen_storage_4",
+            "light_oil_storage_4",
+            "medium_oil_storage_4",
+            "naphtha_storage_4",
+            "nitrogen_storage_4",
+            "oxygen_storage_4",
+            "seawater_storage_4",
+            "sour_water_storage_4",
+            "steam_depleted_storage_4",
+            "steam_hi_storage_4",
+            "steam_lo_storage_4",
+            "toxic_slurry_storage_4",
+            "waste_water_storage_4",
+            "water_storage_4"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "acid",
+                "ammonia",
+                "brine",
+                "carbon_dioxide",
+                "chilled_water",
+                "chlorine",
+                "cooking_oil",
+                "corn_mash",
+                "crude_oil",
+                "diesel",
+                "ethanol",
+                "exhaust",
+                "fertilizer_i",
+                "fertilizer_ii",
+                "fertilizer_organic",
+                "fuel_gas",
+                "heavy_oil",
+                "hydrogen",
+                "hydrogen_fluoride",
+                "light_oil",
+                "medium_oil",
+                "naphtha",
+                "nitrogen",
+                "oxygen",
+                "seawater",
+                "sour_water",
+                "steam_depleted",
+                "steam_hi",
+                "steam_lo",
+                "toxic_slurry",
+                "waste_water",
+                "water"
+            ],
             "output": []
         }
     },
@@ -2501,9 +2669,75 @@
                 "quantity": 30
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "acid_storage_3",
+            "ammonia_storage_3",
+            "brine_storage_3",
+            "carbon_dioxide_storage_3",
+            "chilled_water_storage_3",
+            "chlorine_storage_3",
+            "cooking_oil_storage_3",
+            "corn_mash_storage_3",
+            "crude_oil_storage_3",
+            "diesel_storage_3",
+            "ethanol_storage_3",
+            "exhaust_storage_3",
+            "fertilizer_i_storage_3",
+            "fertilizer_ii_storage_3",
+            "fertilizer_organic_storage_3",
+            "fuel_gas_storage_3",
+            "heavy_oil_storage_3",
+            "hydrogen_fluoride_storage_3",
+            "hydrogen_storage_3",
+            "light_oil_storage_3",
+            "medium_oil_storage_3",
+            "naphtha_storage_3",
+            "nitrogen_storage_3",
+            "oxygen_storage_3",
+            "seawater_storage_3",
+            "sour_water_storage_3",
+            "steam_depleted_storage_3",
+            "steam_hi_storage_3",
+            "steam_lo_storage_3",
+            "toxic_slurry_storage_3",
+            "waste_water_storage_3",
+            "water_storage_3"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "acid",
+                "ammonia",
+                "brine",
+                "carbon_dioxide",
+                "chilled_water",
+                "chlorine",
+                "cooking_oil",
+                "corn_mash",
+                "crude_oil",
+                "diesel",
+                "ethanol",
+                "exhaust",
+                "fertilizer_i",
+                "fertilizer_ii",
+                "fertilizer_organic",
+                "fuel_gas",
+                "heavy_oil",
+                "hydrogen",
+                "hydrogen_fluoride",
+                "light_oil",
+                "medium_oil",
+                "naphtha",
+                "nitrogen",
+                "oxygen",
+                "seawater",
+                "sour_water",
+                "steam_depleted",
+                "steam_hi",
+                "steam_lo",
+                "toxic_slurry",
+                "waste_water",
+                "water"
+            ],
             "output": []
         }
     },
@@ -2531,9 +2765,75 @@
                 "quantity": 90
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "acid_storage_2",
+            "ammonia_storage_2",
+            "brine_storage_2",
+            "carbon_dioxide_storage_2",
+            "chilled_water_storage_2",
+            "chlorine_storage_2",
+            "cooking_oil_storage_2",
+            "corn_mash_storage_2",
+            "crude_oil_storage_2",
+            "diesel_storage_2",
+            "ethanol_storage_2",
+            "exhaust_storage_2",
+            "fertilizer_i_storage_2",
+            "fertilizer_ii_storage_2",
+            "fertilizer_organic_storage_2",
+            "fuel_gas_storage_2",
+            "heavy_oil_storage_2",
+            "hydrogen_fluoride_storage_2",
+            "hydrogen_storage_2",
+            "light_oil_storage_2",
+            "medium_oil_storage_2",
+            "naphtha_storage_2",
+            "nitrogen_storage_2",
+            "oxygen_storage_2",
+            "seawater_storage_2",
+            "sour_water_storage_2",
+            "steam_depleted_storage_2",
+            "steam_hi_storage_2",
+            "steam_lo_storage_2",
+            "toxic_slurry_storage_2",
+            "waste_water_storage_2",
+            "water_storage_2"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "acid",
+                "ammonia",
+                "brine",
+                "carbon_dioxide",
+                "chilled_water",
+                "chlorine",
+                "cooking_oil",
+                "corn_mash",
+                "crude_oil",
+                "diesel",
+                "ethanol",
+                "exhaust",
+                "fertilizer_i",
+                "fertilizer_ii",
+                "fertilizer_organic",
+                "fuel_gas",
+                "heavy_oil",
+                "hydrogen",
+                "hydrogen_fluoride",
+                "light_oil",
+                "medium_oil",
+                "naphtha",
+                "nitrogen",
+                "oxygen",
+                "seawater",
+                "sour_water",
+                "steam_depleted",
+                "steam_hi",
+                "steam_lo",
+                "toxic_slurry",
+                "waste_water",
+                "water"
+            ],
             "output": []
         }
     },
@@ -2561,9 +2861,75 @@
                 "quantity": 180
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "acid_storage",
+            "ammonia_storage",
+            "brine_storage",
+            "carbon_dioxide_storage",
+            "chilled_water_storage",
+            "chlorine_storage",
+            "cooking_oil_storage",
+            "corn_mash_storage",
+            "crude_oil_storage",
+            "diesel_storage",
+            "ethanol_storage",
+            "exhaust_storage",
+            "fertilizer_i_storage",
+            "fertilizer_ii_storage",
+            "fertilizer_organic_storage",
+            "fuel_gas_storage",
+            "heavy_oil_storage",
+            "hydrogen_fluoride_storage",
+            "hydrogen_storage",
+            "light_oil_storage",
+            "medium_oil_storage",
+            "naphtha_storage",
+            "nitrogen_storage",
+            "oxygen_storage",
+            "seawater_storage",
+            "sour_water_storage",
+            "steam_depleted_storage",
+            "steam_hi_storage",
+            "steam_lo_storage",
+            "toxic_slurry_storage",
+            "waste_water_storage",
+            "water_storage"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "acid",
+                "ammonia",
+                "brine",
+                "carbon_dioxide",
+                "chilled_water",
+                "chlorine",
+                "cooking_oil",
+                "corn_mash",
+                "crude_oil",
+                "diesel",
+                "ethanol",
+                "exhaust",
+                "fertilizer_i",
+                "fertilizer_ii",
+                "fertilizer_organic",
+                "fuel_gas",
+                "heavy_oil",
+                "hydrogen",
+                "hydrogen_fluoride",
+                "light_oil",
+                "medium_oil",
+                "naphtha",
+                "nitrogen",
+                "oxygen",
+                "seawater",
+                "sour_water",
+                "steam_depleted",
+                "steam_hi",
+                "steam_lo",
+                "toxic_slurry",
+                "waste_water",
+                "water"
+            ],
             "output": []
         }
     },
@@ -2588,7 +2954,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 25
+                "quantity": 19
             }
         ],
         "recipes": [],
@@ -2618,7 +2984,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -2648,7 +3014,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [
@@ -2708,7 +3074,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [],
@@ -2738,7 +3104,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -2768,7 +3134,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 70
+                "quantity": 53
             }
         ],
         "recipes": [],
@@ -2798,7 +3164,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 50
+                "quantity": 38
             }
         ],
         "recipes": [
@@ -2833,7 +3199,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 50
+                "quantity": 38
             }
         ],
         "recipes": [
@@ -2870,7 +3236,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 120
+                "quantity": 90
             }
         ],
         "recipes": [
@@ -2906,7 +3272,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 70
+                "quantity": 53
             }
         ],
         "recipes": [
@@ -2922,6 +3288,74 @@
             "output": [
                 "exhaust",
                 "gold"
+            ]
+        }
+    },
+    "gold_mine": {
+        "id": "gold_mine",
+        "game_id": "MineTower",
+        "icon": "MineTower.png",
+        "name": "Gold Mine",
+        "category_id": "mines",
+        "category_name": "Mines",
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 20
+            }
+        ],
+        "recipes": [
+            "gold_mining"
+        ],
+        "products": {
+            "input": [],
+            "output": [
+                "gold_ore"
+            ]
+        }
+    },
+    "gravel_mine": {
+        "id": "gravel_mine",
+        "game_id": "MineTower",
+        "icon": "MineTower.png",
+        "name": "Gravel Mine",
+        "category_id": "mines",
+        "category_name": "Mines",
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 20
+            }
+        ],
+        "recipes": [
+            "gravel_mining"
+        ],
+        "products": {
+            "input": [],
+            "output": [
+                "gravel"
             ]
         }
     },
@@ -2946,12 +3380,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 100
+                "quantity": 75
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 320
+                "quantity": 240
             }
         ],
         "recipes": [],
@@ -2981,12 +3415,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 200
+                "quantity": 150
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 640
+                "quantity": 480
             }
         ],
         "recipes": [],
@@ -3016,7 +3450,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -3050,7 +3484,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 50
+                "quantity": 38
             }
         ],
         "recipes": [
@@ -3087,7 +3521,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 80
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -3124,17 +3558,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 80
+                "quantity": 60
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 80
+                "quantity": 60
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [],
@@ -3164,12 +3598,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 45
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -3199,7 +3633,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 80
+                "quantity": 60
             }
         ],
         "recipes": [],
@@ -3229,7 +3663,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 140
+                "quantity": 105
             }
         ],
         "recipes": [],
@@ -3259,12 +3693,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 200
+                "quantity": 150
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 240
+                "quantity": 180
             }
         ],
         "recipes": [],
@@ -3294,7 +3728,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 80
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -3308,6 +3742,40 @@
             "output": [
                 "carbon_dioxide",
                 "hydrogen"
+            ]
+        }
+    },
+    "iron_mine": {
+        "id": "iron_mine",
+        "game_id": "MineTower",
+        "icon": "MineTower.png",
+        "name": "Iron Mine",
+        "category_id": "mines",
+        "category_name": "Mines",
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 20
+            }
+        ],
+        "recipes": [
+            "iron_mining"
+        ],
+        "products": {
+            "input": [],
+            "output": [
+                "iron_ore"
             ]
         }
     },
@@ -3332,13 +3800,47 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [],
         "products": {
             "input": [],
             "output": []
+        }
+    },
+    "limestone_mine": {
+        "id": "limestone_mine",
+        "game_id": "MineTower",
+        "icon": "MineTower.png",
+        "name": "Limestone Mine",
+        "category_id": "mines",
+        "category_name": "Mines",
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 20
+            }
+        ],
+        "recipes": [
+            "limestone_mining"
+        ],
+        "products": {
+            "input": [],
+            "output": [
+                "limestone"
+            ]
         }
     },
     "liquid_dump": {
@@ -3362,7 +3864,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [
@@ -3410,7 +3912,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 120
+                "quantity": 90
             }
         ],
         "recipes": [],
@@ -3440,7 +3942,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [],
@@ -3470,7 +3972,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -3503,9 +4005,97 @@
                 "quantity": 30
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "animal_feed_storage_4",
+            "biomass_storage_4",
+            "broken_glass_storage_4",
+            "canola_storage_4",
+            "coal_storage_4",
+            "compost_storage_4",
+            "copper_ore_crushed_storage_4",
+            "copper_ore_storage_4",
+            "copper_scrap_storage_4",
+            "corn_storage_4",
+            "dirt_storage_4",
+            "filter_media_storage_4",
+            "glass_mix_storage_4",
+            "gold_ore_concentrate_storage_4",
+            "gold_ore_crushed_storage_4",
+            "gold_ore_powder_storage_4",
+            "gold_ore_storage_4",
+            "gold_scrap_storage_4",
+            "gravel_storage_4",
+            "iron_ore_crushed_storage_4",
+            "iron_ore_storage_4",
+            "iron_scrap_storage_4",
+            "limestone_storage_4",
+            "meat_trimmings_storage_4",
+            "poppy_storage_4",
+            "potato_storage_4",
+            "quartz_storage_4",
+            "recyclables_storage_4",
+            "rock_storage_4",
+            "salt_storage_4",
+            "sand_storage_4",
+            "slag_crushed_storage_4",
+            "slag_storage_4",
+            "sludge_storage_4",
+            "soybean_storage_4",
+            "sugar_cane_storage_4",
+            "sugar_storage_4",
+            "sulfur_storage_4",
+            "uranium_ore_crushed_storage_4",
+            "uranium_ore_storage_4",
+            "waste_storage_4",
+            "wheat_storage_4",
+            "yellow_cake_storage_4"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "animal_feed",
+                "biomass",
+                "broken_glass",
+                "canola",
+                "coal",
+                "compost",
+                "copper_ore",
+                "copper_ore_crushed",
+                "copper_scrap",
+                "corn",
+                "dirt",
+                "filter_media",
+                "glass_mix",
+                "gold_ore",
+                "gold_ore_concentrate",
+                "gold_ore_crushed",
+                "gold_ore_powder",
+                "gold_scrap",
+                "gravel",
+                "iron_ore",
+                "iron_ore_crushed",
+                "iron_scrap",
+                "limestone",
+                "meat_trimmings",
+                "poppy",
+                "potato",
+                "quartz",
+                "recyclables",
+                "rock",
+                "salt",
+                "sand",
+                "slag",
+                "slag_crushed",
+                "sludge",
+                "soybean",
+                "sugar",
+                "sugar_cane",
+                "sulfur",
+                "uranium_ore",
+                "uranium_ore_crushed",
+                "waste",
+                "wheat",
+                "yellow_cake"
+            ],
             "output": []
         }
     },
@@ -3533,9 +4123,97 @@
                 "quantity": 30
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "animal_feed_storage_3",
+            "biomass_storage_3",
+            "broken_glass_storage_3",
+            "canola_storage_3",
+            "coal_storage_3",
+            "compost_storage_3",
+            "copper_ore_crushed_storage_3",
+            "copper_ore_storage_3",
+            "copper_scrap_storage_3",
+            "corn_storage_3",
+            "dirt_storage_3",
+            "filter_media_storage_3",
+            "glass_mix_storage_3",
+            "gold_ore_concentrate_storage_3",
+            "gold_ore_crushed_storage_3",
+            "gold_ore_powder_storage_3",
+            "gold_ore_storage_3",
+            "gold_scrap_storage_3",
+            "gravel_storage_3",
+            "iron_ore_crushed_storage_3",
+            "iron_ore_storage_3",
+            "iron_scrap_storage_3",
+            "limestone_storage_3",
+            "meat_trimmings_storage_3",
+            "poppy_storage_3",
+            "potato_storage_3",
+            "quartz_storage_3",
+            "recyclables_storage_3",
+            "rock_storage_3",
+            "salt_storage_3",
+            "sand_storage_3",
+            "slag_crushed_storage_3",
+            "slag_storage_3",
+            "sludge_storage_3",
+            "soybean_storage_3",
+            "sugar_cane_storage_3",
+            "sugar_storage_3",
+            "sulfur_storage_3",
+            "uranium_ore_crushed_storage_3",
+            "uranium_ore_storage_3",
+            "waste_storage_3",
+            "wheat_storage_3",
+            "yellow_cake_storage_3"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "animal_feed",
+                "biomass",
+                "broken_glass",
+                "canola",
+                "coal",
+                "compost",
+                "copper_ore",
+                "copper_ore_crushed",
+                "copper_scrap",
+                "corn",
+                "dirt",
+                "filter_media",
+                "glass_mix",
+                "gold_ore",
+                "gold_ore_concentrate",
+                "gold_ore_crushed",
+                "gold_ore_powder",
+                "gold_scrap",
+                "gravel",
+                "iron_ore",
+                "iron_ore_crushed",
+                "iron_scrap",
+                "limestone",
+                "meat_trimmings",
+                "poppy",
+                "potato",
+                "quartz",
+                "recyclables",
+                "rock",
+                "salt",
+                "sand",
+                "slag",
+                "slag_crushed",
+                "sludge",
+                "soybean",
+                "sugar",
+                "sugar_cane",
+                "sulfur",
+                "uranium_ore",
+                "uranium_ore_crushed",
+                "waste",
+                "wheat",
+                "yellow_cake"
+            ],
             "output": []
         }
     },
@@ -3563,9 +4241,97 @@
                 "quantity": 90
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "animal_feed_storage_2",
+            "biomass_storage_2",
+            "broken_glass_storage_2",
+            "canola_storage_2",
+            "coal_storage_2",
+            "compost_storage_2",
+            "copper_ore_crushed_storage_2",
+            "copper_ore_storage_2",
+            "copper_scrap_storage_2",
+            "corn_storage_2",
+            "dirt_storage_2",
+            "filter_media_storage_2",
+            "glass_mix_storage_2",
+            "gold_ore_concentrate_storage_2",
+            "gold_ore_crushed_storage_2",
+            "gold_ore_powder_storage_2",
+            "gold_ore_storage_2",
+            "gold_scrap_storage_2",
+            "gravel_storage_2",
+            "iron_ore_crushed_storage_2",
+            "iron_ore_storage_2",
+            "iron_scrap_storage_2",
+            "limestone_storage_2",
+            "meat_trimmings_storage_2",
+            "poppy_storage_2",
+            "potato_storage_2",
+            "quartz_storage_2",
+            "recyclables_storage_2",
+            "rock_storage_2",
+            "salt_storage_2",
+            "sand_storage_2",
+            "slag_crushed_storage_2",
+            "slag_storage_2",
+            "sludge_storage_2",
+            "soybean_storage_2",
+            "sugar_cane_storage_2",
+            "sugar_storage_2",
+            "sulfur_storage_2",
+            "uranium_ore_crushed_storage_2",
+            "uranium_ore_storage_2",
+            "waste_storage_2",
+            "wheat_storage_2",
+            "yellow_cake_storage_2"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "animal_feed",
+                "biomass",
+                "broken_glass",
+                "canola",
+                "coal",
+                "compost",
+                "copper_ore",
+                "copper_ore_crushed",
+                "copper_scrap",
+                "corn",
+                "dirt",
+                "filter_media",
+                "glass_mix",
+                "gold_ore",
+                "gold_ore_concentrate",
+                "gold_ore_crushed",
+                "gold_ore_powder",
+                "gold_scrap",
+                "gravel",
+                "iron_ore",
+                "iron_ore_crushed",
+                "iron_scrap",
+                "limestone",
+                "meat_trimmings",
+                "poppy",
+                "potato",
+                "quartz",
+                "recyclables",
+                "rock",
+                "salt",
+                "sand",
+                "slag",
+                "slag_crushed",
+                "sludge",
+                "soybean",
+                "sugar",
+                "sugar_cane",
+                "sulfur",
+                "uranium_ore",
+                "uranium_ore_crushed",
+                "waste",
+                "wheat",
+                "yellow_cake"
+            ],
             "output": []
         }
     },
@@ -3593,9 +4359,97 @@
                 "quantity": 180
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "animal_feed_storage",
+            "biomass_storage",
+            "broken_glass_storage",
+            "canola_storage",
+            "coal_storage",
+            "compost_storage",
+            "copper_ore_crushed_storage",
+            "copper_ore_storage",
+            "copper_scrap_storage",
+            "corn_storage",
+            "dirt_storage",
+            "filter_media_storage",
+            "glass_mix_storage",
+            "gold_ore_concentrate_storage",
+            "gold_ore_crushed_storage",
+            "gold_ore_powder_storage",
+            "gold_ore_storage",
+            "gold_scrap_storage",
+            "gravel_storage",
+            "iron_ore_crushed_storage",
+            "iron_ore_storage",
+            "iron_scrap_storage",
+            "limestone_storage",
+            "meat_trimmings_storage",
+            "poppy_storage",
+            "potato_storage",
+            "quartz_storage",
+            "recyclables_storage",
+            "rock_storage",
+            "salt_storage",
+            "sand_storage",
+            "slag_crushed_storage",
+            "slag_storage",
+            "sludge_storage",
+            "soybean_storage",
+            "sugar_cane_storage",
+            "sugar_storage",
+            "sulfur_storage",
+            "uranium_ore_crushed_storage",
+            "uranium_ore_storage",
+            "waste_storage",
+            "wheat_storage",
+            "yellow_cake_storage"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "animal_feed",
+                "biomass",
+                "broken_glass",
+                "canola",
+                "coal",
+                "compost",
+                "copper_ore",
+                "copper_ore_crushed",
+                "copper_scrap",
+                "corn",
+                "dirt",
+                "filter_media",
+                "glass_mix",
+                "gold_ore",
+                "gold_ore_concentrate",
+                "gold_ore_crushed",
+                "gold_ore_powder",
+                "gold_scrap",
+                "gravel",
+                "iron_ore",
+                "iron_ore_crushed",
+                "iron_scrap",
+                "limestone",
+                "meat_trimmings",
+                "poppy",
+                "potato",
+                "quartz",
+                "recyclables",
+                "rock",
+                "salt",
+                "sand",
+                "slag",
+                "slag_crushed",
+                "sludge",
+                "soybean",
+                "sugar",
+                "sugar_cane",
+                "sulfur",
+                "uranium_ore",
+                "uranium_ore_crushed",
+                "waste",
+                "wheat",
+                "yellow_cake"
+            ],
             "output": []
         }
     },
@@ -3620,7 +4474,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [
@@ -3657,7 +4511,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 140
+                "quantity": 105
             }
         ],
         "recipes": [
@@ -3694,12 +4548,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 50
+                "quantity": 38
             }
         ],
         "recipes": [
-            "maintenance_i_2",
-            "maintenance_i_2"
+            "maintenance_i_4",
+            "maintenance_i_5"
         ],
         "products": {
             "input": [
@@ -3733,11 +4587,11 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
-            "maintenance_i_2"
+            "maintenance_i_6"
         ],
         "products": {
             "input": [
@@ -3770,17 +4624,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 50
+                "quantity": 38
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [
-            "maintenance_ii_2",
-            "maintenance_ii_2"
+            "maintenance_ii_3",
+            "maintenance_ii_4"
         ],
         "products": {
             "input": [
@@ -3814,17 +4668,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 50
+                "quantity": 38
             },
             {
                 "id": "electronics_iii",
                 "name": "Electronics III",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [
-            "maintenance_iii_2",
-            "maintenance_iii_2"
+            "maintenance_iii_3",
+            "maintenance_iii_4"
         ],
         "products": {
             "input": [
@@ -3858,7 +4712,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [
@@ -3897,12 +4751,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 40
+                "quantity": 30
             },
             {
                 "id": "steel",
                 "name": "Steel",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [
@@ -3941,7 +4795,7 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 80
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -4015,7 +4869,7 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 160
+                "quantity": 120
             }
         ],
         "recipes": [
@@ -4089,7 +4943,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -4135,19 +4989,19 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
             "acid_mixing",
             "animal_feed_production",
             "animal_feed_production_2",
-            "animal_feed_production_2",
-            "animal_feed_production_2",
+            "animal_feed_production_3",
+            "animal_feed_production_4",
             "brine_production",
             "composing",
             "composing_2",
-            "composing_2",
+            "composing_3",
             "fertilizer_ii_synthesis",
             "fertilizer_mixing",
             "filter_media_mixing",
@@ -4209,12 +5063,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 800
+                "quantity": 600
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 80
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -4252,7 +5106,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [
@@ -4286,7 +5140,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [
@@ -4324,7 +5178,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 70
+                "quantity": 53
             }
         ],
         "recipes": [
@@ -4362,7 +5216,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 100
+                "quantity": 75
             }
         ],
         "recipes": [
@@ -4392,7 +5246,7 @@
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 1,
         "electricity_consumed": 0,
-        "electricity_generated": 300,
+        "electricity_generated": 360,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -4402,12 +5256,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 20
+                "quantity": 15
             },
             {
                 "id": "electronics",
                 "name": "Electronics",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [
@@ -4433,7 +5287,7 @@
         "maintenance_cost_units": "maintenance_i",
         "maintenance_cost_quantity": 8,
         "electricity_consumed": 0,
-        "electricity_generated": 2500,
+        "electricity_generated": 3000,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -4443,12 +5297,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 80
+                "quantity": 60
             },
             {
                 "id": "electronics",
                 "name": "Electronics",
-                "quantity": 180
+                "quantity": 135
             }
         ],
         "recipes": [
@@ -4484,12 +5338,12 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 20
+                "quantity": 15
             },
             {
                 "id": "wood",
                 "name": "Wood",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [],
@@ -4519,7 +5373,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [],
@@ -4549,7 +5403,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [],
@@ -4579,12 +5433,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 60
+                "quantity": 45
             },
             {
                 "id": "lab_equipment",
                 "name": "Lab Equipment",
-                "quantity": 10
+                "quantity": 8
             }
         ],
         "recipes": [
@@ -4620,12 +5474,12 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 120
+                "quantity": 90
             },
             {
                 "id": "lab_equipment_ii",
                 "name": "Lab Equipment II",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [
@@ -4661,17 +5515,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 220
+                "quantity": 165
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 60
+                "quantity": 45
             },
             {
                 "id": "lab_equipment_iii",
                 "name": "Lab Equipment III",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [
@@ -4707,17 +5561,17 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 200
+                "quantity": 150
             },
             {
                 "id": "glass",
                 "name": "Glass",
-                "quantity": 160
+                "quantity": 120
             },
             {
                 "id": "lab_equipment_iv",
                 "name": "Lab Equipment IV",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [
@@ -4729,6 +5583,40 @@
             ],
             "output": [
                 "recyclables"
+            ]
+        }
+    },
+    "rock_mine": {
+        "id": "rock_mine",
+        "game_id": "MineTower",
+        "icon": "MineTower.png",
+        "name": "Rock Mine",
+        "category_id": "mines",
+        "category_name": "Mines",
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 20
+            }
+        ],
+        "recipes": [
+            "rock_mining"
+        ],
+        "products": {
+            "input": [],
+            "output": [
+                "rock"
             ]
         }
     },
@@ -4753,12 +5641,12 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 1200
+                "quantity": 900
             },
             {
                 "id": "vehicle_parts_iii",
                 "name": "Vehicle Parts III",
-                "quantity": 160
+                "quantity": 120
             }
         ],
         "recipes": [],
@@ -4788,17 +5676,17 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 300
+                "quantity": 225
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 1000
+                "quantity": 750
             },
             {
                 "id": "steel",
                 "name": "Steel",
-                "quantity": 800
+                "quantity": 600
             }
         ],
         "recipes": [],
@@ -4828,7 +5716,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [
@@ -4866,12 +5754,12 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [
             "cement_production_2",
-            "cement_production_2"
+            "cement_production_3"
         ],
         "products": {
             "input": [
@@ -4906,7 +5794,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [
@@ -4927,6 +5815,40 @@
             "output": [
                 "rubber",
                 "waste_water"
+            ]
+        }
+    },
+    "sand_mine": {
+        "id": "sand_mine",
+        "game_id": "MineTower",
+        "icon": "MineTower.png",
+        "name": "Sand Mine",
+        "category_id": "mines",
+        "category_name": "Mines",
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 20
+            }
+        ],
+        "recipes": [
+            "sand_mining"
+        ],
+        "products": {
+            "input": [],
+            "output": [
+                "sand"
             ]
         }
     },
@@ -4951,7 +5873,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 50
+                "quantity": 38
             }
         ],
         "recipes": [
@@ -4985,7 +5907,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 50
+                "quantity": 38
             }
         ],
         "recipes": [
@@ -5019,7 +5941,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 80
+                "quantity": 60
             }
         ],
         "recipes": [
@@ -5064,7 +5986,7 @@
             {
                 "id": "construction_parts_iv",
                 "name": "Construction Parts IV",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [
@@ -5101,7 +6023,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 20
+                "quantity": 15
             }
         ],
         "recipes": [
@@ -5114,6 +6036,74 @@
             ],
             "output": [
                 "silicon_poly"
+            ]
+        }
+    },
+    "slag_crushed_mine": {
+        "id": "slag_crushed_mine",
+        "game_id": "MineTower",
+        "icon": "MineTower.png",
+        "name": "Slag Crushed Mine",
+        "category_id": "mines",
+        "category_name": "Mines",
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 20
+            }
+        ],
+        "recipes": [
+            "slag_crushed_mining"
+        ],
+        "products": {
+            "input": [],
+            "output": [
+                "slag_crushed"
+            ]
+        }
+    },
+    "slag_mine": {
+        "id": "slag_mine",
+        "game_id": "MineTower",
+        "icon": "MineTower.png",
+        "name": "Slag Mine",
+        "category_id": "mines",
+        "category_name": "Mines",
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 20
+            }
+        ],
+        "recipes": [
+            "slag_mining"
+        ],
+        "products": {
+            "input": [],
+            "output": [
+                "slag"
             ]
         }
     },
@@ -5138,17 +6128,17 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 10
+                "quantity": 8
             }
         ],
         "recipes": [
             "product_disposal",
             "product_disposal_2",
-            "product_disposal_2",
-            "product_disposal_2",
-            "product_disposal_2",
-            "product_disposal_2",
-            "product_disposal_2"
+            "product_disposal_3",
+            "product_disposal_4",
+            "product_disposal_5",
+            "product_disposal_6",
+            "product_disposal_7"
         ],
         "products": {
             "input": [
@@ -5186,22 +6176,22 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 10
+                "quantity": 8
             },
             {
                 "id": "concrete_slab",
                 "name": "Concrete slab",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
-            "product_disposal_2",
-            "product_disposal_2",
-            "product_disposal_2",
-            "product_disposal_2",
-            "product_disposal_2",
-            "product_disposal_2",
-            "product_disposal_2"
+            "product_disposal_10",
+            "product_disposal_11",
+            "product_disposal_12",
+            "product_disposal_13",
+            "product_disposal_14",
+            "product_disposal_8",
+            "product_disposal_9"
         ],
         "products": {
             "input": [
@@ -5229,7 +6219,7 @@
         "maintenance_cost_units": "maintenance_ii",
         "maintenance_cost_quantity": 0.5996094,
         "electricity_consumed": 0,
-        "electricity_generated": 32,
+        "electricity_generated": 38,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -5239,17 +6229,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 20
+                "quantity": 15
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 10
+                "quantity": 8
             },
             {
                 "id": "solar_cell",
                 "name": "Solar cell",
-                "quantity": 120
+                "quantity": 90
             }
         ],
         "recipes": [],
@@ -5269,7 +6259,7 @@
         "maintenance_cost_units": "maintenance_ii",
         "maintenance_cost_quantity": 0.5996094,
         "electricity_consumed": 0,
-        "electricity_generated": 40,
+        "electricity_generated": 48,
         "computing_consumed": 0,
         "computing_generated": 0,
         "storage_capacity": 0,
@@ -5279,17 +6269,17 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 20
+                "quantity": 15
             },
             {
                 "id": "electronics_ii",
                 "name": "Electronics II",
-                "quantity": 10
+                "quantity": 8
             },
             {
                 "id": "solar_cell_mono",
                 "name": "Solar cell mono",
-                "quantity": 120
+                "quantity": 90
             }
         ],
         "recipes": [],
@@ -5319,7 +6309,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -5366,9 +6356,157 @@
                 "quantity": 500
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "anesthetics_storage_5",
+            "antibiotics_storage_5",
+            "bread_storage_5",
+            "cake_storage_5",
+            "cement_storage_5",
+            "chicken_carcass_storage_5",
+            "concrete_slab_storage_5",
+            "construction_parts_ii_storage_5",
+            "construction_parts_iii_storage_5",
+            "construction_parts_iv_storage_5",
+            "construction_parts_storage_5",
+            "consumer_electronics_storage_5",
+            "copper_storage_5",
+            "disinfectant_storage_5",
+            "eggs_storage_5",
+            "electronics_ii_storage_5",
+            "electronics_iii_storage_5",
+            "electronics_storage_5",
+            "flour_storage_5",
+            "flowers_storage_5",
+            "food_pack_storage_5",
+            "fruit_storage_5",
+            "glass_storage_5",
+            "gold_storage_5",
+            "graphite_storage_5",
+            "household_appliances_storage_5",
+            "household_goods_storage_5",
+            "impure_copper_storage_5",
+            "iron_storage_5",
+            "lab_equipment_ii_storage_5",
+            "lab_equipment_iii_storage_5",
+            "lab_equipment_iv_storage_5",
+            "lab_equipment_storage_5",
+            "liquid_nitrogen_storage_5",
+            "meat_storage_5",
+            "mechanical_parts_storage_5",
+            "medical_equipment_storage_5",
+            "medical_supplies_ii_storage_5",
+            "medical_supplies_iii_storage_5",
+            "medical_supplies_storage_5",
+            "microchips_stage_1_a_storage_5",
+            "microchips_stage_1_b_storage_5",
+            "microchips_stage_1_c_storage_5",
+            "microchips_stage_2_a_storage_5",
+            "microchips_stage_2_b_storage_5",
+            "microchips_stage_2_c_storage_5",
+            "microchips_stage_3_a_storage_5",
+            "microchips_stage_3_b_storage_5",
+            "microchips_stage_3_c_storage_5",
+            "microchips_stage_4_a_storage_5",
+            "microchips_stage_4_b_storage_5",
+            "microchips_storage_5",
+            "morphine_storage_5",
+            "pcb_storage_5",
+            "plastic_storage_5",
+            "rubber_storage_5",
+            "sausage_storage_5",
+            "server_storage_5",
+            "silicon_poly_storage_5",
+            "silicon_wafer_storage_5",
+            "snack_storage_5",
+            "solar_cell_mono_storage_5",
+            "solar_cell_storage_5",
+            "spent_fuel_storage_5",
+            "steel_storage_5",
+            "tofu_storage_5",
+            "uranium_pellets_storage_5",
+            "uranium_rod_storage_5",
+            "vegetables_storage_5",
+            "vehicle_parts_ii_storage_5",
+            "vehicle_parts_iii_storage_5",
+            "vehicle_parts_storage_5",
+            "wood_storage_5"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "anesthetics",
+                "antibiotics",
+                "bread",
+                "cake",
+                "cement",
+                "chicken_carcass",
+                "concrete_slab",
+                "construction_parts",
+                "construction_parts_ii",
+                "construction_parts_iii",
+                "construction_parts_iv",
+                "consumer_electronics",
+                "copper",
+                "disinfectant",
+                "eggs",
+                "electronics",
+                "electronics_ii",
+                "electronics_iii",
+                "flour",
+                "flowers",
+                "food_pack",
+                "fruit",
+                "glass",
+                "gold",
+                "graphite",
+                "household_appliances",
+                "household_goods",
+                "impure_copper",
+                "iron",
+                "lab_equipment",
+                "lab_equipment_ii",
+                "lab_equipment_iii",
+                "lab_equipment_iv",
+                "liquid_nitrogen",
+                "meat",
+                "mechanical_parts",
+                "medical_equipment",
+                "medical_supplies",
+                "medical_supplies_ii",
+                "medical_supplies_iii",
+                "microchips",
+                "microchips_stage_1_a",
+                "microchips_stage_1_b",
+                "microchips_stage_1_c",
+                "microchips_stage_2_a",
+                "microchips_stage_2_b",
+                "microchips_stage_2_c",
+                "microchips_stage_3_a",
+                "microchips_stage_3_b",
+                "microchips_stage_3_c",
+                "microchips_stage_4_a",
+                "microchips_stage_4_b",
+                "morphine",
+                "pcb",
+                "plastic",
+                "rubber",
+                "sausage",
+                "server",
+                "silicon_poly",
+                "silicon_wafer",
+                "snack",
+                "solar_cell",
+                "solar_cell_mono",
+                "spent_fuel",
+                "steel",
+                "tofu",
+                "uranium_pellets",
+                "uranium_rod",
+                "vegetables",
+                "vehicle_parts",
+                "vehicle_parts_ii",
+                "vehicle_parts_iii",
+                "wood"
+            ],
             "output": []
         }
     },
@@ -5393,18 +6531,18 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 30
+                "quantity": 23
             },
             {
                 "id": "steel",
                 "name": "Steel",
-                "quantity": 30
+                "quantity": 23
             }
         ],
         "recipes": [
             "thermal_desalination",
             "thermal_desalination_2",
-            "thermal_desalination_2"
+            "thermal_desalination_3"
         ],
         "products": {
             "input": [
@@ -5440,7 +6578,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 120
+                "quantity": 90
             }
         ],
         "recipes": [],
@@ -5470,7 +6608,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 60
+                "quantity": 45
             }
         ],
         "recipes": [],
@@ -5500,7 +6638,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -5533,9 +6671,157 @@
                 "quantity": 30
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "anesthetics_storage_4",
+            "antibiotics_storage_4",
+            "bread_storage_4",
+            "cake_storage_4",
+            "cement_storage_4",
+            "chicken_carcass_storage_4",
+            "concrete_slab_storage_4",
+            "construction_parts_ii_storage_4",
+            "construction_parts_iii_storage_4",
+            "construction_parts_iv_storage_4",
+            "construction_parts_storage_4",
+            "consumer_electronics_storage_4",
+            "copper_storage_4",
+            "disinfectant_storage_4",
+            "eggs_storage_4",
+            "electronics_ii_storage_4",
+            "electronics_iii_storage_4",
+            "electronics_storage_4",
+            "flour_storage_4",
+            "flowers_storage_4",
+            "food_pack_storage_4",
+            "fruit_storage_4",
+            "glass_storage_4",
+            "gold_storage_4",
+            "graphite_storage_4",
+            "household_appliances_storage_4",
+            "household_goods_storage_4",
+            "impure_copper_storage_4",
+            "iron_storage_4",
+            "lab_equipment_ii_storage_4",
+            "lab_equipment_iii_storage_4",
+            "lab_equipment_iv_storage_4",
+            "lab_equipment_storage_4",
+            "liquid_nitrogen_storage_4",
+            "meat_storage_4",
+            "mechanical_parts_storage_4",
+            "medical_equipment_storage_4",
+            "medical_supplies_ii_storage_4",
+            "medical_supplies_iii_storage_4",
+            "medical_supplies_storage_4",
+            "microchips_stage_1_a_storage_4",
+            "microchips_stage_1_b_storage_4",
+            "microchips_stage_1_c_storage_4",
+            "microchips_stage_2_a_storage_4",
+            "microchips_stage_2_b_storage_4",
+            "microchips_stage_2_c_storage_4",
+            "microchips_stage_3_a_storage_4",
+            "microchips_stage_3_b_storage_4",
+            "microchips_stage_3_c_storage_4",
+            "microchips_stage_4_a_storage_4",
+            "microchips_stage_4_b_storage_4",
+            "microchips_storage_4",
+            "morphine_storage_4",
+            "pcb_storage_4",
+            "plastic_storage_4",
+            "rubber_storage_4",
+            "sausage_storage_4",
+            "server_storage_4",
+            "silicon_poly_storage_4",
+            "silicon_wafer_storage_4",
+            "snack_storage_4",
+            "solar_cell_mono_storage_4",
+            "solar_cell_storage_4",
+            "spent_fuel_storage_4",
+            "steel_storage_4",
+            "tofu_storage_4",
+            "uranium_pellets_storage_4",
+            "uranium_rod_storage_4",
+            "vegetables_storage_4",
+            "vehicle_parts_ii_storage_4",
+            "vehicle_parts_iii_storage_4",
+            "vehicle_parts_storage_4",
+            "wood_storage_4"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "anesthetics",
+                "antibiotics",
+                "bread",
+                "cake",
+                "cement",
+                "chicken_carcass",
+                "concrete_slab",
+                "construction_parts",
+                "construction_parts_ii",
+                "construction_parts_iii",
+                "construction_parts_iv",
+                "consumer_electronics",
+                "copper",
+                "disinfectant",
+                "eggs",
+                "electronics",
+                "electronics_ii",
+                "electronics_iii",
+                "flour",
+                "flowers",
+                "food_pack",
+                "fruit",
+                "glass",
+                "gold",
+                "graphite",
+                "household_appliances",
+                "household_goods",
+                "impure_copper",
+                "iron",
+                "lab_equipment",
+                "lab_equipment_ii",
+                "lab_equipment_iii",
+                "lab_equipment_iv",
+                "liquid_nitrogen",
+                "meat",
+                "mechanical_parts",
+                "medical_equipment",
+                "medical_supplies",
+                "medical_supplies_ii",
+                "medical_supplies_iii",
+                "microchips",
+                "microchips_stage_1_a",
+                "microchips_stage_1_b",
+                "microchips_stage_1_c",
+                "microchips_stage_2_a",
+                "microchips_stage_2_b",
+                "microchips_stage_2_c",
+                "microchips_stage_3_a",
+                "microchips_stage_3_b",
+                "microchips_stage_3_c",
+                "microchips_stage_4_a",
+                "microchips_stage_4_b",
+                "morphine",
+                "pcb",
+                "plastic",
+                "rubber",
+                "sausage",
+                "server",
+                "silicon_poly",
+                "silicon_wafer",
+                "snack",
+                "solar_cell",
+                "solar_cell_mono",
+                "spent_fuel",
+                "steel",
+                "tofu",
+                "uranium_pellets",
+                "uranium_rod",
+                "vegetables",
+                "vehicle_parts",
+                "vehicle_parts_ii",
+                "vehicle_parts_iii",
+                "wood"
+            ],
             "output": []
         }
     },
@@ -5563,9 +6849,157 @@
                 "quantity": 30
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "anesthetics_storage_3",
+            "antibiotics_storage_3",
+            "bread_storage_3",
+            "cake_storage_3",
+            "cement_storage_3",
+            "chicken_carcass_storage_3",
+            "concrete_slab_storage_3",
+            "construction_parts_ii_storage_3",
+            "construction_parts_iii_storage_3",
+            "construction_parts_iv_storage_3",
+            "construction_parts_storage_3",
+            "consumer_electronics_storage_3",
+            "copper_storage_3",
+            "disinfectant_storage_3",
+            "eggs_storage_3",
+            "electronics_ii_storage_3",
+            "electronics_iii_storage_3",
+            "electronics_storage_3",
+            "flour_storage_3",
+            "flowers_storage_3",
+            "food_pack_storage_3",
+            "fruit_storage_3",
+            "glass_storage_3",
+            "gold_storage_3",
+            "graphite_storage_3",
+            "household_appliances_storage_3",
+            "household_goods_storage_3",
+            "impure_copper_storage_3",
+            "iron_storage_3",
+            "lab_equipment_ii_storage_3",
+            "lab_equipment_iii_storage_3",
+            "lab_equipment_iv_storage_3",
+            "lab_equipment_storage_3",
+            "liquid_nitrogen_storage_3",
+            "meat_storage_3",
+            "mechanical_parts_storage_3",
+            "medical_equipment_storage_3",
+            "medical_supplies_ii_storage_3",
+            "medical_supplies_iii_storage_3",
+            "medical_supplies_storage_3",
+            "microchips_stage_1_a_storage_3",
+            "microchips_stage_1_b_storage_3",
+            "microchips_stage_1_c_storage_3",
+            "microchips_stage_2_a_storage_3",
+            "microchips_stage_2_b_storage_3",
+            "microchips_stage_2_c_storage_3",
+            "microchips_stage_3_a_storage_3",
+            "microchips_stage_3_b_storage_3",
+            "microchips_stage_3_c_storage_3",
+            "microchips_stage_4_a_storage_3",
+            "microchips_stage_4_b_storage_3",
+            "microchips_storage_3",
+            "morphine_storage_3",
+            "pcb_storage_3",
+            "plastic_storage_3",
+            "rubber_storage_3",
+            "sausage_storage_3",
+            "server_storage_3",
+            "silicon_poly_storage_3",
+            "silicon_wafer_storage_3",
+            "snack_storage_3",
+            "solar_cell_mono_storage_3",
+            "solar_cell_storage_3",
+            "spent_fuel_storage_3",
+            "steel_storage_3",
+            "tofu_storage_3",
+            "uranium_pellets_storage_3",
+            "uranium_rod_storage_3",
+            "vegetables_storage_3",
+            "vehicle_parts_ii_storage_3",
+            "vehicle_parts_iii_storage_3",
+            "vehicle_parts_storage_3",
+            "wood_storage_3"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "anesthetics",
+                "antibiotics",
+                "bread",
+                "cake",
+                "cement",
+                "chicken_carcass",
+                "concrete_slab",
+                "construction_parts",
+                "construction_parts_ii",
+                "construction_parts_iii",
+                "construction_parts_iv",
+                "consumer_electronics",
+                "copper",
+                "disinfectant",
+                "eggs",
+                "electronics",
+                "electronics_ii",
+                "electronics_iii",
+                "flour",
+                "flowers",
+                "food_pack",
+                "fruit",
+                "glass",
+                "gold",
+                "graphite",
+                "household_appliances",
+                "household_goods",
+                "impure_copper",
+                "iron",
+                "lab_equipment",
+                "lab_equipment_ii",
+                "lab_equipment_iii",
+                "lab_equipment_iv",
+                "liquid_nitrogen",
+                "meat",
+                "mechanical_parts",
+                "medical_equipment",
+                "medical_supplies",
+                "medical_supplies_ii",
+                "medical_supplies_iii",
+                "microchips",
+                "microchips_stage_1_a",
+                "microchips_stage_1_b",
+                "microchips_stage_1_c",
+                "microchips_stage_2_a",
+                "microchips_stage_2_b",
+                "microchips_stage_2_c",
+                "microchips_stage_3_a",
+                "microchips_stage_3_b",
+                "microchips_stage_3_c",
+                "microchips_stage_4_a",
+                "microchips_stage_4_b",
+                "morphine",
+                "pcb",
+                "plastic",
+                "rubber",
+                "sausage",
+                "server",
+                "silicon_poly",
+                "silicon_wafer",
+                "snack",
+                "solar_cell",
+                "solar_cell_mono",
+                "spent_fuel",
+                "steel",
+                "tofu",
+                "uranium_pellets",
+                "uranium_rod",
+                "vegetables",
+                "vehicle_parts",
+                "vehicle_parts_ii",
+                "vehicle_parts_iii",
+                "wood"
+            ],
             "output": []
         }
     },
@@ -5593,9 +7027,157 @@
                 "quantity": 90
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "anesthetics_storage_2",
+            "antibiotics_storage_2",
+            "bread_storage_2",
+            "cake_storage_2",
+            "cement_storage_2",
+            "chicken_carcass_storage_2",
+            "concrete_slab_storage_2",
+            "construction_parts_ii_storage_2",
+            "construction_parts_iii_storage_2",
+            "construction_parts_iv_storage_2",
+            "construction_parts_storage_2",
+            "consumer_electronics_storage_2",
+            "copper_storage_2",
+            "disinfectant_storage_2",
+            "eggs_storage_2",
+            "electronics_ii_storage_2",
+            "electronics_iii_storage_2",
+            "electronics_storage_2",
+            "flour_storage_2",
+            "flowers_storage_2",
+            "food_pack_storage_2",
+            "fruit_storage_2",
+            "glass_storage_2",
+            "gold_storage_2",
+            "graphite_storage_2",
+            "household_appliances_storage_2",
+            "household_goods_storage_2",
+            "impure_copper_storage_2",
+            "iron_storage_2",
+            "lab_equipment_ii_storage_2",
+            "lab_equipment_iii_storage_2",
+            "lab_equipment_iv_storage_2",
+            "lab_equipment_storage_2",
+            "liquid_nitrogen_storage_2",
+            "meat_storage_2",
+            "mechanical_parts_storage_2",
+            "medical_equipment_storage_2",
+            "medical_supplies_ii_storage_2",
+            "medical_supplies_iii_storage_2",
+            "medical_supplies_storage_2",
+            "microchips_stage_1_a_storage_2",
+            "microchips_stage_1_b_storage_2",
+            "microchips_stage_1_c_storage_2",
+            "microchips_stage_2_a_storage_2",
+            "microchips_stage_2_b_storage_2",
+            "microchips_stage_2_c_storage_2",
+            "microchips_stage_3_a_storage_2",
+            "microchips_stage_3_b_storage_2",
+            "microchips_stage_3_c_storage_2",
+            "microchips_stage_4_a_storage_2",
+            "microchips_stage_4_b_storage_2",
+            "microchips_storage_2",
+            "morphine_storage_2",
+            "pcb_storage_2",
+            "plastic_storage_2",
+            "rubber_storage_2",
+            "sausage_storage_2",
+            "server_storage_2",
+            "silicon_poly_storage_2",
+            "silicon_wafer_storage_2",
+            "snack_storage_2",
+            "solar_cell_mono_storage_2",
+            "solar_cell_storage_2",
+            "spent_fuel_storage_2",
+            "steel_storage_2",
+            "tofu_storage_2",
+            "uranium_pellets_storage_2",
+            "uranium_rod_storage_2",
+            "vegetables_storage_2",
+            "vehicle_parts_ii_storage_2",
+            "vehicle_parts_iii_storage_2",
+            "vehicle_parts_storage_2",
+            "wood_storage_2"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "anesthetics",
+                "antibiotics",
+                "bread",
+                "cake",
+                "cement",
+                "chicken_carcass",
+                "concrete_slab",
+                "construction_parts",
+                "construction_parts_ii",
+                "construction_parts_iii",
+                "construction_parts_iv",
+                "consumer_electronics",
+                "copper",
+                "disinfectant",
+                "eggs",
+                "electronics",
+                "electronics_ii",
+                "electronics_iii",
+                "flour",
+                "flowers",
+                "food_pack",
+                "fruit",
+                "glass",
+                "gold",
+                "graphite",
+                "household_appliances",
+                "household_goods",
+                "impure_copper",
+                "iron",
+                "lab_equipment",
+                "lab_equipment_ii",
+                "lab_equipment_iii",
+                "lab_equipment_iv",
+                "liquid_nitrogen",
+                "meat",
+                "mechanical_parts",
+                "medical_equipment",
+                "medical_supplies",
+                "medical_supplies_ii",
+                "medical_supplies_iii",
+                "microchips",
+                "microchips_stage_1_a",
+                "microchips_stage_1_b",
+                "microchips_stage_1_c",
+                "microchips_stage_2_a",
+                "microchips_stage_2_b",
+                "microchips_stage_2_c",
+                "microchips_stage_3_a",
+                "microchips_stage_3_b",
+                "microchips_stage_3_c",
+                "microchips_stage_4_a",
+                "microchips_stage_4_b",
+                "morphine",
+                "pcb",
+                "plastic",
+                "rubber",
+                "sausage",
+                "server",
+                "silicon_poly",
+                "silicon_wafer",
+                "snack",
+                "solar_cell",
+                "solar_cell_mono",
+                "spent_fuel",
+                "steel",
+                "tofu",
+                "uranium_pellets",
+                "uranium_rod",
+                "vegetables",
+                "vehicle_parts",
+                "vehicle_parts_ii",
+                "vehicle_parts_iii",
+                "wood"
+            ],
             "output": []
         }
     },
@@ -5623,9 +7205,157 @@
                 "quantity": 180
             }
         ],
-        "recipes": [],
+        "recipes": [
+            "anesthetics_storage",
+            "antibiotics_storage",
+            "bread_storage",
+            "cake_storage",
+            "cement_storage",
+            "chicken_carcass_storage",
+            "concrete_slab_storage",
+            "construction_parts_ii_storage",
+            "construction_parts_iii_storage",
+            "construction_parts_iv_storage",
+            "construction_parts_storage",
+            "consumer_electronics_storage",
+            "copper_storage",
+            "disinfectant_storage",
+            "eggs_storage",
+            "electronics_ii_storage",
+            "electronics_iii_storage",
+            "electronics_storage",
+            "flour_storage",
+            "flowers_storage",
+            "food_pack_storage",
+            "fruit_storage",
+            "glass_storage",
+            "gold_storage",
+            "graphite_storage",
+            "household_appliances_storage",
+            "household_goods_storage",
+            "impure_copper_storage",
+            "iron_storage",
+            "lab_equipment_ii_storage",
+            "lab_equipment_iii_storage",
+            "lab_equipment_iv_storage",
+            "lab_equipment_storage",
+            "liquid_nitrogen_storage",
+            "meat_storage",
+            "mechanical_parts_storage",
+            "medical_equipment_storage",
+            "medical_supplies_ii_storage",
+            "medical_supplies_iii_storage",
+            "medical_supplies_storage",
+            "microchips_stage_1_a_storage",
+            "microchips_stage_1_b_storage",
+            "microchips_stage_1_c_storage",
+            "microchips_stage_2_a_storage",
+            "microchips_stage_2_b_storage",
+            "microchips_stage_2_c_storage",
+            "microchips_stage_3_a_storage",
+            "microchips_stage_3_b_storage",
+            "microchips_stage_3_c_storage",
+            "microchips_stage_4_a_storage",
+            "microchips_stage_4_b_storage",
+            "microchips_storage",
+            "morphine_storage",
+            "pcb_storage",
+            "plastic_storage",
+            "rubber_storage",
+            "sausage_storage",
+            "server_storage",
+            "silicon_poly_storage",
+            "silicon_wafer_storage",
+            "snack_storage",
+            "solar_cell_mono_storage",
+            "solar_cell_storage",
+            "spent_fuel_storage",
+            "steel_storage",
+            "tofu_storage",
+            "uranium_pellets_storage",
+            "uranium_rod_storage",
+            "vegetables_storage",
+            "vehicle_parts_ii_storage",
+            "vehicle_parts_iii_storage",
+            "vehicle_parts_storage",
+            "wood_storage"
+        ],
         "products": {
-            "input": [],
+            "input": [
+                "anesthetics",
+                "antibiotics",
+                "bread",
+                "cake",
+                "cement",
+                "chicken_carcass",
+                "concrete_slab",
+                "construction_parts",
+                "construction_parts_ii",
+                "construction_parts_iii",
+                "construction_parts_iv",
+                "consumer_electronics",
+                "copper",
+                "disinfectant",
+                "eggs",
+                "electronics",
+                "electronics_ii",
+                "electronics_iii",
+                "flour",
+                "flowers",
+                "food_pack",
+                "fruit",
+                "glass",
+                "gold",
+                "graphite",
+                "household_appliances",
+                "household_goods",
+                "impure_copper",
+                "iron",
+                "lab_equipment",
+                "lab_equipment_ii",
+                "lab_equipment_iii",
+                "lab_equipment_iv",
+                "liquid_nitrogen",
+                "meat",
+                "mechanical_parts",
+                "medical_equipment",
+                "medical_supplies",
+                "medical_supplies_ii",
+                "medical_supplies_iii",
+                "microchips",
+                "microchips_stage_1_a",
+                "microchips_stage_1_b",
+                "microchips_stage_1_c",
+                "microchips_stage_2_a",
+                "microchips_stage_2_b",
+                "microchips_stage_2_c",
+                "microchips_stage_3_a",
+                "microchips_stage_3_b",
+                "microchips_stage_3_c",
+                "microchips_stage_4_a",
+                "microchips_stage_4_b",
+                "morphine",
+                "pcb",
+                "plastic",
+                "rubber",
+                "sausage",
+                "server",
+                "silicon_poly",
+                "silicon_wafer",
+                "snack",
+                "solar_cell",
+                "solar_cell_mono",
+                "spent_fuel",
+                "steel",
+                "tofu",
+                "uranium_pellets",
+                "uranium_rod",
+                "vegetables",
+                "vehicle_parts",
+                "vehicle_parts_ii",
+                "vehicle_parts_iii",
+                "wood"
+            ],
             "output": []
         }
     },
@@ -5650,7 +7380,7 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [],
@@ -5680,7 +7410,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 120
+                "quantity": 90
             }
         ],
         "recipes": [],
@@ -5710,7 +7440,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 280
+                "quantity": 210
             }
         ],
         "recipes": [],
@@ -5740,13 +7470,47 @@
             {
                 "id": "construction_parts",
                 "name": "Construction Parts",
-                "quantity": 25
+                "quantity": 19
             }
         ],
         "recipes": [],
         "products": {
             "input": [],
             "output": []
+        }
+    },
+    "waste_mine": {
+        "id": "waste_mine",
+        "game_id": "MineTower",
+        "icon": "MineTower.png",
+        "name": "Waste Mine",
+        "category_id": "mines",
+        "category_name": "Mines",
+        "workers": 0,
+        "maintenance_cost_units": null,
+        "maintenance_cost_quantity": 0,
+        "electricity_consumed": 0,
+        "electricity_generated": 0,
+        "computing_consumed": 0,
+        "computing_generated": 0,
+        "storage_capacity": 0,
+        "unity_cost": 0,
+        "research_speed": 0,
+        "build_costs": [
+            {
+                "id": "construction_parts",
+                "name": "Construction Parts",
+                "quantity": 20
+            }
+        ],
+        "recipes": [
+            "waste_mining"
+        ],
+        "products": {
+            "input": [],
+            "output": [
+                "waste"
+            ]
         }
     },
     "waste_sorting_plant": {
@@ -5770,7 +7534,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 400
+                "quantity": 300
             }
         ],
         "recipes": [
@@ -5809,7 +7573,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 140
+                "quantity": 105
             }
         ],
         "recipes": [
@@ -5854,7 +7618,7 @@
             {
                 "id": "construction_parts_iii",
                 "name": "Construction Parts III",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [
@@ -5890,7 +7654,7 @@
             {
                 "id": "construction_parts_ii",
                 "name": "Construction Parts II",
-                "quantity": 40
+                "quantity": 30
             }
         ],
         "recipes": [],

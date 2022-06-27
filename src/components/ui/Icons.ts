@@ -23,7 +23,8 @@ const Icons = {
     'back': 'ph:arrow-left-bold',
     'user': 'ph:user-circle-duotone',
     'out': 'ph:sign-out-bold',
-    'forward': 'ph:arrow-right-bold'
+    'forward': 'ph:arrow-right-bold',
+    'infoCircle': 'ph:info-duotone'
 }
 
 export type IconNames = keyof typeof Icons

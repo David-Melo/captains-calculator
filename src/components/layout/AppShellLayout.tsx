@@ -1,9 +1,10 @@
-import { AppShell, Box, Burger, Button, Divider, Group, Header, MediaQuery, Navbar, ThemeIcon, useMantineTheme, Container } from "@mantine/core"
+import { AppShell, Box, Burger, Button, Divider, Group, Header, MediaQuery, Navbar, ThemeIcon, useMantineTheme, Text } from "@mantine/core"
 import React from "react"
 import { NavLink, useRoutes } from "react-router-dom"
 import { Icon } from '@iconify/react';
 import NavContext from "components/navigation/NavContext";
 import { RenderNavigator } from "components/navigation/Layout";
+import { useAppState } from "state";
 
 type SideBarNavButtonProps = {
     to: string;
@@ -80,6 +81,7 @@ const TopBarNavButton: React.FC<SideBarNavButtonProps> = ({ to, label, icon, onC
 }
 
 const AppShellLayout: React.FC = () => {
+    const appVersion = useAppState(state=>state.version)
     const { routes, menu } = React.useContext(NavContext);
     const navigator = useRoutes(routes);
     const [opened, setOpened] = React.useState(false);
@@ -146,65 +148,50 @@ const AppShellLayout: React.FC = () => {
                         })}
                     >
 
-                        <Container
-                            size="lg"
+                        <Box
                             sx={(theme) => ({
-                                height: "100%",
-                                width: "100%",
-                                display: "flex",
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                [theme.fn.smallerThan('md')]: {
-                                    alignItems: 'flex-start',
-                                },
-                                [theme.fn.smallerThan('md')]: {
-                                    padding: 0,
-                                }
+                                display: 'grid',
+                                gridTemplateColumns: '1fr auto',
+                                height: '100%'
                             })}
                         >
-                            <Box
-                                sx={(theme) => ({
-                                    display: 'grid',
-                                    gridTemplateColumns: '1fr auto',
-                                })}
-                            >
 
-                                <Group>
+                            <Group>
 
-                                    <MediaQuery largerThan="md" styles={{ display: 'none' }}>
-                                        <Burger
-                                            opened={opened}
-                                            onClick={() => setOpened((o) => !o)}
-                                            size="sm"
-                                            color={theme.colors.gray[6]}
-                                        />
-                                    </MediaQuery>
-                                    <Box>
+                                <MediaQuery largerThan="md" styles={{ display: 'none' }}>
+                                    <Burger
+                                        opened={opened}
+                                        onClick={() => setOpened((o) => !o)}
+                                        size="sm"
+                                        color={theme.colors.gray[6]}
+                                    />
+                                </MediaQuery>
+                                <Group spacing="xs" align="flex-end">
+                                    <a href="/" title="Captain's Calculator">
                                         <img src="/img/logo.png" alt="Captain's Calculator" title="Captain's Calculator" />
-                                    </Box>
-
+                                    </a>
+                                    <Text color="white" size="sm">v{appVersion}</Text>
                                 </Group>
 
-                                <Box>
+                            </Group>
 
-                                    <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
-                                        <Group
-                                            spacing="xs"
-                                            grow
-                                        >
-                                            {menu.map((i, k) => {
-                                                return <TopBarNavButton key={`nav-item-${k}`} to={i.to} label={i.label} icon={i.icon} onClick={() => setOpened((o) => !o)} />
-                                            })}
-                                        </Group>
-                                    </MediaQuery>
+                            <Box>
 
-                                </Box>
+                                <MediaQuery smallerThan="md" styles={{ display: 'none' }}>
+                                    <Group
+                                        spacing="xs"
+                                        grow
+                                        sx={{height:'100%'}}
+                                    >
+                                        {menu.map((i, k) => {
+                                            return <TopBarNavButton key={`nav-item-${k}`} to={i.to} label={i.label} icon={i.icon} onClick={() => setOpened((o) => !o)} />
+                                        })}
+                                    </Group>
+                                </MediaQuery>
 
                             </Box>
 
-                        </Container>
-
-
+                        </Box>
 
                     </Header>
                 </Box>

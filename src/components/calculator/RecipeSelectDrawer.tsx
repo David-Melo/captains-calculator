@@ -59,7 +59,7 @@ export const RecipeSelectDrawer = () => {
             </Drawer>
 
             <Box>
-                <Text weight="bold" mb="xs">Production Recipe</Text>
+                <Text weight="bold" mb="xs">3. Production Recipe</Text>
                 {currentItem ? (
                     <Card
                         onClick={() => setOpened(true)}
@@ -92,7 +92,7 @@ export const RecipeSelectDrawer = () => {
 
                     </Card>
                 ) : (
-                    <Button onClick={() => setOpened(true)}>Open Drawer</Button>
+                    <Button onClick={() => setOpened(true)}>Click To Select</Button>
                 )}
             </Box>
         </>

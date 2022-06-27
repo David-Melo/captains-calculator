@@ -2,10 +2,10 @@ import { Box, Divider, Stack} from '@mantine/core';
 
 import { useAppState } from 'state';
 
-import { ProductSelectDrawer } from 'components/products/ProductSelectDrawer';
-import { MachineSelectDrawer } from 'components/machines/MachineSelectDrawer';
-import { RecipeSelectDrawer } from 'components/recipes/RecipeSelectDrawer';
-import { NodeDrawer } from 'components/recipes/NodeDrawer';
+import { ProductSelectDrawer } from 'components/calculator/ProductSelectDrawer';
+import { BuildingSelectDrawer } from 'components/calculator/BuildingSelectDrawer';
+import { RecipeSelectDrawer } from 'components/calculator/RecipeSelectDrawer';
+import { NodeDrawer } from 'components/calculator/NodeDrawer';
 
 export const SetupBar = () => {
 
@@ -18,7 +18,7 @@ export const SetupBar = () => {
             <Divider label="Production Chain Setup" mb="sm" />
             <Stack>
                 <ProductSelectDrawer />
-                {currentProduct && <MachineSelectDrawer />}
+                {currentProduct && <BuildingSelectDrawer />}
                 {currentMachine && <RecipeSelectDrawer />}
             </Stack>
             {currentRecipe && (

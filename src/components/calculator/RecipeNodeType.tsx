@@ -11,7 +11,7 @@ import { RecipeIOImportProduct, RecipeIOExportProduct, RecipeIODictInput, Recipe
 import CostsBadge from 'components/ui/CostsBadge';
 import NeedsBage from 'components/ui/NeedsBadge';
 import Icons from 'components/ui/Icons';
-import { NodeRecipeLink } from 'components/recipes/NodeRecipeSelect';
+import { NodeRecipeLink } from 'components/calculator/NodeRecipeSelect';
 import { RecipeNodeData } from './Editor';
 
 const handleStyle: React.CSSProperties = { border: 'none', width: 'auto', height: 'auto', position: 'relative', top: 'initial', left: 'initial', right: 'initial', bottom: 'initial', borderRadius: 0, transform: 'initial', backgroundColor: 'transparent' }

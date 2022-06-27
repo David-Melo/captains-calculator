@@ -20,7 +20,7 @@ export const NodeDrawer = () => {
             } else {
                 setOpened(false)
             }
-        },
+        }, 
         {
             immediate: false
         } 

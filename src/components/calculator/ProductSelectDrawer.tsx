@@ -5,15 +5,15 @@ import { Box, Button, Drawer, Input, Text, Stack } from "@mantine/core";
 import Icons from "components/ui/Icons";
 
 import { useAppState, useActions } from 'state';
-import MachineListCard from "./MachineListCard";
+import ProductListCard from "./ProductListCard";
 import { DrawerBody, DrawerBodyScrollArea } from "components/ui/DrawerBody";
-import { MachineId } from "state/app/effects";
+import { ProductId } from "state/app/effects";
 
-export const MachineSelectDrawer = () => {
+export const ProductSelectDrawer = () => {
 
-    const currentProduct = useAppState(state=>state.products.currentItem)
-    const { itemsList, currentItem } = useAppState(state => state.machines)
+    const { itemsList, currentItem } = useAppState(state => state.products)
 
+    const selectProduct = useActions().products.selectProduct
     const selectMachine = useActions().machines.selectMachine
     const selectRecipe = useActions().recipes.selectRecipe
     const delectRecipesItem = useActions().recipes.delectRecipesItem
@@ -21,22 +21,20 @@ export const MachineSelectDrawer = () => {
     const [opened, setOpened] = React.useState(false)
     const [filter,setFilter] = React.useState('')
 
-    const handleFilterChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleFilterChange = (e: ChangeEvent<HTMLInputElement>) => { 
         setFilter(e.target.value)
     }
 
-    const handleSelectMachine = (id: MachineId) => {
+    const handleSelectProduct = (id: ProductId) => {
         setFilter('')
+        selectMachine(null)
         selectRecipe(null)
         delectRecipesItem(null)
-        selectMachine(id)
+        selectProduct(id)
         setOpened(false)
     }
 
-    if (!currentProduct) return null;
-
-    let filteredMachines = itemsList.filter(m=>currentProduct.machines.output.indexOf(m.id)>=0)
-    let filteredItems = filter.length < 3 ? filteredMachines : filteredMachines.filter(item=>item.name.toLowerCase().includes(filter.toLowerCase().trim()))
+    let filteredItems = filter.length < 3 ? itemsList : itemsList.filter(item=>item.name.toLowerCase().includes(filter.toLowerCase().trim()))
 
     const renderBody = () => {
         return (
@@ -55,14 +53,14 @@ export const MachineSelectDrawer = () => {
                             value={filter}
                             onChange={handleFilterChange}
                             icon={<Icon icon={Icons.search} />}
-                            placeholder="Machine Search"
+                            placeholder="Product Search"
                             size="lg"
                         />
                     </Box>
                     <DrawerBodyScrollArea>
                         <Box p="md" pt={0}>
                             <Stack spacing="xs">
-                                {filteredItems.map((i, k) => <MachineListCard key={k} item={i} active={currentItem?.id === i.id} onSelect={() => handleSelectMachine(i.id)} />)}
+                                {filteredItems.map((i, k) => <ProductListCard key={k} item={i} active={currentItem?.id === i.id} onSelect={() => handleSelectProduct(i.id)} />)}
                             </Stack>
                         </Box>
                     </DrawerBodyScrollArea>
@@ -70,13 +68,13 @@ export const MachineSelectDrawer = () => {
             </DrawerBody>
         )
     }
-
+ 
     return (
         <>
             <Drawer
                 opened={opened}
                 onClose={() => setOpened(false)}
-                title="Select Machine"
+                title="Select Product"
                 padding={0}
                 size="xl"
                 overlayBlur={3}
@@ -86,11 +84,11 @@ export const MachineSelectDrawer = () => {
             </Drawer>
 
             <Box>
-                <Text weight="bold" mb="xs">Production Building</Text>
+                <Text weight="bold" mb="xs">1. Desired Product</Text>
                 {currentItem ? (
-                    <MachineListCard item={currentItem} active={false} onSelect={() => setOpened(true)} />
+                    <ProductListCard item={currentItem} active={false} onSelect={() => setOpened(true)} />
                 ) : (
-                    <Button onClick={() => setOpened(true)}>Open Drawer</Button>
+                    <Button onClick={() => setOpened(true)}>Click To Select</Button>
                 )}
             </Box>
         </>

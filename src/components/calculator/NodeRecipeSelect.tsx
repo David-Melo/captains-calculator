@@ -8,7 +8,7 @@ type RecipeSelectProps = {
     direction: 'input' | 'output';
     currentNodeId: RecipeId;
     productId: ProductId;
-    label: string;
+    label: string; 
     recipes: Recipe[];
     onSelect(): void;
 }
