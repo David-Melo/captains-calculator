@@ -33,6 +33,9 @@ export type Machine = {
     research_speed: number;
     build_costs: BuildCost[]
     recipes: RecipeId[];
+    isMine: boolean;
+    isStorage: boolean;
+    isFarm: boolean;
     products: {
         input: ProductId[];
         output: ProductId[];

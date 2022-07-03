@@ -1,6 +1,6 @@
-import { AppShell, Box, Burger, Button, Divider, Group, Header, MediaQuery, Navbar, ThemeIcon, useMantineTheme, Text } from "@mantine/core"
+import { AppShell, Box, Burger, Button, Divider, Group, Header, MediaQuery, Navbar, ThemeIcon, useMantineTheme, Text, Anchor } from "@mantine/core"
 import React from "react"
-import { NavLink, useRoutes } from "react-router-dom"
+import { Link, NavLink, useRoutes } from "react-router-dom"
 import { Icon } from '@iconify/react';
 import NavContext from "components/navigation/NavContext";
 import { RenderNavigator } from "components/navigation/Layout";
@@ -53,6 +53,42 @@ const TopBarNavButton: React.FC<SideBarNavButtonProps> = ({ to, label, icon, onC
             to={to}
             component={NavLink}
             onClick={onClick}
+            styles={theme => ({
+                inner: {
+                    justifyContent: 'flex-start',
+
+                },
+                label: {
+                    color: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[6],
+
+                }
+            })}
+            sx={{
+                '&.active': {
+                    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[3],
+                    '.mantine-Button-label': {
+                        color: theme.colorScheme === 'dark' ? theme.white : theme.colors.dark[9],
+                    }
+                },
+                '&:hover .mantine-Button-label': {
+                    color: theme.colorScheme === 'dark' ? theme.white : theme.colors.dark[9],
+                }
+            }}
+        >
+            {label}
+        </Button>
+    )
+}
+
+const TopBarNavLink: React.FC<SideBarNavButtonProps> = ({ to, label }) => {
+    const theme = useMantineTheme();
+    return (
+        <Button
+            variant="subtle"
+            color="dark"
+            href={to}
+            target="_blank"
+            component="a"
             styles={theme => ({
                 inner: {
                     justifyContent: 'flex-start',
@@ -186,6 +222,7 @@ const AppShellLayout: React.FC = () => {
                                         {menu.map((i, k) => {
                                             return <TopBarNavButton key={`nav-item-${k}`} to={i.to} label={i.label} icon={i.icon} onClick={() => setOpened((o) => !o)} />
                                         })}
+                                        <TopBarNavLink to="https://github.com/David-Melo/captains-calculator/issues" label="Bugs & Issues" icon="bug" />
                                     </Group>
                                 </MediaQuery>
 

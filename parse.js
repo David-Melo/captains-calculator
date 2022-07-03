@@ -82,6 +82,28 @@ function calculateProduct60(originalDuration, quantity) {
     return (60 / originalDuration) * quantity
 }
 
+const storages = [
+    'StorageUnitT4',
+    'StorageUnitT3',
+    'StorageUnitT2',
+    'StorageUnit',
+    'StorageLooseT4',
+    'StorageLooseT3',
+    'StorageLooseT2',
+    'StorageLoose',
+    'StorageFluidT4',
+    'StorageFluidT3',
+    'StorageFluidT2',
+    'StorageFluid',
+    'NuclearWasteStorage',
+]
+
+const mines = [
+    'MineTower'
+]
+
+const farms = []
+
 let CATEGORIES_DATA = {}
 let MACHINES_DATA = {}
 let RECIPES_DATA = {}
@@ -116,6 +138,9 @@ function parseBuildings(items, override = false) {
             name: machineParseName(m.name),
             category_id: categoryNameToId(m.category),
             category_name: categoryParseName(m.category),
+            isMine: mines.indexOf(m.id) > -1,
+            isStorage: storages.indexOf(m.id) > -1,
+            isFarm: farms.indexOf(m.id) > -1,
             workers: m.workers,
             maintenance_cost_units: productNameToId(m.maintenance_cost_units),
             maintenance_cost_quantity: m.maintenance_cost_quantity,

@@ -22,7 +22,6 @@ const elk = new Elk({
 })
 
 export const createGraphLayout = async (nodes: Array<Node>, edges: Array<Edge>): Promise<Array<Node>> => {
-    console.log('generatingLayout')
     const elkNodes: ElkNode[] = [];
     const elkEdges: ElkPrimitiveEdge[] = [];
 

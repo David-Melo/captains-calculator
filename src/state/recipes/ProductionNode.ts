@@ -1,4 +1,4 @@
-import { Category, Machine, Product, Recipe, RecipeId, RecipeProduct } from "state/app/effects"
+import { Category, Machine, Product, Recipe, RecipeProduct } from "state/app/effects"
 import { ProductRecipes } from "state/_types";
 import { Edge }  from 'react-flow-renderer';
 import { generateDarkColorHex } from "utils/colors";
@@ -14,20 +14,20 @@ type ProductionNodeParams = {
     targets: ProductRecipes;
 }
 
-type RecipeIOImport =  {
+export type RecipeIOImport =  {
     maxed: boolean;
     imported: number;
     imports: {
-        source: RecipeId;
+        source: string;
         quantity: number;
     }[]
 }
 
-type RecipeIOExport =  {
+export type RecipeIOExport =  {
     maxed: boolean;
     exported: number;
     exports: {
-        target: RecipeId;
+        target: string;
         quantity: number;
     }[]
 }
@@ -45,7 +45,7 @@ export type RecipeIODictOutput= {
 
 class ProductionNode {
 
-    id: RecipeId;
+    id: string;
     recipe: Recipe;
     machine: Machine;
     category: Category;
@@ -58,19 +58,22 @@ class ProductionNode {
 
     duration: number = 60;
     machinesCount: number = 0;
+    updated: number = 0;
 
     constructor( { recipe, machine, category, inputs, outputs, sources, targets }: ProductionNodeParams ) {
         
-        this.id = recipe.id
+        this.id = recipe.id + `_${Date.now()}`
         this.recipe = {...recipe}
         this.machine = {...machine}
         this.category = {...category}
+
+        this.machinesCount = 1
 
         let inputProducts = inputs.reduce((items,item)=>({
             ...items, 
             [item.id]: {
                 ...item,
-                quantity: this.calculateProduct60(recipe.duration, item.quantity),
+                quantity: item.quantity,
                 imported: 0,
                 maxed: false,
                 imports: []
@@ -81,7 +84,7 @@ class ProductionNode {
             ...items, 
             [item.id]: {
                 ...item,
-                quantity: this.calculateProduct60(recipe.duration, item.quantity),
+                quantity: item.quantity,
                 exported: 0,
                 maxed: false,
                 exports: []
@@ -107,7 +110,7 @@ class ProductionNode {
         return this.outputs.hasOwnProperty(productId) && !this.outputs[productId].maxed
     }
 
-    addImport(productId: string, sourceRecipeId: RecipeId, importedQuantity: number): number | false {
+    addImport(productId: string, sourceRecipeId: string, importedQuantity: number): number | false {
 
         let amountToImport = 0
 
@@ -135,6 +138,8 @@ class ProductionNode {
                     this.inputs[productId].maxed = true
                 }
 
+                this.updated = Date.now()
+
                 // Return How Much We Are Importing
                 return amountToImport
 
@@ -147,7 +152,7 @@ class ProductionNode {
 
     }
 
-    addExport(productId: string, targetRecipeId: RecipeId, exportedQuantity: number) {
+    addExport(productId: string, targetRecipeId: string, exportedQuantity: number) {
 
         this.outputs[productId].exports.push({
             target: targetRecipeId,

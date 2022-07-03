@@ -15,10 +15,12 @@ export const RecipeSelectDrawer = () => {
 
     const selectRecipe = useActions().recipes.selectRecipe
     const selectRecipesItem = useActions().recipes.selectRecipesItem
+    const resetNodes = useActions().recipes.resetNodes
 
     const [opened, setOpened] = React.useState(false)
 
-    const handleSelectMachine = (id: RecipeId) => {
+    const handleSelectRecipe = (id: RecipeId) => {
+        resetNodes()
         selectRecipe(id)
         selectRecipesItem(id)
         setOpened(false)
@@ -36,7 +38,7 @@ export const RecipeSelectDrawer = () => {
                 <DrawerBodyScrollArea>
                     <Box p="md">
                         <Stack spacing="xs">
-                            {filteredItems.map((i, k) => <RecipeListCard key={k} item={i} active={currentItem?.id === i.id} onSelect={() => handleSelectMachine(i.id)} />)}
+                            {filteredItems.map((i, k) => <RecipeListCard key={k} item={i} active={currentItem?.id === i.id} available={true} onSelect={() => handleSelectRecipe(i.id)} />)}
                         </Stack>
                     </Box>
                 </DrawerBodyScrollArea>

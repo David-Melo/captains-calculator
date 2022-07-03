@@ -1,6 +1,6 @@
 {
   "name": "captains-calculator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@mantine/core": "^4.2.9",

@@ -2,8 +2,6 @@ import React from "react";
 import { Box, Drawer, Text, Stack } from "@mantine/core";
 import { useAppState, useActions, useReaction } from 'state';
 import { DrawerBody, DrawerBodyScrollArea } from "components/ui/DrawerBody";
-import { ProductId } from "state/app/effects";
-import { NodeRecipeLink } from "./NodeRecipeSelect";
 
 export const NodeDrawer = () => {
 
@@ -39,7 +37,7 @@ export const NodeDrawer = () => {
                     <Box p="xl">
                         <Stack spacing="xs">
                             <Text weight="bold" mb="xs">1. Desired Product</Text>
-                            {Object.keys(node.inputs).map((productId, key) => {
+                            {/* {Object.keys(node.inputs).map((productId, key) => {
                                 try {
                                     let sources = node.sources[productId as ProductId]
                                     let product = node.inputs[productId]
@@ -50,7 +48,7 @@ export const NodeDrawer = () => {
                                             recipes={sources}
                                             label={product.name}
                                             currentNodeId={node.id}
-                                            productId={product.id}
+                                            product={product}
                                             onSelect={()=>null}
                                         />
                                     )
@@ -58,7 +56,7 @@ export const NodeDrawer = () => {
                                     console.error(e.message)
                                     return productId
                                 }
-                            })}
+                            })} */}
                             <Text size="xs">{node.id}</Text>
                         </Stack>
                     </Box>

@@ -33,15 +33,11 @@ export const EditorLayout = () => {
                     width: '100%',
                     height: '100%',
                     backgroundImage: 'url("https://www.transparenttextures.com/patterns/squared-metal.png")'
-                },
-                // '& > div': {
-                //     position: 'relative'
-                // }
+                }
             })}>
                 <EditorWrapper />
             </Box>
             <Box
-                p="md"
                 sx={theme => ({ backgroundColor: theme.colors.gray[1] })}
             >
                 <ResultsSummary />

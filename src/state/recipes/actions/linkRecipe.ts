@@ -3,7 +3,7 @@ import { ProductId, RecipeId } from '../../app/effects/loadJsonData';
 import ProductionNode from "../ProductionNode";
 
 type LinkRecipeParams = {
-    currentNodeId: RecipeId;
+    currentNodeId: string;
     newNodeId: RecipeId;
     productId: ProductId;
     direction: 'input' | 'output';
@@ -42,8 +42,9 @@ export const linkRecipe: AsyncAction<LinkRecipeParams> = async ({ state, actions
     if (direction==='input') {
 
         let newNodeExportedProduct = newNode.outputs[productId]
+        let newNodeExportedQuantity = machine.isMine || machine.isStorage ? currentNode.inputs[productId].quantity : newNodeExportedProduct.quantity
 
-        let currentNodeImports = currentNode.addImport(productId, newNodeId, newNodeExportedProduct.quantity)
+        let currentNodeImports = currentNode.addImport(productId, newNode.id, newNodeExportedQuantity)
 
         if (currentNodeImports) {
             newNode.addExport(productId, currentNodeId, currentNodeImports)
@@ -54,11 +55,12 @@ export const linkRecipe: AsyncAction<LinkRecipeParams> = async ({ state, actions
     if (direction==='output') {
 
         let currentNodeExportedProduct = currentNode.outputs[productId]
+        let currentNodeExportedQuantity = currentNode.machine.isMine || currentNode.machine.isStorage ? newNode.inputs[productId].quantity : currentNodeExportedProduct.quantity
 
-        let newNodeImports = newNode.addImport(productId, currentNodeId, currentNodeExportedProduct.quantity)
+        let newNodeImports = newNode.addImport(productId, currentNodeId, currentNodeExportedQuantity)
 
         if (newNodeImports) {
-            currentNode.addExport(productId, newNodeId, newNodeImports)
+            currentNode.addExport(productId, newNode.id, newNodeImports)
         }
 
     }

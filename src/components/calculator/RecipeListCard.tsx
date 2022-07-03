@@ -8,17 +8,20 @@ import { Icon } from '@iconify/react';
 type RecipeListCardProps = {
     item: Recipe;
     active: boolean;
+    available: boolean;
     onSelect(id: RecipeId): void;
 }
 
-const RecipeListCard: React.FC<RecipeListCardProps> = ({ item, active, onSelect }) => {
+const RecipeListCard: React.FC<RecipeListCardProps> = ({ item, active, available, onSelect }) => {
 
     const allProducts = useAppState(state => state.products.items)
     const allMachines = useAppState(state => state.machines.items)
 
     const onItemClick = React.useCallback((id: RecipeId) => {
-        onSelect(id)
-    }, [onSelect]);
+        if (available) {            
+            onSelect(id)
+        }
+    }, [onSelect,available]);
 
     if (!item) return null
 
@@ -42,10 +45,11 @@ const RecipeListCard: React.FC<RecipeListCardProps> = ({ item, active, onSelect 
             onClick={() => onItemClick(item.id)}
             shadow="xs"
             sx={(theme) => ({
-                cursor: 'pointer',
+                cursor: available ? 'pointer': 'initial' ,
                 backgroundColor: active ? theme.colors.gray[2] : '',
+                opacity: available ? 1 : 0.4,
                 '&:hover': {
-                    backgroundColor: theme.colorScheme === 'light' ? theme.colors.gray[3] : theme.colors.dark[9],
+                    backgroundColor: available ? theme.colorScheme === 'light' ? theme.colors.gray[3] : theme.colors.dark[9] : ''
                 },
             })}
         >
@@ -142,7 +146,7 @@ const RecipeListCard: React.FC<RecipeListCardProps> = ({ item, active, onSelect 
                                             color="red"
                                             withinPortal
                                         >
-                                            <Indicator label={product.quantity} color="red" radius="xs" styles={{ indicator: { fontSize: 11, height: 'auto', paddingRight: 5, paddingLeft: 5 } }} size={8}>
+                                            <Indicator label={product.quantity<1?'∞':product.quantity} color="red" radius="xs" styles={{ indicator: { fontSize: 11, height: 'auto', paddingRight: 5, paddingLeft: 5 } }} size={8}>
                                                 <Box
                                                     p={8}
                                                     sx={theme => ({

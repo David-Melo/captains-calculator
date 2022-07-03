@@ -17,6 +17,7 @@ export const ProductSelectDrawer = () => {
     const selectMachine = useActions().machines.selectMachine
     const selectRecipe = useActions().recipes.selectRecipe
     const delectRecipesItem = useActions().recipes.delectRecipesItem
+    const resetNodes = useActions().recipes.resetNodes
 
     const [opened, setOpened] = React.useState(false)
     const [filter,setFilter] = React.useState('')
@@ -30,6 +31,7 @@ export const ProductSelectDrawer = () => {
         selectMachine(null)
         selectRecipe(null)
         delectRecipesItem(null)
+        resetNodes()
         selectProduct(id)
         setOpened(false)
     }
@@ -48,7 +50,6 @@ export const ProductSelectDrawer = () => {
                     <Box
                         p="md"
                     >
-                        {filter}
                         <Input
                             value={filter}
                             onChange={handleFilterChange}

@@ -52,7 +52,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                     size="xl"
                     opened={modalOpened}
                     onClose={handleModalClose}
-                    title={`Select ${selectedDirection === 'input' ? 'Input Source' : 'Output Target'} For ${selectedProduct.name}`}
+                    title={<Text weight={600}>{`Select ${selectedDirection === 'input' ? 'Input Source' : 'Output Target'} For ${selectedProduct.name}`}</Text>}
                 >
                     <Box sx={{ height: 500 }}>
                         <Box
@@ -62,19 +62,21 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                 height: '100%'
                             }}
                         >
-                            <ScrollArea
+                            <ScrollArea 
                                 style={{
                                     position: "absolute",
                                     top: 0,
                                     bottom: 0,
                                     left: 0,
-                                    right: 0
+                                    right: 0 
                                 }}
                             >
                                 <Box>
+
                                     <Stack spacing="xs">
 
                                         {Object.keys(selectedDestinations).filter(productId => productId === selectedProduct.id).map((productId, key) => {
+                                            
                                             try {
                                                 let destinationRecipes = selectedDirection === 'input' ? sources[productId as ProductId] : targets[productId as ProductId]
                                                 let product = selectedDirection === 'input' ? inputs[productId] : outputs[productId]
@@ -84,8 +86,8 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                                         direction={selectedDirection}
                                                         recipes={destinationRecipes}
                                                         label={product.name}
-                                                        currentNodeId={recipe.id}
-                                                        productId={product.id}
+                                                        currentNodeId={id}
+                                                        product={product}
                                                         onSelect={handleModalClose}
                                                     />
                                                 )
@@ -194,7 +196,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                                 display: 'flex',
                                                 justifyContent: 'center',
                                                 alignItems: 'center',
-                                                backgroundColor: theme.colors.red[8],
+                                                backgroundColor: theme.colors.green[8],
                                                 borderRadius: theme.radius.sm,
                                                 pointerEvents: 'none'
                                             })}
@@ -226,7 +228,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                             >
                                                 <Image src={`/assets/products/${product.icon}`} alt='test' height={22} width={22} style={{ pointerEvents: 'none' }} />
                                             </Box>
-                                            {product.quantity === product.imported ? (
+                                            { machine.isStorage || product.quantity === product.imported ? (
                                                 <Tooltip
                                                     label="Input Satisfied"
                                                     withArrow
@@ -280,7 +282,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                 <Box key={`recipe-handle-output-${productId}`} sx={{ marginRight: product.maxed ? -14 : -47 }} className='nodrag'>
                                     <Group spacing={5} noWrap>
                                         <Group spacing={5} noWrap>
-                                            {product.quantity === product.exported ? (
+                                            { (machine.isStorage || machine.isMine) || product.quantity === product.exported ? (
                                                 <Tooltip
                                                     label="Output Satisfied"
                                                     withArrow
@@ -341,7 +343,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                             border: `1px dashed ${theme.colors.gray[4]}`,
                                         })}
                                         >
-                                            <Text align="center" size="sm" sx={{ lineHeight: 24 }}>{product.quantity}</Text>
+                                            <Text align="center" size="sm" sx={{ lineHeight: 24, fontFamily: product.quantity<1 ? 'Verdana' : '' }}>{product.quantity<1?'∞':product.quantity}</Text>
                                         </Box>
                                         <Handle
                                             key={`${id}-${product.id}-output`}
@@ -356,7 +358,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                                 display: 'flex',
                                                 justifyContent: 'center',
                                                 alignItems: 'center',
-                                                backgroundColor: theme.colors.green[8],
+                                                backgroundColor: theme.colors.red[8],
                                                 borderRadius: theme.radius.sm,
                                                 pointerEvents: 'none'
                                             })}
