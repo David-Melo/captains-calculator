@@ -21,9 +21,9 @@ export const SetupBar = () => {
                 {currentProduct && <BuildingSelectDrawer />}
                 {currentMachine && <RecipeSelectDrawer />}
             </Stack>
-            {currentRecipe && (
-                <Divider label="Assitional Settings" my="md" mt="xl" />
-            )}
+            {/* {currentRecipe && (
+                <Divider label="Additional Settings" my="md" mt="xl" />
+            )} */}
             <NodeDrawer />
         </Box>
     )
