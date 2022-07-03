@@ -11,7 +11,7 @@ type NeedsBageProps = {
 export const needMap = {
     electricity: {
         label: 'Electricity',
-        icon: 'electricity.png',
+        icon: 'Electricity.png',
         color: '#be7405'
     },
     workers: {
