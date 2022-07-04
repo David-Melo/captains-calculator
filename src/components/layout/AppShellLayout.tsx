@@ -1,4 +1,4 @@
-import { AppShell, Box, Burger, Button, Divider, Group, Header, MediaQuery, Navbar, ThemeIcon, useMantineTheme, Text, Notification, useMantineColorScheme } from "@mantine/core"
+import { AppShell, Box, Burger, Button, Divider, Group, Header, MediaQuery, Navbar, ThemeIcon, useMantineTheme, Text, Notification, useMantineColorScheme, List } from "@mantine/core"
 import React from "react"
 import { Link, NavLink, useRoutes } from "react-router-dom"
 import { Icon } from '@iconify/react';
@@ -6,6 +6,7 @@ import NavContext from "components/navigation/NavContext";
 import { RenderNavigator } from "components/navigation/Layout";
 import { useAppState } from "state";
 import Icons from "components/ui/Icons";
+import { showNotification } from "@mantine/notifications";
 
 type SideBarNavButtonProps = {
     to: string;
@@ -152,12 +153,49 @@ const TopBarNavLink: React.FC<SideBarNavButtonProps> = ({ to, label }) => {
     )
 }
 
+const showReleaseNotes = () => showNotification({
+    id: Date.now().toString(),
+    title: 'Release Notes',
+    autoClose: 10000,
+    disallowClose: true,
+    message:
+        <Box> 
+            <Box>
+                <Text weight={600}>v0.0.3</Text>
+                <List size="sm">
+                    <List.Item>
+                        Adds Ability To Delete Nodes
+                        <List withPadding listStyleType="disc" size="xs">
+                            <List.Item>Feature is experimental, please report any bugs or crashes</List.Item>
+                        </List>
+                    </List.Item> 
+                </List>
+            </Box>
+            <Box>
+                <Text weight={600}>v0.0.2</Text>
+                <List size="sm">
+                    <List.Item>Adds Storages as Import Sources</List.Item>
+                    <List.Item>
+                        Dark Mode Option Added
+                        <List withPadding listStyleType="disc" size="xs">
+                            <List.Item>Might conflict with browser dark mode settings</List.Item>
+                            <List.Item>Please report if this happens to you</List.Item>
+                        </List>
+                    </List.Item>
+                </List>
+            </Box>
+        </Box>
+})
+
 const AppShellLayout: React.FC = () => {
     const appVersion = useAppState(state => state.version)
     const { routes, menu } = React.useContext(NavContext);
     const navigator = useRoutes(routes);
     const [opened, setOpened] = React.useState(false);
     const theme = useMantineTheme();
+    React.useEffect(() => {
+        showReleaseNotes()
+    }, [])
     return (
         <React.Fragment>
             <AppShell
