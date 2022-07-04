@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Image, Group, Divider, Stack, Tooltip, Text, ScrollArea, Modal } from '@mantine/core';
+import { Box, Grid, Image, Group, Divider, Stack, Tooltip, Text, ScrollArea, Modal, Button } from '@mantine/core';
 import { Handle, Position, NodeProps } from 'react-flow-renderer';
 import { Icon } from '@iconify/react';
 
@@ -13,6 +13,8 @@ import NeedsBage from 'components/ui/NeedsBadge';
 import Icons from 'components/ui/Icons';
 import { NodeRecipeLink } from 'components/calculator/NodeRecipeSelect';
 import { RecipeNodeData } from './Editor';
+import { useModals } from '@mantine/modals';
+import { useActions } from 'state';
 
 const handleStyle: React.CSSProperties = { border: 'none', width: 'auto', height: 'auto', position: 'relative', top: 'initial', left: 'initial', right: 'initial', bottom: 'initial', borderRadius: 0, transform: 'initial', backgroundColor: 'transparent' }
 
@@ -22,6 +24,8 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
     const [selectedDirection, setSelectedDirection] = React.useState<'input' | 'output'>('input');
     const [selectedProduct, setSelectedProduct] = React.useState<RecipeIOImportProduct | RecipeIOExportProduct | null>(null);
     const [selectedDestinations, setSelectedDestinations] = React.useState<RecipeIODictInput | RecipeIODictOutput | {}>({});
+    const deleteNode = useActions().recipes.deleteNode    
+    const modals = useModals();
 
     const handleLinkCreate = (direction: 'input' | 'output', product: RecipeIOImportProduct | RecipeIOExportProduct) => {
         setSelectedDirection(direction)
@@ -34,6 +38,23 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
         setModalOpened(false)
         setSelectedProduct(null)
         setSelectedDestinations({})
+    }
+
+    const handleNodeDelete = (nodeId: string) => {
+        console.log(nodeId)
+        const openConfirmModal = () => modals.openConfirmModal({
+            title: 'Confirm Delete',
+            centered: true,
+            children: (
+                <Text size="sm">
+                    Are you sure you want to delete this item: <strong>{machine.name}</strong>?
+                </Text>
+            ),
+            confirmProps: { color: 'red' },
+            labels: { confirm: 'Delete Node', cancel: 'Cancel' },
+            onConfirm: () => deleteNode(nodeId),
+        });
+        openConfirmModal()
     }
 
     return (
@@ -62,13 +83,13 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                 height: '100%'
                             }}
                         >
-                            <ScrollArea 
+                            <ScrollArea
                                 style={{
                                     position: "absolute",
                                     top: 0,
                                     bottom: 0,
                                     left: 0,
-                                    right: 0 
+                                    right: 0
                                 }}
                             >
                                 <Box>
@@ -76,7 +97,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                     <Stack spacing="xs">
 
                                         {Object.keys(selectedDestinations).filter(productId => productId === selectedProduct.id).map((productId, key) => {
-                                            
+
                                             try {
                                                 let destinationRecipes = selectedDirection === 'input' ? sources[productId as ProductId] : targets[productId as ProductId]
                                                 let product = selectedDirection === 'input' ? inputs[productId] : outputs[productId]
@@ -125,7 +146,32 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                             />
                         </Box>
                     </Tooltip>
-                    <Text weight="bolder" size="lg" sx={{ lineHeight: '1em' }}>{machine.name}</Text>
+
+                    <Group spacing={5}>
+                        <Text weight="bolder" size="lg" sx={{ lineHeight: '1em' }}>{machine.name}</Text>
+                        <Button
+                            variant="subtle"
+                            color="red"
+                            sx={{
+                                padding: 6,
+                                height: 'auto'
+                            }}
+                            onClick={() => handleNodeDelete(id)}
+                        >
+                            <Box
+                                component='span'
+                                sx={theme => ({
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    pointerEvents: 'none',
+                                    color: theme.colors.red[9],
+                                })}
+                            >
+                                <Icon icon={Icons.delete} width={16} style={{pointerEvents: 'none'}}/>
+                            </Box>
+                        </Button>
+                    </Group>
                     <Tooltip
                         label={category.name}
                         withArrow
@@ -228,7 +274,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                             >
                                                 <Image src={`/assets/products/${product.icon}`} alt='test' height={20} width={20} style={{ pointerEvents: 'none' }} />
                                             </Box>
-                                            { machine.isStorage || product.quantity === product.imported ? (
+                                            {machine.isStorage || product.quantity === product.imported ? (
                                                 <Tooltip
                                                     label="Input Satisfied"
                                                     withArrow
@@ -280,7 +326,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                 <Box key={`recipe-handle-output-${productId}`} sx={{ marginRight: product.maxed ? -14 : -47 }} className='nodrag'>
                                     <Group spacing={5} noWrap>
                                         <Group spacing={5} noWrap>
-                                            { (machine.isStorage || machine.isMine) || product.quantity === product.exported ? (
+                                            {(machine.isStorage || machine.isMine) || product.quantity === product.exported ? (
                                                 <Tooltip
                                                     label="Output Satisfied"
                                                     withArrow
@@ -339,7 +385,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                             border: `1px dashed ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[4]}`,
                                         })}
                                         >
-                                            <Text align="center" size="sm" sx={{ lineHeight: 24, fontFamily: product.quantity<1 ? 'Verdana' : '' }}>{product.quantity<1?'∞':product.quantity}</Text>
+                                            <Text align="center" size="sm" sx={{ lineHeight: 24, fontFamily: product.quantity < 1 ? 'Verdana' : '' }}>{product.quantity < 1 ? '∞' : product.quantity}</Text>
                                         </Box>
                                         <Handle
                                             key={`${id}-${product.id}-output`}

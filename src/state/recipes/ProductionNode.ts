@@ -110,6 +110,28 @@ class ProductionNode {
         return this.outputs.hasOwnProperty(productId) && !this.outputs[productId].maxed
     }
 
+    async removeExport(productId: string, targetRecipeId: string): Promise<void> {
+        return new Promise(resolve=>{
+            console.log('2',productId,targetRecipeId)
+            let removedExports: RecipeIOExport['exports']  = []
+            let remainingExports: RecipeIOExport['exports']  = []
+            console.log('3',this.id)
+            this.outputs[productId].exports.forEach(e=>{
+                console.log('5',e.target,targetRecipeId)
+                if (e.target===targetRecipeId) {
+                    removedExports.push(e)
+                    console.log('6',this.outputs[productId].exported, e.quantity)
+                    this.outputs[productId].exported = this.outputs[productId].exported - e.quantity
+                    console.log('7',this.outputs[productId].exported)
+                } else {
+                    remainingExports.push(e)
+                }
+            })
+            this.outputs[productId].exports = remainingExports
+            return resolve()
+        })
+    }
+
     addImport(productId: string, sourceRecipeId: string, importedQuantity: number): number | false {
 
         let amountToImport = 0

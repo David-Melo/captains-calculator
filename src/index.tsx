@@ -124,7 +124,7 @@ const Root = () => {
                             }
                         })}
                     />
-                    <NotificationsProvider position="top-right">
+                    <NotificationsProvider position="bottom-left">
                         <App />
                     </NotificationsProvider>
                 </ModalsProvider>

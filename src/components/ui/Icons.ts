@@ -25,7 +25,8 @@ const Icons = {
     'out': 'ph:sign-out-bold',
     'forward': 'ph:arrow-right-bold',
     'infoCircle': 'ph:info-duotone',
-    'bug': 'ph:bug-bold'
+    'bug': 'ph:bug-bold',
+    'delete': 'ph:trash-duotone'
 }
 
 export type IconNames = keyof typeof Icons
