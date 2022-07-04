@@ -20,7 +20,7 @@ const MachineListCard: React.FC<MachineListCardProps> = ({ item, active, onSelec
             p="xs"
             sx={(theme) => ({
                 cursor: 'pointer',
-                backgroundColor: active ? theme.colors.gray[4] : '',
+                backgroundColor: active ?theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[9] :  '',
                 '&:hover': {
                     backgroundColor: theme.colorScheme === 'light' ? theme.colors.gray[6] : theme.colors.dark[9],
                 },

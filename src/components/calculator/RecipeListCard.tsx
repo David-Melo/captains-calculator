@@ -46,7 +46,7 @@ const RecipeListCard: React.FC<RecipeListCardProps> = ({ item, active, available
             shadow="xs"
             sx={(theme) => ({
                 cursor: available ? 'pointer': 'initial' ,
-                backgroundColor: active ? theme.colors.gray[2] : '',
+                backgroundColor: active ?theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[9] :  '',
                 opacity: available ? 1 : 0.4,
                 '&:hover': {
                     backgroundColor: available ? theme.colorScheme === 'light' ? theme.colors.gray[3] : theme.colors.dark[9] : ''
@@ -67,10 +67,10 @@ const RecipeListCard: React.FC<RecipeListCardProps> = ({ item, active, available
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            backgroundColor: theme.white,
+                            backgroundColor: theme.colorScheme === 'light' ? theme.white : theme.colors.dark[9],
                             borderRadius: theme.radius.sm,
                             pointerEvents: 'none',
-                            border: `1px dashed ${theme.colors.gray[4]}`,
+                            border: `1px dashed ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[9]}`,
                         })}
                     >
                         <Image src={`/assets/buildings/${currentMachine.icon}`} height={62} width={62} />

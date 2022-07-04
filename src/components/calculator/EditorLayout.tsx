@@ -17,13 +17,14 @@ export const EditorLayout = () => {
         >
             <Box
                 p="md"
-                sx={theme => ({ backgroundColor: theme.colors.gray[1] })}
+                sx={theme => ({ backgroundColor: theme.colorScheme === 'light' ? theme.colors.gray[1] : theme.colors.dark[7]  })}
             >
                 <SetupBar />
             </Box>
             <Box sx={theme => ({
-                borderRight: `1px solid ${theme.colors.gray[4]}`,
-                borderLeft: `1px solid ${theme.colors.gray[4]}`,
+                borderRight: `1px solid ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[8]}`,
+                borderLeft: `1px solid ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[8]}`,
+                backgroundColor: theme.colorScheme === 'light' ? theme.colors.white : theme.colors.dark[7],
                 position: 'relative',
                 '&:before': {
                     content: '""',
@@ -32,13 +33,13 @@ export const EditorLayout = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundImage: 'url("https://www.transparenttextures.com/patterns/squared-metal.png")'
+                    backgroundImage: `url("/img/${theme.colorScheme==='light'?'squared-metal.png':'squared-metal-inverted.png'}")`
                 }
             })}>
                 <EditorWrapper />
             </Box>
             <Box
-                sx={theme => ({ backgroundColor: theme.colors.gray[1] })}
+                sx={theme => ({ backgroundColor: theme.colorScheme === 'light' ? theme.colors.gray[1] : theme.colors.dark[7]  })}
             >
                 <ResultsSummary />
             </Box>

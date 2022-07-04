@@ -1,10 +1,11 @@
-import { AppShell, Box, Burger, Button, Divider, Group, Header, MediaQuery, Navbar, ThemeIcon, useMantineTheme, Text, Anchor } from "@mantine/core"
+import { AppShell, Box, Burger, Button, Divider, Group, Header, MediaQuery, Navbar, ThemeIcon, useMantineTheme, Text, Anchor, useMantineColorScheme } from "@mantine/core"
 import React from "react"
 import { Link, NavLink, useRoutes } from "react-router-dom"
 import { Icon } from '@iconify/react';
 import NavContext from "components/navigation/NavContext";
 import { RenderNavigator } from "components/navigation/Layout";
 import { useAppState } from "state";
+import Icons from "components/ui/Icons";
 
 type SideBarNavButtonProps = {
     to: string;
@@ -65,7 +66,7 @@ const TopBarNavButton: React.FC<SideBarNavButtonProps> = ({ to, label, icon, onC
             })}
             sx={{
                 '&.active': {
-                    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[3],
+                    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[3],
                     '.mantine-Button-label': {
                         color: theme.colorScheme === 'dark' ? theme.white : theme.colors.dark[9],
                     }
@@ -76,6 +77,41 @@ const TopBarNavButton: React.FC<SideBarNavButtonProps> = ({ to, label, icon, onC
             }}
         >
             {label}
+        </Button>
+    )
+}
+
+const ColorSchemeToggle = () => {
+    const theme = useMantineTheme();
+    const { toggleColorScheme } = useMantineColorScheme();
+    return (
+        <Button
+            variant="default" 
+            color="gray"
+            onClick={()=>toggleColorScheme()}
+            styles={theme => ({
+                inner: {
+                    justifyContent: 'flex-start',
+
+                },
+                label: {
+                    color: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[6],
+
+                }
+            })}
+            sx={{
+                '&.active': {
+                    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[3],
+                    '.mantine-Button-label': {
+                        color: theme.colorScheme === 'dark' ? theme.white : theme.colors.dark[9],
+                    }
+                },
+                '&:hover .mantine-Button-label': {
+                    color: theme.colorScheme === 'dark' ? theme.white : theme.colors.dark[9],
+                }
+            }}
+        >
+            <Icon icon={theme.colorScheme === 'light' ? Icons.dark : Icons.light} color={theme.colorScheme === 'dark' ? theme.white : theme.black}/>
         </Button>
     )
 }
@@ -95,13 +131,13 @@ const TopBarNavLink: React.FC<SideBarNavButtonProps> = ({ to, label }) => {
 
                 },
                 label: {
-                    color: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[6],
+                    color: theme.colorScheme === 'dark' ? theme.colors.dark[2] : theme.colors.gray[6],
 
                 }
             })}
             sx={{
                 '&.active': {
-                    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[9] : theme.colors.gray[3],
+                    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[3],
                     '.mantine-Button-label': {
                         color: theme.colorScheme === 'dark' ? theme.white : theme.colors.dark[9],
                     }
@@ -179,7 +215,7 @@ const AppShellLayout: React.FC = () => {
                             borderImageSlice: 2,
                             borderBottomWidth: 5,
                             borderImageSource: 'linear-gradient(45deg, #FCA23A, #FCA23A)',
-                            backgroundColor: theme.colorScheme === 'light' ? theme.colors.dark[8] : theme.white,
+                            backgroundColor: theme.colors.dark[8],
 
                         })}
                     >
@@ -223,6 +259,7 @@ const AppShellLayout: React.FC = () => {
                                             return <TopBarNavButton key={`nav-item-${k}`} to={i.to} label={i.label} icon={i.icon} onClick={() => setOpened((o) => !o)} />
                                         })}
                                         <TopBarNavLink to="https://github.com/David-Melo/captains-calculator/issues" label="Bugs & Issues" icon="bug" />
+                                        <ColorSchemeToggle/>
                                     </Group>
                                 </MediaQuery>
 

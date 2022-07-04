@@ -67,13 +67,13 @@ const Root = () => {
                 }}
                 styles={{
                     Modal: theme=>({
-                        modal: {
-                            backgroundColor: theme.colors.gray[2]
+                        modal: { 
+                            backgroundColor: theme.colorScheme === 'light' ? theme.colors.gray[2] : theme.colors.dark[7]
                         }
                     }),
                     Drawer: theme=>({
                         drawer: {
-                            backgroundColor: theme.colors.gray[2],
+                            backgroundColor: theme.colorScheme === 'light' ? theme.colors.gray[2] : theme.colors.dark[7],
                             height: '100%',
                             minHeight: '100%',
                             maxHeight: '100%'
@@ -105,6 +105,23 @@ const Root = () => {
                                 color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.black,
                                 lineHeight: theme.lineHeight
                             },
+                            ' .react-flow__minimap-mask': {
+                                fill: theme.colorScheme === 'dark' ? 'rgba(26, 27, 30, 0.7)' : 'rgba(240, 242, 243, 0.7)'
+                            },
+                            ' .react-flow__minimap': {
+                                backgroundColor: theme.colorScheme === 'dark' ? '#141517' : '#FFFFFF'
+                            },
+                            ' .react-flow__controls-button': {
+                                background: theme.colorScheme === 'dark' ? '#25262b' : '#fefefe',
+                                borderBottom: theme.colorScheme === 'dark' ? '1px solid #141517' : '#eee',
+                            },
+                            ' .react-flow__controls-button svg': {
+                                fill: theme.colorScheme === 'dark' ? '#c1bab5' : '#000000'
+                            },
+                            ' .react-flow__minimap-node': {
+                                fill: theme.colorScheme === 'dark' ? 'rgba(26, 27, 30, 0.7)' : 'rgba(240, 242, 243, 0.7)',
+                                stroke: theme.colorScheme === 'dark' ? 'rgb(85, 85, 85)' : 'rgb(85, 85, 85)'
+                            }
                         })}
                     />
                     <NotificationsProvider position="top-right">

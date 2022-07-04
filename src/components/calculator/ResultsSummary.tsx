@@ -161,7 +161,7 @@ export const ResultsSummary = () => {
                                             p={4}
                                             sx={theme => ({
                                                 borderRadius: theme.radius.sm,
-                                                border: `1px solid ${theme.colors.gray[4]}`,
+                                                border: `1px solid ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[9]}`,
                                                 background: theme.colors.dark[5]
                                             })}
                                         >
@@ -213,7 +213,7 @@ export const ResultsSummary = () => {
                                             p={6}
                                             sx={theme => ({
                                                 borderRadius: theme.radius.sm,
-                                                border: `1px solid ${theme.colors.gray[4]}`,
+                                                border: `1px solid ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[9]}`,
                                                 background: theme.colors.dark[5]
                                             })}
                                         >
@@ -268,7 +268,7 @@ export const ResultsSummary = () => {
                                                 height: 24,
                                                 width: 24,
                                                 borderRadius: theme.radius.sm,
-                                                border: `1px solid ${theme.colors.gray[4]}`,
+                                                border: `1px solid ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[9]}`,
                                                 background: need.color,
                                                 display: 'flex',
                                                 justifyContent: 'center',
@@ -325,7 +325,7 @@ export const ResultsSummary = () => {
                                             p={6}
                                             sx={theme => ({
                                                 borderRadius: theme.radius.sm,
-                                                border: `1px solid ${theme.colors.gray[4]}`,
+                                                border: `1px solid ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[9]}`,
                                                 background: theme.colors.dark[5]
                                             })}
                                         >
@@ -377,7 +377,7 @@ export const ResultsSummary = () => {
                                             p={6}
                                             sx={theme => ({
                                                 borderRadius: theme.radius.sm,
-                                                border: `1px solid ${theme.colors.gray[4]}`,
+                                                border: `1px solid ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[9]}`,
                                                 background: theme.colors.dark[5]
                                             })}
                                         >
@@ -420,17 +420,17 @@ export const ResultsSummary = () => {
 
                     <Stack spacing="xs">
 
-                        {nodesList.length ? (
+                        {nodesList.length ? ( 
                             <React.Fragment>
                                 {renderBuildings()}
                                 {renderCosts()}
                                 {renderNeeds()}
-                                {renderTotalOutputs()}
-                                {renderTotalInputs()}
+                                {!!Object.keys(outputs).length && renderTotalOutputs()}
+                                {!!Object.keys(inputs).length && renderTotalInputs()}
                             </React.Fragment>
                         ) : (
                             <Alert>
-                                Customize your production chan in the right to see a summary below.
+                                Customize your production chain on the left to see a summary below.
                             </Alert>
                         )}
 

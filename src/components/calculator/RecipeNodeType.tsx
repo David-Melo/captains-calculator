@@ -41,7 +41,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
         <Box
             key={`recipe-node-${id}`}
             sx={theme => ({
-                backgroundColor: theme.white,
+                backgroundColor: theme.colorScheme === 'light' ? theme.white : theme.colors.dark[8],
                 borderRadius: theme.radius.sm,
                 boxShadow: theme.shadows.sm,
                 minWidth: 240
@@ -115,7 +115,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                             p={4}
                             sx={theme => ({
                                 borderRadius: theme.radius.sm,
-                                background: theme.colors.dark[3]
+                                background: theme.colorScheme === 'light' ? theme.colors.dark[3] : theme.colors.dark[5]
                             })}
                         >
                             <Image
@@ -135,7 +135,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                             p={4}
                             sx={theme => ({
                                 borderRadius: theme.radius.sm,
-                                background: theme.colors.dark[3]
+                                background: theme.colorScheme === 'light' ? theme.colors.dark[3] : theme.colors.dark[5]
                             })}
                         >
                             <Image src={`/assets/categories/${category.id}.png`} alt={category.name} height={22} />
@@ -144,7 +144,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                 </Group>
             </Box>
 
-            <Divider py="xs" variant="solid" labelPosition="center" label="Inputs & Outputs" color="gray" sx={theme => ({ borderTopColor: theme.colors.gray[4] })} />
+            <Divider py="xs" variant="solid" labelPosition="center" label="Inputs & Outputs" />
             <Grid gutter={40}>
                 <Grid.Col span={6}>
                     <Stack spacing="sm" justify="space-around">
@@ -170,12 +170,12 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                                         display: 'flex',
                                                         justifyContent: 'center',
                                                         alignItems: 'center',
-                                                        backgroundColor: theme.white,
+                                                        backgroundColor: theme.colorScheme === 'light' ? theme.white : theme.colors.dark[9],
                                                         borderRadius: theme.radius.sm,
                                                         boxShadow: theme.shadows.sm,
                                                         cursor: "default",
                                                         '&:hover': {
-                                                            backgroundColor: theme.colors.gray[2],
+                                                            backgroundColor: theme.colorScheme === 'light' ? theme.colors.gray[2] : theme.colors.dark[6],
                                                         }
                                                     })}
                                                 >
@@ -210,10 +210,10 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                             display: 'flex',
                                             justifyContent: 'center',
                                             alignItems: 'center',
-                                            backgroundColor: theme.white,
+                                            backgroundColor: theme.colorScheme === 'light' ? theme.white : theme.colors.dark[7],
                                             borderRadius: theme.radius.sm,
                                             pointerEvents: 'none',
-                                            border: `1px dashed ${theme.colors.gray[4]}`,
+                                            border: `1px dashed ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[4]}`,
                                         })}
                                         >
                                             <Text align="center" size="sm" sx={{ lineHeight: 24 }}>{product.quantity}</Text>
@@ -221,12 +221,12 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                         <Group spacing={5} noWrap>
                                             <Box
                                                 sx={theme => ({
-                                                    border: `1px dashed ${theme.colors.gray[4]}`,
+                                                    border: `1px dashed ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[4]}`,
                                                     borderRadius: theme.radius.sm,
                                                     padding: 3
                                                 })}
                                             >
-                                                <Image src={`/assets/products/${product.icon}`} alt='test' height={22} width={22} style={{ pointerEvents: 'none' }} />
+                                                <Image src={`/assets/products/${product.icon}`} alt='test' height={20} width={20} style={{ pointerEvents: 'none' }} />
                                             </Box>
                                             { machine.isStorage || product.quantity === product.imported ? (
                                                 <Tooltip
@@ -239,7 +239,6 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                                         display: 'flex',
                                                         justifyContent: 'center',
                                                         alignItems: 'center',
-                                                        backgroundColor: theme.white,
                                                         pointerEvents: 'none',
                                                         color: theme.colors.green[9],
                                                     })}
@@ -258,7 +257,6 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                                         display: 'flex',
                                                         justifyContent: 'center',
                                                         alignItems: 'center',
-                                                        backgroundColor: theme.white,
                                                         pointerEvents: 'none',
                                                         color: theme.colors.red[9],
                                                     })}
@@ -293,7 +291,6 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                                         display: 'flex',
                                                         justifyContent: 'center',
                                                         alignItems: 'center',
-                                                        backgroundColor: theme.white,
                                                         pointerEvents: 'none',
                                                         color: theme.colors.green[9],
                                                     })}
@@ -312,7 +309,6 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                                         display: 'flex',
                                                         justifyContent: 'center',
                                                         alignItems: 'center',
-                                                        backgroundColor: theme.white,
                                                         pointerEvents: 'none',
                                                         color: theme.colors.red[9],
                                                     })}
@@ -323,12 +319,12 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                             )}
                                             <Box
                                                 sx={theme => ({
-                                                    border: `1px dashed ${theme.colors.gray[4]}`,
+                                                    border: `1px dashed ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[4]}`,
                                                     borderRadius: theme.radius.sm,
                                                     padding: 3
                                                 })}
                                             >
-                                                <Image src={`/assets/products/${product.icon}`} alt='test' height={22} width={22} style={{ pointerEvents: 'none' }} />
+                                                <Image src={`/assets/products/${product.icon}`} alt='test' height={20} width={20} style={{ pointerEvents: 'none' }} />
                                             </Box>
                                         </Group>
                                         <Box sx={theme => ({
@@ -337,10 +333,10 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                             display: 'flex',
                                             justifyContent: 'center',
                                             alignItems: 'center',
-                                            backgroundColor: theme.white,
+                                            backgroundColor: theme.colorScheme === 'light' ? theme.white : theme.colors.dark[7],
                                             borderRadius: theme.radius.sm,
                                             pointerEvents: 'none',
-                                            border: `1px dashed ${theme.colors.gray[4]}`,
+                                            border: `1px dashed ${theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.dark[4]}`,
                                         })}
                                         >
                                             <Text align="center" size="sm" sx={{ lineHeight: 24, fontFamily: product.quantity<1 ? 'Verdana' : '' }}>{product.quantity<1?'∞':product.quantity}</Text>
@@ -382,12 +378,12 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                                                         display: 'flex',
                                                         justifyContent: 'center',
                                                         alignItems: 'center',
-                                                        backgroundColor: theme.white,
+                                                        backgroundColor: theme.colorScheme === 'light' ? theme.white : theme.colors.dark[9],
                                                         borderRadius: theme.radius.sm,
                                                         boxShadow: theme.shadows.sm,
                                                         cursor: "default",
                                                         '&:hover': {
-                                                            backgroundColor: theme.colors.gray[2],
+                                                            backgroundColor: theme.colorScheme === 'light' ? theme.colors.gray[2] : theme.colors.dark[6],
                                                         }
                                                     })}
                                                 >
@@ -403,7 +399,7 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
                 </Grid.Col>
             </Grid>
 
-            <Divider py="xs" variant="solid" labelPosition="center" label="Costs & Needs" color="gray" sx={theme => ({ borderTopColor: theme.colors.gray[4] })} />
+            <Divider py="xs" variant="solid" labelPosition="center" label="Costs & Needs" />
             <Box pb="md" px="md">
 
                 <Group spacing={4} position="center" noWrap={false}>
