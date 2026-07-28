@@ -15,7 +15,7 @@ Live at: https://captains-calculator.com
 | Graph / Flow       | react-flow-renderer 10.x, Dagre (auto-layout), elkjs         |
 | UI Library         | Mantine v4 (core, hooks, modals, notifications, dates)       |
 | Styling            | SASS + Mantine CSS-in-JS (Emotion), custom Euclid Circular B font |
-| Forms              | Formik + Yup / Zod                                           |
+| Forms              | Formik + Yup                                                 |
 | Animations         | Framer Motion 3.x                                            |
 | Routing            | React Router v6                                              |
 | Icons              | @iconify/react                                               |
