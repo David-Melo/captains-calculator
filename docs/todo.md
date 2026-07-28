@@ -6,11 +6,11 @@
 
 ## Phase 1 — Dead Weight Removal (Quick Wins)
 
-- [ ] **Remove `zod`** — installed but never imported anywhere. Yup handles all validation (`src/utils/forms.ts`).
-- [ ] **Remove `xstate` + `@xstate/react`** — installed but never imported. Overmind is the sole state manager.
-- [ ] **Remove `"install": "^0.13.0"`** from devDependencies — not a real package, likely an accidental `npm install` artifact.
-- [ ] **Remove `react-error-overlay` pin** — both the devDependency and the `resolutions` entry exist only as a CRA workaround. Goes away with the Vite migration.
-- [ ] **Strip debug `console.log` calls** left in production code:
+- [x] **Remove `zod`** — installed but never imported anywhere. Yup handles all validation (`src/utils/forms.ts`).
+- [x] **Remove `xstate` + `@xstate/react`** — installed but never imported. Overmind is the sole state manager.
+- [x] **Remove `"install": "^0.13.0"`** from devDependencies — not a real package, likely an accidental `npm install` artifact.
+- [x] **Remove `react-error-overlay` pin** — both the devDependency and the `resolutions` entry exist only as a CRA workaround. Goes away with the Vite migration.
+- [x] **Strip debug `console.log` calls** left in production code:
   - `src/components/calculator/Editor.tsx` — `console.log('onConnect')`
   - `src/components/calculator/RecipeNodeType.tsx` — `console.log(nodeId)`
 - [ ] **Resolve `@TODO` in `src/state/recipes/actions/linkRecipe.ts`** (line 32) — incomplete "Create New Node" logic.
@@ -21,25 +21,25 @@
 
 ### CRA to Vite Migration
 
-- [ ] Replace `react-scripts` with `vite` + `@vitejs/plugin-react`
-- [ ] Convert `tsconfig.json` to Vite-compatible config (keep `baseUrl: "./src"` via `vite-tsconfig-paths`)
-- [ ] Move `public/index.html` to root `index.html` (Vite convention)
-- [ ] Replace `react-scripts start/build/test` scripts with `vite` / `vite build` / `vitest`
-- [ ] Remove CRA-specific env var prefix (`REACT_APP_` -> `VITE_`)
-- [ ] Extract hardcoded Google Analytics ID (`public/index.html`) into an env variable
+- [x] Replace `react-scripts` with `vite` + `@vitejs/plugin-react`
+- [x] Convert `tsconfig.json` to Vite-compatible config (keep `baseUrl: "./src"` via `vite-tsconfig-paths`)
+- [x] Move `public/index.html` to root `index.html` (Vite convention)
+- [x] Replace `react-scripts start/build/test` scripts with `vite` / `vite build` / `vitest`
+- [x] Remove CRA-specific env var prefix (`REACT_APP_` -> `VITE_`)
+- [x] Extract hardcoded Google Analytics ID (`public/index.html`) into an env variable
 
-### React 17 -> 18+
+### React 17 -> 19+
 
-- [ ] Upgrade `react` and `react-dom` to 18+
+- [ ] Upgrade `react` and `react-dom` to 19
 - [ ] Replace `ReactDOM.render()` with `createRoot()` in `src/index.tsx`
-- [ ] Verify Overmind + Mantine compatibility with React 18 concurrent mode
-- [ ] Update `@types/react` and `@types/react-dom` to 18+
+- [ ] Verify Overmind + Mantine compatibility with React 19 concurrent mode
+- [ ] Update `@types/react` and `@types/react-dom` to 19
 
-### TypeScript 4.4 -> 5.x
+### TypeScript 4.9 -> 7.x
 
-- [ ] Upgrade `typescript` to latest 5.x
+- [ ] Upgrade `typescript` to latest 7.x
 - [ ] Update `tsconfig.json` target from `es2015` to `es2020` or `esnext` (smaller output, modern features)
-- [ ] Audit and fix any new strict-mode errors introduced by TS 5
+- [ ] Audit and fix any new strict-mode errors introduced by TS 7
 
 ---
 
@@ -47,7 +47,7 @@
 
 The project has testing libraries installed (`@testing-library/react`, `jest-dom`, `user-event`) but **zero test files exist** in `src/`.
 
-- [ ] Set up Vitest (replaces Jest after Vite migration)
+- [x] Set up Vitest (replaces Jest after Vite migration)
 - [ ] Add unit tests for `ProductionNode` class (`src/state/recipes/ProductionNode.ts`) — it's the core domain logic
 - [ ] Add unit tests for key Overmind actions: `selectRecipe`, `linkRecipe`, `calculateGraph`, `deleteNode`
 - [ ] Add integration tests for the Editor flow (select product -> machine -> recipe -> link nodes)
