@@ -6,7 +6,7 @@
 
 ## Phase 1 — Dead Weight Removal (Quick Wins)
 
-- [ ] **Remove `zod`** — installed but never imported anywhere. Yup handles all validation (`src/utils/forms.ts`).
+- [x] **Remove `zod`** — installed but never imported anywhere. Yup handles all validation (`src/utils/forms.ts`).
 - [ ] **Remove `xstate` + `@xstate/react`** — installed but never imported. Overmind is the sole state manager.
 - [ ] **Remove `"install": "^0.13.0"`** from devDependencies — not a real package, likely an accidental `npm install` artifact.
 - [ ] **Remove `react-error-overlay` pin** — both the devDependency and the `resolutions` entry exist only as a CRA workaround. Goes away with the Vite migration.
