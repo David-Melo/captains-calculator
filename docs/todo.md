@@ -22,7 +22,7 @@
 ### CRA to Vite Migration
 
 - [x] Replace `react-scripts` with `vite` + `@vitejs/plugin-react`
-- [x] Convert `tsconfig.json` to Vite-compatible config (keep `baseUrl: "./src"` via `vite-tsconfig-paths`)
+- [x] Convert `tsconfig.json` to Vite-compatible config (keep `baseUrl: "./src"` with native Vite aliases)
 - [x] Move `public/index.html` to root `index.html` (Vite convention)
 - [x] Replace `react-scripts start/build/test` scripts with `vite` / `vite build` / `vitest`
 - [x] Remove CRA-specific env var prefix (`REACT_APP_` -> `VITE_`)
@@ -35,17 +35,20 @@
 - [ ] Verify Overmind + Mantine compatibility with React 19 concurrent mode
 - [ ] Update `@types/react` and `@types/react-dom` to 19
 
-### TypeScript 4.9 -> 7.x
+### TypeScript 5.9 -> 7.x
 
+- [x] Upgrade from TypeScript 4.9 to 5.9 and enforce app/config type checks in the build
 - [ ] Upgrade `typescript` to latest 7.x
-- [ ] Update `tsconfig.json` target from `es2015` to `es2020` or `esnext` (smaller output, modern features)
+- [x] Update `tsconfig.json` target from `es2015` to `es2020` (modern features)
 - [ ] Audit and fix any new strict-mode errors introduced by TS 7
 
 ---
 
-## Phase 3 — Test Coverage (Currently Zero)
+## Phase 3 — Test Coverage
 
-The project has testing libraries installed (`@testing-library/react`, `jest-dom`, `user-event`) but **zero test files exist** in `src/`.
+The regression suite covers bundled-data validation, initialization and retry,
+saved-settings recovery, production-node linking/deletion, the product selector,
+and optional analytics. Broader graph/layout coverage remains below.
 
 - [x] Set up Vitest (replaces Jest after Vite migration)
 - [ ] Add unit tests for `ProductionNode` class (`src/state/recipes/ProductionNode.ts`) — it's the core domain logic

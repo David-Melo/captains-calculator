@@ -99,13 +99,16 @@ export const recipeDatasetSchema = yup.array().of(recipeSchema).required();
 ** are logged for context and then thrown to stop `loadJsonData` before state is mutated.
 ****************** */
 
-export const validateDataset = (datasetName: string, schema: yup.ArraySchema<any>, data: Record<string, { id?: string }>): void => {
+export const validateDataset = (datasetName: string, schema: yup.ArraySchema<any>, data: Record<string, unknown>): void => {
 
     const entries = Object.entries(data);
 
     const keyMismatchErrors = entries
-        .filter(([key, item]) => item?.id !== key)
-        .map(([key, item]) => `Record key "${key}" does not match item id "${item?.id}"`);
+        .filter(([key, item]) => typeof item !== 'object' || item === null || !('id' in item) || item.id !== key)
+        .map(([key, item]) => {
+            const id = typeof item === 'object' && item !== null && 'id' in item ? item.id : undefined;
+            return `Record key "${key}" does not match item id "${id}"`;
+        });
 
     const validationErrors: string[] = [...keyMismatchErrors];
 

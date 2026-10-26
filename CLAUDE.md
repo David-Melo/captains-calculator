@@ -10,7 +10,7 @@ Live at: https://captains-calculator.com
 
 | Layer              | Technology                                                    |
 |--------------------|---------------------------------------------------------------|
-| Framework          | React 17 + TypeScript 4.9 (Vite / @vitejs/plugin-react)      |
+| Framework          | React 17 + TypeScript 5.9 (Vite / @vitejs/plugin-react)      |
 | State Management   | Overmind (centralized, derived state, effects)                |
 | Graph / Flow       | react-flow-renderer 10.x, Dagre (auto-layout), elkjs         |
 | UI Library         | Mantine v4 (core, hooks, modals, notifications, dates)       |
@@ -87,6 +87,7 @@ yarn dev       # Dev server (Vite)
 yarn build     # Production build (outputs to dist/)
 yarn preview   # Serve the production build locally
 yarn test      # Vitest
+yarn run validate     # Tests, type checking, and production build (also run on Vercel)
 ```
 
 ## Conventions

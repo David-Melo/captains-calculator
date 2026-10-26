@@ -1,8 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    "target": "es2015",
-    "types": ["vite/client"],
+    "target": "es2020",
+    "types": [
+      "vite/client",
+      "vitest/globals"
+    ],
     "lib": [
       "dom",
       "dom.iterable",
@@ -16,16 +19,18 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "framer-motion": [
+        "../node_modules/framer-motion/types/index.d.ts"
+      ]
+    }
   },
   "include": [
     "src/**/*"
-  ],
-  "references": [
-    { "path": "./tsconfig.node.json" }
   ]
 }
