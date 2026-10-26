@@ -125,7 +125,6 @@ export const Editor: React.FC<EditorProps> = ({ nodesData, edgesData }) => {
     // }
 
     const onConnect = async (params: Connection) => {
-        console.log('onConnect')
         // @ts-ignore
         params.style.stroke = generateDarkColorHex()
         setEdges((eds) => addEdge(params, eds))
