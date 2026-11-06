@@ -3,7 +3,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
-import { useAppState } from 'state';
+import { useActions, useAppState } from 'state';
+import { Alert, Button, Container, Stack } from '@mantine/core';
 
 import Loader from 'components/app/Loader';
 import AppShellLayout from 'components/layout/AppShellLayout';
@@ -13,9 +14,21 @@ import guestRoutes from 'routes/Guest'
 
 const Wrapper = () => {
 
-    const loading = useAppState(({ loading }) => loading)
+    const { loading, initializationError } = useAppState();
+    const { onInitializeOvermind } = useActions();
 
     if (loading) return <Loader />
+
+    if (initializationError) return (
+        <Container size="sm" py="xl">
+            <Stack>
+                <Alert title="Could not load calculator" color="red" role="alert">
+                    {initializationError}
+                </Alert>
+                <Button onClick={() => void onInitializeOvermind()}>Try again</Button>
+            </Stack>
+        </Container>
+    );
 
     return (
         <Routes>
@@ -39,4 +52,4 @@ const App: React.FC = () => {
     );
 }
 
-export default App;  
+export default App;

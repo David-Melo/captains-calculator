@@ -5,6 +5,7 @@ export type AppSettings = {
 export type AppState = {
     settings: AppSettings;
     loading: boolean;
+    initializationError: string | null;
     navigating: boolean;
     version: string | null;
 }

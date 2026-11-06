@@ -2,6 +2,7 @@ import machineData from "data/machines.json"
 import productData from "data/products.json"
 import recipeData from "data/recipes.json"
 import categoryData from "data/categories.json"
+import { validateDataset, machineDatasetSchema, productDatasetSchema, recipeDatasetSchema, categoryDatasetSchema } from "./dataSchemas"
 
 export type MachineId = keyof typeof machineData;
 export type RecipeId = keyof typeof recipeData;
@@ -85,18 +86,22 @@ type ProductData = { [id in ProductId]: Product }
 type CategoryData = { [id in CategoryId]: Category }
 
 export const loadMachineData = () => {
+    validateDataset('machines', machineDatasetSchema, machineData)
     return machineData as unknown as MachineData
 }
 
 export const loadProductData = () => {
+    validateDataset('products', productDatasetSchema, productData)
     return productData as unknown as ProductData
 }
 
 export const loadRecipeData = () => {
+    validateDataset('recipes', recipeDatasetSchema, recipeData)
     return recipeData as unknown as RecipeData
 }
 
 export const loadCategoryData = () => {
+    validateDataset('categories', categoryDatasetSchema, categoryData)
     return categoryData as unknown as CategoryData
 }
 

@@ -1,7 +1,7 @@
 import dayjs from "dayjs"
-var utc = require('dayjs/plugin/utc')
-var timezone = require('dayjs/plugin/timezone')
-var relativeTime = require('dayjs/plugin/relativeTime')
+import utc from 'dayjs/plugin/utc'
+import timezone from 'dayjs/plugin/timezone'
+import relativeTime from 'dayjs/plugin/relativeTime'
 dayjs.extend(utc)
 dayjs.extend(timezone)
 dayjs.extend(relativeTime)

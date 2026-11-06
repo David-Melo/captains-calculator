@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "captains-calculator-dev",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["dev"],
+      "port": 3000
+    },
+    {
+      "name": "captains-calculator-preview",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["preview"],
+      "port": 4173
+    }
+  ]
+}

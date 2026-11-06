@@ -12,9 +12,12 @@ import { AppStateConfig, useActions, useAppState } from 'state'
 import theme from 'theme/theme';
 
 import 'theme/scss/index.scss';
+import { initializeAnalytics } from './analytics';
+
+if (import.meta.env.PROD) initializeAnalytics(import.meta.env.VITE_GA_MEASUREMENT_ID);
 
 const overmind = createOvermind(AppStateConfig, {
-    devtools: true
+    devtools: import.meta.env.DEV
 })
 
 // background-color: #f1f3f5;

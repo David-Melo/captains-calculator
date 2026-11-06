@@ -1,6 +1,6 @@
 import { Action } from "state/_types";
 
-export const loadJsonData: Action = async ({state,effects}) => {
+export const loadJsonData: Action = ({state,effects}) => {
     let machines = effects.loadMachineData();
     let products = effects.loadProductData();
     let categories = effects.loadCategoryData();
@@ -9,4 +9,4 @@ export const loadJsonData: Action = async ({state,effects}) => {
     state.products.items = products
     state.categories.items = categories
     state.recipes.items = recipes
-} 
+}

@@ -41,7 +41,6 @@ export const RecipeNodeType = ({ id, data: { recipe, machine, category, inputs, 
     }
 
     const handleNodeDelete = (nodeId: string) => {
-        console.log(nodeId)
         const openConfirmModal = () => modals.openConfirmModal({
             title: 'Confirm Delete',
             centered: true,

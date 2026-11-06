@@ -5,6 +5,7 @@ export const state: AppState = {
         theme: 'light',
     },
     loading: true,
+    initializationError: null,
     navigating: false,
     version: null
 }
